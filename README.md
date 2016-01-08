@@ -3,4 +3,4 @@ This is a class team project. The goal of this project is to build a responsive 
 
 ## This project will contain the following.
 
-### Prototype-Wireframe
+###   -Prototype-Wireframe
