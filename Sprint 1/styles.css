@@ -1,0 +1,9 @@
+/*
+* General page styles
+*/
+
+.list-group {
+    float: left;
+    width: 20%;
+    margin: 10px;
+}
