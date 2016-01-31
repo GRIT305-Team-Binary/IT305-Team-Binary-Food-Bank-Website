@@ -7,11 +7,15 @@
     <meta name="author" content="">
 
     <title>Kent Food Bank & Emergency Services</title>
-
+    
+    
+    
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
 
     
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -20,190 +24,7 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-   <style type="text/css">
-        .carousel{
-            background: #2f4357;
-            margin-top: 20px;
-        }
-        .carousel .item img{
-            margin: 0 auto; /* Align slide image horizontally center */
-        }
-        .bs-example{
-            margin: 20px;
-        }
-
-        .center-block{
-          margin-bottom: 0;
-        }
-      
-        .navbar{
-          margin-bottom:0;
-        }
-      
-        hr{
-          margin: 0;
-          padding: 0;
-          height: 2px;
-          background-color: black;
-          border:none
-        }
-      
-        #donateBtn{
-          margin-top: 10px; ;
-        }
-        /* Extra Small Devices, Phones */
-          @media only screen and (max-width : 767px) and (min-width : 0px) {
-      
-            hr{
-              display: none;
-            }
-      
-            #donateBtn {
-              display: none;
-            }
-      
-            #moto p {
-              display: none;
-            }
-      
-            .fa{
-              display: none;
-            }
-      
-          .navbar-toggle {
-          position:static;
-          float: none;
-          padding:0 0 5px 0;
-          margin: 0;
-          background-color: gray ;
-          background-image: none;
-          border: 1px solid transparent;
-          border-radius:2px;
-          width: 100%;
-          font-size: 1.5em;
-          font-synthesis: weight;
-      }
-      
-      .navbar-brand {
-           float:none;
-          height: 0;
-          padding: 0;
-          font-size: 0;
-          line-height: 0;
-      }
-      
-      nav li {
-        font-size: 2em;
-        text-align: center;
-        border-bottom: 1px solid black;
-        padding: 5px 0 5px 0;
-      }
-      
-        #logo img {
-          width: 100%;
-        }
-      
-          }
-      
-      
-        /* Small Devices, Tablets */
-        @media only screen and (min-width : 768px) and (max-width : 991px) {
-      
-          #logo img{
-            position: relative;
-            max-width:12.5em;
-            right: 25%;
-            display: block;
-      
-          }
-      
-          .fa{
-            display: block;
-            text-align: center;
-            padding-bottom: 15px;
-            color: black;
-            font-size: 2em;
-          }
-      
-          #navEl{
-            font-size: .95em;
-            color: black;
-          }
-      
-          #moto p{
-            display: inline-block;
-            text-align: left;
-          }
-      
-      
-      
-        }
-      
-        /* Medium Devices, Desktops */
-        @media only screen and (min-width : 992px) and (max-width : 1199px) {
-          .fa{
-            display: block;
-            text-align: center;
-            padding-bottom: 15px;
-            color: black;
-          }
-      
-        #logo img{
-          position: relative;
-          max-width:250px;
-          display: block;
-          right:12%;
-      
-        }
-      
-      
-          #navEl{
-            font-size: 1.2em;
-            color: black;
-          }
-      
-      
-      
-          #moto p{
-            display: inline-block;
-            text-align: left;
-          }
-      
-          nav{
-            padding-bottom: 0;
-          }
-        }
-      
-        /* Large Devices, Wide Screens */
-           @media only screen and (min-width : 1200px) {
-             .fa{
-               display: block;
-               text-align: center;
-               padding-bottom: 15px;
-               color: black;
-               font-size: 3em;
-             }
-      
-             #navEl{
-               font-size: 1.5em;
-               color: black;
-             }
-      
-             #logo img{
-               max-width:300px;
-               position: relative;
-               display: block;
-               right:12%;
-      
-             }
-      
-             nav{
-               padding-bottom: 0;
-             }
-           }
-      
-        </style>
-
+ 
     <div class="container">
       <!---Top of the page-->
 
@@ -241,5 +62,4 @@
       <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 
       </script>
-  </body>
-</html>
+
