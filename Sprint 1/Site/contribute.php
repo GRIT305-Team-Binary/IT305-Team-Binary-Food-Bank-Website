@@ -1,20 +1,11 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head>
-    <title>Contribute</title>
-<!--<?php  include ('includes/header.inc.php');  ?> -->
-<meta charset="UTF-8">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
-</head>
-<body>
-</head>
+<?php  include ('includes/header.inc.php');  ?>
 
-<body>
+
+	 <div class="main">
     <div class="container-fluid">
 		<h1>Contribute</h1>
 		 <!-- Donate Button on mobile site -->
@@ -79,6 +70,5 @@
             <h3>Fred Meyer Community Rewards</h3>
             <P>Sign up for the Community Rewards program by linking your Fred Meyer Rewards Card to Kent Food Bank at: <a href="http://www.fredmeyer.com/communityrewards">FredMeyer.com/communityrewards</a>. You can search for us by name, Kent Food Bank or by our NPO # 83698</p>
          </div>
-    
-</body>
-</html>
+	</div>  
+<?php  include ('includes/footer.php');  ?>

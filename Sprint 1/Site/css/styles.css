@@ -7,7 +7,24 @@
     width: 20%;
     margin: 10px;
 }
-
+body {
+    background-color: #695D46;
+    margin:0 5%;
+}
+.head {
+    background-color: #CFC291;
+    padding: 1%;
+    margin-top: 20px;
+    width: 100%;
+}
+.main {
+    background-color: #FFF6C5;
+    width: inherit;
+   
+}
+.footer {
+    background-color: #CFC291;
+}
 /* Code for Image slider */
 .carousel{
     background: #2f4357;
