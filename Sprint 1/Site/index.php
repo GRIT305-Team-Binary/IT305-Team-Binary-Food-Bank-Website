@@ -75,6 +75,7 @@
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
                                     <li data-target="#myCarousel" data-slide-to="5"></li>
+                                    <li data-target="#myCarousel" data-slide-to="6"></li>
                                 </ol>   
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
@@ -96,6 +97,9 @@
                                     <div class="item">
                                        <img class="img-responsive img-square" src="http://placehold.it/900x350" alt="Sixth Slide">
                                     </div>
+                                    <div class="item">
+                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Sixth Slide">
+                                    </div>
                                 </div>
                                 <!-- Carousel controls -->
                                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -110,9 +114,9 @@
                 </div>
                 <div class="row">
                     
-                        <div class="col-md-3 well text-center">
+                        <div class="col-md-12 well text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-primary btn-lg" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                             <a class="btn btn-primary btn-lg col-md-10 col-md-offset-1 text-center"  href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
                          </div>
                      
                  </div>
