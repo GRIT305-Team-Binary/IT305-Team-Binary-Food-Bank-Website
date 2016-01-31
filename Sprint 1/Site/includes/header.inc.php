@@ -42,10 +42,10 @@
               <ul class="nav navbar-nav">
                   <li class="nav"><a href="index.php"><i class="fa fa-home fa-3x"></i><span id="navEl">Home</span></a></li>
                   <li class="nav"><a href="contribute.php"><i class="fa fa-users fa-3x"></i><span id="navEl">Contribute</span></a></li>
-                  <li class="nav"><a href="gethelp.html"><i class="fa fa-cutlery fa-3x"></i><span id="navEl">Get Help</span></a></li>
-                  <li class="nav"><a href="calender.html"><i class="fa fa-calendar fa-3x"></i><span id="navEl">Calendar</span></a></li>
+                  <li class="nav"><a href="gethelp.php"><i class="fa fa-cutlery fa-3x"></i><span id="navEl">Get Help</span></a></li>
+                  <li class="nav"><a href="calendar.php"><i class="fa fa-calendar fa-3x"></i><span id="navEl">Calendar</span></a></li>
                   <li class="nav"><a href="#"><i class="fa fa-map-marker fa-3x"></i><span id="navEl">Location</span></a></li>
-                  <li class="nav"><a href="contactus.html"><i class="fa fa-phone-square fa-3x"></i><span id="navEl">Contact Us</span></a></li>
+                  <li class="nav"><a href="contactus.php"><i class="fa fa-phone-square fa-3x"></i><span id="navEl">Contact Us</span></a></li>
               </ul>
             </div>
         </div>

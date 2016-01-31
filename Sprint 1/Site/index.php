@@ -122,7 +122,7 @@
                  </div>
                  <div class="row visible-xs">
                     
-                        <div class="col-xs-12 well text-center">
+                        <div class="col-xs-12 text-center">
                             <!-- Location and Hours Button under Carousel -->
                             <a class="col-xs-1 col-xs-offset-1 text-center"  href="https://www.facebook.com/kentfoodbank/">
                                 <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a>
