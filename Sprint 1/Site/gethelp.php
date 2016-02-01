@@ -5,12 +5,18 @@
 <?php  include ('includes/header.inc.php');  ?>
 
 
-	 <div class="main">
+	 <div class="main" id="top">
     <div class="container-fluid">
         <h1>Get Help</h1>
+		 <!-- Contact Us Button on mobile site -->
+		<div class="row visible-xs">
+			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
+				 href="contactus.php">Contact Us</>
+           </a>
+		</div>
      <!-- Side navigation -->
  <div class="row">
-         <div class="col-sm-2 col-xs-12 pull-left">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 ">
             <div class="btn-group-vertical">
                 <a href="#services" class="btn btn-warning">Services We Provide</a>
                 <a href="#clothingbank" class="btn btn-default">Clothing Bank</a>
@@ -18,9 +24,9 @@
             
             </div>
         </div>
-        <div class="col-xs-12 col-sm-9" >
+        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
             <!-- Main Content -->
-            <div class="col-md-7">
+            <div class="col-lg-7 ">
             <!-- List of main services available from Kent Food Bank -->
             <h3 id="services">Services We Provide</h3>
             <ul>
@@ -28,13 +34,24 @@
                 <li>Each household may have two visits to the Food Bank per month</li>
                 <li>Remember to bring your own bags or boxes to carry your food</li>
             </ul>
-            
+            <!-- Link to top of Page -->
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+				</span>
+				</div>
+			</div>
+			<!-- /top-link-block -->
             <!-- Information about the Clothing Bank-->
             <h3 id="clothingbank">Clothing Bank</h3>
             <p>10 item limit per persion in family </p>
             <p>Diapers available once every 6 months if available</p>
             </div>
-            <div class="col-md-5 pull-left" >
+			
+			
+            <div class="col-lg-5 pull-left" >
             <!-- Items client needs to bring into food bank to obtain a food card -->
             <div class="panel panel-warning">
                 <div class="panel-heading">
@@ -63,6 +80,15 @@
               Panel content
                 </div>
               </div>
+			<!-- Link to top of Page -->
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 visbile-sm visible-xs visible-md">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+				</span>
+				</div>
+			</div><!-- /top-link-block -->
             </div>
         </div>
     </div>

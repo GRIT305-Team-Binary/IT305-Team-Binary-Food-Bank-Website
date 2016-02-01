@@ -56,11 +56,11 @@
     -->
     <div class="main">
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
-        <!-- Heading Row -->
+       
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-6 col-lg-8">
                 <div class="row">
                     <div class="col-md-12">
                         
@@ -108,18 +108,20 @@
                     
                         <div class="col-xs-12 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-10 col-xs-offset-1" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
                          </div>
                      
                  </div>
-                 <div class="facebook-hours row visible-xs">
+                 <div class="row visible-xs">
                     
                         <div class="col-xs-12 text-center">
                             <!-- Location and Hours Button under Carousel -->
                             <div class="col-xs-2 text-center"><a class="btn btn-lg" href="https://www.facebook.com/kentfoodbank/">
-                                <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a></div>
-                             <div class="col-xs-7 col-xs-offset-1 text-center"><a class="btn btn-primary btn-lg" href="calendar.php">Hours</a></div>
-
+                                <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a>
+                            </div>
+                             <div class="col-xs-9 col-xs-offset-1 text-center">
+                                <a class="btn btn-primary col-xs-12 facebook-hours" href="calendar.php">Hours</a>
+                             </div>
                          </div>
                      
                  </div>
@@ -127,7 +129,7 @@
                     
                         <div class="col-xs-12 text-center">
                             <!-- Contact Us under Carousel -->
-                             <a class="btn btn-primary btn-lg col-xs-10 col-xs-offset-1 text-center" href="contactus.html">Contact Us</a>
+                             <a class="btn btn-primary btn-lg col-xs-12 text-center" href="contactus.php">Contact Us</a>
                          </div>
                      
                  </div>
@@ -153,10 +155,10 @@
                
             </div>
             </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-4 hidden-xs">
+         
+            <div class="col-sm-10 col-sm-offset-1 col-md-5 col-lg-3 hidden-xs">
                     <!-- Facebook Feed for Kent Food Bank Page -->
-                    <div class="fb-page"
+                    <div class="fb-page col-md-12"
                          data-href="https://www.facebook.com/kentfoodbank/"
                          data-tabs="timeline"
                          data-small-header="true"

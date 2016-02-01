@@ -5,30 +5,29 @@
 <?php  include ('includes/header.inc.php');  ?>
 
 
-	 <div class="main">
+	 <div class="main" id="#top">
     <div class="container-fluid">
 		<h1>Contribute</h1>
 		 <!-- Donate Button on mobile site -->
-		<div class="row visible-xs">
+		<!--<div class="row visible-xs">
 			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
 				 href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</>
            </a>
-		</div>
+		</div>-->
 		   <!-- Volunteer Button can go here with link to Volunteer form -->
     <div class="row">
-        <div class="col-sm-2 col-xs-12 pull-left">
-			
-			<div class="btn-group-vertical">
-    	
-                <a  class="btn btn-warning hidden-xs" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate</a>
-                <!-- <li><a href="#">Volunteer</a></li> -->
-                <a class="btn btn-default col-xs-11" href="#clothing">Clothing Bank</a>
-               <a class="btn btn-default col-xs-11" href="#otherGift">Other Ways to Give</a>
-           
-			</div>
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 " role="group">
+            <div class="btn-group-vertical">
+                <a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3" class="btn btn-warning">Donate</a>
+				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
+                <a href="#clothing" class="btn btn-default">Clothing Bank</a>
+                <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
+            
+            </div>
         </div>
+ 
 
-        <div class="topItemsList col-xs-12 col-sm-4 col-md-3 pull-right">
+        <div class="topItemsList col-xs-12 col-sm-3 col-md-3 col-lg-3 pull-right">
 			 
             <div class="panel panel-warning">
                 <!-- Top Ten Items needed at Food Bank now -->
@@ -47,12 +46,22 @@
 							 <li class="list-group-item">Office supplies - paper, pens, garbage bags </li>
 						 </ul>
 					 </div>
-			   </div>	
+			   </div>
+			<!-- Link to top of Page -->
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+				</span>
+				</div>
+			</div><!-- /top-link-block -->
         </div>
        
       
-         <div class="col-md-7 col-offset-md-1">
+         <div class="col-xs-12 col-sm-6 col-md-6 col-offset-md-1 col-lg-7 pull-left">
             <!-- Details about what Kent Food Bank does -->
+			
             <p>Each year Kent Food Bank distributes approximately 6,000 lbs of food.  We are a non-profit organization that run on volunteer support with funding from grants, individual doners, and some money from the city of Kent.</p>
             <p>Every contribution makes a difference. </p>
             <p class="text-center hidden-xs"><a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3" class="btn btn-warning">Donate Today</a></p>
@@ -64,6 +73,16 @@
         	<!-- Button for Mobile display-->
 			<p class="text-center  visible-xs "><a href="https://goo.gl/maps/r75mDcuyd2J2" class="btn btn-warning text-center">Kent Food Bank</a></p></p>
             <!-- Other ways to give to include Amazon Smile and Fred Meyer Rewards-->
+			<!-- Link to top of Page -->
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 visible-xs visible-sm visible-md">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+			</span>
+			</div>
+			</div><!-- /top-link-block -->
+			<p></p>
 			<hr>
             <h2 id="otherGift">Other ways to give:</h2>
             <h3>Amazon Smile</h3>
@@ -81,6 +100,16 @@
 			<!-- Button for Mobile display-->
 			<p class="text-center visible-xs"><a href="http://www.fredmeyer.com/communityrewards" class="btn btn-warning">Fred Meyer Rewards</a></p>.
 			<p class="text-center bold"><strong>You can search for us by name, Kent Food Bank or by our NPO # 83698</strong></p>
+			<!-- Link to top of Page -->
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+			</span>
+			</div>
+			</div><!-- /top-link-block -->
+			</p>
          </div>
 	</div>
 	</div>

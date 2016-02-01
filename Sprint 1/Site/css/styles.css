@@ -21,7 +21,7 @@ p#hoursOperation {
     text-align: center;
     text-transform: uppercase;
     font-weight: lighter;
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 .defaultLink {
@@ -46,6 +46,12 @@ p#hoursOperation {
     padding: 5% 1%;
     margin-bottom: 2%;
 }
+
+.mobile-facebook {
+  vertical-align: middle;
+  line-height: 60px;
+}
+
 /* Code for Image slider */
 .carousel{
     background: #2f4357;
@@ -84,14 +90,18 @@ hr{
     margin: 0 15px 0 15px;
 }
 
-
+.top-link-block {
+    margin: 2% 0;
+    padding: 2% 0;
+}
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {
     
     .facebook-hours {
         vertical-align: middle;
-        line-height: 80px;
+        line-height: 45px;
+        margin: 10px 0;
     }
     
     .topItemsList {
@@ -119,9 +129,9 @@ hr{
   .navbar-toggle {
   position:static;
   float: none;
-  padding:0 0 5px 0;
+  padding:5px 0 5px 0;
   margin: 0;
-  background-color: orange;
+  background-color: #DD991D;
   background-image: none;
   border: 1px solid transparent;
   border-radius:2px;
