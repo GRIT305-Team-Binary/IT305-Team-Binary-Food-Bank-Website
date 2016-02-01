@@ -31,7 +31,7 @@
 
     <div class="row head">
         <div id="logo" class="col-sm-3 col-xs-12">
-            <a href="" class="navbar-brand" ><img alt="This is the logo" src="images/logo.png" ></a>
+            <a href="index.php" class="navbar-brand" ><img alt="This is the logo" src="images/logo-transparent.png" ></a>
         </div>
 
       <div class="col-md-8 col-sm-9 col-xs-12 navbar center-block">
@@ -44,7 +44,7 @@
                   <li class="nav"><a href="contribute.php"><i class="fa fa-users fa-3x"></i><span id="navEl">Contribute</span></a></li>
                   <li class="nav"><a href="gethelp.php"><i class="fa fa-cutlery fa-3x"></i><span id="navEl">Get Help</span></a></li>
                   <li class="nav"><a href="calendar.php"><i class="fa fa-calendar fa-3x"></i><span id="navEl">Calendar</span></a></li>
-                  <li class="nav"><a href="#"><i class="fa fa-map-marker fa-3x"></i><span id="navEl">Location</span></a></li>
+                  <li class="nav"><a href="https://goo.gl/maps/r75mDcuyd2J2" target="_blank"><i class="fa fa-map-marker fa-3x"></i><span id="navEl">Location</span></a></li>
                   <li class="nav"><a href="contactus.php"><i class="fa fa-phone-square fa-3x"></i><span id="navEl">Contact Us</span></a></li>
               </ul>
             </div>
@@ -70,13 +70,10 @@
       </a>
       <div><hr class="col-md-12 col-sm-12 hidden-xs"></div>
 
-      <div id="moto" class="pull-right"><p>Serving low-income residents of the Kent School District</p></div>
+      <div id="motto" class="pull-right"><p>Serving low-income residents of the Kent School District</p></div>
 </div>
 </div>
       <!--Bottom of the page-->
     </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
       <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
-
- 
-

@@ -74,8 +74,6 @@
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
-                                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                                    <li data-target="#myCarousel" data-slide-to="6"></li>
                                 </ol>   
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
@@ -92,13 +90,7 @@
                                         <img class="img-responsive" src="images/slide3.png" alt="Fourth Slide">
                                     </div>
                                     <div class="item">
-                                        <img class="img-responsive img-circle" src="http://placehold.it/900x350" alt="Fifth Slide">
-                                    </div>
-                                    <div class="item">
-                                       <img class="img-responsive img-square" src="http://placehold.it/900x350" alt="Sixth Slide">
-                                    </div>
-                                    <div class="item">
-                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Sixth Slide">
+                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Fifth Slide">
                                     </div>
                                 </div>
                                 <!-- Carousel controls -->
@@ -114,36 +106,38 @@
                 </div>
                 <div class="row">
                     
-                        <div class="col-xs-12 well text-center">
+                        <div class="col-xs-12 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-primary btn-lg col-xs-10 col-xs-offset-1 text-center"  href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                             <a class="btn btn-warning btn-lg col-xs-10 col-xs-offset-1" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
                          </div>
                      
                  </div>
-                 <div class="row visible-xs">
+                 <div class="facebook-hours row visible-xs">
                     
                         <div class="col-xs-12 text-center">
                             <!-- Location and Hours Button under Carousel -->
-                            <a class="col-xs-1 col-xs-offset-1 text-center"  href="https://www.facebook.com/kentfoodbank/">
-                                <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a>
-                             <a class="btn  btn-primary btn-lg col-xs-4 col-xs-offset-1 text-center"  href="location.html">Location</a>
-                             <a class="btn  btn-primary btn-lg col-xs-3 col-xs-offset-1 text-center"  href="location.html">Hours</a>
+                            <div class="col-xs-2 text-center"><a class="btn btn-lg" href="https://www.facebook.com/kentfoodbank/">
+                                <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a></div>
+                             <div class="col-xs-7 col-xs-offset-1 text-center"><a class="btn btn-primary btn-lg" href="calendar.php">Hours</a></div>
 
                          </div>
                      
                  </div>
                  <div class="row visible-xs">
                     
-                        <div class="col-xs-12 well text-center">
+                        <div class="col-xs-12 text-center">
                             <!-- Contact Us under Carousel -->
-                             <a class="btn btn-primary btn-lg col-xs-10 col-xs-offset-1 text-center"  href="contactus.html">Contact Us</a>
+                             <a class="btn btn-primary btn-lg col-xs-10 col-xs-offset-1 text-center" href="contactus.html">Contact Us</a>
                          </div>
                      
                  </div>
                 <div class="row">
-                <div class="col-md-12 hidden-xs">
+                <div class="col-md-12">
                     <!-- About Us Content -->
-                    <p>The Kent Food Bank and Emergency Services is a non-profit organization offering food, clothing and emergency financial assistance to low income families and individuals living within the Kent School District.  The Kent Food Bank service area covers 73 square miles with 40 schools. Kent Food Bank operates two food distribution locations in Kent each week.</p>
+                    <h2>About Us</h2>
+                    <p>The Kent Food Bank and Emergency Services is a non-profit organization offering food, clothing and emergency financial assistance
+                    to low income families and individuals living within the Kent School District.  The Kent Food Bank service area covers 73 square miles with 40 schools.
+                    Kent Food Bank operates two food distribution locations in Kent each week.</p>
                     <h2>Mission</h2>
                     <p> The Kent Food Bank and Emergency Services exist to serve the citizens of the Greater Kent area.<br />
                     In order to fulfill its mission the Kent Food Bank will:
@@ -160,7 +154,7 @@
             </div>
             </div>
             <!-- /.col-md-8 -->
-            <div class="col-md-4">
+            <div class="col-md-4 hidden-xs">
                     <!-- Facebook Feed for Kent Food Bank Page -->
                     <div class="fb-page"
                          data-href="https://www.facebook.com/kentfoodbank/"
@@ -201,4 +195,5 @@
     <!-- /.container -->
 
  <?php  include ('includes/footer.php');  ?>
+
 

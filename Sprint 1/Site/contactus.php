@@ -20,6 +20,7 @@
 	<?php
 		include ('includes/header.inc.php');
 	?>
+	<div class="main">
     <div class="container-fluid text-center">
         <div class="row">
             <div class="col-xs-12 ">
@@ -33,16 +34,21 @@
             </div>
             <div class="col-xs-12 col-sm-4">
                 <!-- Facebook Page -->
-                <p><span class="glyphicon"><img src="startbootstrap-small-business-1.0.4/images/FB-f-Logo__blue_29.png" class="img-responsive" alt="facebook"></span><a href="facebook.com/kentfoodbank">facebook.com/kentfoodbank</a></p>
+                <p><span class="glyphicon"><img src="startbootstrap-small-business-1.0.4/images/FB-f-Logo__blue_29.png" class="img-responsive" alt="facebook"></span>
+					<a class="defaultLink href="facebook.com/kentfoodbank">&nbspfacebook.com/kentfoodbank</a>
+				</p>
             </div>
             <div class="col-xs-12 col-sm-4">
                 <!-- Email -->
-                <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:kentfoodbank@gmail.com">kentfoodbank@gmail.com</a></p>
+                <p><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+					<a class="defaultLink" href="mailto:kentfoodbank@gmail.com">kentfoodbank@gmail.com</a>
+				</p>
             </div>
          </div>
         <div class="row">
             <!-- Contact Form -->
         </div>
     </div>
+	</div>
 </body>
 </html>

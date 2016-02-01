@@ -1,29 +1,26 @@
 <!DOCTYPE html>
 
-<html>
-<head>
-    <!-- Services page -->
-</head>
+<html lang="en">
 
-<body>
-    <?php
-        include('includes/header.inc.php');
-    ?>
-    <div class="container">
-    <div class="row">
-        <!-- Side navigation -->
-        <div class="col-sm-2" pull-left>
-            <ul class="nav nav-pills nav-stacked">
-                <li class="active"><a href="#gethelp">Get Help</a></li>
-                <li><a href="#services">Services We Provide</a></li>
-                <li><a href="#clothingbank">Clothing Bank</a></li>
-                <li><a href="#foodbankcard">How to Obtain a Food Bank Card</a></li>
-            </ul>
-        </div>
-        <div class="col-sm-10" pull-right>
-            <!-- Main Content -->
-            <h2 id="#gethelp">Get Help</h2>
+<?php  include ('includes/header.inc.php');  ?>
+
+
+	 <div class="main">
+    <div class="container-fluid">
+        <h1>Get Help</h1>
+     <!-- Side navigation -->
+ <div class="row">
+         <div class="col-sm-2 col-xs-12 pull-left">
+            <div class="btn-group-vertical">
+                <a href="#services" class="btn btn-warning">Services We Provide</a>
+                <a href="#clothingbank" class="btn btn-default">Clothing Bank</a>
+                <a href="#foodbankcard" class="btn btn-default">Food Bank Card</a>
             
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-9" >
+            <!-- Main Content -->
+            <div class="col-md-7">
             <!-- List of main services available from Kent Food Bank -->
             <h3 id="services">Services We Provide</h3>
             <ul>
@@ -36,17 +33,24 @@
             <h3 id="clothingbank">Clothing Bank</h3>
             <p>10 item limit per persion in family </p>
             <p>Diapers available once every 6 months if available</p>
-            
+            </div>
+            <div class="col-md-5 pull-left" >
             <!-- Items client needs to bring into food bank to obtain a food card -->
-            <h3 id="foodbankcard">How to Obtain a Food Bank Card</h3>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                  <h3 class="panel-title text-center" id="foodbankcard">How to Obtain a Food Bank Card</h3>
+                </div>
+                <div class="panel-body">
+                
+            <!--<h3 id="foodbankcard">How to Obtain a Food Bank Card</h3> -->
             <h4>Bring:</h4>
             <ul>
                 <li>Picture identification</li>
                 <li>Current proof of address  (if available)</li>
             </ul>
-            <p>to <a href="location.html">Kent Food Bank</a> during <a href="hours.html">open hours</a>
+            <p>to <a href="https://goo.gl/maps/r75mDcuyd2J2">Kent Food Bank</a> during <a href="calendar.php">open hours</a>
             to obtain your Food Bank Card.</p><br />
-            <p>If registering a household, you need the following for each member of the household: </p>
+            <h5>If registering a household, you need the following for each member of the household: </h5>
             
             <h4>For each adult: </h4>
             <p>Current mail, lease, or bill not older than 30 days</p>
@@ -56,8 +60,13 @@
  
             <h4>For younger children:  </h4>
             <p>Birth Certificate</p>
+              Panel content
+                </div>
+              </div>
+            </div>
         </div>
     </div>
     </div>
-</body>
-</html>
+    </div>
+    
+ <?php  include ('includes/footer.php');  ?>
