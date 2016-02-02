@@ -29,7 +29,7 @@
                 <!-- Facebook Page -->
                 <p btn btn-warning> <span class="btn btn-warning facebook-hours">
 				<span class="glyphicon"><img src="startbootstrap-small-business-1.0.4/images/FB-f-Logo__blue_29.png" class="img-responsive" alt="facebook"></span>
-					<a class="defaultLink" href="http://facebook.com/kentfoodbank">
+					<a class="defaultLink" href="http://facebook.com/kentfoodbank" target="_blank">
 					<span class="hidden-xs">facebook.com/kentfoodbank</span>
 					<span class="visible-xs">Facebook</span>
 					</a>
@@ -49,6 +49,21 @@
          </div>
         <div class="row">
             <!-- Contact Form -->
+			<form action="POST" action="#">
+				<label>Name:</label><br>
+				<input name="name" class="input" type="text" value="" size="40"><br><br>
+				
+				<label>E-mail address:</label><br>
+				<input name="email" class="input" type="text" value="" size="40"><br><br>
+				
+				<label></label>
+				<textarea name="message" class="input" rows="5" cols="40">Your message
+				</textarea><br>
+				
+				<input type="submit" value="Submit">
+			</form>
+			
+			
         </div>
     </div>
 	</div>

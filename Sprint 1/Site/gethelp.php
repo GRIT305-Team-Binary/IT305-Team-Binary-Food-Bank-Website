@@ -16,7 +16,7 @@
 		</div>
      <!-- Side navigation -->
  <div class="row">
-        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-2 ">
+        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 ">
             <div class="btn-group-vertical">
                 <a href="#services" class="btn btn-warning">Services We Provide</a>
                 <a href="#clothingbank" class="btn btn-default">Clothing Bank</a>
@@ -24,7 +24,7 @@
             
             </div>
         </div>
-        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9" >
+        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9" >
             <!-- Main Content -->
             <div class="col-lg-7 ">
             <!-- List of main services available from Kent Food Bank -->
@@ -46,8 +46,10 @@
 			<!-- /top-link-block -->
             <!-- Information about the Clothing Bank-->
             <h3 id="clothingbank">Clothing Bank</h3>
-            <p>10 item limit per persion in family </p>
-            <p>Diapers available once every 6 months if available</p>
+			<ul>
+            <li>10 item limit per persion in family </li>
+            <li>Diapers available once every 6 months if available</li>
+			</ul><br>
             </div>
 			
 			

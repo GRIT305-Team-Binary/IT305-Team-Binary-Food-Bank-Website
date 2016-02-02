@@ -16,7 +16,7 @@
                 </div>
                 <div class="panel-body"> -->
                     <!-- Option #2 for Header -->
-                    <br><p id="hoursOperation">Hours of Operation</p>
+                    <br><div class="title"><h4>Hours of Operation</h4></div>
                     
                     <h3>Food Bank</h3>
                     <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>

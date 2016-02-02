@@ -17,11 +17,15 @@ body {
     font-size: 80%;
 }
 
-p#hoursOperation {
+.title {
+    font-size: 100%;
+    color: white;
     text-align: center;
-    text-transform: uppercase;
-    font-weight: lighter;
-    letter-spacing: 2px;
+    /*text-transform: uppercase;
+    letter-spacing: 1px;*/
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    padding: 1px;
 }
 
 .defaultLink {
@@ -35,7 +39,7 @@ p#hoursOperation {
     width: 100%;
 }
 .main {
-    padding: 5% 2%;
+    padding: 2% 2%;
     background-color: #FFF6C5;
     margin: 2% auto;
     width: 100%;
@@ -216,7 +220,7 @@ color: white;
 
 #logo img{
   position: relative;
-  max-width:250px;
+  max-width:300px;
   display: block;
   right:12%;
 
@@ -224,7 +228,7 @@ color: white;
 
 
   #navEl{
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
   }
 
@@ -252,16 +256,16 @@ color: white;
        text-align: center;
        padding-bottom: 15px;
        color: black;
-       font-size: 3em;
+       font-size: 2.5em;
      }
 
      #navEl{
-       font-size: 1.5em;
+       font-size: 1em;
        color: black;
      }
 
      #logo img {
-       max-width:300px;
+       max-width:325px;
        position: relative;
        display: block;
        right:12%;

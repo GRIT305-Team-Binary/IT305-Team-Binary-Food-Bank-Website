@@ -26,16 +26,16 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
  
-    <div class="container">
+    <div class="container-fluid head">
       <!---Top of the page-->
 
-    <div class="row head">
+    <div class="row">
         <div id="logo" class="col-sm-3 col-xs-12">
             <a href="index.php" class="navbar-brand" ><img alt="This is the logo" src="images/logo-transparent.png" ></a>
         </div>
 
       <div class="col-md-8 col-sm-9 col-xs-12 navbar center-block">
-          <div class="container"><!--Centers Nav On Headers-->
+          <div class="container-fluid"><!--Centers Nav On Headers-->
 
             <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" >Menu<span class="caret"></span></button>
             <div class="collapse navbar-collapse navHeaderCollapse">
@@ -44,11 +44,11 @@
                   <li class="nav"><a href="contribute.php"><i class="fa fa-users fa-3x"></i><span id="navEl">Contribute</span></a></li>
                   <li class="nav"><a href="gethelp.php"><i class="fa fa-cutlery fa-3x"></i><span id="navEl">Get Help</span></a></li>
                   <li class="nav"><a href="calendar.php"><i class="fa fa-calendar fa-3x"></i><span id="navEl">Calendar</span></a></li>
-                  <li class="nav"><a href="https://goo.gl/maps/r75mDcuyd2J2" target="_blank"><i class="fa fa-map-marker fa-3x"></i><span id="navEl">Location</span></a></li>
+                  <li class="nav"><a href="location.php"><i class="fa fa-map-marker fa-3x"></i><span id="navEl">Location</span></a></li>
                   <li class="nav"><a href="contactus.php"><i class="fa fa-phone-square fa-3x"></i><span id="navEl">Contact Us</span></a></li>
               </ul>
             </div>
-        </div>
+          </div>
     </div>
       
     <div class="col-md-1 hidden-sm hidden-xs">

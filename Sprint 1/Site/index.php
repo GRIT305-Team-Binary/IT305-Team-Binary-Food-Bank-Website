@@ -78,7 +78,7 @@
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img  class="img-responsive" src="images/visit.png" alt="First Slide">
+                                        <img  class="img-responsive" src="images/visit-borderless.png" alt="First Slide">
                                     </div>
                                     <div class="item ">
                                         <img  class="img-responsive" src="images/slide1.png" alt="Second Slide">
