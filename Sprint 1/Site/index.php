@@ -54,13 +54,13 @@
         <!-- /.container 
     </nav>
     -->
-
+    <div class="main">
     <!-- Page Content -->
-    <div class="container">
+    <div class="container-fluid">
 
-        <!-- Heading Row -->
+       
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-xs-12 col-md-6 col-lg-8">
                 <div class="row">
                     <div class="col-md-12">
                         
@@ -74,13 +74,11 @@
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
-                                    <li data-target="#myCarousel" data-slide-to="5"></li>
-                                    <li data-target="#myCarousel" data-slide-to="6"></li>
                                 </ol>   
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img  class="img-responsive" src="images/visit.png" alt="First Slide">
+                                        <img  class="img-responsive" src="images/visit-borderless.png" alt="First Slide">
                                     </div>
                                     <div class="item ">
                                         <img  class="img-responsive" src="images/slide1.png" alt="Second Slide">
@@ -92,13 +90,7 @@
                                         <img class="img-responsive" src="images/slide3.png" alt="Fourth Slide">
                                     </div>
                                     <div class="item">
-                                        <img class="img-responsive img-circle" src="http://placehold.it/900x350" alt="Fifth Slide">
-                                    </div>
-                                    <div class="item">
-                                       <img class="img-responsive img-square" src="http://placehold.it/900x350" alt="Sixth Slide">
-                                    </div>
-                                    <div class="item">
-                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Sixth Slide">
+                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Fifth Slide">
                                     </div>
                                 </div>
                                 <!-- Carousel controls -->
@@ -114,16 +106,40 @@
                 </div>
                 <div class="row">
                     
-                        <div class="col-md-12 well text-center">
+                        <div class="col-xs-12 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-primary btn-lg col-md-10 col-md-offset-1 text-center"  href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                         </div>
+                     
+                 </div>
+                 <div class="row visible-xs">
+                    
+                        <div class="col-xs-12 text-center">
+                            <!-- Location and Hours Button under Carousel -->
+                            <div class="col-xs-2 text-center"><a class="btn btn-lg" href="https://www.facebook.com/kentfoodbank/">
+                                <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a>
+                            </div>
+                             <div class="col-xs-9 col-xs-offset-1 text-center">
+                                <a class="btn btn-primary col-xs-12 facebook-hours" href="calendar.php">Hours</a>
+                             </div>
+                         </div>
+                     
+                 </div>
+                 <div class="row visible-xs">
+                    
+                        <div class="col-xs-12 text-center">
+                            <!-- Contact Us under Carousel -->
+                             <a class="btn btn-primary btn-lg col-xs-12 text-center" href="contactus.php">Contact Us</a>
                          </div>
                      
                  </div>
                 <div class="row">
                 <div class="col-md-12">
                     <!-- About Us Content -->
-                    <p>The Kent Food Bank and Emergency Services is a non-profit organization offering food, clothing and emergency financial assistance to low income families and individuals living within the Kent School District.  The Kent Food Bank service area covers 73 square miles with 40 schools. Kent Food Bank operates two food distribution locations in Kent each week.</p>
+                    <h2>About Us</h2>
+                    <p>The Kent Food Bank and Emergency Services is a non-profit organization offering food, clothing and emergency financial assistance
+                    to low income families and individuals living within the Kent School District.  The Kent Food Bank service area covers 73 square miles with 40 schools.
+                    Kent Food Bank operates two food distribution locations in Kent each week.</p>
                     <h2>Mission</h2>
                     <p> The Kent Food Bank and Emergency Services exist to serve the citizens of the Greater Kent area.<br />
                     In order to fulfill its mission the Kent Food Bank will:
@@ -133,15 +149,16 @@
                         <li>Work in conjunction with government agencies, churches and other organizations to serve the surrounding people.</li>
                         <li>Operate primarily as a volunteer agency, obtaining the majority of its support and donations from the community.</li>
                      </ul>
+                    Learn more at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx">Seattle Foundation</a>
                     </p>
                 </div>
                
             </div>
             </div>
-            <!-- /.col-md-8 -->
-            <div class="col-md-4">
+         
+            <div class="col-sm-10 col-sm-offset-1 col-md-5 col-lg-3 hidden-xs">
                     <!-- Facebook Feed for Kent Food Bank Page -->
-                    <div class="fb-page"
+                    <div class="fb-page col-md-12"
                          data-href="https://www.facebook.com/kentfoodbank/"
                          data-tabs="timeline"
                          data-small-header="true"
@@ -173,25 +190,12 @@
         <!-- Content Row -->
         
         <!-- /.row -->
+    </div>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; 2016 Kent Food Bank. All Rights Reserved.</p>
-                </div>
-            </div>
-        </footer>
 
     </div>
     <!-- /.container -->
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+ <?php  include ('includes/footer.php');  ?>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
-</body>
-
-</html>
