@@ -2,24 +2,89 @@
 * General page styles
 */
 
-.list-group {
-    float: left;
-    width: 20%;
-    margin: 10px;
+body {
+    background-color: #695D46;
+    margin:0 5%;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.head {
+    background-color: #CFC291;
+    padding: 2% 1%;
+    margin-top: 2%;
+    width: 100%;
+}
+.main {
+    padding: 2% 2%;
+    background-color: #FFF6C5;
+    margin: 2% auto;
+    width: 100%;
+
+}
+.footer {
+    background-color: #CFC291;
+    padding: 2% 1%;
+    margin-bottom: 2%;
+}
+.foot {
+    vertical-align: bottom;
+    margin: 25px;
+    
+}
+
+.mobile-facebook {
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.contactButton {
+    margin: 5px;
+}
+
+
+/* Specialized font */
+
+.contactInfo {
+    font-size: 80%;
+}
+
+.defaultLink {
+    color: inherit;
+}
+
+.title {    /* For calendar page */
+    font-size: 100%;
+    color: white;
+    text-align: center;
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.dayOfWeek {
+    font-weight: bold;
+}
+
+.asterisk {
+    font-style: italic;
+    font-size: 80%;
+}
+
 
 /* Code for Image slider */
 .carousel{
     background: #2f4357;
-    margin-top: 20px;
+    margin: 20px 0;
 }
 .carousel .item img{
     margin: 0 auto; /* Align slide image horizontally center */
 }
-.bs-example{
-    margin: 20px;
-}
 
+.warning{
+    background-color: #FF712C;
+    color:white;
+    font-weight: 300;
+}
 .center-block{
   margin-bottom: 0;
 }
@@ -39,8 +104,31 @@ hr{
 #donateBtn{
   margin-top: 10px; ;
 }
+
+.donateButton {
+    margin: 0 15px 0 15px;
+}
+
+.top-link-block {
+    margin: 2% 0;
+    padding: 2% 0;
+}
+
 /* Extra Small Devices, Phones */
+
   @media only screen and (max-width : 767px) and (min-width : 0px) {
+
+    .facebook-hours {
+        vertical-align: middle;
+        line-height: 45px;
+        margin: 10px 0;
+    }
+
+    .topItemsList {
+        padding-top: 10px;
+    }
+
+
 
     hr{
       display: none;
@@ -50,20 +138,20 @@ hr{
       display: none;
     }
 
-    #moto p {
+    #motto p {
       display: none;
     }
 
-    .fa{
+    .icon-in-nav{
       display: none;
     }
 
   .navbar-toggle {
   position:static;
   float: none;
-  padding:0 0 5px 0;
+  padding:5px 0 5px 0;
   margin: 0;
-  background-color: gray ;
+  background-color: #DD991D;
   background-image: none;
   border: 1px solid transparent;
   border-radius:2px;
@@ -80,20 +168,29 @@ hr{
   line-height: 0;
 }
 
-nav li {
+li.nav {
 font-size: 2em;
 text-align: center;
 border-bottom: 1px solid black;
 padding: 5px 0 5px 0;
 }
 
+li.nav a {
+color: white;
+}
+li.nav a:visited {
+color: white;
+}
+
 #logo img {
   width: 100%;
 }
 
-  }
+iframe {
+    width:100%;
+}
 
-
+}
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
@@ -105,54 +202,65 @@ padding: 5px 0 5px 0;
 
   }
 
-  .fa{
+
+  .icon-in-nav{
     display: block;
-    text-align: center;
-    padding-bottom: 15px;
+    padding-bottom: 7px;
     color: black;
     font-size: 2em;
   }
 
-  #navEl{
-    font-size: .95em;
-    color: black;
+  .nav-fonts{
+     font-size: .95em;
+     color: black;
+     font-weight: bold;
+
   }
 
-  #moto p{
+  #motto p{
     display: inline-block;
     text-align: left;
+    /*font-style: italic;*/
+  }
+
+  .fb-page {
+    margin: 20px 0;
   }
 
 
 
 }
 
+
+
 /* Medium Devices, Desktops */
 @media only screen and (min-width : 992px) and (max-width : 1199px) {
-  .fa{
+  .icon-in-nav{
     display: block;
-    text-align: center;
+
     padding-bottom: 15px;
     color: black;
   }
 
-#logo img{
-  position: relative;
-  max-width:250px;
-  display: block;
-  right:12%;
+  #logo img{
+    position: relative;
+    max-width:300px;
+    display: block;
+    right:12%;
 
-}
+  }
 
 
-  #navEl{
-    font-size: 1.2em;
+  .nav-fonts{
+    font-size: 1em;
     color: black;
+    font-weight: bold;
+
   }
 
 
 
-  #moto p{
+  #motto p{
     display: inline-block;
     text-align: left;
   }
@@ -160,25 +268,34 @@ padding: 5px 0 5px 0;
   nav{
     padding-bottom: 0;
   }
+
+
+.btn {
+    letter-spacing: 2px;
 }
 
+.fb-page {
+    margin: 20px 0;
+  }
+
+}
 /* Large Devices, Wide Screens */
    @media only screen and (min-width : 1200px) {
-     .fa{
+     .icon-in-nav{
        display: block;
-       text-align: center;
        padding-bottom: 15px;
        color: black;
-       font-size: 3em;
+       font-size: 2.5em;
      }
 
-     #navEl{
-       font-size: 1.5em;
+     .nav-fonts{
+       font-size: 1em;
        color: black;
+       font-weight: bold;
      }
 
-     #logo img{
-       max-width:300px;
+     #logo img {
+       max-width:325px;
        position: relative;
        display: block;
        right:12%;
@@ -187,5 +304,11 @@ padding: 5px 0 5px 0;
 
      nav{
        padding-bottom: 0;
-     }
+
    }
+
+   .fb-page {
+    margin: 20px 0;
+  }
+
+}
