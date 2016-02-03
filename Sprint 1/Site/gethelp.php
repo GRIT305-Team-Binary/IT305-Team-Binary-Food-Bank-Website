@@ -8,17 +8,17 @@
 	 <div class="main" id="top">
     <div class="container-fluid">
         <h1>Get Help</h1>
-		 <!-- Contact Us Button on mobile site -->
-		<div class="row visible-xs">
-			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
-				 href="contactus.php">Contact Us</>
-           </a>
-		</div>
+		
+		
      <!-- Side navigation -->
  <div class="row">
-        <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 ">
-            <div class="btn-group-vertical">
-                <a href="#services" class="btn btn-warning">Services We Provide</a>
+        <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
+            <div class="btn-group-vertical col-xs-12">
+				 <!-- Contact Us Button on mobile site -->
+                <a href="contactus.php" class="btn btn-warning visible-xs">Contact Us</a>
+				 <!-- Services We Provide header displays on larger screens -->
+                <a href="#services" class="btn btn-warning ">Our Services</a>
+				
                 <a href="#clothingbank" class="btn btn-default">Clothing Bank</a>
                 <a href="#foodbankcard" class="btn btn-default">Food Bank Card</a>
             
@@ -34,7 +34,7 @@
                 <li>Each household may have two visits to the Food Bank per month</li>
                 <li>Remember to bring your own bags or boxes to carry your food</li>
             </ul>
-            <!-- Link to top of Page -->
+            <!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
 			<p><span class="top-link-block right">
 				<a href="#top" class="well well-sm" >
@@ -82,7 +82,7 @@
               Panel content
                 </div>
               </div>
-			<!-- Link to top of Page -->
+			<!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 visbile-sm visible-xs visible-md">
 			<p><span class="top-link-block right">
 				<a href="#top" class="well well-sm" >
