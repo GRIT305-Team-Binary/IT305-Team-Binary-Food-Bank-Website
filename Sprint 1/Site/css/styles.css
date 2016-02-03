@@ -19,6 +19,7 @@ body {
     background-color: #FFF6C5;
     margin: 2% auto;
     width: 100%;
+<<<<<<< HEAD
 
 }
 .footer {
@@ -31,6 +32,15 @@ body {
     margin: 25px;
     
 }
+=======
+   
+}
+.footer {
+    background-color: #CFC291;
+    padding: 5% 1%;
+    margin-bottom: 2%;
+}
+>>>>>>> origin/master
 
 .mobile-facebook {
   vertical-align: middle;
@@ -117,6 +127,18 @@ hr{
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {
+    
+    .facebook-hours {
+        vertical-align: middle;
+        line-height: 45px;
+        margin: 10px 0;
+    }
+    
+    .topItemsList {
+        padding-top: 10px;
+    }
+    
+    
 
     .facebook-hours {
         vertical-align: middle;
@@ -201,6 +223,7 @@ iframe {
     display: block;
 
   }
+  
 
 
   .icon-in-nav{
@@ -221,12 +244,18 @@ iframe {
     display: inline-block;
     text-align: left;
     /*font-style: italic;*/
+<<<<<<< HEAD
+  }
+
+  .fb-page {
+    margin: 20px 0;
+=======
+>>>>>>> origin/master
   }
 
   .fb-page {
     margin: 20px 0;
   }
-
 
 
 }
@@ -242,16 +271,28 @@ iframe {
     color: black;
   }
 
+<<<<<<< HEAD
   #logo img{
     position: relative;
     max-width:300px;
     display: block;
     right:12%;
+=======
+#logo img{
+  position: relative;
+  max-width:300px;
+  display: block;
+  right:12%;
+>>>>>>> origin/master
 
   }
 
 
+<<<<<<< HEAD
   .nav-fonts{
+=======
+  #navEl{
+>>>>>>> origin/master
     font-size: 1em;
     color: black;
     font-weight: bold;
@@ -274,11 +315,22 @@ iframe {
     letter-spacing: 2px;
 }
 
+<<<<<<< HEAD
+=======
+.btn {
+    letter-spacing: 2px;
+}
+
+>>>>>>> origin/master
 .fb-page {
     margin: 20px 0;
   }
 
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> origin/master
 /* Large Devices, Wide Screens */
    @media only screen and (min-width : 1200px) {
      .icon-in-nav{
@@ -288,7 +340,11 @@ iframe {
        font-size: 2.5em;
      }
 
+<<<<<<< HEAD
      .nav-fonts{
+=======
+     #navEl{
+>>>>>>> origin/master
        font-size: 1em;
        color: black;
        font-weight: bold;
@@ -306,9 +362,16 @@ iframe {
        padding-bottom: 0;
 
    }
+<<<<<<< HEAD
 
    .fb-page {
     margin: 20px 0;
   }
 
 }
+=======
+   
+   .fb-page {
+    margin: 20px 0;
+  }
+>>>>>>> origin/master

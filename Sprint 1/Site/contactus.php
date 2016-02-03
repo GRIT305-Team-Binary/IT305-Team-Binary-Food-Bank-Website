@@ -50,6 +50,7 @@
 			
 			        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 " role="group">
 						<div class="btn-group-vertical col-xs-12">
+<<<<<<< HEAD
 							
 							<div class="btn btn-warning">
 								<!-- Hours -->
@@ -71,10 +72,32 @@
 							</span>
 							</div>
 							<div class="btn btn-default">
+=======
+							<li class="btn btn-warning">
+								<!-- Hours -->
+								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+								<a class="defaultLink" href="calendar.php">Hours of Operation</a>
+							</li>
+							
+							<li class="btn btn-default">
+							<!-- Phone -->
+							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550
+							</li>
+							<li class="btn btn-default">
+								<!-- Facebook Page -->
+							<span class="facebook-hours">
+							<span class="glyphicon"><img src="images/fb-icon-20.png" class="img-responsive" alt="facebook"></span>
+								<a class="defaultLink" href="http://facebook.com/kentfoodbank" target="_blank">
+								<span class="hidden-xs hidden-sm contactInfo">facebook.com/kentfoodbank</span><span class="visible-xs visible-sm">Facebook</span>
+								<a>
+							</li>
+							<li class="btn btn-default">
+>>>>>>> origin/master
 							<!-- Email -->
 							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 								<a class="defaultLink" href="mailto:kentfoodbank@gmail.com">
 									<span class="hidden-xs hidden-sm contactInfo">kentfoodbank@gmail.com</span><span class="visible-xs visible-sm">Email</span>
+<<<<<<< HEAD
 								</a>
 							</div>
 							<div class="btn btn-warning">
@@ -83,6 +106,14 @@
 								<a class="defaultLink" href="location.php">Location</a>
 							</div>
 							
+=======
+							</li>
+							<li class="btn btn-warning">
+								<!-- Location -->
+								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+								<a class="defaultLink" href="location.php">Location</a>
+							</li><br>
+>>>>>>> origin/master
 					</div>
 			 </div>
  

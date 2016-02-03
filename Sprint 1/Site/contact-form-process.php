@@ -7,7 +7,11 @@
     <body>
             <?php
             
+<<<<<<< HEAD
                 $recipient = 'a77458@trbvn.com';
+=======
+                $recipient = 'nicolerbassen@gmail.com';
+>>>>>>> origin/master
                 $valid = true;
                 
                 // Validate name
@@ -45,8 +49,14 @@
                 
                 // Send e-mail if all fields are valid
                 if ($valid) {
+<<<<<<< HEAD
                     mail($recipient, $subject, $message,
                           'From: $name <$email>' . "\r\n" .'Reply-to: $name <$email>');
+=======
+                    @mail($recipient, $subject, $message,
+                          "From: $name <$email>",
+                          "Reply-to: $name <$email>");
+>>>>>>> origin/master
                     echo("<p>Thank you for contacting us.</p>");
                 }
                 
