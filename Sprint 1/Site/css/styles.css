@@ -8,30 +8,6 @@ body {
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-.dayOfWeek {
-    font-weight: bold;
-}
-
-.asterisk {
-    font-style: italic;
-    font-size: 80%;
-}
-
-.title {
-    font-size: 100%;
-    color: white;
-    text-align: center;
-    /*text-transform: uppercase;
-    letter-spacing: 1px;*/
-    background-color: #f0ad4e;
-    border-radius: 5px;
-    padding: 1px;
-}
-
-.defaultLink {
-    color: inherit;
-}
-
 .head {
     background-color: #CFC291;
     padding: 2% 1%;
@@ -55,6 +31,40 @@ body {
   vertical-align: middle;
   line-height: 60px;
 }
+
+.contactButton {
+    margin: 5px;
+}
+
+
+/* Specialized font */
+
+.contactInfo {
+    font-size: 80%;
+}
+
+.defaultLink {
+    color: inherit;
+}
+
+.title {    /* For calendar page */
+    font-size: 100%;
+    color: white;
+    text-align: center;
+    background-color: #f0ad4e;
+    border-radius: 5px;
+    padding: 1px;
+}
+
+.dayOfWeek {
+    font-weight: bold;
+}
+
+.asterisk {
+    font-style: italic;
+    font-size: 80%;
+}
+
 
 /* Code for Image slider */
 .carousel{
@@ -98,6 +108,7 @@ hr{
     margin: 2% 0;
     padding: 2% 0;
 }
+
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {
@@ -183,6 +194,7 @@ color: white;
     display: block;
 
   }
+  
 
   .fa{
     display: block;
@@ -203,6 +215,9 @@ color: white;
     /*font-style: italic;*/
   }
 
+  .fb-page {
+    margin: 20px 0;
+  }
 
 
 }
@@ -248,6 +263,10 @@ color: white;
     letter-spacing: 2px;
 }
 
+.fb-page {
+    margin: 20px 0;
+  }
+
 
 /* Large Devices, Wide Screens */
    @media only screen and (min-width : 1200px) {
@@ -276,3 +295,7 @@ color: white;
        padding-bottom: 0;
      }
    }
+   
+   .fb-page {
+    margin: 20px 0;
+  }

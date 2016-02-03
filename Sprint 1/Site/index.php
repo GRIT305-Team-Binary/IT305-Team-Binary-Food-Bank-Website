@@ -60,7 +60,7 @@
 
        
         <div class="row">
-            <div class="col-xs-12 col-md-6 col-lg-8">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8">
                 <div class="row">
                     <div class="col-md-12">
                         
@@ -78,7 +78,7 @@
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img  class="img-responsive" src="images/visit-borderless.png" alt="First Slide">
+                                        <img  class="img-responsive" src="images/visit.png" alt="First Slide">
                                     </div>
                                     <div class="item ">
                                         <img  class="img-responsive" src="images/slide1.png" alt="Second Slide">
@@ -156,7 +156,7 @@
             </div>
             </div>
          
-            <div class="col-sm-10 col-sm-offset-1 col-md-5 col-lg-3 hidden-xs">
+            <div class="col-sm-12 col-md-6 col-lg-4 hidden-xs">
                     <!-- Facebook Feed for Kent Food Bank Page -->
                     <div class="fb-page col-md-12"
                          data-href="https://www.facebook.com/kentfoodbank/"

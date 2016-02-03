@@ -35,8 +35,8 @@
                  </div>
             
                 <div class="col-sm-9 hidden-xs pull-right">
-                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23ffcc66&amp;src=teambinarykfb%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles"
-                            style="border-width:0" width="100%" height="550px" frameborder="0" scrolling="no"></iframe>
+                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23f0ad4e&amp;src=teambinarykfb%40gmail.com&amp;color=%23BE6D00&amp;ctz=America%2FLos_Angeles"
+                            style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
                 <div class="col-xs-12 visible-xs">
