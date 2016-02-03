@@ -21,6 +21,12 @@
 				
                 <a href="#clothingbank" class="btn btn-default">Clothing Bank</a>
                 <a href="#foodbankcard" class="btn btn-default">Food Bank Card</a>
+				<div class="btn btn-warning">Other Support</div>
+				<!--Community Services that might be helpful to clients of Food Bank -->
+				<a href="https://www.uwkc.org/need-help/" class="btn btn-default" target="_blank">United Way</a>
+				<a href="https://www.kcls.org/esl/" class="btn btn-default" target="_blank">ESL</a>
+				<a href="http://crisisclinic.org/education/2-1-1-community-resources/" class="btn btn-default" target="_blank">2-1-1</a>
+				<a href="https://www.dshs.wa.gov/esa/community-services-offices/community-services-office" class="btn btn-default" target="_blank">D S H S</a>
             
             </div>
         </div>

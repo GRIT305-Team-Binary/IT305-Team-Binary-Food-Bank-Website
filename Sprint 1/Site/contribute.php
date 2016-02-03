@@ -18,11 +18,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
             <div class="btn-group-vertical col-xs-12">
-<<<<<<< HEAD
                 <a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate</a>
-=======
-                <a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3" class="btn btn-warning">Donate</a>
->>>>>>> origin/master
 				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
                 <a href="#clothing" class="btn btn-default">Clothing Bank</a>
                 <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
@@ -59,11 +55,7 @@
 				</a>
 				</span>
 				</div>
-<<<<<<< HEAD
 			</div> /top-link-block -->
-=======
-			</div><!-- /top-link-block -->
->>>>>>> origin/master
         </div>
        
       
@@ -72,24 +64,14 @@
 			
             <p>Each year Kent Food Bank distributes approximately 6,000 lbs of food.  We are a non-profit organization that run on volunteer support with funding from grants, individual doners, and some money from the city of Kent.</p>
             <p>Every contribution makes a difference. </p>
-<<<<<<< HEAD
             <p class="text-center hidden-xs"><a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate Today</a></p>
-=======
-            <p class="text-center hidden-xs"><a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3" class="btn btn-warning">Donate Today</a></p>
->>>>>>> origin/master
 			
             <!-- How you can help the Clothing Bank -->
             <h2 id="clothing">Clothing Bank</h2>
             <p>Clothing Bank Accepts donations on M, T, W and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at<br />
-<<<<<<< HEAD
             <p class="text-center  hidden-xs hidden-sm "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p>
         	<!-- Button for Mobile display-->
 			<p class="text-center  visible-xs visible-sm"><a href="location.php" class="btn btn-warning text-center">Kent Food Bank</a></p>
-=======
-            <p class="text-center  hidden-xs hidden-sm "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p></p>
-        	<!-- Button for Mobile display-->
-			<p class="text-center  visible-xs visible-sm"><a href="location.php" class="btn btn-warning text-center">Kent Food Bank</a></p></p>
->>>>>>> origin/master
             <!-- Other ways to give to include Amazon Smile and Fred Meyer Rewards-->
 			<!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8 visible-xs visible-sm visible-md">
@@ -99,11 +81,7 @@
 				</a>
 			</span>
 			</div>
-<<<<<<< HEAD
 			</div> /top-link-block -->
-=======
-			</div><!-- /top-link-block -->
->>>>>>> origin/master
 			<p></p>
 			<hr>
             <h2 id="otherGift">Other ways to give:</h2>
@@ -130,7 +108,6 @@
 				</a>
 			</span>
 			</div>
-<<<<<<< HEAD
 			</div> /top-link-block -->
 			
 				</div>
@@ -138,14 +115,5 @@
 		</div>
 	 </div>
 
-=======
-			</div><!-- /top-link-block -->
-			</p>
-         </div>
-	</div>
-	</div>
-	 </div>
-</div>
->>>>>>> origin/master
 <?php  include ('includes/footer.php');  ?>
 

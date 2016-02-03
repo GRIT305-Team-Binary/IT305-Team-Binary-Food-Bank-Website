@@ -2,7 +2,6 @@
  <div class="footer">
            
         <footer>
-<<<<<<< HEAD
                       
               <div class="row text-center foot">
                      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
@@ -41,10 +40,6 @@
                 </div>
            
                 <div class="col-xs-12 col-sm-6 col-md-8 col-lg-8 text-right">
-=======
-            <div class="row">
-                <div class="col-lg-12">
->>>>>>> origin/master
                     <p>Copyright &copy; 2016 Kent Food Bank. All Rights Reserved.</p>
                 </div>
             </div>
