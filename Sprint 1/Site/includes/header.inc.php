@@ -30,15 +30,15 @@
       <!---Top of the page-->
 
     <div class="row">
-        <div id="logo" class="hidden-sm col-md-3 col-xs-12">
-            <a href="index.php" class="navbar-brand" ><img alt="This is the logo" src="images/logo-transparent.png" ></a>
+        <div  class="hidden-sm col-md-3 col-xs-12">
+            <a href="index.php" class="navbar-brand" ><img id="logo" alt="This is the logo" src="images/logo-transparent.png" ></a>
         </div>
 
-      <div class="col-xs-12 col-sm-12 col-md-8 navbar center-block">
+      <div class="col-xs-12 col-sm-10 col-md-8 navbar center-block">
           <div class="container-fluid"><!--Centers Nav On Headers-->
 
-            <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse" >Menu<span class="caret"></span></button>
-            <div class="collapse navbar-collapse navHeaderCollapse">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeaderCollapse">Menu<span class="caret"></span></button>
+            <div class="collapse navbar-collapse" id="navHeaderCollapse">
               <ul class="nav navbar-nav">
                   <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="index.php"><i class="text-center icon-in-nav fa fa-home fa-3x"></i><span class="nav-fonts">Home</span></a></li>
                   <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="contribute.php"><i class="text-center icon-in-nav fa fa-users fa-3x"></i><span class="nav-fonts">Contribute</span></a></li>
@@ -52,8 +52,8 @@
     </div>
 
 
-    <div class="hidden-sm col-md-1 hidden-xs">
-        <a  class="hidden-sm" href="#" id="donateBtn" class="btn btn-md btn-default ">
+    <div class="col-sm-2 col-md-1 hidden-xs">
+        <a  class="" href="#" id="donateBtn" class="btn btn-md btn-default ">
         <!--<span class="glyphicon glyphicon-credit-card"></span> Donate -->
         <!--Paypal Donate Button-->
         <div style="width: auto">
@@ -69,14 +69,46 @@
     </div>
 
       </a>
+      </div>
+
     <div class="container-fluid">
       <div class="row col-md-12 col-sm-12"><hr class="col-md-12 col-sm-12 hidden-xs"></div>
     </div>
 
       <div id="motto" class="pull-right"><p>Serving low-income residents of the Kent School District</p></div>
-</div>
+
 </div>
       <!--Bottom of the page-->
     </div>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-      <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+
+      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+      <script>
+      //This javascript manipulates the logo size.
+        $(document).ready(function(){
+          var windowWidth = $(document).width();
+          var imageSize = windowWidth/4;
+
+          if(windowWidth > 767){
+            $("#logo").css("width", imageSize + "px");
+        }else{
+            $("#logo").css("width", "100%");
+        }
+
+        });
+
+          $(window).resize(function(){
+            var windowWidth = $(document).width();
+            var imageSize = windowWidth/4;
+
+            if(windowWidth > 767){
+              $("#logo").css("width", imageSize + "px");
+          }else{
+              $("#logo").css("width", "100%");
+          }
+
+        });
+
+
+      </script>

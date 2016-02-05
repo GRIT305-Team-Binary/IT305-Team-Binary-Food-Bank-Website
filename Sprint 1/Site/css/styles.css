@@ -16,7 +16,7 @@ body {
 }
 .main {
     padding: 2% 2%;
-    background-color: #FFF6C5;
+    background-color: #FFEFD5;
     margin: 2% auto;
     width: 100%;
 
@@ -114,6 +114,10 @@ hr{
     padding: 2% 0;
 }
 
+#buildingImg
+ {
+    width: 100%;
+ }
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {
@@ -220,6 +224,9 @@ iframe {
   #motto p{
     display: inline-block;
     text-align: left;
+    position: relative;
+    right: 10%;
+
     /*font-style: italic;*/
   }
 
@@ -261,6 +268,8 @@ iframe {
 
 
   #motto p{
+    position: relative;
+    right: 10%;
     display: inline-block;
     text-align: left;
   }
@@ -275,10 +284,11 @@ iframe {
 }
 
 .fb-page {
-    margin: 20px 0;
+    margin: 20px 0 20px 20px;
   }
 
 }
+
 /* Large Devices, Wide Screens */
    @media only screen and (min-width : 1200px) {
      .icon-in-nav{
@@ -302,13 +312,20 @@ iframe {
 
      }
 
+     #motto p{
+       position: relative;
+       right: 10%;
+       display: inline-block;
+       text-align: left;
+     }
+
      nav{
        padding-bottom: 0;
 
    }
 
    .fb-page {
-    margin: 20px 0;
+    margin: 20px 20px 20px 0;
   }
 
 }

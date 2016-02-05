@@ -26,17 +26,18 @@
 				<a href="https://www.uwkc.org/need-help/" class="btn btn-default" target="_blank">United Way</a>
 				<a href="https://www.kcls.org/esl/" class="btn btn-default" target="_blank">ESL</a>
 				<a href="http://crisisclinic.org/education/2-1-1-community-resources/" class="btn btn-default" target="_blank">2-1-1</a>
-				<a href="https://www.dshs.wa.gov/esa/community-services-offices/community-services-office" class="btn btn-default" target="_blank">D S H S</a>
+				<a href="https://www.dshs.wa.gov/esa/community-services-offices/community-services-office" class="btn btn-default" target="_blank">D S H S</a><br>
             
             </div>
         </div>
-        <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9" >
+        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9" >
             <!-- Main Content -->
             <div class="col-lg-7 ">
+				<img src="images/building.JPG" id="buildingImg">
             <!-- List of main services available from Kent Food Bank -->
             <h3 id="services">Services We Provide</h3>
             <ul>
-                <li>Food and clothing to low-income residents of the Kent School District</li>
+                <li>Food and clothing to low-income residents of the Kent School District, comprised of ZIP codes 98030 and 98031, and parts of 98032, 98042 and 98058.</li>
                 <li>Each household may have two visits to the Food Bank per month</li>
                 <li>Remember to bring your own bags or boxes to carry your food</li>
             </ul>
@@ -51,11 +52,13 @@
 			</div>
 			<!-- /top-link-block -->
             <!-- Information about the Clothing Bank-->
+            
             <h3 id="clothingbank">Clothing Bank</h3>
 			<ul>
             <li>10 item limit per persion in family </li>
             <li>Diapers available once every 6 months if available</li>
 			</ul><br>
+			<p><img src="images/clothingbank.png" id="buildingImg" class="img-repsonsive"></p>
             </div>
 			
 			

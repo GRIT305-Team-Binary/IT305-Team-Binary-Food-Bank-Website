@@ -74,24 +74,30 @@
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
                                     <li data-target="#myCarousel" data-slide-to="3"></li>
                                     <li data-target="#myCarousel" data-slide-to="4"></li>
+                                    <li data-target="#myCarousel" data-slide-to="5"></li>
                                 </ol>   
                                 <!-- Wrapper for carousel items -->
                                 <div class="carousel-inner">
                                     <div class="item active">
-                                        <img  class="img-responsive" src="images/visit.png" alt="First Slide">
+                                        <img  class="img-responsive" src="images/slide1.png" alt="First Slide">
                                     </div>
                                     <div class="item ">
-                                        <img  class="img-responsive" src="images/slide1.png" alt="Second Slide">
+                                        <img  class="img-responsive" src="images/slide2.png" alt="Second Slide">
+                                    </div>
+                                     <div class="item">
+                                       <img class="img-responsive img-square" src="images/visit.png" alt="Third Slide">
                                     </div>
                                     <div class="item">
-                                        <img  class="img-responsive" src="images/slide2.png" alt="Third Slide">
+                                        <img  class="img-responsive" src="images/slide3.png" alt="Fourth Slide">
                                     </div>
                                     <div class="item">
-                                        <img class="img-responsive" src="images/slide3.png" alt="Fourth Slide">
+                                        <img class="img-responsive" src="images/slide4.png" alt="Fifth Slide">
                                     </div>
                                     <div class="item">
-                                       <img class="img-responsive img-square" src="images/KentFoodBank.png" alt="Fifth Slide">
+                                        <img class="img-responsive" src="images/slide5.png" alt="Sixth Slide">
                                     </div>
+                                   
+                                   
                                 </div>
                                 <!-- Carousel controls -->
                                 <a class="carousel-control left" href="#myCarousel" data-slide="prev">
@@ -156,7 +162,7 @@
             </div>
             </div>
          
-            <div class="col-sm-12 col-md-6 col-lg-4 hidden-xs">
+            <div class="col-sm-12 col-md-6 col-lg-4 hidden-xs facebookFeed">
                     <!-- Facebook Feed for Kent Food Bank Page -->
                     <div class="fb-page col-md-12"
                          data-href="https://www.facebook.com/kentfoodbank/"
@@ -197,5 +203,3 @@
     <!-- /.container -->
 
  <?php  include ('includes/footer.php');  ?>
-
-
