@@ -3,39 +3,51 @@
 */
 
 body {
-    background-color: #2B4450;
+    background-color: #222831;
     margin:0 5%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .head {
-    background-color: #DFEBED;
+    background-color: #393E46;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
+	color:white;
 }
+
+/* Changing the font color in header*/
+.icon-in-nav, .nav-fonts{
+	color:white;
+	text-shadow: 2px 2px #222831;
+}
+.head ul.nav a:hover{
+	background-color:#222831;
+}
+
 .main {
     padding: 2% 2%;
-    background-color: #497285;
+    background-color: #EEEEEE;
     margin: 2% auto;
     width: 100%;
-	color:#DFEBED;
+	
 
 }
 .footer {
-    background-color: #497285;
+    background-color: #393E46;
     padding: 2% 1%;
     margin-bottom: 2%;
-	color:#DFEBED;
+	color:#EEEEEE;
 }
 .foot {
     vertical-align: bottom;
     margin: 25px;
 
 }
-
-.btn-warning {
-	background-color:#F78536;
+/*Orange buttons and panel headers */
+.btn-warning, .panel-warning, .panel-warning>.panel-heading {
+	background-color:#FF5722;
+	border-color:#FF5722;
 }
 .mobile-facebook {
   vertical-align: middle;
@@ -212,16 +224,15 @@ iframe {
   }
 
 
+
   .icon-in-nav{
     display: block;
     padding-bottom: 7px;
-    color: black;
     font-size: 3.5vw;
   }
 
   .nav-fonts{
      font-size: 1.5vw;
-     color: black;
      font-weight: bold;
 
   }
@@ -251,7 +262,7 @@ iframe {
     display: block;
     font-size: 3.5vw;
     padding-bottom: 15px;
-    color: black;
+    
   }
 
   #logo img{
@@ -265,7 +276,6 @@ iframe {
 
   .nav-fonts{
     font-size: 1.5vw;
-    color: black;
     font-weight: bold;
 
   }
@@ -299,13 +309,11 @@ iframe {
      .icon-in-nav{
        display: block;
        padding-bottom: 15px;
-       color: black;
        font-size: 3.5vw;
      }
 
      .nav-fonts{
        font-size: 1.5vw;
-       color: black;
        font-weight: bold;
      }
 
