@@ -3,7 +3,7 @@
 */
 
 body {
-    background-color: #23425F;
+    background-color: #004A55;
     margin:0 5%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -11,14 +11,14 @@ body {
 .main {
     padding: 2% 2%;
     margin: 2% auto;
-	background-color:#FFEFD5;
+	background-color:#F6F6F6;
     width: 100%;
 	color:black;
 	
 }
 
 .head {
-    background-color: #A64942;
+    background-color: #A7CDCC;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
@@ -31,14 +31,14 @@ body {
 	text-shadow: 2px 2px  #404040; /* dark gray*/
 }
 .head ul.nav a:hover{
-	background-color:#FFAB5E;
+	/* background-color:#004A55; */
 }
 
 .footer {
-    background-color: #A64942;
+    background-color: #A7CDCC;
     padding: 2% 1%;
     margin-bottom: 2%;
-	color:white;
+	color:black;
 	
 }
 .foot {
@@ -48,12 +48,12 @@ body {
 }
 /*Orange buttons and panel headers */
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
-	background-color:#FF7844;
-	border-color:#FF7844;
+	background-color:#F87D09;
+	border-color:#F87D09;
 	
 }
 .btn-default, .list-group-item {
-	background-color: #FFAB5E;
+	/*background-color: #A7CDCC;*/
 }
 .mobile-facebook {
   vertical-align: middle;
