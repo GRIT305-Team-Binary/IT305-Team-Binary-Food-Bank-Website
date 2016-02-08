@@ -28,7 +28,7 @@ body {
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
-	color: #E7A117;
+	color: white;
 	text-shadow: 2px 2px #222832 ;
 }
 .head ul.nav a:hover{
