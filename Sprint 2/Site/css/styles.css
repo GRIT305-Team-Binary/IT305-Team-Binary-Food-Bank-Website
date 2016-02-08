@@ -3,41 +3,43 @@
 */
 
 body {
-    background-color: #222831;
+    background-color: #2B4450;
     margin:0 5%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.main {
+    padding: 2% 2%;
+    background-color: #497285;
+    margin: 2% auto;
+    width: 100%;
+	color:white;
+	
+}
+
 .head {
-    background-color: #393E46;
+    background-color: #DFEBED;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
-	color:white;
+	color:black;
 }
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
-	color:white;
-	text-shadow: 2px 2px #222831;
+	color:black;
+	text-shadow: 2px 2px gray;
 }
 .head ul.nav a:hover{
 	background-color:#222831;
 }
 
-.main {
-    padding: 2% 2%;
-    background-color: #EEEEEE;
-    margin: 2% auto;
-    width: 100%;
-	
-
-}
 .footer {
-    background-color: #393E46;
+    background-color: #DFEBED;
     padding: 2% 1%;
     margin-bottom: 2%;
-	color:#EEEEEE;
+	color:black;
+	
 }
 .foot {
     vertical-align: bottom;
@@ -45,9 +47,10 @@ body {
 
 }
 /*Orange buttons and panel headers */
-.btn-warning, .panel-warning, .panel-warning>.panel-heading {
-	background-color:#FF5722;
-	border-color:#FF5722;
+.btn-warning, .panel-warning, .panel-warning>.panel-heading{
+	background-color:#F78536;
+	border-color:#F78536;
+	color:black;
 }
 .mobile-facebook {
   vertical-align: middle;
