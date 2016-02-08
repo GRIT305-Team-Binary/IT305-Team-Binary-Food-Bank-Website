@@ -18,7 +18,7 @@ body {
 }
 
 .head {
-    background-color: #FFAB5E;
+    background-color: #A64942;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
@@ -28,7 +28,7 @@ body {
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
 	color:black;
-	text-shadow: 2px 2px #A64942;
+	text-shadow: 2px 2px  #404040; /* dark gray*/
 }
 .head ul.nav a:hover{
 	background-color:#FFAB5E;
