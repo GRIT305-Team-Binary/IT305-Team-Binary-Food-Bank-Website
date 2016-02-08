@@ -10,35 +10,35 @@ body {
 
 .main {
     padding: 2% 2%;
-    background-color: #497285;
+    background-color: #DFEBED;
     margin: 2% auto;
     width: 100%;
-	color:white;
+	color:black;
 	
 }
 
 .head {
-    background-color: #DFEBED;
+    background-color: #497285;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
-	color:black;
+	color:white;
 }
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
-	color:black;
-	text-shadow: 2px 2px gray;
+	color:white;
+	text-shadow: 2px 2px black;
 }
 .head ul.nav a:hover{
-	background-color:#222831;
+	background-color:#2B4450;
 }
 
 .footer {
-    background-color: #DFEBED;
+    background-color: #497285;
     padding: 2% 1%;
     margin-bottom: 2%;
-	color:black;
+	color:white;
 	
 }
 .foot {
@@ -50,7 +50,7 @@ body {
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
 	background-color:#F78536;
 	border-color:#F78536;
-	color:black;
+	
 }
 .mobile-facebook {
   vertical-align: middle;
