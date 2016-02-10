@@ -192,7 +192,7 @@
     		<label for="questions">Any questions for or about the foodback please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
     		<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="3"></textarea>
   	</fieldset>						
-		<button type="submit" class="btn btn-primary">Submit</button>
+		<button type="submit" class="btn btn-warning">Submit</button>
 		<p class="asterisk">* = Required field</p>
 	</div>
 </div>
