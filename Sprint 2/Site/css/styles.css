@@ -3,7 +3,7 @@
 */
 
 body {
-    background-color: #004A55;
+    background-color: #695D46;
     margin:0 5%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -11,34 +11,36 @@ body {
 .main {
     padding: 2% 2%;
     margin: 2% auto;
-	background-color:#F6F6F6;
+	background-color:#FFF6C5;
     width: 100%;
 	color:black;
-	
+	box-shadow: 2px 2px #404040; /* dark gray*/
 }
 
 .head {
-    background-color: #A7CDCC;
+    background-color: #CFC291;
     padding: 2% 1%;
     margin-top: 2%;
     width: 100%;
 	color:black;
+	box-shadow: 2px 2px #404040; /* dark gray*/
 }
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
-	color:#F6F6F6;
-	text-shadow: 2px 2px  #404040; /* dark gray*/
+	color: black;
+	text-shadow: 2px 2px #695D46 ;
 }
 .head ul.nav a:hover{
 	/* background-color:#004A55; */
 }
 
 .footer {
-    background-color: #A7CDCC;
+    background-color: #CFC291;
     padding: 2% 1%;
     margin-bottom: 2%;
 	color:black;
+	box-shadow: 2px 2px #404040; /* dark gray*/
 	
 }
 .foot {
@@ -48,9 +50,9 @@ body {
 }
 /*Orange buttons and panel headers */
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
-	background-color:#F87D09;
-	border-color:#F87D09;
-	
+	background-color:#FF712C;
+	border-color:#FF712C;
+		
 }
 .btn-default, .list-group-item {
 	/*background-color: #A7CDCC;*/
@@ -141,210 +143,4 @@ hr{
  {
     width: 100%;
  }
-/* Extra Small Devices, Phones */
 
-  @media only screen and (max-width : 767px) and (min-width : 0px) {
-
-    .facebook-hours {
-        vertical-align: middle;
-        line-height: 45px;
-        margin: 10px 0;
-    }
-
-    .topItemsList {
-        padding-top: 10px;
-    }
-
-
-
-    hr{
-      display: none;
-    }
-
-    #donateBtn {
-      display: none;
-    }
-
-    #motto p {
-      display: none;
-    }
-
-    .icon-in-nav{
-      display: none;
-    }
-
-  .navbar-toggle {
-  position:static;
-  float: none;
-  padding:5px 0 5px 0;
-  margin: 0;
-  background-color: #DD991D;
-  background-image: none;
-  border: 1px solid transparent;
-  border-radius:2px;
-  width: 100%;
-  font-size: 1.5em;
-  font-synthesis: weight;
-}
-
-.navbar-brand {
-   float:none;
-  height: 0;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-}
-
-li.nav {
-font-size: 2em;
-text-align: center;
-border-bottom: 1px solid black;
-padding: 5px 0 5px 0;
-}
-
-li.nav a {
-color: white;
-}
-li.nav a:visited {
-color: white;
-}
-
-#logo img {
-  width: 100%;
-}
-
-iframe {
-    width:100%;
-}
-
-}
-/* Small Devices, Tablets */
-@media only screen and (min-width : 768px) and (max-width : 991px) {
-
-  #logo img{
-    position: relative;
-    max-width:12.5em;
-    right: 25%;
-    display: block;
-
-  }
-
-
-
-  .icon-in-nav{
-    display: block;
-    padding-bottom: 7px;
-    font-size: 3.5vw;
-  }
-
-  .nav-fonts{
-     font-size: 1.5vw;
-     font-weight: bold;
-
-  }
-
-  #motto p{
-    display: inline-block;
-    text-align: left;
-    position: relative;
-    right: 10%;
-
-    /*font-style: italic;*/
-  }
-
-  .fb-page {
-    margin: 20px 0;
-  }
-
-
-
-}
-
-
-
-/* Medium Devices, Desktops */
-@media only screen and (min-width : 992px) and (max-width : 1199px) {
-  .icon-in-nav{
-    display: block;
-    font-size: 3.5vw;
-    padding-bottom: 15px;
-    
-  }
-
-  #logo img{
-    position: relative;
-    max-width:300px;
-    display: block;
-    right:12%;
-
-  }
-
-
-  .nav-fonts{
-    font-size: 1.5vw;
-    font-weight: bold;
-
-  }
-
-
-
-  #motto p{
-    position: relative;
-    right: 10%;
-    display: inline-block;
-    text-align: left;
-  }
-
-  nav{
-    padding-bottom: 0;
-  }
-
-
-.btn {
-    letter-spacing: 2px;
-}
-
-.fb-page {
-    margin: 20px 0 20px 20px;
-  }
-
-}
-
-/* Large Devices, Wide Screens */
-   @media only screen and (min-width : 1200px) {
-     .icon-in-nav{
-       display: block;
-       padding-bottom: 15px;
-       font-size: 3.5vw;
-     }
-
-     .nav-fonts{
-       font-size: 1.5vw;
-       font-weight: bold;
-     }
-
-     #logo img {
-       max-width:325px;
-       position: relative;
-       display: block;
-       right:12%;
-
-     }
-
-     #motto p{
-       position: relative;
-       right: 10%;
-       display: inline-block;
-       text-align: left;
-     }
-
-     nav{
-       padding-bottom: 0;
-
-   }
-
-   .fb-page {
-    margin: 20px 20px 20px 0;
-  }
-
-}
