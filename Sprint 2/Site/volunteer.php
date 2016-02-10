@@ -148,6 +148,7 @@
 	</fieldset>
 </div>
 </div>
+<div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group">
 	<p>Are you able to lift 10 pounds</p>
@@ -166,6 +167,7 @@
 	</fieldset>
 </div>
 </div>
+<div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group">
 	<p>Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance</p>
