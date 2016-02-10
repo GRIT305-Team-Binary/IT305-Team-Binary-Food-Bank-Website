@@ -22,6 +22,7 @@
 				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
                 <a href="#clothing" class="btn btn-default">Clothing Bank</a>
                 <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
+				<a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" class="btn btn-default">Seattle Foundation</a>
             
             </div>
         </div>

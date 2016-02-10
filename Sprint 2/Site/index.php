@@ -155,7 +155,7 @@
                         <li>Work in conjunction with government agencies, churches and other organizations to serve the surrounding people.</li>
                         <li>Operate primarily as a volunteer agency, obtaining the majority of its support and donations from the community.</li>
                      </ul>
-                    Learn more at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx">Seattle Foundation</a>
+                    Learn more about Kent Food Bank at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx">Seattle Foundation</a>
                     </p>
                 </div>
                
