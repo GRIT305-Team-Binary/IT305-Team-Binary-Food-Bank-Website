@@ -3,7 +3,7 @@
 
 
     <?php  include ('includes/header.inc.php');  ?>
-     <!-- Facebook Feed --->
+     <!-- Facebook Feed -->
         <div id="fb-root"></div>
         <script>
             (function(d, s, id) {
@@ -20,7 +20,7 @@
     <!-- Navigation 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display 
+             Brand and toggle get grouped for better mobile display 
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -32,7 +32,7 @@
                     <img src="http://placehold.it/150x50&text=Logo" alt="">
                 </a>
             </div>
-            <!-- Collect the nav links, forms, and other content for toggling 
+             Collect the nav links, forms, and other content for toggling 
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
@@ -51,7 +51,7 @@
             </div>
             <!-- /.navbar-collapse 
         </div>
-        <!-- /.container 
+         /.container 
     </nav>
     -->
     <div class="main">
@@ -174,7 +174,7 @@
                          data-show-facepile="true">
                     <div class="fb-xfbml-parse-ignore">
                         <blockquote cite="https://www.facebook.com/kentfoodbank/">
-                            <a href="https://www.facebook.com/kentfoodbank/">Kent Food Bank &amp; Emergency Services</a>
+                            <a href="https://www.facebook.com/kentfoodbank/" target="_blank">Kent Food Bank &amp; Emergency Services</a>
                         </blockquote>
                     </div>
                 </div>
