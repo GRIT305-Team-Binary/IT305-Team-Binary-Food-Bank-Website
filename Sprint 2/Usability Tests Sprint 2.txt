@@ -1,0 +1,65 @@
+Task: As a client find services
+
+Recieve Services
+Click on Get Help
+"Image looks like a hotel"
+"I don't have a picture ID what do I do"
+
+"Panel Content. What is that..."
+
+"Where Do I go"
+"Location"
+
+CLicked on Location
+
+Clicekd on Birch Creek Annex
+"WHere is this one"
+
+"WOuld be nice if both displayed, or you could click on it to switch to it"
+
+"I guess I'll have to go to this one then"
+
+Read Parking information
+
+----------------------------------------------------------
+Task: Volunteer
+
+Looked at navbar
+Scroleld down
+Went up and clicked on Contribute
+
+Scolled down then up
+
+"Donate Clocks"
+CLicked on Donate time
+
+Fills in Form
+Does not select Type of Application
+
+-------------------------------
+Task: Contact Food Bank
+
+Went to home page
+
+"It looks so nice"
+Scrolled up and down several times
+"Is this a real site"
+Watches the images scroll through
+"The Paypal button looks so real"
+Hovers over Paypal button
+"Like can I go places, oh I can click"
+Clicks on Calendar
+"Did you make all of this"
+I have to explain the project scope and ask to pretend you want to contact the food bank.
+"Ok, yes. Uhm I think I'd click on the Contact Button here"
+Click on Contact Us
+"Hey there is a form. I"ll fill it out. Does someone one actually read this"
+Fills out form
+Hits Sumbit
+Page displays black text that says "Thank you for contacting us!"
+"Did it do anything"
+Hits Refresh
+"Did they get my message"
+"I see they have phone and email here on the side"
+"I think if this was real I'd call them on the phone"
+"Is that it. Do you need me to do anything else"
