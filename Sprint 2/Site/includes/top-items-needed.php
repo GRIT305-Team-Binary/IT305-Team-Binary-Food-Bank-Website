@@ -25,5 +25,6 @@
 	<h3>Bring all items to Kent Food Bank</h3>
 	<p>515 W Harrison St, Ste 107 <br />
 Kent, Washington 98032</p>
+	<p>Thank you for your donations and support.</p>
  </div>
 	 	 
