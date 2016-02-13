@@ -11,12 +11,12 @@
 
 
     <!-- Bootstrap Core CSS -->
-    <link href="http://teambinary.greenrivertech.net/readable_css/bootstrap.css" rel="stylesheet">
-    <link href="http://teambinary.greenrivertech.net/readable_css/bootstrap.min.css" rel="stylesheet">
+    <link href="readable_css/bootstrap.css" rel="stylesheet">
+    <link href="readable_css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -26,66 +26,33 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-    <div class="container head">
+    <div class="container-fluid head">
       <!---Top of the page-->
 
     <div class="row">
-        <div  class="col-xs-12 hidden-sm col-md-3 col-lg-3 col-xl-3">
-			<div class="col-xs-12">
-            <a href="index.php" class="navbar-brand" >
-				<img id="logo" class="img-responsive"  alt="This is the logo" src="http://teambinary.greenrivertech.net/images/logo-transparent.png" >
-			</a>
-			</div>
+        <div  class="hidden-sm col-md-3 col-xs-12">
+            <a href="index.php" class="navbar-brand" ><img id="logo" alt="This is the logo" src="images/logo-transparent-bw.png" ></a>
         </div>
 
-      <div class="col-xs-12 col-sm-10 col-md-8 navbar center-block" >
-          <!--Centers Nav On Headers-->
+      <div class="col-xs-12 col-sm-10 col-md-8 navbar center-block">
+          <div class="container-fluid"><!--Centers Nav On Headers-->
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeaderCollapse">Menu<span class="caret"></span></button>
             <div class="collapse navbar-collapse" id="navHeaderCollapse">
               <ul class="nav navbar-nav">
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center ">
-						<p><a class="text-center col-xs-12 nav-fonts" href="index.php">
-								<span class="text-center icon-in-nav fa fa-home fa-3x"></span>
-								<br />Home</span>
-						</a></p>
-					</li>
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
-						<p><a class="text-center col-xs-12 nav-fonts" href="contribute.php">
-								<span class="text-center icon-in-nav fa fa-users fa-3x"></span>
-								<br />Contribute
-						</a></p>
-					</li>
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
-						<p><a class="text-center col-xs-12 nav-fonts" href="gethelp.php">
-								<span class="text-center icon-in-nav fa fa-cutlery fa-3x"></span>
-								<br />Get&nbsp;Help
-						</a></p>
-					</li>
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
-						<p><a class="text-center col-xs-12 nav-fonts" href="calendar.php">
-								<span class="text-center icon-in-nav fa fa-calendar fa-3x"></span>
-								<br />Calendar
-						</a></p>
-					</li>
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
-						<p><a class="text-center col-xs-12 nav-fonts" href="location.php">
-								<span class="text-center icon-in-nav fa fa-map-marker fa-3x"></span>
-								<br />Location</a></p>
-						</li>
-                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2 text-center">
-						<p><a class="text-center col-xs-12 nav-fonts" href="contactus.php">
-								<span class="text-center icon-in-nav fa fa-phone-square fa-3x"></span>
-								<br />Contact&nbsp;Us
-						</a></p>
-					</li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="index.php"><i class="text-center icon-in-nav fa fa-home fa-3x"></i><span class="nav-fonts">Home</span></a></li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="contribute.php"><i class="text-center icon-in-nav fa fa-users fa-3x"></i><span class="nav-fonts">Contribute</span></a></li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="gethelp.php"><i class="text-center icon-in-nav fa fa-cutlery fa-3x"></i><span class="nav-fonts">Get&nbsp;Help</span></a></li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="calendar.php"><i class="text-center icon-in-nav fa fa-calendar fa-3x"></i><span class="nav-fonts">Calendar</span></a></li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="location.php"><i class="text-center icon-in-nav fa fa-map-marker fa-3x"></i><span class="nav-fonts">Location</span></a></li>
+                  <li class="nav  col-sm-2 col-md-2 col-lg-2 col-xl-2"><a class="text-center col-md-12" href="contactus.php"><i class="text-center icon-in-nav fa fa-phone-square fa-3x"></i><span class="nav-fonts">Contact&nbsp;Us</span></a></li>
               </ul>
-            
+            </div>
           </div>
     </div>
 
 
-    <div class="hidden-xs col-sm-2 col-md-1 ">
+    <div class="col-sm-2 col-md-1 hidden-xs">
 
         <!--<span class="glyphicon glyphicon-credit-card"></span> Donate -->
         <!--Paypal Donate Button-->
@@ -94,22 +61,21 @@
 
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="HPNP9YXHUXN4G">
-            <input type="image"   class="img-responsive" src="http://teambinary.greenrivertech.net/images/paypaldonate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+            <input type="image"   class="img-responsive" src="images/paypaldonate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
              <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 
             </form>
         </div>
     </div>
 
-	</div>
+      </div>
 
-    <div class="row">
+    <div class="container-fluid">
       <div class="row col-md-12 col-sm-12"><hr class="col-md-12 col-sm-12 hidden-xs"></div>
     </div>
-    <div class="row">
+
       <div id="motto" class="pull-right"><p>Serving low-income residents of the Kent School District</p></div>
 
-</div>
 </div>
       <!--Bottom of the page-->
 
@@ -144,4 +110,4 @@
         });
 
 
-      </script> 
+      </script>

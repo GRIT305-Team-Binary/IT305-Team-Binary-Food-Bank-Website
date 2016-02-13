@@ -22,7 +22,7 @@
 				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
                 <a href="#clothing" class="btn btn-default">Clothing Bank</a>
                 <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
-				<a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" class="btn btn-default">Seattle Foundation</a>
+				<a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" class="btn btn-default" target="_blank">Seattle Foundation</a>
             
             </div>
         </div>
@@ -68,6 +68,10 @@
             <p class="text-center hidden-xs"><a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate Today</a></p>
 			
             <!-- How you can help the Clothing Bank -->
+            <h2> Non Perishable Food</h2>
+            <p>Kent Food Bank accepts non perishable food donations on M, T, W and F from 9 am – 2 pm <span class="hidden-xs hidden-sm"> at</p>
+            <p class="text-center   "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p></span>
+            <p> Items must not be expired, damaged, or opened. During the summer call if you would like to donate vegetables or other items from your garden. </p>
             <h2 id="clothing">Clothing Bank</h2>
             <p>Clothing Bank Accepts donations on M, T, W and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at<br />
             <p class="text-center  hidden-xs hidden-sm "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p>

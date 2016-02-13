@@ -34,15 +34,24 @@
                 </div> -->
                  </div>
             
-                <div class="col-sm-9 hidden-xs pull-right">
+                <!-- calendar on med/large screen sizes -->
+                <div class="col-med-9 hidden-xs hidden-sm">
                     <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23f0ad4e&amp;src=teambinarykfb%40gmail.com&amp;color=%23BE6D00&amp;ctz=America%2FLos_Angeles"
+                            style="border-width:0" width="73%" height="600px" frameborder="0" scrolling="no"></iframe>
+                </div>
+                
+                <!-- calendar on small screen size -->
+                <div class="col-sm-9 visible-sm">
+                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff9900&amp;src=teambinarykfb%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles"
                             style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
+                <!-- calendar on mobile/xs screen size -->
                 <div class="col-xs-12 visible-xs">
-                    <p>Click <a href="https://calendar.google.com/calendar/embed?src=teambinarykfb%40gmail.com&ctz=America/Los_Angeles"
-                    target="_blank">here</a> to view our calendar of events.</p>
+                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff9900&amp;src=teambinarykfb%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles"
+                            style="border-width:0" width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
                 </div>
+                
             </div>
         </div>
        <!-- Calendar and Hours Page  -->

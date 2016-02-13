@@ -236,9 +236,13 @@ iframe {
     padding-bottom: 7px;
     font-size: 3.5vw;
   }
+  
+  li.nav {
+    padding: 0;
+  }
 
   .nav-fonts{
-     font-size: 1.5vw;
+     font-size: 1.25vw;
      font-weight: bold;
 
   }
@@ -281,11 +285,14 @@ iframe {
 
 
   .nav-fonts{
-    font-size: 1.5vw;
+    font-size: 1.25vw;
     font-weight: bold;
 
   }
 
+  li.nav {
+    padding: 0;
+  }
 
 
   #motto p{
@@ -319,7 +326,7 @@ iframe {
      }
 
      .nav-fonts{
-       font-size: 1.5vw;
+       font-size: 1.25vw;
        font-weight: bold;
      }
 
@@ -340,8 +347,12 @@ iframe {
 
      nav{
        padding-bottom: 0;
-
    }
+   
+   li.nav {
+    padding: 0;
+  }
+
 
    .fb-page {
     margin: 20px 20px 20px 0;

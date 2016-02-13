@@ -2,17 +2,17 @@
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
-    $expected = ['name', 'email', 'subject', 'comments'];
+    $expected = ['name', 'email', 'comments'];
     $required = ['name', 'email', 'comments'];
     $recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
-	if (!empty($_POST['subject'])) {
+    if (!empty($_POST['subject'])) {
 		$subject = $_POST['subject'];
 	}
     else {
 		$subject = 'Feedback from online form';
 	}
     $headers = [];
-    $headers[] = 'From: webmaster@example.com';
+    $headers[] = 'From: Kentfoodbank@example.com';
     $headers[] = 'Cc: another@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
     $authorized = null;
@@ -31,6 +31,7 @@ if (isset($_POST['send'])) {
 		include ('includes/header.inc.php');
 	?>
 	<div class="main">
+		<h3>Thank you for contacting us!</h3>
     <div class="container-fluid ">
         <div class="row">
             <div class="col-xs-12 ">
@@ -107,7 +108,7 @@ if (isset($_POST['send'])) {
 					?>
 					>
 				</p>
-
+				
 				<p>
 					<label for="subject">Subject</label><br>
 					<input type="subject" name="subject" id="subject" size="40"
@@ -118,7 +119,7 @@ if (isset($_POST['send'])) {
 					?>
 					>
 				</p>
-
+				
 				<p>
 					<label for="comments">Comments*
 						<?php if ($missing && in_array('comments', $missing)) : ?>
