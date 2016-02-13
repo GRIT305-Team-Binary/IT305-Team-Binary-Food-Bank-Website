@@ -17,37 +17,15 @@
 		   <!-- Volunteer Button can go here with link to Volunteer form -->
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
-            <div class="btn-group-vertical col-xs-12">
-                <a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate</a>
-				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
-                <a href="#clothing" class="btn btn-default">Clothing Bank</a>
-                <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
-				<a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" class="btn btn-default" target="_blank">Seattle Foundation</a>
+             <?php  include ('includes/contribute-side.php');  ?>
             
-            </div>
         </div>
  
 
         <div class="topItemsList col-xs-12 col-sm-3 col-md-3 col-lg-3 pull-right">
-			 
-            <div class="panel panel-warning">
-                <!-- Top Ten Items needed at Food Bank now -->
-                 <div class="panel-heading">Top Items We Need</div>
-					<div class="panel-body">
-						<ul class="list-group">
-							 <li class="list-group-item">Soup - condensed and ready to eat </li>
-							 <li class="list-group-item">Canned vegetables  </li>
-							 <li class="list-group-item"> Canned tomato products </li>
-							 <li class="list-group-item"> Canned fruit  </li>
-							 <li class="list-group-item">Canned proteins - SPAM, tuna, chicken  </li>
-							 <li class="list-group-item">Ready to eat meals - chili, Chef Boyardee  </li>
-							 <li class="list-group-item">Canned or bagged beans  </li>
-							 <li class="list-group-item">Toiletries</li>
-							 <li class="list-group-item">Diapers and Formula </li>
-							 <li class="list-group-item">Office supplies - paper, pens, garbage bags </li>
-						 </ul>
-					 </div>
-			   </div>
+			
+			 <?php  include ('includes/top-items-needed.php');  ?>
+           <p><a href="includes/top-items-needed.php">Print</a></p>
 			<!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
 			<p><span class="top-link-block right">

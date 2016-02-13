@@ -17,14 +17,7 @@
 		   <!-- Volunteer Button can go here with link to Volunteer form -->
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
-            <div class="btn-group-vertical col-xs-12">
-                <a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate</a>
-				<!--<a href="#volunteer" class="btn btn-warning">Volunteer</a>-->
-                <a href="#clothing" class="btn btn-default">Clothing Bank</a>
-                <a href="#otherGift" class="btn btn-default">Other Ways to Give</a>
-				<a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" class="btn btn-default" target="_blank">Seattle Foundation</a>
-            
-            </div>
+            <?php  include ('includes/contribute-side.php');  ?>
         </div>
 		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
          <form method="GET" action="">
@@ -196,8 +189,7 @@
 		<p class="asterisk">* = Required field</p>
 	</div>
 </div>
-</form>
-</div>
+</form></div>
 			</div>
 		</div>
 	 </div>
