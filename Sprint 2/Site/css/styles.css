@@ -148,6 +148,11 @@ hr{
  .checkbox label {
     font-weight: 600;
  }
+ 
+ .form-confirm {
+     color: #F78536;
+     font-weight: 600;
+ }
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {

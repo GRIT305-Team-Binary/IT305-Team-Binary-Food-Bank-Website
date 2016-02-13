@@ -1,3 +1,31 @@
+<?php
+$errors = [];
+$missing = [];
+if (isset($_POST['send'])) {
+    $expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+				 'clothing', 'office', 'food','whyVolunteer',
+				 'commit', 'lift', 'limitation', 'questions'];
+    $required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+				 'commit', 'lift', 'limitation'];
+    $recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
+	if (!empty($_POST['subject'])) {
+		$subject = $_POST['subject'];
+	}
+    else {
+		$subject = 'Feedback from online form';
+	}
+    $headers = [];
+    $headers[] = 'From: webmaster@example.com';
+    $headers[] = 'Cc: another@example.com';
+    $headers[] = 'Content-type: text/plain; charset=utf-8';
+    $authorized = null;
+    require './includes/process_mail.php';
+    if ($mailSent) {
+        //header('Location: contact-thank-you.php');
+       // exit;
+    }
+}
+?>
 <!DOCTYPE html>
 
 <html lang="en">
@@ -7,7 +35,7 @@
 
 	 <div class="main" id="#top">
     <div class="container-fluid">
-		<h1>Contribute</h1>
+		<h1>Donate Time (Volunteer)</h1>
 		 <!-- Donate Button on mobile site -->
 		<!--<div class="row visible-xs">
 			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
@@ -20,9 +48,9 @@
             <?php  include ('includes/contribute-side.php');  ?>
         </div>
 		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
-         <form method="GET" action="">
+         <form method="GET" action="Volunteer-thank-you.php">
 <div class="row ">
-	<h1>Donate Time (Volunteer)</h1>
+	
 	<hr>
 	<p></p>
 </div>
@@ -30,7 +58,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
 	<!-- Application type -->
 		<fieldset class="form-group text-center">
-				<label>Type of Application:</label><br>
+				<label>Type of Application*:</label><br>
 				<label class="radio-inline"><input type="radio" name="appType" id="Individual" value="individual">Individual</label>
 				<label class="radio-inline"><input type="radio" name="appType" id="Group" value="group">Group</label>
 				<label class="radio-inline"><input type="radio" name="appType" id="Organization" value="organization">Organization</label>
@@ -44,7 +72,7 @@
 	<!-- First Name field -->
 		<fieldset class="form-group">
 			<label for="fname">First Name*</label><br>
-			<input name="fname" class="input col-xs-12 form-control" type="text" value="Enter your first name" >
+			<input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" >
 		</fieldset>
 	</div>
 	
@@ -52,7 +80,7 @@
 	<!-- Last Name field -->
 		<fieldset class="form-group">
 			<label for="lname">Last Name*</label><br>
-			<input name="lname" class="input col-xs-12 form-control" type="text" value="Enter your last name" >
+			<input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" >
 		</fieldset>
 	</div>
 	
@@ -63,7 +91,7 @@
 	<!-- Address -->
 	<fieldset class="form-group">
 		<label for="address">Address*</label><br>
-		<input name="address" class="input col-xs-12 form-control" type="text" id="address" value="Enter your street address" >
+		<input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" >
 	</fieldset>
 	</div>
 
@@ -74,7 +102,7 @@
 	<!-- City -->
 		<fieldset class="form-group">
 			<label for="city">City*</label><br>
-			<input name="city" class="input col-xs-12 form-control" type="text" id="city" value="Enter your city" >
+			<input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" >
 		</fieldset>
 	</div>
 	<div class="col-lg-3 visible-lg">
@@ -84,7 +112,7 @@
 	<!-- Zip -->
 		<fieldset class="form-group">
 			<label for="zip">Zip Code*</label><br>
-			<input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" value="Enter your zip" >
+			<input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" >
 		</fieldset>
 	</div>
 </div>
@@ -96,13 +124,13 @@
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<!-- Contact Phone -->
 			<label>Phone*</label><br>
-			<input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" value="Enter phone number" ><br><br>
+			<input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" ><br><br>
 		</div>
 
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<!-- Contact Email-->
 			<label>E-mail address*</label><br>
-			<input name="email" class="input col-xs-12 form-control" id="email" type="email" value="Enter email" >
+			<input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" >
 			<br><br>
 		</div>
 	</fieldset>
@@ -111,7 +139,7 @@
 	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<fieldset class="form-group">
 			
-				<label for="checkbox" >Volunteer Opprotunities (check your interests)</label>
+				<label for="checkbox" >Volunteer Opportunities (check your interests)</label>
 				<div class="checkbox">
 					<label for="clothing">
 					<input type="checkbox" name="clothing" id="clothing"> Clothing
@@ -142,7 +170,7 @@
 <div class="row">
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group" for="commit">
-	<label>Are you able to make a commitment of at leaset three (3) months one day a week?<br />
+	<label>Are you able to make a commitment of at leaset three (3) months one day a week?*<br />
 	(M, T, W, or F from 9am -2:30pm)</label>
 	<div class="radio">
    	 	<label class="radio-inline">
@@ -161,7 +189,7 @@
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group">
-	<label for="lift">Are you able to lift 10 pounds</label for="appType">
+	<label for="lift">Are you able to lift 10 pounds?*</label >
 	<div class="radio">
    	 	<label class="radio-inline">
       			<input type="radio" name="lift" id="liftYes" value="liftYes">
@@ -179,10 +207,10 @@
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group">
-	<label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance</label>
+	<label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
 	<div class="radio">
    	 	<label class="radio-inline">
-      			<input type="radio" name="limitation" id="limitationYes" value="limitationYes">
+      			<input type="radio" name="limitation" id="limitationYes" name="limitationYes">
      		 	Yes
   		</label>
   	
@@ -204,7 +232,10 @@
 		<p class="asterisk">* = Required field</p>
 	</div>
 </div>
-</form></div>
+</form>
+		 	<p></p>
+		 	<hr>
+</div>
 			</div>
 		</div>
 	 </div>

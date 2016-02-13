@@ -18,8 +18,8 @@ if (isset($_POST['send'])) {
     $authorized = null;
     require './includes/process_mail.php';
     if ($mailSent) {
-        header('Location: contact-thank-you.php');
-        exit;
+        //header('Location: contact-thank-you.php');
+       // exit;
     }
 }
 ?>
@@ -66,9 +66,9 @@ if (isset($_POST['send'])) {
 				 </form>
 		-->
 			<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
-			<p class="formError">Sorry, your mail couldn't be sent.</p><br>
+				<p class="formError">Sorry, your mail couldn't be sent.</p><br>
 			<?php elseif ($errors || $missing) : ?>
-			<p class="formError">Please fix the item(s) indicated:</p>
+				<p class="formError">Please fix the item(s) indicated:</p>
 			<?php endif; ?>
 			
 			<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" role="form">
@@ -174,8 +174,9 @@ if (isset($_POST['send'])) {
 					if ($_POST && $mailSent) {
 						echo "<div class='row '>
 								<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center'>
-										Your message has been sent. Thank you!
-								</div>";
+										<p class='form-confirm'>Your message has been sent. Thank you!</p>
+								</div>
+							</div>";
 					}
 				?>
 				 
@@ -184,48 +185,16 @@ if (isset($_POST['send'])) {
 				
 			
 			        <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 " role="group">
-						<div class="btn-group-vertical col-xs-12">
-							
-							<div class="btn btn-warning">
-								<!-- Hours -->
-								<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
-								<a class="defaultLink" href="calendar.php">Hours of Operation</a>
-							</div>
-							
-							<div class="btn btn-default">
-							<!-- Phone -->
-							<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550
-							</div>
-							<div class="btn btn-default">
-								<!-- Facebook Page -->
-							<span class="facebook-hours">
-							<span class="glyphicon"><img src="images/fb-icon-20.png" class="img-responsive" alt="facebook" /></span>
-								<a class="defaultLink" href="http://facebook.com/kentfoodbank" target="_blank">
-								<span class="hidden-xs hidden-sm contactInfo">facebook.com/kentfoodbank</span><span class="visible-xs visible-sm">Facebook</span>
-								</a>
-							</span>
-							</div>
-							<div class="btn btn-default">
-							<!-- Email -->
-							<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
-								<a class="defaultLink" href="mailto:kentfoodbank@gmail.com">
-									<span class="hidden-xs hidden-sm contactInfo">kentfoodbank@gmail.com</span><span class="visible-xs visible-sm">Email</span>
-								</a>
-							</div>
-							<div class="btn btn-warning">
-								<!-- Location -->
-								<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
-								<a class="defaultLink" href="location.php">Location</a>
-							</div>
-							
-					</div>
+					 <?php
+						include('includes/contact_KFB.php');
+					?>	
 			 </div>
  
 		
 		 </div>
 	    </div>
   
-	
+		</div>
  <?php
             include('includes/footer.php');
         ?>
