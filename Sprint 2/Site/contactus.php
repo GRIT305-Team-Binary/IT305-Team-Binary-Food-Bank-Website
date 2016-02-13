@@ -66,9 +66,9 @@ if (isset($_POST['send'])) {
 				 </form>
 		-->
 			<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
-			<p>Sorry, your mail couldn't be sent.</p><br>
+			<p class="formError">Sorry, your mail couldn't be sent.</p><br>
 			<?php elseif ($errors || $missing) : ?>
-			<p>Please fix the item(s) indicated:</p>
+			<p class="formError">Please fix the item(s) indicated:</p>
 			<?php endif; ?>
 			
 			<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" role="form">
@@ -82,10 +82,13 @@ if (isset($_POST['send'])) {
 								<?php endif; ?>
 							</label><br>
 							<div class="col-xs-12">
-							<input type="text" name="name" id="name"  class="input form-control "
+							<input type="text" name="name" id="name"  class="input form-control 
 							<?php
 								if ($errors || $missing) {
+									echo 'has-error has-feedback" ';
 									echo 'value="' . htmlentities($name) . '"';
+								} else {
+									echo '"';
 								}
 							?>
 							>
@@ -104,9 +107,13 @@ if (isset($_POST['send'])) {
 							<?php endif; ?>
 						</label><br>
 						<div class="col-xs-12">
-							<input type="email" name="email" id="email" 	 class="input form-control"					<?php
+							<input type="email" name="email" id="email" 	 class="input form-control
+							<?php
 								if ($errors || $missing) {
+									echo 'has-error has-feedback" ';
 									echo 'value="' . htmlentities($email) . '"';
+								} else {
+									echo '"';
 								}
 							?> >
 						</div>
@@ -120,11 +127,14 @@ if (isset($_POST['send'])) {
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 						<div class="form-group">
 						<p><label for="subject">Subject</label><br>
-						<input type="subject" name="subject" id="subject" class="form-control"
+						<input type="subject" name="subject" id="subject" class="form-control
 						<?php
 							if ($errors || $missing) {
+								echo 'has-error has-feedback" ';
 								echo 'value="' . htmlentities($subject) . '"';
-							}
+							} else {
+									echo '"';
+								}
 						?>
 						</p>
 						</div>
@@ -139,8 +149,10 @@ if (isset($_POST['send'])) {
 									<span class="formError">You forgot to add any comments.</span>
 									<?php endif; ?>
 								</label><br>
-								<textarea name="comments" id="comments" rows="5" class="input form-control"><?php
+								<textarea name="comments" id="comments" rows="5" class="input form-control">
+								<?php
 									if ($errors || $missing) {
+										
 										echo htmlentities($comments);
 									}
 								?></textarea>
