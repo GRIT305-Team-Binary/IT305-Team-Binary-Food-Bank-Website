@@ -71,7 +71,7 @@ if (isset($_POST['send'])) {
 			<p>Please fix the item(s) indicated:</p>
 			<?php endif; ?>
 			
-			<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
+			<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" role="form">
 			 <div class="row ">
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-left">
 					<div class="form-group">
