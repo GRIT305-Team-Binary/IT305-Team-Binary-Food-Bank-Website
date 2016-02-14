@@ -76,12 +76,13 @@ if (isset($_POST['send'])) {
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-left">
 					<div class="form-group">
 						<p>
-							<label for="name">Name*
+								<div class="col-xs-12">
+								<label for="name">Name*
 								<?php if ($missing && in_array('name', $missing)) : ?>
 								<span class="formError">Please enter your name.</span>
 								<?php endif; ?>
 							</label><br>
-							<div class="col-xs-12">
+						
 							<input type="text" name="name" id="name"  class="input form-control 
 							<?php
 								if ($errors || $missing) {
@@ -99,14 +100,16 @@ if (isset($_POST['send'])) {
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-right form-group">
 					
 					<div class="form-group">
-						<p><label for="email">E-mail address*
+						<p>
+							<div class="col-xs-12">
+								<label for="email">E-mail address*
 							<?php if ($missing && in_array('email', $missing)) : ?>
 							<span class="formError">Please enter your email address.</span>
 							<?php elseif (isset($errors['email'])) : ?>
 							<span class="formError ">Invalid email address</span>
 							<?php endif; ?>
 						</label><br>
-						<div class="col-xs-12">
+						
 							<input type="email" name="email" id="email" 	 class="input form-control
 							<?php
 								if ($errors || $missing) {
