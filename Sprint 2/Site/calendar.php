@@ -16,7 +16,7 @@
                 </div>
                 <div class="panel-body"> -->
                     <!-- Option #2 for Header -->
-                    <br><div class="title"><h4>Hours of Operation</h4></div>
+                    <br><h4 class="title">Hours of Operation</h4>
                     
                     <h3>Food Bank</h3>
                     <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>
@@ -36,19 +36,19 @@
             
                 <!-- calendar on med/large screen sizes -->
                 <div class="col-med-9 hidden-xs hidden-sm">
-                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23f0ad4e&amp;src=teambinarykfb%40gmail.com&amp;color=%23BE6D00&amp;ctz=America%2FLos_Angeles"
+                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
                             style="border-width:0" width="73%" height="600px" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
                 <!-- calendar on small screen size -->
                 <div class="col-sm-9 visible-sm">
-                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff9900&amp;src=teambinarykfb%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles"
+                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
                             style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
                 <!-- calendar on mobile/xs screen size -->
                 <div class="col-xs-12 visible-xs">
-                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23ff9900&amp;src=teambinarykfb%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FLos_Angeles"
+                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
                             style="border-width:0" width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
                 </div>
                 
