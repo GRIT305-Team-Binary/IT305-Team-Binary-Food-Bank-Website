@@ -31,7 +31,7 @@
 
     <div class="row">
         <div  class="hidden-sm col-md-3 col-xs-12">
-            <a href="index.php" class="navbar-brand" ><img id="logo" alt="This is the logo" src="images/logo-transparent-bw.png" ></a>
+            <a href="index.php" class="navbar-brand" ><img id="logo" alt="This is the logo" src="images/logo-transparent-bw-orange.png" ></a>
         </div>
 
       <div class="col-xs-12 col-sm-10 col-md-8 navbar center-block">
