@@ -1,29 +1,149 @@
 <?php
 $errors = [];
 $missing = [];
-if (isset($_POST['send'])) {
+if (isset($_POST['submit'])) {
     $expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 				 'clothing', 'office', 'food','whyVolunteer',
 				 'commit', 'lift', 'limitation', 'questions'];
     $required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 				 'commit', 'lift', 'limitation'];
     $recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
-	if (!empty($_POST['subject'])) {
-		$subject = $_POST['subject'];
+	
+
+	//Create placeholder text for entry forms
+	$fname="";
+	$lname="";
+	$address="";
+	$city="";
+	$zip="";
+	$phone="";
+	$email="";
+	$whyVolunteer="";
+	$questions="";
+       
+    //Form has been submitted 
+    if (isset($_POST['submit'])) {
+		
+
+	 $isValid = true;
+		
+		//Validate Type of Application
+		if (!empty($_POST['appType'])) {
+            $appType = $_POST['appType'];
+        } else {
+            echo '<p>Please select the type of application you are submitting.</p>';
+            $isValid = false;
+			
+	    }
+		
+ 	 //Validate first name
+        if (!empty($_POST['fname'])) {
+            $fname = $_POST['fname'];
+        } else {
+            echo '<p>Please enter a first name.</p>';
+            $isValid = false;
+			
+	    }
+
+	 //Validate last name
+        
+		if (!empty($_POST['lname'])) {
+            $lname = $_POST['lname'];
+        } else {
+            echo '<p>Please enter a last name.</p>';
+            $isValid = false;
+        }
+		
+	//Validate address
+        
+		if (!empty($_POST['address'])) {
+            $address = $_POST['address'];
+        } else {
+            echo '<p> Please enter an address. </p>';
+            $isValid = false;
+        }
+		
+	//Validate city
+        if (!empty($_POST['city'])) {
+            $city = $_POST['city'];
+        } else {
+            echo '<p>Please enter a city.</p>';
+            $isValid = false;
+			
+	    }
+
+	 //Validate zip
+        
+		if (!empty($_POST['zip'])) {
+            $zip = $_POST['zip'];
+        } else {
+            echo '<p>Please enter a zip code.</p>';
+            $isValid = false;
+        }
+		
+	//Validate phone number
+        
+		if (!empty($_POST['phone'])) {
+            $phone = $_POST['phone'];
+        } 
+
+		//Validate email
+        if (!empty($_POST['email'])) {
+            $email = $_POST['email'];
+        }
+		
+		if (empty($_POST['email']) && empty($_POST['phone'])) {
+            echo '<p>Please enter a phone number or email address.</p>';
+            $isValid = false;
+		}
+		
+		//Validate Volunteer Opprotunities
+		if (empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+            echo '<p>Please select a Volunteer Opprotunity.</p>';
+            $isValid = false;
+		} else {
+			$clothing = $_POST['clothing'];
+			$office= $_POST['office'];
+			$food= $_POST['food'];
+		}
+		
+		//Validate Why are you interested in Volunteering
+        
+		if (!empty($_POST['whyVolunteer'])) {
+            $whyVolunteer = $_POST['whyVolunteer'];
+        }
+			
+		//Validate Any Questions
+        
+		if (!empty($_POST['questions'])) {
+            $questions = $_POST['questions'];
+        }
+		
+		
+		
+		
+		
+		if ($isValid) {
+            //Send Form information in email
+			$subject = 'Volunteer Application -'. $fname . " " . $lname;
+			$headers = [];
+			$headers[] = 'From: webmaster@example.com';
+			$headers[] = 'Cc: another@example.com';
+			$headers[] = 'Content-type: text/plain; charset=utf-8';
+			$authorized = null;
+			require './includes/process_mail.php';
+			if ($mailSent) {
+				//header('Location: Volunteer-thank-you.php');
+				exit;
+			}
+			
+           
+        }
+		
 	}
-    else {
-		$subject = 'Feedback from online form';
-	}
-    $headers = [];
-    $headers[] = 'From: webmaster@example.com';
-    $headers[] = 'Cc: another@example.com';
-    $headers[] = 'Content-type: text/plain; charset=utf-8';
-    $authorized = null;
-    require './includes/process_mail.php';
-    if ($mailSent) {
-        //header('Location: contact-thank-you.php');
-       // exit;
-    }
+
+	
+	
 }
 ?>
 <!DOCTYPE html>
@@ -48,7 +168,7 @@ if (isset($_POST['send'])) {
             <?php  include ('includes/contribute-side.php');  ?>
         </div>
 		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
-         <form method="GET" action="Volunteer-thank-you.php">
+         <form method="POST" action="Volunteer-thank-you.php">
 <div class="row ">
 	
 	<hr>
@@ -72,7 +192,7 @@ if (isset($_POST['send'])) {
 	<!-- First Name field -->
 		<fieldset class="form-group">
 			<label for="fname">First Name*</label><br>
-			<input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" >
+			<input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
 		</fieldset>
 	</div>
 	
@@ -80,7 +200,7 @@ if (isset($_POST['send'])) {
 	<!-- Last Name field -->
 		<fieldset class="form-group">
 			<label for="lname">Last Name*</label><br>
-			<input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" >
+			<input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
 		</fieldset>
 	</div>
 	
@@ -91,18 +211,20 @@ if (isset($_POST['send'])) {
 	<!-- Address -->
 	<fieldset class="form-group">
 		<label for="address">Address*</label><br>
-		<input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" >
+		<input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" value="<?php echo $address; ?>">
 	</fieldset>
 	</div>
 
 
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 	
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 form-group">
 	<!-- City -->
 		<fieldset class="form-group">
+			
 			<label for="city">City*</label><br>
-			<input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" >
+			<input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" value="<?php echo $city; ?>">
+			
 		</fieldset>
 	</div>
 	<div class="col-lg-3 visible-lg">
@@ -112,7 +234,7 @@ if (isset($_POST['send'])) {
 	<!-- Zip -->
 		<fieldset class="form-group">
 			<label for="zip">Zip Code*</label><br>
-			<input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" >
+			<input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" value="<?php echo $zip; ?>">
 		</fieldset>
 	</div>
 </div>
@@ -124,13 +246,13 @@ if (isset($_POST['send'])) {
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<!-- Contact Phone -->
 			<label>Phone*</label><br>
-			<input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" ><br><br>
+			<input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
 		</div>
 
 		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 		<!-- Contact Email-->
 			<label>E-mail address*</label><br>
-			<input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" >
+			<input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" value="<?php echo $email; ?>">
 			<br><br>
 		</div>
 	</fieldset>
@@ -162,7 +284,7 @@ if (isset($_POST['send'])) {
 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 	<fieldset class="form-group">
     		<label for="whyVolunteer">Why are you interested in volunteering?</label><br />
-    		<textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10></textarea>
+    		<textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
   	</fieldset>
 </div>
 </div>
@@ -182,7 +304,16 @@ if (isset($_POST['send'])) {
       			<input type="radio" name="commit" id="commitNo" value="commitNo">
      		 	No
     		</label>
-	
+	<?php
+	//Validate Commitment
+		if (!empty($_POST['commit'])) {
+            $commit = $_POST['commit'];
+        } else {
+            echo '<p class="radio-inline" >Please select Yes or No.</p>';
+            $isValid = false;
+			
+	    }
+		?>
 	</fieldset>
 </div>
 </div>
@@ -225,10 +356,10 @@ if (isset($_POST['send'])) {
 <div class="row">
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 	<fieldset class="form-group">
-    		<label for="questions">Any questions for or about the foodback please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
-    		<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"></textarea>
+    		<label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
+    		<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
   	</fieldset>						
-		<button type="submit" class="btn btn-warning">Submit</button>
+		<button type="submit" class="btn btn-warning" name="submit">Submit</button>
 		<p class="asterisk">* = Required field</p>
 	</div>
 </div>
