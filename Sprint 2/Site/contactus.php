@@ -13,9 +13,8 @@ if (isset($_POST['send'])) {
 	}
     $headers = [];
     $headers[] = 'From: webmaster@example.com';
-    $headers[] = 'Cc: another@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
-    $authorized = null;
+    $authorized = '-fnicolerbassen@gmail.com';
     require './includes/process_mail.php';
     if ($mailSent) {
         //header('Location: contact-thank-you.php');

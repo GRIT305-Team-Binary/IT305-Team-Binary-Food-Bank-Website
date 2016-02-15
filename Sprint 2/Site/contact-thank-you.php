@@ -12,10 +12,9 @@ if (isset($_POST['send'])) {
 		$subject = 'Feedback from online form';
 	}
     $headers = [];
-    $headers[] = 'From: Kentfoodbank@example.com';
-    $headers[] = 'Cc: another@example.com';
+    $headers[] = 'From: webmaster@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
-    $authorized = null;
+    $authorized = '-fnicolerbassen@gmail.com;
     require './includes/process_mail.php';
     if ($mailSent) {
         header('Location: contact-thank-you.php');
