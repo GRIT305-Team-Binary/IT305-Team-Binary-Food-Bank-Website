@@ -97,7 +97,7 @@
  
             <h4>For younger children:  </h4>
             <p>Birth Certificate</p>
-              Panel content
+              
                 </div>
               </div>
 			<!-- Link to top of Page 
