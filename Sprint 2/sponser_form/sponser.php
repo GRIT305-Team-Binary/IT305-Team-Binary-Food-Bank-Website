@@ -1,5 +1,6 @@
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 <style>
 .sponserHeaderText{
   text-align: center;
@@ -158,12 +159,12 @@ h3.sponserBoxHeader{
       <h2 class="sponserBoxHeader">Gold</h2>
       <h3 class="sponserBoxHeader">$3,000 or $250 per month for a year</h3>
         <ul class="sponserLiEl">
-            <li>Logo and name recognition on printed materials</li><br>
-            <li>Logo and name recognition in annual report</li><br>
-            <li>Logo and name recognition on our Facebook page</li><br>
-            <li>Verbal recognition day of event</li><br>
-            <li>Each Table of Honor guest will receive 7 raffle tickets</li><br>
-            <li>Certificate of Appreciation</li><br>
+            <li>Logo and name recognition on printed materials</li><br />
+            <li>Logo and name recognition in annual report</li><br />
+            <li>Logo and name recognition on our Facebook page</li><br />
+            <li>Verbal recognition day of event</li><br />
+            <li>Each Table of Honor guest will receive 7 raffle tickets</li><br />
+            <li>Certificate of Appreciation</li><br />
         </ul>
 
         <div class="sponserRadioBtnNTxt">
@@ -175,11 +176,11 @@ h3.sponserBoxHeader{
       <h2 class="sponserBoxHeader">Silver</h2>
       <h3 class="sponserBoxHeader">$1,500 or $125 per month for a year</h3>
         <ul class="sponserLiEl">
-            <li>Logo and name recognition on printed materials</li><br>
-            <li>Name recognition in annual report</li><br>
-            <li>Logo and name recognition on our Facebook page</li><br>
+            <li>Logo and name recognition on printed materials</li><br />
+            <li>Name recognition in annual report</li><br />
+            <li>Logo and name recognition on our Facebook page</li><br />
             <li>Verbal recognition day of event</li><br>
-            <li>Each Table of Honor guest will receive 3 raffle tickets</li><br>
+            <li>Each Table of Honor guest will receive 3 raffle tickets</li><br />
         </ul>
         <br class="hidden-xs hidden-md hidden-lg"/>
         <br class="hidden-xs hidden-lg " />
@@ -195,11 +196,11 @@ h3.sponserBoxHeader{
       <h2 class="sponserBoxHeader">Bronze</h2>
       <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
         <ul class="sponserLiEl">
-            <li>Name recognition on printed materials</li><br>
-            <li>Name recognition in annual report</li><br>
-            <li>Name recognition on our Facebook page</li><br>
-            <li>Verbal recognition day of event</li><br>
-            <li>Table of Honor at event</li><br>
+            <li>Name recognition on printed materials</li><br />
+            <li>Name recognition in annual report</li><br />
+            <li>Name recognition on our Facebook page</li><br />
+            <li>Verbal recognition day of event</li><br />
+            <li>Table of Honor at event</li><br />
         </ul>
         <br class="hidden-xs hidden-md hidden-lg"/>
         <br class="hidden-xs hidden-md hidden-lg"/>
@@ -223,7 +224,7 @@ h3.sponserBoxHeader{
    </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
-      &nbsp;<label>Last Name:</label><br>
+      &nbsp;<label>Last Name:</label><br />
       &nbsp;<input type="text" name="lName">
     </div>
 
