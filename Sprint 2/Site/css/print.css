@@ -1,0 +1,30 @@
+div { 
+	width: auto; 
+	border: 0; 
+	margin: 0 5%; 
+	padding: 0; 
+	float: none !important;
+    background-color: black; 
+	font-size: 12pt; 
+}
+
+img {
+    margin: 2% auto;
+    width: 100%;
+}
+.panel-heading{
+    margin: 2% auto;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3em;
+}
+ul {
+     margin: 2% auto;
+     margin-left: 20%;
+     list-style-type: circle;
+}
+
+.hidden h3, p{
+    margin: 2% auto;
+    text-align: center;
+}

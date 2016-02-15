@@ -49,7 +49,12 @@
  
 	<!--Bottom of the page-->
 	
+	<!-- jQuery -->
+    <script async src="js/jquery.js"></script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <!-- Bootstrap Core JavaScript -->
+    <script async src="js/bootstrap.min.js"></script>
 	
 
 
