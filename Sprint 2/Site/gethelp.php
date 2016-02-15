@@ -33,7 +33,8 @@
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9" >
             <!-- Main Content -->
             <div class="col-lg-7 ">
-				<img src="images/building.JPG" id="buildingImg">
+				<h3>Main Location</h3>
+				<a href="location.php"><img class="img-responsive" src="images/building.JPG" id="buildingImg"></a>
             <!-- List of main services available from Kent Food Bank -->
             <h3 id="services">Services We Provide</h3>
             <ul>
@@ -59,6 +60,14 @@
             <li>Diapers available once every 6 months if available</li>
 			</ul><br>
 			<p><img src="images/clothingbank.png" id="buildingImg" class="img-repsonsive"></p>
+			
+			<h3>Birch Creek Annex</h3>
+				<ul>
+					<li>Only perisable and refrigerated food available </li>
+					<li>Alternative to visting Main Location</li>
+				</ul>
+				<p>For more information see <a href="location.php">Locations</a></p>
+				<a href="location.php"><img class="img-responsive" src="images/annex.png" id="buildingImg" ></a>
             </div>
 			
 			
@@ -70,7 +79,7 @@
                 </div>
                 <div class="panel-body">
                 
-            <!--<h3 id="foodbankcard">How to Obtain a Food Bank Card</h3> -->
+            <h3 id="foodbankcard">Obtain Eligibility</h3> 
             <h4>Bring:</h4>
             <ul>
                 <li>Picture identification</li>
