@@ -161,6 +161,14 @@
                      </ul>
                     Learn more about Kent Food Bank at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" target="_blank">Seattle Foundation</a>
                     </p>
+                    <h2>History</h2>
+                    <p>The Kent Food Bank began operations in 1970 as a temporary agency to serve Kent families during an economic recession.</p>
+                    <p>It has since grown into a permanent agency, providing for basic needs, food, clothing and shelter to thousands of families yearly.</p>
+                    <p>The Kent Food Bank is one of the founding agencies in developing South County Area Human Service Alliance 
+                    whose mission is to streamline access to human services for low-income individuals and families in South King County by locating multiple providers in a single site known as the Alliance Center,
+                    thereby leveraging resources and increasing efficiency. </p>
+                    <p>In the fall of 2004, the Kent Food Bank moved into the <a href="location.php">Alliance Center</a>. In addition to this facility we operate the <a href="location.php">Birch Creek Food Bank</a> on the east hill of Kent.</p>
+                    <p>This supports our efforts to ensure that low-income families/individuals that need assistance will have ease of access to our services. One of our major goals is to alleviate hunger in our service area, making for a healthy and strong community.</p>
                 </div>
                
             </div>
