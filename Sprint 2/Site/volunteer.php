@@ -10,7 +10,13 @@ $missing = [];
 	$phone="";
 	$email="";
 	$whyVolunteer="";
+	$commit ="";
+	$lift = "";
+	$limitation ="";
 	$questions="";
+	$clothing="";
+	$office="";
+	$food="";
 	
 	// Turn on error reporting
    ini_set('display_errors', 1);
@@ -22,10 +28,16 @@ $missing = [];
 		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
 					 'commit', 'lift', 'limitation', 'questions'];
-		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 
 					 'commit', 'lift', 'limitation'];
 		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
 		$headers = [];
+		$subject = 'Volunteer Application -'. $fname . " " . $lname;
+		$headers = [];
+		$headers[] = 'From: webmaster@example.com';
+		$headers[] = 'Cc: another@example.com';
+		$headers[] = 'Content-type: text/plain; charset=utf-8';
+		$authorized = '-fkentfoodbank@gmail.com';
 		
 
 	// Include the validation functions
@@ -60,69 +72,56 @@ $missing = [];
 //            $isValid = false;
 //        }
 		
-	//Validate address
-        
-		if (!empty($_POST['address'])) {
-            $address = $_POST['address'];
-        } else {
-            echo '<p> Please enter an address. </p>';
-            $isValid = false;
-        }
-		
-	//Validate city
-        if (!empty($_POST['city'])) {
-            $city = $_POST['city'];
-        } else {
-            echo '<p>Please enter a city.</p>';
-            $isValid = false;
-			
-	    }
-
-	 //Validate zip
-        
-		if (!empty($_POST['zip'])) {
-            $zip = $_POST['zip'];
-        } else {
-            echo '<p>Please enter a zip code.</p>';
-            $isValid = false;
-        }
-		
-//	//Validate phone number
+//	//Validate address
 //        
-//		if (!empty($_POST['phone'])) {
-//            $phone = $_POST['phone'];
-//        } 
-//
-//		//Validate email
-//        if (!empty($_POST['email'])) {
-//            $email = $_POST['email'];
-//			if (isSuspect($email)) {
-//				
-//			}
+//		if (!empty($_POST['address'])) {
+//            $address = $_POST['address'];
+//        } else {
+//            echo '<p> Please enter an address. </p>';
+//            $isValid = false;
 //        }
 //		
-
-		//Validate Volunteer Opprotunities
-		if (empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-            echo '<p>Please select a Volunteer Opprotunity.</p>';
-            $isValid = false;
-		} else {
-			$clothing = $_POST['clothing'];
-			$office= $_POST['office'];
-			$food= $_POST['food'];
-		}
+//	//Validate city
+//        if (!empty($_POST['city'])) {
+//            $city = $_POST['city'];
+//        } else {
+//            echo '<p>Please enter a city.</p>';
+//            $isValid = false;
+//			
+//	    }
+//
+//	 //Validate zip
+//        
+//		if (!empty($_POST['zip'])) {
+//            $zip = $_POST['zip'];
+//        } else {
+//            echo '<p>Please enter a zip code.</p>';
+//            $isValid = false;
+//        }
 		
-		//Validate Why are you interested in Volunteering
+	//Validate phone number
         
-		if (!empty($_POST['whyVolunteer'])) {
-            $whyVolunteer = $_POST['whyVolunteer'];
-        }
+		if (!empty($_POST['phone'])) {
+            $phone = $_POST['phone'];
+        } 
+
+		//Validate email
+        if (!empty($_POST['email'])) {
+            $email = $_POST['email'];
 			
-		//Validate Any Questions
-        
-		if (!empty($_POST['questions'])) {
-            $questions = $_POST['questions'];
         }
+//		
+		//Validate Why are you interested in Volunteering
+			//
+			//if (!empty($_POST['whyVolunteer'])) {
+			//	$whyVolunteer = $_POST['whyVolunteer'];
+			//}
+			//	
+			////Validate Any Questions
+			//
+			//if (!empty($_POST['questions'])) {
+			//	$questions = $_POST['questions'];
+			//}
 		
 		
 		
@@ -130,15 +129,11 @@ $missing = [];
 		
 		if ($isValid) {
             //Send Form information in email
-			$subject = 'Volunteer Application -'. $fname . " " . $lname;
-			$headers = [];
-			$headers[] = 'From: webmaster@example.com';
-			$headers[] = 'Cc: another@example.com';
-			$headers[] = 'Content-type: text/plain; charset=utf-8';
-			$authorized = null;
+			
+			
 			
 			if ($mailSent) {
-				//header('Location: Volunteer-thank-you.php');
+				header('Location: Volunteer-thank-you.php');
 				exit;
 			}
 			
@@ -206,11 +201,11 @@ $missing = [];
 						} elseif ($_POST) {
 							//print_r($_POST);
 							//$appType = $_POST['appType'];
-							echo 'appType: ';
-							print $appType;
+							//echo 'appType: ';
+							//echo $appType;
 							
-							echo '<br >appTypes: ';
-							print_r($appTypes);
+							//echo '<br >appTypes: ';
+							//print_r($appTypes);
 							if (!in_array($appType, $appTypes )) {
 								echo '<p class="formError text-center">There was an error please reload your page</p>';
 							}
@@ -221,6 +216,7 @@ $missing = [];
 					   <fieldset class="form-group text-center">
 							   <label>Type of Application*:</label><br>
 							   
+					 <!-- Create Radio Buttons -->		   
 					<?php
 						foreach ($appTypes as $appValue) {
 							echo '<label class="radio-inline"><input type="radio" name="appType" id="';
@@ -243,9 +239,21 @@ $missing = [];
 			   <div class="row">
 						
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+					<!-- Error Message if first name not entered -->	
 					<?php if ($missing && in_array('fname', $missing)) : ?>
 								<span class="formError text-center">Please enter your first name.</span>
 								<?php endif; ?>
+				   </div>
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+					<!-- Error Message if last name not entered -->
+					<?php if ($missing && in_array('lname', $missing)) : ?>
+								<span class="formError text-center">Please enter your last name.</span>
+								<?php endif; ?>
+					</div>
+			   </div>
+					<div class="row">
+						
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">		
 				   <!-- First Name field -->
 					   <fieldset class="form-group">
 						   <label for="fname">First Name*</label><br>
@@ -254,10 +262,7 @@ $missing = [];
 				   </div>
 				   
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-					<?php if ($missing && in_array('lname', $missing)) : ?>
-								<span class="formError text-center">Please enter your last name.</span>
-								<?php endif; ?>
-				   <!-- Last Name field -->
+					<!-- Last Name field -->
 					   <fieldset class="form-group">
 						   <label for="lname">Last Name*</label><br>
 						   <input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
@@ -267,6 +272,13 @@ $missing = [];
 				   
 			   </div>
 			   <div class="row">
+				<?php if ($_POST) {
+						if ($missing && in_array('address', $missing) || in_array('city', $missing) || in_array('zip', $missing)) {
+							echo '<p class="formError text-center">Please enter your street address, city, and zip code.</p>';
+							$isValid = false;
+						}
+				}
+				?>
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 				   <!-- Address -->
 				   <fieldset class="form-group">
@@ -302,6 +314,7 @@ $missing = [];
 			   
 			   
 			   <div class="row">
+				 <!-- Validate phone OR email is entered -->
 				<?php if ($_POST) {
 						if (empty($_POST['email']) && empty($_POST['phone'])) {
 							echo '<p class="formError text-center">Please enter a phone number or email address.</p>';
@@ -327,22 +340,59 @@ $missing = [];
 			   </div>
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					<?php
+					//Validate Volunteer Opprotunities
+					
+						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+							echo '<p class="formError text-center">Please select a Volunteer Opprotunity.</p>';
+							$isValid = false;
+						} else {
+							if (!empty($_POST['clothing'])) {
+								$clothing = $_POST['clothing'];
+								
+							}
+							if (!empty($_POST['office'])) {
+								$office= $_POST['office'];
+							}
+							if (!empty($_POST['food'])) {
+								$food= $_POST['food'];
+							}
+								
+							
+						}
+						
+						
+						
+					?>
 					   <fieldset class="form-group">
 						   
 							   <label for="checkbox" >Volunteer Opportunities (check your interests)</label>
 							   <div class="checkbox">
 								   <label for="clothing">
-								   <input type="checkbox" name="clothing" id="clothing"> Clothing
+								   <input type="checkbox" name="clothing" id="clothing"
+								   <?php if ($clothing) : ?>
+									checked
+									<?php endif; ?>
+								   > Clothing
 								   </label>
 								   <p>Volunteers recieve, sort and organize donated clothing and assiting clients in their shopping</p>
 						   
 								   <label for="office">
-								   <input type="checkbox" name="office" id="office"> Office
+								   <input type="checkbox" name="office" id="office"
+								   <?php if ($office) : ?>
+									checked
+									<?php endif; ?>
+								   >Office
 								   </label>
 								   <p>Volunteers register clients by computer check in through a one on one client interview process and verify information. Assist with resource referral and other needs. </p>
 						   
-								   <label for="office">
-								   <input type="checkbox" name="food" id="food"> Food
+								   <label for="food">
+								   <input type="checkbox" name="food" id="food"
+									<?php if ($food) : ?>
+									checked
+									<?php endif; ?>
+								 
+								   > Food
 								   </label>
 								   <p>Volunteers recieve, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
 						   </div>
@@ -364,20 +414,27 @@ $missing = [];
 				   (M, T, W, or F from 9am -2:30pm)</label>
 				   <div class="radio">
 					   <label class="radio-inline">
-							   <input type="radio" name="commit" id="commitYes" value="commitYes">
+							   <input type="radio" name="commit" id="commitYes" value="commitYes"
+							   <?php if (strcmp($commit, "commitYes") == 0 ) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
 							   Yes
 					   </label>
 				   
 						   <label class="radio-inline">
-							   <input type="radio" name="commit" id="commitNo" value="commitNo">
+							   <input type="radio" name="commit" id="commitNo" value="commitNo"
+							   <?php if (strcmp($commit, "commitNo") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
+							  
 							   No
 						   </label>
 				   <?php
 				   //Validate Commitment
-					   if (!empty($_POST['commit'])) {
-						   $commit = $_POST['commit'];
-					   } else {
-						   echo '<p class="radio-inline" >Please select Yes or No.</p>';
+					   if ($missing && in_array('commit', $missing)) {
+						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 						   $isValid = false;
 						   
 					   }
@@ -391,15 +448,30 @@ $missing = [];
 				   <label for="lift">Are you able to lift 10 pounds?*</label >
 				   <div class="radio">
 					   <label class="radio-inline">
-							   <input type="radio" name="lift" id="liftYes" value="liftYes">
+							   <input type="radio" name="lift" id="liftYes" value="liftYes"
+							   <?php if (strcmp($lift, "liftYes") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
 							   Yes
 					   </label>
 				 
 						   <label class="radio-inline">
-							   <input type="radio" name="lift" id="liftNo" value="liftNo">
+							   <input type="radio" name="lift" id="liftNo" value="liftNo"
+							   <?php if (strcmp($lift, "liftNo") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
 							   No
 						   </label>
-				   
+				   <?php
+				   //Validate Ability to Lift
+					    if ($missing && in_array('lift', $missing)) {
+						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+						   $isValid = false;
+						   
+					   }
+					   ?>
 				   </fieldset>
 			   </div>
 			   </div>
@@ -408,16 +480,32 @@ $missing = [];
 				   <fieldset class="form-group">
 				   <label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
 				   <div class="radio">
+					
 					   <label class="radio-inline">
-							   <input type="radio" name="limitation" id="limitationYes" name="limitationYes">
+							   <input type="radio" name="limitation" id="limitationYes" value="limitationYes"
+							   <?php if (strcmp($limitation, "limitationYes") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
 							   Yes
 					   </label>
 				   
 						   <label class="radio-inline">
-							   <input type="radio" name="limitation" id="limitationNo" value="limitationNo">
+							   <input type="radio" name="limitation" id="limitationNo" value="limitationNo"
+							  <?php if (strcmp($limitation, "limitationNo") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							   >
 							   No
 						   </label>
-				   
+				    <?php
+				   //Validate Physical Limiations
+					   if ($missing && in_array('limitation', $missing)) {
+						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+						   $isValid = false;
+						   
+					   }
+					   ?>
 				   </fieldset>
 			   </div>
 			   </div>	

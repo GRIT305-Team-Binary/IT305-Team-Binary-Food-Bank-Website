@@ -111,7 +111,7 @@ if (isset($_POST['send'])) {
 					<div class="form-group">
 						<p>
 							<div class="col-xs-12">
-								<label for="email">
+								<label for="email" class="control-label">
 							<?php if ($missing && in_array('email', $missing)) : ?>
 							<span class="formError">Please enter your email address.</span>
 							<?php elseif (isset($errors['email'])) : ?>
@@ -120,15 +120,16 @@ if (isset($_POST['send'])) {
 							<br>E-mail address*
 						</label><br>
 						
-							<input type="email" name="email" id="email" 	 class="input form-control
+							<input type="email" name="email" id="email" class="input form-control"
 							<?php
 								if ($errors || $missing) {
-									echo 'has-error has-feedback" ';
-									echo 'value="' . htmlentities($email) . '"';
+									echo 'value="' . htmlentities($email) . '">';
+									
 								} else {
-									echo '"';
-								}
-							?> >
+									echo 'value="' . htmlentities($email). '">'; 
+									
+								}	
+							?> 
 						</div>
 						</p>
 					</div>
