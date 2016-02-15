@@ -22,7 +22,7 @@ $missing = [];
 		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
 					 'commit', 'lift', 'limitation', 'questions'];
-		$required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'commit', 'lift', 'limitation'];
 		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
 		$headers = [];
@@ -40,37 +40,25 @@ $missing = [];
 	  
     
 		
-		//Validate Type of Application
-		if (!empty($_POST['appType'])) {
-            $appType = $_POST['appType'];
-			$appTypes = array('individual', 'group', 'organizational', 'school');
-			
-			if (!in_array($appType, $appTypes)) {
-				echo '<p>There was an error please reload your page</p>';
-			}
-        } else {
-            echo '<p>Please select the type of application you are submitting.</p>';
-            $isValid = false;
-			
-	    }
 		
- 	 //Validate first name
-        if (!empty($_POST['fname'])) {
-            $fname = $_POST['fname'];
-        } else {
-            echo '<p>Please enter a first name.</p>';
-            $isValid = false;
-			
-	    }
-
-	 //Validate last name
-        
-		if (!empty($_POST['lname'])) {
-            $lname = $_POST['lname'];
-        } else {
-            echo '<p>Please enter a last name.</p>';
-            $isValid = false;
-        }
+		
+// 	 //Validate first name
+//        if (!empty($_POST['fname'])) {
+//            $fname = $_POST['fname'];
+//        } else {
+//            echo '<p>Please enter a first name.</p>';
+//            $isValid = false;
+//			
+//	    }
+//
+//	 //Validate last name
+//        
+//		if (!empty($_POST['lname'])) {
+//            $lname = $_POST['lname'];
+//        } else {
+//            echo '<p>Please enter a last name.</p>';
+//            $isValid = false;
+//        }
 		
 	//Validate address
         
@@ -99,25 +87,21 @@ $missing = [];
             $isValid = false;
         }
 		
-	//Validate phone number
-        
-		if (!empty($_POST['phone'])) {
-            $phone = $_POST['phone'];
-        } 
+//	//Validate phone number
+//        
+//		if (!empty($_POST['phone'])) {
+//            $phone = $_POST['phone'];
+//        } 
+//
+//		//Validate email
+//        if (!empty($_POST['email'])) {
+//            $email = $_POST['email'];
+//			if (isSuspect($email)) {
+//				
+//			}
+//        }
+//		
 
-		//Validate email
-        if (!empty($_POST['email'])) {
-            $email = $_POST['email'];
-			if (isSuspect($email)) {
-				
-			}
-        }
-		
-		if (empty($_POST['email']) && empty($_POST['phone'])) {
-            echo '<p>Please enter a phone number or email address.</p>';
-            $isValid = false;
-		}
-		
 		//Validate Volunteer Opprotunities
 		if (empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
             echo '<p>Please select a Volunteer Opprotunity.</p>';
@@ -191,10 +175,17 @@ $missing = [];
         </div>
 		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
 					
+				<!-- Space for error message -->
+				
+				<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
+				<h1 class="formError text-center">Sorry, your mail couldn't be sent.</h1><br>
+			<?php elseif ($errors || $missing) : ?>
+				<h1 class="formError text-center">Please fix the item(s) indicated:</h1><br>
+			<?php endif; ?>		
 					
 			<!-- This is the Form -->
 							 
-							 
+						 
 			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!--Volunteer-thank-you.php -->
 			   <div class="row ">
 				   
@@ -203,19 +194,58 @@ $missing = [];
 			   </div>
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
+					<?php
+						//Validate Type of Application
+						//print_r ($missing);
+						$appTypes = array('individual', 'group', 'organizational', 'school');
+						if ($missing && in_array('appType', $missing))  {
+							echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
+							$isValid = false;
+							
+							
+						} elseif ($_POST) {
+							//print_r($_POST);
+							//$appType = $_POST['appType'];
+							echo 'appType: ';
+							print $appType;
+							
+							echo '<br >appTypes: ';
+							print_r($appTypes);
+							if (!in_array($appType, $appTypes )) {
+								echo '<p class="formError text-center">There was an error please reload your page</p>';
+							}
+						}
+						
+					?>
 				   <!-- Application type -->
 					   <fieldset class="form-group text-center">
 							   <label>Type of Application*:</label><br>
-							   <label class="radio-inline"><input type="radio" name="appType" id="Individual" value="individual">Individual</label>
-							   <label class="radio-inline"><input type="radio" name="appType" id="Group" value="group">Group</label>
-							   <label class="radio-inline"><input type="radio" name="appType" id="Organization" value="organization">Organization</label>
-							   <label class="radio-inline"><input type="radio" name="appType" id="School" value="school">School</label>
-						   
+							   
+					<?php
+						foreach ($appTypes as $appValue) {
+							echo '<label class="radio-inline"><input type="radio" name="appType" id="';
+							echo strtolower($appValue);
+							echo '" value="';
+							echo strtolower($appValue);
+							
+							if (strcmp($appValue, $appType) == 0){
+								echo '" checked>';
+							} else {
+								echo'">';
+							}
+							echo ucfirst($appValue);
+							echo '</label>';
+						}
+					?>
 					   </fieldset>
 				   </div>
 			   </div>
 			   <div class="row">
+						
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+					<?php if ($missing && in_array('fname', $missing)) : ?>
+								<span class="formError text-center">Please enter your first name.</span>
+								<?php endif; ?>
 				   <!-- First Name field -->
 					   <fieldset class="form-group">
 						   <label for="fname">First Name*</label><br>
@@ -224,6 +254,9 @@ $missing = [];
 				   </div>
 				   
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+					<?php if ($missing && in_array('lname', $missing)) : ?>
+								<span class="formError text-center">Please enter your last name.</span>
+								<?php endif; ?>
 				   <!-- Last Name field -->
 					   <fieldset class="form-group">
 						   <label for="lname">Last Name*</label><br>
@@ -269,6 +302,14 @@ $missing = [];
 			   
 			   
 			   <div class="row">
+				<?php if ($_POST) {
+						if (empty($_POST['email']) && empty($_POST['phone'])) {
+							echo '<p class="formError text-center">Please enter a phone number or email address.</p>';
+							$isValid = false;
+						}
+				}
+				?>
+		
 				   <fieldset class="form-group">
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->

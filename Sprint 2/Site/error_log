@@ -354,3 +354,36 @@
 [14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
 [14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
 [14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 21:25:11 America/Chicago] PHP Parse error:  syntax error, unexpected '}' in /home/teambinary/public_html/volunteer.php on line 204
+[14-Feb-2016 21:25:28 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 205
+[14-Feb-2016 21:26:53 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 205
+[14-Feb-2016 21:27:59 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 205
+[14-Feb-2016 21:28:13 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 205
+[14-Feb-2016 21:29:50 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 205
+[14-Feb-2016 21:31:02 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 207
+[14-Feb-2016 21:34:20 America/Chicago] PHP Notice:  Undefined variable: appType in /home/teambinary/public_html/volunteer.php on line 210
+[14-Feb-2016 21:38:58 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/includes/process_mail.php on line 30
+[14-Feb-2016 21:50:14 America/Chicago] PHP Parse error:  syntax error, unexpected 'echo' (T_ECHO), expecting ',' or ';' in /home/teambinary/public_html/volunteer.php on line 228
+[14-Feb-2016 21:50:29 America/Chicago] PHP Parse error:  syntax error, unexpected end of file in /home/teambinary/public_html/volunteer.php on line 435
+[14-Feb-2016 22:06:35 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 228
+[14-Feb-2016 22:06:35 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 228
+[14-Feb-2016 22:06:35 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 228
+[14-Feb-2016 22:06:35 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 228
+[14-Feb-2016 22:07:31 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:08:06 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:08:12 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:09:43 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:10:00 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:10:06 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:10:26 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:11:34 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 209
+[14-Feb-2016 22:13:25 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 226
+[14-Feb-2016 22:13:25 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 226
+[14-Feb-2016 22:13:25 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 226
+[14-Feb-2016 22:13:25 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 226
+[14-Feb-2016 22:18:32 America/Chicago] PHP Parse error:  syntax error, unexpected '$appTypes' (T_VARIABLE) in /home/teambinary/public_html/volunteer.php on line 211
+[14-Feb-2016 22:18:57 America/Chicago] PHP Parse error:  syntax error, unexpected '{' in /home/teambinary/public_html/volunteer.php on line 229
+[14-Feb-2016 22:25:24 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 231
+[14-Feb-2016 22:25:24 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 231
+[14-Feb-2016 22:25:24 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 231
+[14-Feb-2016 22:25:24 America/Chicago] PHP Notice:  Undefined index: appType in /home/teambinary/public_html/volunteer.php on line 231

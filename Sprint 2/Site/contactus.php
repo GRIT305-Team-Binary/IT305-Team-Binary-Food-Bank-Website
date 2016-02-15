@@ -69,6 +69,15 @@ if (isset($_POST['send'])) {
 			<?php elseif ($errors || $missing) : ?>
 				<p class="formError">Please fix the item(s) indicated:</p>
 			<?php endif; ?>
+			<?php
+					if ($_POST && $mailSent) {
+						echo "<div class='row '>
+								<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center'>
+										<p class='form-confirm'>Your message has been sent. Thank you!</p>
+								</div>
+							</div>";
+					}
+				?>
 			
 			<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" role="form">
 			 <div class="row ">
@@ -76,10 +85,11 @@ if (isset($_POST['send'])) {
 					<div class="form-group">
 						<p>
 								<div class="col-xs-12">
-								<label for="name">Name*
+								<label for="name">
 								<?php if ($missing && in_array('name', $missing)) : ?>
 								<span class="formError">Please enter your name.</span>
 								<?php endif; ?>
+								<br>Name*
 							</label><br>
 						
 							<input type="text" name="name" id="name"  class="input form-control 
@@ -101,12 +111,13 @@ if (isset($_POST['send'])) {
 					<div class="form-group">
 						<p>
 							<div class="col-xs-12">
-								<label for="email">E-mail address*
+								<label for="email">
 							<?php if ($missing && in_array('email', $missing)) : ?>
 							<span class="formError">Please enter your email address.</span>
 							<?php elseif (isset($errors['email'])) : ?>
 							<span class="formError ">Invalid email address</span>
 							<?php endif; ?>
+							<br>E-mail address*
 						</label><br>
 						
 							<input type="email" name="email" id="email" 	 class="input form-control
@@ -151,8 +162,8 @@ if (isset($_POST['send'])) {
 									<span class="formError">You forgot to add any comments.</span>
 									<?php endif; ?>
 								</label><br>
-								<textarea name="comments" id="comments" rows="5" class="input form-control">
-								<?php
+								<textarea name="comments" id="comments" rows="5" class="input form-control"><?php
+								//If php is not on the line above it ands strange white space
 									if ($errors || $missing) {
 										
 										echo htmlentities($comments);
@@ -172,15 +183,7 @@ if (isset($_POST['send'])) {
 			
 			</form>
 				 
-				<?php
-					if ($_POST && $mailSent) {
-						echo "<div class='row '>
-								<div class='col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center'>
-										<p class='form-confirm'>Your message has been sent. Thank you!</p>
-								</div>
-							</div>";
-					}
-				?>
+				
 				 
 				 
 			</div>
