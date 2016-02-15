@@ -1,16 +1,7 @@
 <?php
 $errors = [];
 $missing = [];
-if (isset($_POST['submit'])) {
-    $expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-				 'clothing', 'office', 'food','whyVolunteer',
-				 'commit', 'lift', 'limitation', 'questions'];
-    $required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-				 'commit', 'lift', 'limitation'];
-    $recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
-	
-
-	//Create placeholder text for entry forms
+//Create placeholder text for entry forms
 	$fname="";
 	$lname="";
 	$address="";
@@ -20,16 +11,51 @@ if (isset($_POST['submit'])) {
 	$email="";
 	$whyVolunteer="";
 	$questions="";
+	
+	// Turn on error reporting
+   ini_set('display_errors', 1);
+   error_reporting(E_ALL);
+
+	
+	
+	if (isset($_POST['submit'])) {
+		//expected and required for isSuspect function
+			$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+						 'clothing', 'office', 'food','whyVolunteer',
+						 'commit', 'lift', 'limitation', 'questions'];
+			$required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+						 'commit', 'lift', 'limitation'];
+			$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
+		//Send Form information in email
+			$subject = 'Volunteer Application -'. $fname . " " . $lname;
+			$headers = [];
+			$headers[] = 'From: webmaster@example.com';
+			$headers[] = 'Cc: another@example.com';
+			$headers[] = 'Content-type: text/plain; charset=utf-8';
+			$authorized = NULL;
+		
+		// Include the validation functions
+		include ('./includes/process_mail.php');
+
+	
        
     //Form has been submitted 
-    if (isset($_POST['submit'])) {
+    if (isset($_POST['submit'] && !isSuspect)) {
 		
-
+	//Create a boolean flag to track validation errors	
 	 $isValid = true;
+	 
+	  
+    
 		
 		//Validate Type of Application
 		if (!empty($_POST['appType'])) {
             $appType = $_POST['appType'];
+			$appTypes = array('individual', 'group', 'organizational', 'school');
+			
+			if (!in_array($appType, $appTypes)) {
+				echo '<p>There was an error please reload your page</p>';
+			}
         } else {
             echo '<p>Please select the type of application you are submitting.</p>';
             $isValid = false;
@@ -90,6 +116,9 @@ if (isset($_POST['submit'])) {
 		//Validate email
         if (!empty($_POST['email'])) {
             $email = $_POST['email'];
+			if (isSuspect($email)) {
+				
+			}
         }
 		
 		if (empty($_POST['email']) && empty($_POST['phone'])) {
@@ -124,18 +153,13 @@ if (isset($_POST['submit'])) {
 		
 		
 		if ($isValid) {
-            //Send Form information in email
-			$subject = 'Volunteer Application -'. $fname . " " . $lname;
-			$headers = [];
-			$headers[] = 'From: webmaster@example.com';
-			$headers[] = 'Cc: another@example.com';
-			$headers[] = 'Content-type: text/plain; charset=utf-8';
-			$authorized = null;
-			require './includes/process_mail.php';
+          
+			
 			if ($mailSent) {
 				//header('Location: Volunteer-thank-you.php');
 				exit;
 			}
+			
 			
            
         }
@@ -168,205 +192,214 @@ if (isset($_POST['submit'])) {
             <?php  include ('includes/contribute-side.php');  ?>
         </div>
 		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
-         <form method="POST" action="Volunteer-thank-you.php">
-<div class="row ">
-	
-	<hr>
-	<p></p>
-</div>
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
-	<!-- Application type -->
-		<fieldset class="form-group text-center">
-				<label>Type of Application*:</label><br>
-				<label class="radio-inline"><input type="radio" name="appType" id="Individual" value="individual">Individual</label>
-				<label class="radio-inline"><input type="radio" name="appType" id="Group" value="group">Group</label>
-				<label class="radio-inline"><input type="radio" name="appType" id="Organization" value="organization">Organization</label>
-				<label class="radio-inline"><input type="radio" name="appType" id="School" value="School">School</label>
-			
-		</fieldset>
-	</div>
-</div>
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-	<!-- First Name field -->
-		<fieldset class="form-group">
-			<label for="fname">First Name*</label><br>
-			<input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
-		</fieldset>
-	</div>
-	
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-	<!-- Last Name field -->
-		<fieldset class="form-group">
-			<label for="lname">Last Name*</label><br>
-			<input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
-		</fieldset>
-	</div>
-	
-	
-</div>
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-	<!-- Address -->
-	<fieldset class="form-group">
-		<label for="address">Address*</label><br>
-		<input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" value="<?php echo $address; ?>">
-	</fieldset>
-	</div>
-
-
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
-	
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 form-group">
-	<!-- City -->
-		<fieldset class="form-group">
-			
-			<label for="city">City*</label><br>
-			<input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" value="<?php echo $city; ?>">
-			
-		</fieldset>
-	</div>
-	<div class="col-lg-3 visible-lg">
-		<h2 class="text-center">WA</h2>
-	</div>
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-	<!-- Zip -->
-		<fieldset class="form-group">
-			<label for="zip">Zip Code*</label><br>
-			<input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" value="<?php echo $zip; ?>">
-		</fieldset>
-	</div>
-</div>
-</div>
-
-
-<div class="row">
-	<fieldset class="form-group">
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-		<!-- Contact Phone -->
-			<label>Phone*</label><br>
-			<input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
-		</div>
-
-		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-		<!-- Contact Email-->
-			<label>E-mail address*</label><br>
-			<input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" value="<?php echo $email; ?>">
-			<br><br>
-		</div>
-	</fieldset>
-</div>
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-		<fieldset class="form-group">
-			
-				<label for="checkbox" >Volunteer Opportunities (check your interests)</label>
-				<div class="checkbox">
-					<label for="clothing">
-					<input type="checkbox" name="clothing" id="clothing"> Clothing
-					</label>
-					<p>Volunteers recieve, sort and organize donated clothing and assiting clients in their shopping</p>
-			
-					<label for="office">
-					<input type="checkbox" name="office" id="office"> Office
-					</label>
-					<p>Volunteers register clients by computer check in through a one on one client interview process and verify information. Assist with resource referral and other needs. </p>
-			
-					<label for="office">
-					<input type="checkbox" name="food" id="food"> Food
-					</label>
-					<p>Volunteers recieve, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
-			</div>
-		</fieldset>
-	</div>
-
-<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-	<fieldset class="form-group">
-    		<label for="whyVolunteer">Why are you interested in volunteering?</label><br />
-    		<textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
-  	</fieldset>
-</div>
-</div>
-
-<div class="row">
-	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<fieldset class="form-group" for="commit">
-	<label>Are you able to make a commitment of at leaset three (3) months one day a week?*<br />
-	(M, T, W, or F from 9am -2:30pm)</label>
-	<div class="radio">
-   	 	<label class="radio-inline">
-      			<input type="radio" name="commit" id="commitYes" value="commitYes">
-     		 	Yes
-  		</label>
-  	
-    		<label class="radio-inline">
-      			<input type="radio" name="commit" id="commitNo" value="commitNo">
-     		 	No
-    		</label>
-	<?php
-	//Validate Commitment
-		if (!empty($_POST['commit'])) {
-            $commit = $_POST['commit'];
-        } else {
-            echo '<p class="radio-inline" >Please select Yes or No.</p>';
-            $isValid = false;
-			
-	    }
-		?>
-	</fieldset>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<fieldset class="form-group">
-	<label for="lift">Are you able to lift 10 pounds?*</label >
-	<div class="radio">
-   	 	<label class="radio-inline">
-      			<input type="radio" name="lift" id="liftYes" value="liftYes">
-     		 	Yes
-  		</label>
-  
-    		<label class="radio-inline">
-      			<input type="radio" name="lift" id="liftNo" value="liftNo">
-     		 	No
-    		</label>
-	
-	</fieldset>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<fieldset class="form-group">
-	<label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
-	<div class="radio">
-   	 	<label class="radio-inline">
-      			<input type="radio" name="limitation" id="limitationYes" name="limitationYes">
-     		 	Yes
-  		</label>
-  	
-    		<label class="radio-inline">
-      			<input type="radio" name="limitation" id="limitationNo" value="limitationNo">
-     		 	No
-    		</label>
-	
-	</fieldset>
-</div>
-</div>	
-<div class="row">
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-	<fieldset class="form-group">
-    		<label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
-    		<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
-  	</fieldset>						
-		<button type="submit" class="btn btn-warning" name="submit">Submit</button>
-		<p class="asterisk">* = Required field</p>
-	</div>
-</div>
-</form>
+					
+					
+			<!-- This is the Form -->
+							 
+							 
+			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!--Volunteer-thank-you.php -->
+			   <div class="row ">
+				   
+				   <hr>
+				   <p></p>
+			   </div>
+			   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
+				   <!-- Application type -->
+					   <fieldset class="form-group text-center">
+							   <label>Type of Application*:</label><br>
+							   <label class="radio-inline"><input type="radio" name="appType" id="Individual" value="individual">Individual</label>
+							   <label class="radio-inline"><input type="radio" name="appType" id="Group" value="group">Group</label>
+							   <label class="radio-inline"><input type="radio" name="appType" id="Organization" value="organization">Organization</label>
+							   <label class="radio-inline"><input type="radio" name="appType" id="School" value="school">School</label>
+						   
+					   </fieldset>
+				   </div>
+			   </div>
+			   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+				   <!-- First Name field -->
+					   <fieldset class="form-group">
+						   <label for="fname">First Name*
+						   <?php if ($missing && in_array('name', $missing)) : ?>
+								<span class="formError">Please enter your name.</span>
+								<?php endif; ?>
+								</label><br>
+						   <input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
+					   </fieldset>
+				   </div>
+				   
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+				   <!-- Last Name field -->
+					   <fieldset class="form-group">
+						   <label for="lname">Last Name*</label><br>
+						   <input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
+					   </fieldset>
+				   </div>
+				   
+				   
+			   </div>
+			   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+				   <!-- Address -->
+				   <fieldset class="form-group">
+					   <label for="address">Address*</label><br>
+					   <input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" value="<?php echo $address; ?>">
+				   </fieldset>
+				   </div>
+			   
+			   
+			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+				   
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 form-group">
+				   <!-- City -->
+					   <fieldset class="form-group">
+						   
+						   <label for="city">City*</label><br>
+						   <input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" value="<?php echo $city; ?>">
+						   
+					   </fieldset>
+				   </div>
+				   <div class="col-lg-3 visible-lg">
+					   <h2 class="text-center">WA</h2>
+				   </div>
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+				   <!-- Zip -->
+					   <fieldset class="form-group">
+						   <label for="zip">Zip Code*</label><br>
+						   <input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" value="<?php echo $zip; ?>">
+					   </fieldset>
+				   </div>
+			   </div>
+			   </div>
+			   
+			   
+			   <div class="row">
+				   <fieldset class="form-group">
+					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					   <!-- Contact Phone -->
+						   <label>Phone*</label><br>
+						   <input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
+					   </div>
+			   
+					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					   <!-- Contact Email-->
+						   <label>E-mail address*</label><br>
+						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" value="<?php echo $email; ?>">
+						   <br><br>
+					   </div>
+				   </fieldset>
+			   </div>
+			   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+					   <fieldset class="form-group">
+						   
+							   <label for="checkbox" >Volunteer Opportunities (check your interests)</label>
+							   <div class="checkbox">
+								   <label for="clothing">
+								   <input type="checkbox" name="clothing" id="clothing"> Clothing
+								   </label>
+								   <p>Volunteers recieve, sort and organize donated clothing and assiting clients in their shopping</p>
+						   
+								   <label for="office">
+								   <input type="checkbox" name="office" id="office"> Office
+								   </label>
+								   <p>Volunteers register clients by computer check in through a one on one client interview process and verify information. Assist with resource referral and other needs. </p>
+						   
+								   <label for="office">
+								   <input type="checkbox" name="food" id="food"> Food
+								   </label>
+								   <p>Volunteers recieve, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
+						   </div>
+					   </fieldset>
+				   </div>
+			   
+			   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				   <fieldset class="form-group">
+						   <label for="whyVolunteer">Why are you interested in volunteering?</label><br />
+						   <textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
+				   </fieldset>
+			   </div>
+			   </div>
+			   
+			   <div class="row">
+				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				   <fieldset class="form-group" for="commit">
+				   <label>Are you able to make a commitment of at leaset three (3) months one day a week?*<br />
+				   (M, T, W, or F from 9am -2:30pm)</label>
+				   <div class="radio">
+					   <label class="radio-inline">
+							   <input type="radio" name="commit" id="commitYes" value="commitYes">
+							   Yes
+					   </label>
+				   
+						   <label class="radio-inline">
+							   <input type="radio" name="commit" id="commitNo" value="commitNo">
+							   No
+						   </label>
+				   <?php
+				   //Validate Commitment
+					   if (!empty($_POST['commit'])) {
+						   $commit = $_POST['commit'];
+					   } else {
+						   echo '<p class="radio-inline" >Please select Yes or No.</p>';
+						   $isValid = false;
+						   
+					   }
+					   ?>
+				   </fieldset>
+			   </div>
+			   </div>
+			   <div class="row">
+			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				   <fieldset class="form-group">
+				   <label for="lift">Are you able to lift 10 pounds?*</label >
+				   <div class="radio">
+					   <label class="radio-inline">
+							   <input type="radio" name="lift" id="liftYes" value="liftYes">
+							   Yes
+					   </label>
+				 
+						   <label class="radio-inline">
+							   <input type="radio" name="lift" id="liftNo" value="liftNo">
+							   No
+						   </label>
+				   
+				   </fieldset>
+			   </div>
+			   </div>
+			   <div class="row">
+			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				   <fieldset class="form-group">
+				   <label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
+				   <div class="radio">
+					   <label class="radio-inline">
+							   <input type="radio" name="limitation" id="limitationYes" name="limitationYes">
+							   Yes
+					   </label>
+				   
+						   <label class="radio-inline">
+							   <input type="radio" name="limitation" id="limitationNo" value="limitationNo">
+							   No
+						   </label>
+				   
+				   </fieldset>
+			   </div>
+			   </div>	
+			   <div class="row">
+			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				   <fieldset class="form-group">
+						   <label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
+						   <textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
+				   </fieldset>						
+					   <button type="submit" class="btn btn-warning" name="submit">Submit</button>
+					   <p class="asterisk">* = Required field</p>
+				   </div>
+			   </div>
+			   </form>
 		 	<p></p>
 		 	<hr>
-</div>
+</div>
 			</div>
 		</div>
 	 </div>
