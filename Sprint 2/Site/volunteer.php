@@ -19,28 +19,20 @@ $missing = [];
 	
 	
 	if (isset($_POST['submit'])) {
-		//expected and required for isSuspect function
-			$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-						 'clothing', 'office', 'food','whyVolunteer',
-						 'commit', 'lift', 'limitation', 'questions'];
-			$required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-						 'commit', 'lift', 'limitation'];
-			$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
-		//Send Form information in email
-			$subject = 'Volunteer Application -'. $fname . " " . $lname;
-			$headers = [];
-			$headers[] = 'From: webmaster@example.com';
-			$headers[] = 'Cc: another@example.com';
-			$headers[] = 'Content-type: text/plain; charset=utf-8';
-			$authorized = NULL;
+		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+					 'clothing', 'office', 'food','whyVolunteer',
+					 'commit', 'lift', 'limitation', 'questions'];
+		$required = ['fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+					 'commit', 'lift', 'limitation'];
+		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
+		$headers = [];
 		
-		// Include the validation functions
-		include ('./includes/process_mail.php');
 
-	
+	// Include the validation functions
+	include ('./includes/process_mail.php');
        
     //Form has been submitted 
-    if (isset($_POST['submit'] && !isSuspect)) {
+    if (isset($_POST['submit'])) {
 		
 	//Create a boolean flag to track validation errors	
 	 $isValid = true;
@@ -153,7 +145,13 @@ $missing = [];
 		
 		
 		if ($isValid) {
-          
+            //Send Form information in email
+			$subject = 'Volunteer Application -'. $fname . " " . $lname;
+			$headers = [];
+			$headers[] = 'From: webmaster@example.com';
+			$headers[] = 'Cc: another@example.com';
+			$headers[] = 'Content-type: text/plain; charset=utf-8';
+			$authorized = null;
 			
 			if ($mailSent) {
 				//header('Location: Volunteer-thank-you.php');
@@ -220,11 +218,7 @@ $missing = [];
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
 				   <!-- First Name field -->
 					   <fieldset class="form-group">
-						   <label for="fname">First Name*
-						   <?php if ($missing && in_array('name', $missing)) : ?>
-								<span class="formError">Please enter your name.</span>
-								<?php endif; ?>
-								</label><br>
+						   <label for="fname">First Name*</label><br>
 						   <input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
 					   </fieldset>
 				   </div>
