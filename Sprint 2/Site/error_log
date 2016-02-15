@@ -1,3 +1,356 @@
 [31-Jan-2016 00:25:50 America/Chicago] PHP Warning:  include(../includes/header.inc.php): failed to open stream: No such file or directory in /home/teambinary/public_html/index.php on line 5
 [31-Jan-2016 00:25:50 America/Chicago] PHP Warning:  include(../includes/header.inc.php): failed to open stream: No such file or directory in /home/teambinary/public_html/index.php on line 5
 [31-Jan-2016 00:25:50 America/Chicago] PHP Warning:  include(): Failed opening '../includes/header.inc.php' for inclusion (include_path='.:/opt/php54/lib/php') in /home/teambinary/public_html/index.php on line 5
+[14-Feb-2016 04:31:24 America/Chicago] PHP Parse error:  syntax error, unexpected '/' in /home/teambinary/public_html/volunteer.php on line 57
+[14-Feb-2016 04:31:38 America/Chicago] PHP Parse error:  syntax error, unexpected 'exit' (T_EXIT) in /home/teambinary/public_html/volunteer.php on line 70
+[14-Feb-2016 15:21:05 America/Chicago] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/teambinary/public_html/volunteer.php on line 40
+[14-Feb-2016 15:21:49 America/Chicago] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/teambinary/public_html/volunteer.php on line 42
+[14-Feb-2016 15:22:03 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:22:03 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:26:45 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:26:45 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:26:45 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:26:45 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:26:45 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:26:45 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:26:45 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:26:54 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:26:54 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:26:54 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:26:54 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:26:54 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:26:54 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:26:54 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:30:13 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:30:13 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:30:13 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:30:13 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:30:13 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:30:13 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:30:13 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:35:28 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:35:28 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:35:28 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:35:28 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:35:28 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:35:28 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:35:28 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:38:18 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:38:18 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:38:18 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:38:18 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:38:18 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:38:18 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:38:18 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:21 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:43:21 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:43:21 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:43:21 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:43:21 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:21 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:21 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:43:49 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:43:49 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:58:22 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:22 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:30 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:58:30 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 15:58:30 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:58:30 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 15:58:30 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:30 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 15:58:30 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:03:49 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:03:49 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:03:49 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:03:49 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:03:49 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:03:49 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:03:49 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:13 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:07:13 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:07:13 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:07:13 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:07:13 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:13 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:13 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:22 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:07:22 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:07:22 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:07:22 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:07:22 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:22 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:07:22 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:12 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:08:12 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:08:12 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:08:12 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:08:12 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:12 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:12 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:08:24 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:08:24 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:09:59 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:09:59 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:09:59 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:09:59 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:09:59 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:09:59 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:09:59 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:12:15 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:12:15 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:16:26 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:16:26 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:16:26 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:16:26 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 16:16:26 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:16:26 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:16:26 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 16:29:38 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:30:52 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:30:52 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:30:52 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:30:52 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:30:52 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:30:52 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:30:52 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:30:54 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:30:54 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:30:54 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:30:54 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:30:54 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:30:54 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:30:54 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: required in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 31
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  in_array() expects parameter 2 to be array, null given in /home/teambinary/public_html/includes/process_mail.php on line 34
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: headers in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  implode(): Invalid arguments passed in /home/teambinary/public_html/includes/process_mail.php on line 49
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: expected in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:31:15 America/Chicago] PHP Warning:  Invalid argument supplied for foreach() in /home/teambinary/public_html/includes/process_mail.php on line 52
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: recipient in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: subject in /home/teambinary/public_html/includes/process_mail.php on line 67
+[14-Feb-2016 20:31:15 America/Chicago] PHP Notice:  Undefined variable: authorized in /home/teambinary/public_html/includes/process_mail.php on line 67
