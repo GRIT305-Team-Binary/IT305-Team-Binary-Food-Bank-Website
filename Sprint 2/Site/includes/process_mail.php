@@ -53,6 +53,15 @@ if (!$suspect) :
     // If no errors, create headers and message body
     if (!$errors && !$missing) :
         $headers = implode("\r\n", $headers);
+        if (!empty($_POST['subject'])) {
+            $subject = $_POST['subject'];
+        }
+        else {
+            $subject = 'Feedback from online form';
+        }
+        if ($appType) {
+            $subject = 'Volunteer Application - '. $fname . " " . $lname;
+        }
         // Initialize message
         $message = '';
         foreach ($expected as $field) :

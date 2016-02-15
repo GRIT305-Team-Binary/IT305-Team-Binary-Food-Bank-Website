@@ -5,13 +5,8 @@ if (isset($_POST['send'])) {
     $expected = ['name', 'email', 'subject', 'comments'];
     $required = ['name', 'email', 'comments'];
     $recipient = 'Nicole Bassen <nicolerbassen@gmail.com>';
-	if (!empty($_POST['subject'])) {
-		$subject = $_POST['subject'];
-	}
-    else {
-		$subject = 'Feedback from online form';
-	}
-    $headers = [];
+	$subject = 'Feedback from online form';
+	$headers = [];
     $headers[] = 'From: webmaster@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
     $authorized = '-fnicolerbassen@gmail.com';
@@ -39,31 +34,7 @@ if (isset($_POST['send'])) {
 	
         <div class="row ">
 			<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-			  <!-- Contact Form 
-				 
-				 <form method="POST" action="contact-form-process.php">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					 <label>Name*</label><br>
-					 <input name="name" class="input col-xs-12" type="text" value="" size="40"><br><br>
-					</div>
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-					 <label>E-mail address*</label><br>
-					 <input name="email" class="input col-xs-12" type="text" value="" size="40"><br><br>
-					 </div>
-					<div class="row">
-						<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-							<label>Subject</label><br>
-							<input name="subject" class="input col-xs-12" type="text" value="" size="40"><br><br>
-											   
-							<label>Comments*</label><br>
-							<textarea name="message" class="input col-xs-12" rows="5" cols="40"></textarea><br>
-							
-							<input type="submit" name="submit" value="Submit"><br>
-							<p class="asterisk">* = Required field</p>
-						</div>
-					</div>
-				 </form>
-		-->
+
 			<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
 				<p class="formError">Sorry, your mail couldn't be sent.</p><br>
 			<?php elseif ($errors || $missing) : ?>
