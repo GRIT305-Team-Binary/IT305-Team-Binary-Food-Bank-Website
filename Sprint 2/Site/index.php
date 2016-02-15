@@ -112,9 +112,13 @@
                 </div>
                 <div class="row">
                     
-                        <div class="col-xs-12 col-sm-offset-2 col-sm-8 text-center">
+                        <div class="col-xs-12 col-sm-offset-2 col-sm-4 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</a>
+                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate <span class="glyphicon glyphicon-usd"></span></a>
+                         </div>
+                        <div class="col-xs-12 col-sm-4 text-center">
+                            <!-- Volunteer Button under Carousel -->
+                             <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Donate <span class="glyphicon glyphicon-time" alt="time"></a>
                          </div>
                      
                  </div>
@@ -201,5 +205,35 @@
 
     </div>
     <!-- /.container -->
+    
+    <div class="main">
+         <!-- This is our Team -->
+         <div class="container-fluid">
+            <div class="row">
+                 <h2 class="text-center">Our Team</h2>
+                 <hr>
+                 <p></p>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                   <p class="text-center"> <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-3.jpg"></p>
+                     <h4 class="text-center">Name</h4>
+                    <h5 class="text-center">Job Title</h5>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-7.jpg">
+                     <h4 class="text-center">Name</h4>
+                    <h5 class="text-center">Job Title</h5>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                    <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-6.jpg">
+                     <h4 class="text-center">Name</h4>
+                    <h5 class="text-center">Job Title</h5>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                </div>
+            </div>
+         
+    </div>
+    </div>
 
  <?php  include ('includes/footer.php');  ?>

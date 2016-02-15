@@ -141,7 +141,12 @@ hr{
  {
     width: 100%;
  }
- 
+ /* Our Team Styles*/
+ .team-img{
+    margin: 2% auto;
+    height: 200px;
+    width: 200px;
+ }
   /* Form Styles */
 .formError{
     color: #F78536;
