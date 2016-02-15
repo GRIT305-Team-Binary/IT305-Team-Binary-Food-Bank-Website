@@ -17,7 +17,7 @@ $missing = [];
 	$clothing="";
 	$office="";
 	$food="";
-	
+	$appType="";
 	// Turn on error reporting
    ini_set('display_errors', 1);
    error_reporting(E_ALL);
@@ -45,7 +45,7 @@ $missing = [];
        
     //Form has been submitted 
     if (isset($_POST['submit'])) {
-		
+	$subject = 'Volunteer Application -'. $fname . " " . $lname;	
 	//Create a boolean flag to track validation errors	
 	 $isValid = true;
 	 
@@ -417,8 +417,8 @@ $missing = [];
 				   (M, T, W, or F from 9am -2:30pm)</label>
 				   <div class="radio">
 					   <label class="radio-inline">
-							   <input type="radio" name="commit" id="commitYes" value="commitYes"
-							   <?php if (strcmp($commit, "commitYes") == 0 ) : ?>
+							   <input type="radio" name="commit" id="commitYes" value="Yes"
+							   <?php if (strcmp($commit, "Yes") == 0 ) : ?>
 							  checked
 							  <?php endif; ?>
 							  >
@@ -426,8 +426,8 @@ $missing = [];
 					   </label>
 				   
 						   <label class="radio-inline">
-							   <input type="radio" name="commit" id="commitNo" value="commitNo"
-							   <?php if (strcmp($commit, "commitNo") == 0) : ?>
+							   <input type="radio" name="commit" id="commitNo" value="No"
+							   <?php if (strcmp($commit, "No") == 0) : ?>
 							  checked
 							  <?php endif; ?>
 							  >
@@ -451,8 +451,8 @@ $missing = [];
 				   <label for="lift">Are you able to lift 10 pounds?*</label >
 				   <div class="radio">
 					   <label class="radio-inline">
-							   <input type="radio" name="lift" id="liftYes" value="liftYes"
-							   <?php if (strcmp($lift, "liftYes") == 0) : ?>
+							   <input type="radio" name="lift" id="liftYes" value="Yes"
+							   <?php if (strcmp($lift, "Yes") == 0) : ?>
 							  checked
 							  <?php endif; ?>
 							  >
@@ -460,8 +460,8 @@ $missing = [];
 					   </label>
 				 
 						   <label class="radio-inline">
-							   <input type="radio" name="lift" id="liftNo" value="liftNo"
-							   <?php if (strcmp($lift, "liftNo") == 0) : ?>
+							   <input type="radio" name="lift" id="liftNo" value="No"
+							   <?php if (strcmp($lift, "No") == 0) : ?>
 							  checked
 							  <?php endif; ?>
 							  >
@@ -485,8 +485,8 @@ $missing = [];
 				   <div class="radio">
 					
 					   <label class="radio-inline">
-							   <input type="radio" name="limitation" id="limitationYes" value="limitationYes"
-							   <?php if (strcmp($limitation, "limitationYes") == 0) : ?>
+							   <input type="radio" name="limitation" id="limitationYes" value="Yes"
+							   <?php if (strcmp($limitation, "Yes") == 0) : ?>
 							  checked
 							  <?php endif; ?>
 							  >
@@ -494,8 +494,8 @@ $missing = [];
 					   </label>
 				   
 						   <label class="radio-inline">
-							   <input type="radio" name="limitation" id="limitationNo" value="limitationNo"
-							  <?php if (strcmp($limitation, "limitationNo") == 0) : ?>
+							   <input type="radio" name="limitation" id="limitationNo" value="No"
+							  <?php if (strcmp($limitation, "No") == 0) : ?>
 							  checked
 							  <?php endif; ?>
 							   >
