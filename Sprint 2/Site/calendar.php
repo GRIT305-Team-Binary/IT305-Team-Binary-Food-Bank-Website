@@ -49,7 +49,7 @@
                 <!-- calendar on mobile/xs screen size -->
                 <div class="col-xs-12 visible-xs">
                     <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
-                            style="border-width:0" width="100%" height="300px" frameborder="0" scrolling="no"></iframe>
+                             width="600"  scrolling="yes"></iframe>
                 </div>
                 
             </div>
