@@ -2,6 +2,10 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
 <style>
+.err{
+  color:red;
+  font-weight: bolder;
+}
 .sponserHeaderText{
   text-align: center;
 }
@@ -10,6 +14,7 @@
   border-radius: 5px;
   border: 1px solid black;
   margin-top: 20px;
+  font-size: 1.5em;
 }
 
 .sponserHeaderText{
@@ -105,7 +110,6 @@ h3.sponserBoxHeader{
       left: 18%;
      }
 
-
     }
 
     /* Small Devices, Tablets */
@@ -143,6 +147,99 @@ h3.sponserBoxHeader{
 
 </style>
 
+<?php
+//Form Validation for the sponser form.
+
+  $rdoNotSlectedErr = ""; //initializing the variable
+  $fNameEmptyErr = ""; //initializing the variable
+  $lNameEmptyErr = ""; //initializing the variable
+  $phoneEmptyErr = ""; //initializing the variable
+  $emailEmptyErr = ""; //initializing the variable
+  $goldChecked = ""; //initializing the variable
+  $silverChecked = ""; //initializing the variable
+  $bronzeChecked = ""; //initializing the variable
+
+// makes the radio buttons sticky
+  if(isset($_POST['submit'])){
+    $isValid = true;
+    if($_POST['sponserLvl'] == 'gold'){
+      $goldChecked = 'checked';
+    }elseif($_POST['sponserLvl'] == 'silver'){
+      $silverChecked = "checked";
+    }elseif ($_POST['sponserLvl'] == 'bronze') {
+      $bronzeChecked = "checked";
+    }
+
+    // Radio buttons validation
+    if(!isset($_POST['sponserLvl'])){
+      $rdoNotSlectedErr = "<span class='err'><style> .sponserBox{
+        height: 550px !important;
+      }
+      </style>Please Slect a Sponser level before you submit. <br /> </span>";
+      $isValid = false;
+    }else{
+      $validSponserLvlsArr = array('bronze', 'silver', 'gold');
+
+      if(!in_array($_POST['sponserLvl'], $validSponserLvlsArr)){
+        $rdoNotSlectedErr = "The sponser you attempted to choose is not valid.";
+        $isValid = false;
+      }else{
+        $sponserLvl = $_POST['sponserLvl'];
+      }
+
+      //First name validation
+      if(empty($_POST['fName'])){
+        $fNameEmptyErr = "<span class='err'>Please enter a first name. <br /></span>";
+        $isValid = false;
+      }elseif (!ctype_alpha($_POST['fName'])) {
+        $fNameEmptyErr = "<span class='err'>Please enter a valid first name. <br /></span>";
+        $isValid = false;
+      }else{
+        $firstName = $_POST['fName'];
+      }
+
+      //Last name validation
+      if(empty($_POST['lName'])){
+        $lNameEmptyErr = "<span class='err'>Please enter a last name. <br /></span>";
+        $isValid = false;
+      }elseif (!ctype_alpha($_POST['lName'])) {
+        $fNameEmptyErr = "<span class='err'>Please enter a valid first name. <br /></span>";
+        $isValid = false;
+      }else {
+        $lastName = $_POST['lName'];
+      }
+
+      //Phone Number Validation
+      if(empty($_POST['phone'])){
+        $phoneEmptyErr = "<span class='err'>Please enter a phone number. <br /></span>";
+        $isValid = false;
+      }elseif (!ctype_digit(str_replace(" ", "", str_replace("-", "", $_POST['phone'])))) {
+        $phoneEmptyErr = "<span class='err'>Please enter a valid phone number. <br /></span>";
+        $isValid = false;
+      }else {
+        $phoneNum = $_POST['phone'];
+      }
+
+      //email Validation
+      if(empty($_POST['email'])){
+        $emailEmptyErr = "<span class='err'>Please enter a email. <br /></span>";
+        $isValid = false;
+      }elseif (!strpos($_POST['email'], '@')) {
+        $emailEmptyErr = "<span class='err'>Please enter a valid email. <br /></span>";
+        $isValid = false;
+      }else {
+        $email = $_POST['email'];
+      }
+
+      //check if all fields are valid and ready for submission
+      if($isValid){
+        echo "This would return user to a thank you page.";
+        return;
+      }
+    }
+  }
+ ?>
+
 <div class="container">
 <div class="headerText">
   <p class="col-md-10 col-md-offset-1 sponserHeaderText">We are excited this year to provide you with a number of different options to support the Kent Food Bank Annual Breakfast with your monetary donations. We have two different payment options, a one-time sponsorship payment or monthly installments. Both options will make a direct difference for families in need.
@@ -153,7 +250,7 @@ h3.sponserBoxHeader{
   </b></p>
 </div>
 
-<form class="form-horizontal">
+<form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-horizontal">
 
 <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
       <h2 class="sponserBoxHeader">Gold</h2>
@@ -168,7 +265,8 @@ h3.sponserBoxHeader{
         </ul>
 
         <div class="sponserRadioBtnNTxt">
-          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold"><label class="rdoTxt">&nbsp;Donte at a Gold Level.</label>
+          <?php echo $rdoNotSlectedErr; ?>
+          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold" <?php echo $goldChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Gold Level.</label>
         </div>
 </div>
 
@@ -188,7 +286,8 @@ h3.sponserBoxHeader{
         <br class="hidden-xs "/>
 
         <div class="sponserRadioBtnNTxt">
-          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver"><label class="rdoTxt">&nbsp;Donte at a Silver Level.</label>
+          <?php echo $rdoNotSlectedErr; ?>
+          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Silver Level.</label>
         </div>
 </div>
 
@@ -212,7 +311,8 @@ h3.sponserBoxHeader{
         <br  class="hidden-xs" />
         <br class="hidden-md hidden-xs" />
         <div class="sponserRadioBtnNTxt">
-          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze"><label class="rdoTxt">&nbsp;Donte at a Bronze Level.</label>
+          <?php echo $rdoNotSlectedErr; ?>
+          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Bronze Level.</label>
       </div>
   </div>
 
@@ -220,34 +320,38 @@ h3.sponserBoxHeader{
   <div class="row">
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>First Name:</label><br />
-      &nbsp;<input type="text" name="fName">
+      <?php echo $fNameEmptyErr ?>
+      &nbsp;<input type="text" name="fName" value="<?php echo $_POST['fName'] ?>">
    </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Last Name:</label><br />
-      &nbsp;<input type="text" name="lName">
+     <?php echo $lNameEmptyErr ?>
+      &nbsp;<input type="text" name="lName" value="<?php echo $_POST['lName'] ?>">
     </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Middle Initial:</label><br />
-      &nbsp;<input type="text" name="lName">
+      &nbsp;<input type="text" name="mName" value="<?php echo $_POST['mName'] ?>">
     </div>
   </div>
 
   <div class="row">
     <div class="inputFields col-xs-12 col-sm-4 col-md-4">
       &nbsp;<label>Business/Organization:</label><br />
-      &nbsp;<input type="text" name="bus-org">
+      &nbsp;<input type="text" name="bus-org" value="<?php echo $_POST['bus-org'] ?>">
     </div>
 
     <div class="inputFields col-xs-12 col-sm-4 col-md-4">
       &nbsp;<label>Phone:</label><br />
-      &nbsp;<input type="text" name="phone">
+     <?php echo $phoneEmptyErr ?>
+      &nbsp;<input type="text" name="phone" value="<?php echo $_POST['phone'] ?>">
     </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Email:</label><br />
-      &nbsp;<input type="text" name="email">
+      <?php echo $emailEmptyErr ?>
+      &nbsp;<input type="text" name="email" value="<?php echo $_POST['email'] ?>">
     </div>
   </div>
 </div>
