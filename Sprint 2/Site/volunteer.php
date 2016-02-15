@@ -177,15 +177,18 @@ $missing = [];
 			<?php elseif ($errors || $missing) : ?>
 				<h1 class="formError text-center">Please fix the item(s) indicated:</h1><br>
 			<?php endif; ?>		
-					
+				
 			<!-- This is the Form -->
 							 
 						 
 			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!--Volunteer-thank-you.php -->
 			   <div class="row ">
-				   
 				   <hr>
 				   <p></p>
+				   <p class="asterisk pull-right">* = Required field</p>	
+				   
+				   
+				   
 			   </div>
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
@@ -366,7 +369,7 @@ $missing = [];
 					?>
 					   <fieldset class="form-group">
 						   
-							   <label for="checkbox" >Volunteer Opportunities (check your interests)</label>
+							   <label for="checkbox" >Volunteer Opportunities (check your interests)*</label>
 							   <div class="checkbox">
 								   <label for="clothing">
 								   <input type="checkbox" name="clothing" id="clothing"
@@ -515,8 +518,8 @@ $missing = [];
 						   <label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
 						   <textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
 				   </fieldset>						
-					   <button type="submit" class="btn btn-warning" name="submit">Submit</button>
-					   <p class="asterisk">* = Required field</p>
+					   <p><button type="submit" class="btn btn-warning" name="submit">Submit</button></p>
+					   
 				   </div>
 			   </div>
 			   </form>

@@ -77,11 +77,7 @@
       <div id="motto" class="pull-right"><p>Serving low-income residents of the Kent School District</p></div>
 
 </div>
-      <!--Bottom of the page-->
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-      <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+      
 
       <script>
       //This javascript manipulates the logo size.
@@ -111,3 +107,9 @@
 
 
       </script>
+      	<!-- jQuery -->
+    <script async src="js/jquery.js"></script>
+	<script async src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script async src="js/bootstrap.min.js"></script>
