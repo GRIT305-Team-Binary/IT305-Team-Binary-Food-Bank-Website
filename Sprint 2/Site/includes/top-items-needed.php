@@ -1,4 +1,5 @@
- <div class="hidden text-center">
+<link href="print.css"    rel="stylesheet" media="print">
+<div class="hidden text-center">
 	<img alt="Kent Food Bank" src="../images/logo-transparent.png">
  </div>
 	 
