@@ -87,40 +87,8 @@
 
       <script>
       //This javascript manipulates the logo size.
-        $(document).ready(function(){
-          var windowWidth = $(document).width();
-          var imageSize = windowWidth/4;
-
-          if(windowWidth > 767){
-            $("#logo").css("width", imageSize + "px");
-        }else{
-            $("#logo").css("width", "100%");
-        }
-
         });
 
-          $(window).resize(function(){
-            var windowWidth = $(document).width();
-            var imageSize = windowWidth/4;
-
-            if(windowWidth > 767){
-              $("#logo").css("width", imageSize + "px");
-          }else{
-              $("#logo").css("width", "100%");
-          }
-
-          $(document).load(function(){
-              var windowWidth = $(document).width();
-              var imageSize = windowWidth/4;
-              
-              if(windowWidth > 767){
-                $("#logo").css("width", imageSize + "px");
-            }else{
-                $("#logo").css("width", "100%");
-            }
-          });
-
-        });
 
 
       </script>

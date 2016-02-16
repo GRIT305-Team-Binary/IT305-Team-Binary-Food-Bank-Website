@@ -56,15 +56,15 @@
             
             <h3 id="clothingbank">Clothing Bank</h3>
 			<ul>
-            <li>10 item limit per person in family </li>
+            <li>10 item limit per persion in family </li>
             <li>Diapers available once every 6 months if available</li>
 			</ul><br>
 			<p><img src="images/clothingbank.png" id="buildingImg" class="img-repsonsive"></p>
 			
 			<h3>Birch Creek Annex</h3>
 				<ul>
-					<li>Only perishable and refrigerated food available </li>
-					<li>Alternative to visiting Main Location</li>
+					<li>Only perisable and refrigerated food available </li>
+					<li>Alternative to visting Main Location</li>
 				</ul>
 				<p>For more information see <a href="location.php">Locations</a></p>
 				<a href="location.php"><img class="img-responsive" src="images/annex.png" id="buildingImg" ></a>

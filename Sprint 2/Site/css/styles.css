@@ -46,11 +46,6 @@ body {
     margin: 25px;
 
 }
-.foot .foot-btn {
-    font-size: 4em;
-    color: white;
-    
-}
 /*Orange buttons and panel headers */
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
 	background-color:#F78536;

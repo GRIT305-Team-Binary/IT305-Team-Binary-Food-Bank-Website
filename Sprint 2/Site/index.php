@@ -112,11 +112,11 @@
                 </div>
                 <div class="row">
                     
-                        <div class="col-xs-12 col-sm-offset-1 col-sm-5 text-center">
+                        <div class="col-xs-12 col-sm-offset-2 col-sm-4 text-center">
                             <!-- Donate Button under Carousel -->
                              <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate <span class="glyphicon glyphicon-usd"></span></a>
                          </div>
-                        <div class="col-xs-12 col-sm-5 text-center">
+                        <div class="col-xs-12 col-sm-4 text-center">
                             <!-- Volunteer Button under Carousel -->
                              <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Donate <span class="glyphicon glyphicon-time" alt="time"></a>
                          </div>
