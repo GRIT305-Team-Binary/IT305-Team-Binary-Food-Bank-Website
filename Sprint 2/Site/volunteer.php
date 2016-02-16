@@ -347,7 +347,7 @@ $missing = [];
 					//Validate Volunteer Opprotunities
 					
 						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-							echo '<p class="formError text-center">Please select a Volunteer Opprotunity.</p>';
+							echo '<p class="formError text-center">Please select a Volunteer Opportunity.</p>';
 							$isValid = false;
 						} else {
 							if (!empty($_POST['clothing'])) {
