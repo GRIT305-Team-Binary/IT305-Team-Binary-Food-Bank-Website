@@ -159,14 +159,26 @@ h3.sponserBoxHeader{
   $silverChecked = ""; //initializing the variable
   $bronzeChecked = ""; //initializing the variable
 
+
+  $mName = isset($_POST['mName']) ? $_POST['mName'] : '';
+  $busOrg = isset($_POST['bus-org']) ? $_POST['bus-org'] : '';
+  $fName = isset($_POST['fName']) ? $_POST['fName'] : '';
+  $lName = isset($_POST['lName']) ? $_POST['lName'] : '';
+  $email = isset($_POST['email']) ? $_POST['email'] : '';
+  $phone = isset($_POST['phone']) ? $_POST['phone'] : '';
+  $sponserLvlRdo = isset($_POST['sponserLvl']) ? $_POST['sponserLvl'] : '';
+
 // makes the radio buttons sticky
   if(isset($_POST['submit'])){
     $isValid = true;
-    if($_POST['sponserLvl'] == 'gold'){
+
+
+
+    if($sponserLvlRdo == 'gold'){
       $goldChecked = 'checked';
-    }elseif($_POST['sponserLvl'] == 'silver'){
+    }elseif($sponserLvlRdo == 'silver'){
       $silverChecked = "checked";
-    }elseif ($_POST['sponserLvl'] == 'bronze') {
+    }elseif ($sponserLvlRdo == 'bronze') {
       $bronzeChecked = "checked";
     }
 
@@ -195,7 +207,7 @@ h3.sponserBoxHeader{
         $fNameEmptyErr = "<span class='err'>Please enter a valid first name. <br /></span>";
         $isValid = false;
       }else{
-        $firstName = $_POST['fName'];
+
       }
 
       //Last name validation
@@ -206,8 +218,10 @@ h3.sponserBoxHeader{
         $fNameEmptyErr = "<span class='err'>Please enter a valid first name. <br /></span>";
         $isValid = false;
       }else {
-        $lastName = $_POST['lName'];
+
       }
+
+
 
       //Phone Number Validation
       if(empty($_POST['phone'])){
@@ -217,7 +231,7 @@ h3.sponserBoxHeader{
         $phoneEmptyErr = "<span class='err'>Please enter a valid phone number. <br /></span>";
         $isValid = false;
       }else {
-        $phoneNum = $_POST['phone'];
+
       }
 
       //email Validation
@@ -228,7 +242,7 @@ h3.sponserBoxHeader{
         $emailEmptyErr = "<span class='err'>Please enter a valid email. <br /></span>";
         $isValid = false;
       }else {
-        $email = $_POST['email'];
+
       }
 
       //check if all fields are valid and ready for submission
@@ -321,37 +335,37 @@ h3.sponserBoxHeader{
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>First Name:</label><br />
       <?php echo $fNameEmptyErr ?>
-      &nbsp;<input type="text" name="fName" value="<?php echo $_POST['fName'] ?>">
+      &nbsp;<input type="text" name="fName" value="<?php echo $fName; ?>">
    </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Last Name:</label><br />
      <?php echo $lNameEmptyErr ?>
-      &nbsp;<input type="text" name="lName" value="<?php echo $_POST['lName'] ?>">
+      &nbsp;<input type="text" name="lName" value="<?php echo $lName; ?>">
     </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Middle Initial:</label><br />
-      &nbsp;<input type="text" name="mName" value="<?php echo $_POST['mName'] ?>">
+      &nbsp;<input type="text" name="mName" value="<?php echo $mName; ?>">
     </div>
   </div>
 
   <div class="row">
     <div class="inputFields col-xs-12 col-sm-4 col-md-4">
       &nbsp;<label>Business/Organization:</label><br />
-      &nbsp;<input type="text" name="bus-org" value="<?php echo $_POST['bus-org'] ?>">
+      &nbsp;<input type="text" name="bus-org" value="<?php echo $busOrg; ?>">
     </div>
 
     <div class="inputFields col-xs-12 col-sm-4 col-md-4">
       &nbsp;<label>Phone:</label><br />
      <?php echo $phoneEmptyErr ?>
-      &nbsp;<input type="text" name="phone" value="<?php echo $_POST['phone'] ?>">
+      &nbsp;<input type="text" name="phone" value="<?php echo $phone; ?>">
     </div>
 
     <div class="inputFields col-xs-12  col-sm-4 col-md-4">
       &nbsp;<label>Email:</label><br />
       <?php echo $emailEmptyErr ?>
-      &nbsp;<input type="text" name="email" value="<?php echo $_POST['email'] ?>">
+      &nbsp;<input type="text" name="email" value="<?php echo $email; ?>">
     </div>
   </div>
 </div>
