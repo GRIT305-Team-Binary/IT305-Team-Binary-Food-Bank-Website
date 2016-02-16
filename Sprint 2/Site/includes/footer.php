@@ -6,26 +6,35 @@
               <div class="row text-center ">
               		<!-- Location -->
                      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                    <div class="btn btn-warning col-xs-12">
+                    <div class="btn-lg btn-warning col-xs-12">
 				
-                            <p><a class="defaultLink" href="location.php">
+                            <p><a class="defaultLink foot-btn" href="location.php"  >
                                     <span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
                                     Location
                             </a></p>
 					</div>
+					
                 </div>
+					 <div class="visible-xs">
+					 <p>&nbsp;</p>
+				
+					</div>
                  <!-- Phone Number -->
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                    <div class="btn btn-warning col-xs-12">
+                    <div class="btn-lg btn-warning col-xs-12">
 							<!-- Phone -->
-							<p><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550</p>
+							<p><a class="defaultLink foot-btn" href="tel:1-253-520-3550"  ><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550</a></p>
 					</div>
                 </div>
+				<div class="visible-xs">
+					 <p>&nbsp;</p>
+					
+					</div>
                  <!-- Contact -->
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 ">
-                    <div class="btn btn-warning col-xs-12">
+                    <div class="btn-lg btn-warning col-xs-12">
 							<!-- Phone -->
-							<p><a class="defaultLink" href="contactus.php">
+							<p><a class="defaultLink foot-btn" href="contactus.php" >
                                    <span  class="glyphicon glyphicon-phone" aria-hidden="true"></span> Contact Us
                             </a></p>
 					</div>

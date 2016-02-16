@@ -3,14 +3,14 @@
 						
 						<div class="btn btn-warning">
 							<!-- Hours -->
-							<span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+							<span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>
 							<a class="defaultLink" href="calendar.php">Hours of Operation</a>
 						</div>
 						
 						<div class="btn btn-default">
 						<!-- Phone -->
-						<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550
-						</div>
+						<a href="tel:1-253-520-3550" class="defaultLink"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> (253) 520-3550
+						</a></div>
 						<div class="btn btn-default">
 							<!-- Facebook Page -->
 						<span class="facebook-hours">

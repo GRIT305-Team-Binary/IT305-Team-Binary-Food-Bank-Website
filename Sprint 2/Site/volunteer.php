@@ -195,7 +195,7 @@ $missing = [];
 					<?php
 						//Validate Type of Application
 						//print_r ($missing);
-						$appTypes = array('individual', 'group', 'organizational', 'school');
+						$appTypes = array('individual', 'group', 'organizational', 'student');
 						if ($missing && in_array('appType', $missing))  {
 							echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 							$isValid = false;
