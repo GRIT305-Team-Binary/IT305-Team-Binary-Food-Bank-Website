@@ -8,7 +8,14 @@
 	 <div class="main" id="#top">
     <div class="container-fluid">
 		<h1>Contribute</h1>
-   <div class="row">
+		 <!-- Donate Button on mobile site -->
+		<!--<div class="row visible-xs">
+			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
+				 href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</>
+           </a>
+		</div>-->
+		   <!-- Volunteer Button can go here with link to Volunteer form -->
+    <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
              <?php  include ('includes/contribute-side.php');  ?>
             
@@ -19,7 +26,16 @@
 			
 			 <?php  include ('includes/top-items-needed.php');  ?>
            <p><a href="includes/top-items-needed.php">Print</a></p>
- </div>
+			<!-- Link to top of Page 
+			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
+			<p><span class="top-link-block right">
+				<a href="#top" class="well well-sm" >
+					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
+				</a>
+				</span>
+				</div>
+			</div> /top-link-block -->
+        </div>
        
       
          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6 pull-left">
