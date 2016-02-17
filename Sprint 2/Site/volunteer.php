@@ -133,7 +133,7 @@ $missing = [];
 			
 			
 			if ($mailSent) {
-				header('Location: Volunteer-thank-you.php');
+				header('Location: volunteer-thank-you.php');
 				exit;
 			}
 			
@@ -168,7 +168,7 @@ $missing = [];
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
             <?php  include ('includes/contribute-side.php');  ?>
         </div>
-		         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
+		     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
 					
 				<!-- Space for error message -->
 				
@@ -181,7 +181,7 @@ $missing = [];
 			<!-- This is the Form -->
 							 
 						 
-			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!--Volunteer-thank-you.php -->
+			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!--volunteer-thank-you.php -->
 			   <div class="row ">
 				   <hr>
 				   <p></p>
@@ -195,7 +195,7 @@ $missing = [];
 					<?php
 						//Validate Type of Application
 						//print_r ($missing);
-						$appTypes = array('individual', 'group', 'organizational', 'school');
+						$appTypes = array('individual', 'group', 'organizational', 'student');
 						if ($missing && in_array('appType', $missing))  {
 							echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 							$isValid = false;
@@ -254,7 +254,7 @@ $missing = [];
 								<?php endif; ?>
 					</div>
 			   </div>
-					<div class="row">
+				<div class="row">
 						
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">		
 				   <!-- First Name field -->
@@ -330,7 +330,7 @@ $missing = [];
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->
 						   <label>Phone*</label><br>
-						   <input name="phone" id="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
+						   <input name="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
 					   </div>
 			   
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -347,7 +347,7 @@ $missing = [];
 					//Validate Volunteer Opprotunities
 					
 						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-							echo '<p class="formError text-center">Please select a Volunteer Opprotunity.</p>';
+							echo '<p class="formError text-center">Please select a Volunteer Opportunity.</p>';
 							$isValid = false;
 						} else {
 							if (!empty($_POST['clothing'])) {
@@ -360,16 +360,11 @@ $missing = [];
 							if (!empty($_POST['food'])) {
 								$food= $_POST['food'];
 							}
-								
-							
 						}
-						
-						
-						
 					?>
 					   <fieldset class="form-group">
 						   
-							   <label for="checkbox" >Volunteer Opportunities (check your interests)*</label>
+							   <label >Volunteer Opportunities (check your interests)*</label>
 							   <div class="checkbox">
 								   <label for="clothing">
 								   <input type="checkbox" name="clothing" id="clothing"
@@ -412,7 +407,7 @@ $missing = [];
 			   
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				   <fieldset class="form-group" for="commit">
+				   <fieldset class="form-group">
 				   <label>Are you able to make a commitment of at leaset three (3) months one day a week?*<br />
 				   (M, T, W, or F from 9am -2:30pm)</label>
 				   <div class="radio">
@@ -442,13 +437,15 @@ $missing = [];
 						   
 					   }
 					   ?>
+						   </div>
 				   </fieldset>
+			   
 			   </div>
-			   </div>
+				   </div>
 			   <div class="row">
 			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				   <fieldset class="form-group">
-				   <label for="lift">Are you able to lift 10 pounds?*</label >
+				   <label>Are you able to lift 10 pounds?*</label >
 				   <div class="radio">
 					   <label class="radio-inline">
 							   <input type="radio" name="lift" id="liftYes" value="Yes"
@@ -475,13 +472,15 @@ $missing = [];
 						   
 					   }
 					   ?>
+						   </div>
 				   </fieldset>
+			   
 			   </div>
 			   </div>
 			   <div class="row">
 			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				   <fieldset class="form-group">
-				   <label for="limitation">Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
+				   <label>Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
 				   <div class="radio">
 					
 					   <label class="radio-inline">
@@ -509,23 +508,25 @@ $missing = [];
 						   
 					   }
 					   ?>
+				  </div>
 				   </fieldset>
+			   
 			   </div>
-			   </div>	
+			   </div>
 			   <div class="row">
-			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-				   <fieldset class="form-group">
-						   <label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
-						   <textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
-				   </fieldset>						
-					   <p><button type="submit" class="btn btn-warning" name="submit">Submit</button></p>
-					   
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<fieldset class="form-group">
+								<label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
+								<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
+						</fieldset>						
+							<p><button type="submit" class="btn btn-warning" name="submit">Submit</button></p>
+							
 				   </div>
 			   </div>
 			   </form>
 		 	<p></p>
 		 	<hr>
-</div>
+				</div>
 			</div>
 		</div>
 	 </div>

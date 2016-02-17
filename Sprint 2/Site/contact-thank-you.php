@@ -14,7 +14,7 @@ if (isset($_POST['send'])) {
     $headers = [];
     $headers[] = 'From: webmaster@example.com';
     $headers[] = 'Content-type: text/plain; charset=utf-8';
-    $authorized = '-fnicolerbassen@gmail.com';
+    $authorized = '-fnicolerbassen@gmail.com;
     require './includes/process_mail.php';
     if ($mailSent) {
         header('Location: contact-thank-you.php');
@@ -38,10 +38,10 @@ if (isset($_POST['send'])) {
             </div>
         </div>
 		<div class="row">
-
+			
 		</div>
         <div class="row ">
-
+			
 			<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
 
 				<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
@@ -49,7 +49,7 @@ if (isset($_POST['send'])) {
 				<?php elseif ($errors || $missing) : ?>
 				<p>Please fix the item(s) indicated:</p>
 				<?php endif; ?>
-
+				
 				<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>">
 				<p>
 					<label for="name">Name*
@@ -65,7 +65,7 @@ if (isset($_POST['send'])) {
 					?>
 					>
 				</p>
-
+				
 				<p>
 					<label for="email">E-mail address*
 						<?php if ($missing && in_array('email', $missing)) : ?>
@@ -82,7 +82,7 @@ if (isset($_POST['send'])) {
 					?>
 					>
 				</p>
-
+				
 				<p>
 					<label for="subject">Subject</label><br>
 					<input type="subject" name="subject" id="subject" size="40"
@@ -93,7 +93,7 @@ if (isset($_POST['send'])) {
 					?>
 					>
 				</p>
-
+				
 				<p>
 					<label for="comments">Comments*
 						<?php if ($missing && in_array('comments', $missing)) : ?>
@@ -106,35 +106,35 @@ if (isset($_POST['send'])) {
 						}
 					?></textarea>
 				</p>
-
+			
 				<p>
 					* = Required field<br><br>
 					<input type="submit" name="send" id="send" value="Send Comments">
 				</p>
-
+				
 				</form>
-
+				
 				<?php
 					if ($_POST && $mailSent) {
 						echo "Your message has been sent. Thank you!";
 					}
 				?>
-
-
+				 
+				 
 			 </div>
-
-
+			
+			
 			<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 " role="group">
 					 <?php
 						include('includes/contact_KFB.php');
-					?>
+					?>	
 			 </div>
-
-
+			
+		
 		 </div>
 	    </div>
     </div>
-
+	
  <?php
             include('includes/footer.php');
         ?>

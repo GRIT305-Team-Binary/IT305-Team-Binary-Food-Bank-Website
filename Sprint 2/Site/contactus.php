@@ -36,9 +36,9 @@ if (isset($_POST['send'])) {
 			<div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
 
 			<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
-				<p class="formError">Sorry, your mail couldn't be sent.</p><br>
+				<h2 class="formError">Sorry, your mail couldn't be sent.</h2><br>
 			<?php elseif ($errors || $missing) : ?>
-				<p class="formError">Please fix the item(s) indicated:</p>
+				<h2 class="formError">Please fix the item(s) indicated:</h2>
 			<?php endif; ?>
 			<?php
 					if ($_POST && $mailSent) {
@@ -84,7 +84,7 @@ if (isset($_POST['send'])) {
 							<div class="col-xs-12">
 								<label for="email" class="control-label">
 							<?php if ($missing && in_array('email', $missing)) : ?>
-							<span class="formError">Please enter your email address.</span>
+							<span class="formError">Please enter your e-mail.</span>
 							<?php elseif (isset($errors['email'])) : ?>
 							<span class="formError ">Invalid email address</span>
 							<?php endif; ?>

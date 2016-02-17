@@ -75,11 +75,11 @@ body {
     color: inherit;
 }
 
-.title { /* For calendar page */
+.title {
     color: white;
     text-align: center;
-    background-color: #F78536;
-    border-radius: 5px;
+    background-color: #FF9600;
+    border-radius: 3px;
     padding: 2px;
     margin-top: 0;
 }
@@ -91,6 +91,16 @@ body {
 .asterisk {
     font-style: italic;
     font-size: 80%;
+}
+
+.footerTitle {
+    margin: 0;
+    padding: 0;
+    color: #FF9600;
+}
+
+.footerBtn {
+    margin-bottom: 0;   /* remove margin space from bottom of footer button links */
 }
 
 
@@ -140,24 +150,6 @@ hr{
 #buildingImg
  {
     width: 100%;
- }
- /* Our Team Styles*/
- .team-img{
-    margin: 2% auto;
-    height: 200px;
-    width: 200px;
- }
-  /* Form Styles */
-.formError{
-    color: #F78536;
-}
- .checkbox label {
-    font-weight: 600;
- }
- 
- .form-confirm {
-     color: #F78536;
-     font-weight: 600;
  }
 /* Extra Small Devices, Phones */
 

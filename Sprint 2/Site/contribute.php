@@ -41,17 +41,17 @@
          <div class="col-xs-12 col-sm-5 col-md-5 col-lg-6 pull-left">
             <!-- Details about what Kent Food Bank does -->
 			
-            <p>Each year Kent Food Bank distributes approximately 6,000 lbs of food.  We are a non-profit organization that run on volunteer support with funding from grants, individual doners, and some money from the city of Kent.</p>
+            <p>Each year Kent Food Bank distributes approximately 6,000 lbs of food.  We are a non-profit organization that runs on volunteer support with funding from grants, individual donors, and some money from the city of Kent.</p>
             <p>Every contribution makes a difference. </p>
             <p class="text-center hidden-xs"><a href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&amp;s=3" class="btn btn-warning">Donate Today</a></p>
 			
             <!-- How you can help the Clothing Bank -->
-            <h2> Non Perishable Food</h2>
-            <p>Kent Food Bank accepts non perishable food donations on M, T, W and F from 9 am – 2 pm <span class="hidden-xs hidden-sm"> at</p>
+            <h2> Non-Perishable Food</h2>
+            <p>Kent Food Bank accepts nonperishable food donations on M, T, W and F from 9 am – 2 pm <span class="hidden-xs hidden-sm"> at</p>
             <p class="text-center   "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p></span>
             <p> Items must not be expired, damaged, or opened. During the summer call if you would like to donate vegetables or other items from your garden. </p>
             <h2 id="clothing">Clothing Bank</h2>
-            <p>Clothing Bank Accepts donations on M, T, W and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at<br />
+            <p>Clothing Bank accepts donations on M, T, W and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at<br />
             <p class="text-center  hidden-xs hidden-sm "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p>
         	<!-- Button for Mobile display-->
 			<p class="text-center  visible-xs visible-sm"><a href="location.php" class="btn btn-warning text-center">Kent Food Bank</a></p>
@@ -71,7 +71,7 @@
             <h3>Amazon Smile</h3>
 			<p><a href="http://smile.amazon.com"><img src="images/AmazonSmile-logo.png" alt="Amazon Smile" class="img-responsive"></a></p>
            
-            <p>Amazon donates 0.5% of the prie of your elighble AmazonSmile purchases to the charitable organization of your choice. </p>
+            <p>Amazon donates 0.5% of the price of your eligible AmazonSmile purchases to the charitable organization of your choice. </p>
 			<p>AmazonSmile is the same Amazon you know. Same products, same prices, same service.</p>	
 			<p>Support your charitable organization by starting your shopping at</p>
 			<p class="text-center"><a href="http://smile.amazon.com" class="btn btn-warning">smile.amazon.com</a></p>
