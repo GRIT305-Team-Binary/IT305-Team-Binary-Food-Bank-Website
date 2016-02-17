@@ -18,7 +18,6 @@
 }
 
 .sponserHeaderText{
-
   margin-top: 20px;
 }
 
@@ -96,6 +95,10 @@ h3.sponserBoxHeader{
     left: 19%;
    }
 
+   .sponserBox{
+       height:575px;
+   }
+
     }
 
     /* Extra Small Devices, Phones */
@@ -110,27 +113,27 @@ h3.sponserBoxHeader{
       left: 18%;
      }
 
+     .sponserBox{
+         height: 600px;
+     }
+
     }
 
     /* Small Devices, Tablets */
     @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-      .sponserBox{
-        margin-left: 2% !important;
-        width: 31% !important;
-        height: 700px;
-      }
-
       .rdoTxt{
         position: relative;
-        bottom: 25px;
-        left: 25%;
         font-size: 1em;
+      }
+
+      .sponserBox{
+          height: 440px;
       }
     }
 
     /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) {
+    @media only screen and (min-width : 992px) and (max-width : 1199px) {
 
       .sponserRadioBtnNTxt{
         width: 78%;
@@ -139,9 +142,18 @@ h3.sponserBoxHeader{
       .sponserBox{
         margin-left: 2% !important;
         width: 31% !important;
-        height: 520px;
+        height : 565px;
+
       }
 
+    }
+
+    @media only screen and (min-width : 1200px) {
+      .sponserBox{
+        margin-left: 2% !important;
+        width: 31% !important;
+          height: 555px;
+      }
     }
 
 
@@ -184,10 +196,7 @@ h3.sponserBoxHeader{
 
     // Radio buttons validation
     if(!isset($_POST['sponserLvl'])){
-      $rdoNotSlectedErr = "<span class='err'><style> .sponserBox{
-        height: 550px !important;
-      }
-      </style>Please Slect a Sponser level before you submit. <br /> </span>";
+      $rdoNotSlectedErr = "<span class='err'>Please Slect a Sponser level before you submit. <br /> </span>";
       $isValid = false;
     }else{
       $validSponserLvlsArr = array('bronze', 'silver', 'gold');
@@ -266,7 +275,7 @@ h3.sponserBoxHeader{
 
 <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-horizontal">
 
-<div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
+<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
       <h2 class="sponserBoxHeader">Gold</h2>
       <h3 class="sponserBoxHeader">$3,000 or $250 per month for a year</h3>
         <ul class="sponserLiEl">
@@ -284,7 +293,7 @@ h3.sponserBoxHeader{
         </div>
 </div>
 
-<div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
+<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
       <h2 class="sponserBoxHeader">Silver</h2>
       <h3 class="sponserBoxHeader">$1,500 or $125 per month for a year</h3>
         <ul class="sponserLiEl">
@@ -294,9 +303,9 @@ h3.sponserBoxHeader{
             <li>Verbal recognition day of event</li><br>
             <li>Each Table of Honor guest will receive 3 raffle tickets</li><br />
         </ul>
-        <br class="hidden-xs hidden-md hidden-lg"/>
-        <br class="hidden-xs hidden-lg " />
-        <br class="hidden-xs"/>
+        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
+        <br class="hidden-xs hidden-sm hidden-lg " />
+        <br class="hidden-xs hidden-sm"/>
         <br class="hidden-xs "/>
 
         <div class="sponserRadioBtnNTxt">
@@ -305,7 +314,7 @@ h3.sponserBoxHeader{
         </div>
 </div>
 
-<div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
+<div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col col-md-3 col-md-offset-1 sponserBox">
       <h2 class="sponserBoxHeader">Bronze</h2>
       <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
         <ul class="sponserLiEl">
@@ -315,14 +324,14 @@ h3.sponserBoxHeader{
             <li>Verbal recognition day of event</li><br />
             <li>Table of Honor at event</li><br />
         </ul>
-        <br class="hidden-xs hidden-md hidden-lg"/>
-        <br class="hidden-xs hidden-md hidden-lg"/>
-        <br class="hidden-xs hidden-md hidden-lg"/>
-        <br class="hidden-xs hidden-md hidden-lg"/>
-        <br class="hidden-xs" />
-        <br class="hidden-xs" />
-        <br class="hidden-xs" />
-        <br  class="hidden-xs" />
+        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
+        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
+        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
+        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
+        <br class="hidden-xs hidden-sm" />
+        <br class="hidden-xs hidden-sm" />
+        <br class="hidden-xs hidden-sm" />
+        <br  class="hidden-xs hidden-sm" />
         <br class="hidden-md hidden-xs" />
         <div class="sponserRadioBtnNTxt">
           <?php echo $rdoNotSlectedErr; ?>
