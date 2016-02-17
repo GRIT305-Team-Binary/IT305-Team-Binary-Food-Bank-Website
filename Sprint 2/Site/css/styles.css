@@ -46,6 +46,31 @@ body {
     margin: 25px;
 
 }
+
+ .foot .foot-btn {
+     font-size: 4em;
+    color: white;
+     
+ }
+ 
+ /* Our Team Styles*/
+ .team-img{
+    margin: 2% auto;
+    height: 200px;
+    width: 200px;
+ }
+  /* Form Styles */
+.formError{
+    color: #F78536;
+}
+ .checkbox label {
+    font-weight: 600;
+ }
+ 
+ .form-confirm {
+     color: #F78536;
+     font-weight: 600;
+ }
 /*Orange buttons and panel headers */
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
 	background-color:#F78536;
@@ -62,6 +87,10 @@ body {
 
 .contactButton {
     margin: 5px;
+}
+
+.footerButton {
+    margin-bottom: 0px;
 }
 
 

@@ -157,13 +157,6 @@ $missing = [];
 	 <div class="main" id="#top">
     <div class="container-fluid">
 		<h1>Donate Time (Volunteer)</h1>
-		 <!-- Donate Button on mobile site -->
-		<!--<div class="row visible-xs">
-			<a class="btn btn-warning btn-lg col-xs-11 text-center fullWidthBtn"
-				 href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=75871&s=3">Donate!</>
-           </a>
-		</div>-->
-		   <!-- Volunteer Button can go here with link to Volunteer form -->
     <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-4 col-lg-3 " role="group">
             <?php  include ('includes/contribute-side.php');  ?>
