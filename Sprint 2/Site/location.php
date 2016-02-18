@@ -49,7 +49,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 text-center" id="foodBank">
+                <div class="col-xs-12 text-center">
                 <h3>Parking</h3>
                 <p> Please park in legal designated parking spots to avoid tickets and towing!</p>
                 <p> HomeStreet Bank and Key Bank are private lots. Parking in their lots could result in your vehicle being towed at your own expense. </p>

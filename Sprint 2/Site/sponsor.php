@@ -1,5 +1,4 @@
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
 
 <style>
 .err{
@@ -7,13 +6,10 @@
   font-weight: bolder;
 }
 .sponserHeaderText{
-  text-align: center;
+  text-align:justify;
 }
 
 .headerText{
-  border-radius: 5px;
-  border: 1px solid black;
-  margin-top: 20px;
   font-size: 1.5em;
 }
 
@@ -65,7 +61,8 @@ h3.sponserBoxHeader{
 
 .rdoTxt{
   position: relative;
-  bottom: 10px;
+  bottom: 25px;
+  left: 18%;
 }
 
 .sponserRadioBtnNTxt{
@@ -92,11 +89,11 @@ h3.sponserBoxHeader{
 
     #sponserFormSubmitBtn {
     position: relative;
-    left: 19%;
+    left: 24%;
    }
 
    .sponserBox{
-       height:575px;
+       height:975px;
    }
 
     }
@@ -114,7 +111,7 @@ h3.sponserBoxHeader{
      }
 
      .sponserBox{
-         height: 600px;
+         height: 645px;
      }
 
     }
@@ -128,7 +125,11 @@ h3.sponserBoxHeader{
       }
 
       .sponserBox{
-          height: 440px;
+          height: 605px;
+      }
+
+      .inputFields{
+        text-align: center;
       }
     }
 
@@ -140,11 +141,13 @@ h3.sponserBoxHeader{
       }
 
       .sponserBox{
-        margin-left: 2% !important;
-        width: 31% !important;
-        height : 565px;
+        height 440px;
 
       }
+
+      input[type="text"] {
+    width: 100%;
+}
 
     }
 
@@ -152,7 +155,7 @@ h3.sponserBoxHeader{
       .sponserBox{
         margin-left: 2% !important;
         width: 31% !important;
-          height: 555px;
+        height: 850px;
       }
     }
 
@@ -170,7 +173,10 @@ h3.sponserBoxHeader{
   $goldChecked = ""; //initializing the variable
   $silverChecked = ""; //initializing the variable
   $bronzeChecked = ""; //initializing the variable
-
+  $errors = "";
+  $missing = "";
+  $suspect = "";
+  $formProc = "";
 
   $mName = isset($_POST['mName']) ? $_POST['mName'] : '';
   $busOrg = isset($_POST['bus-org']) ? $_POST['bus-org'] : '';
@@ -196,13 +202,13 @@ h3.sponserBoxHeader{
 
     // Radio buttons validation
     if(!isset($_POST['sponserLvl'])){
-      $rdoNotSlectedErr = "<span class='err'>Please Select a Sponser level before you submit. <br /> </span>";
+      $rdoNotSlectedErr = "<span class='err'>Please select a sponsor level before you submit. <br /> </span>";
       $isValid = false;
     }else{
       $validSponserLvlsArr = array('bronze', 'silver', 'gold');
 
       if(!in_array($_POST['sponserLvl'], $validSponserLvlsArr)){
-        $rdoNotSlectedErr = "The sponser you attempted to choose is not valid.";
+        $rdoNotSlectedErr = "The sponsor level you attempted to choose is not valid.";
         $isValid = false;
       }else{
         $sponserLvl = $_POST['sponserLvl'];
@@ -256,10 +262,11 @@ h3.sponserBoxHeader{
 
       //check if all fields are valid and ready for submission
       if($isValid){
-       if ($mailSent) {
-				header('Location: sponsor-thankyou.php');
-				exit;
-			}
+
+  			$formProc = "<h2>Thank you for sponsoring Kent Food Bank.</h2>" .
+         "<p>We will contact you via email or phone regarding the steps to make you a sponser. We are every so greatful, Thank You!</p>";
+         $formHd = "hidden";
+
       }
     }
   }
@@ -280,25 +287,27 @@ h3.sponserBoxHeader{
               </div>
               <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
 
-              <div class="headerText">
+                <?php echo $formProc ?>
+
+              <div class="headerText <?php echo $formHd ?>">
                 <p class="col-md-10 col-md-offset-1 sponserHeaderText">We are excited this year to provide you with a number of different options to support the Kent Food Bank Annual Breakfast with your monetary donations. We have two different payment options, a one-time sponsorship payment or monthly installments. Both options will make a direct difference for families in need.
                 </p>
               <?php if ($_POST && (!$suspect || !isset($errors['mailfail']))) : ?>
               <p class="col-md-12 sponserHeaderText formError"><b>There are errors with your submission <br>
               Please see below
-              
+
                 </b></p>
               <?php elseif (!$errors || !$missing) : ?>
-                <p class="col-md-12 sponserHeaderText"><b>Your generosity is greatly appreciated!
+                <p class="col-md-12 text-center"><b>Your generosity is greatly appreciated!
                 THANK YOU!!!
                 </b></p>
-                
-                <?php endif; ?>	
+
+                <?php endif; ?>
               </div>
-              
-                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-horizontal">
-                
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
+
+                <form  method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-horizontal <?php echo $formHd ?>">
+
+                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
                       <h2 class="sponserBoxHeader">Gold</h2>
                       <h3 class="sponserBoxHeader">$3,000 or $250 per month for a year</h3>
                         <ul class="sponserLiEl">
@@ -309,14 +318,14 @@ h3.sponserBoxHeader{
                             <li>Each Table of Honor guest will receive 7 raffle tickets</li><br />
                             <li>Certificate of Appreciation</li><br />
                         </ul>
-                
+
                         <div class="sponserRadioBtnNTxt">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold" <?php echo $goldChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Gold Level.</label>
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold" <?php echo $goldChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Gold Level.</label>
                         </div>
                 </div>
-                
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-3 col-md-offset-1 sponserBox">
+
+                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
                       <h2 class="sponserBoxHeader">Silver</h2>
                       <h3 class="sponserBoxHeader">$1,500 or $125 per month for a year</h3>
                         <ul class="sponserLiEl">
@@ -327,17 +336,17 @@ h3.sponserBoxHeader{
                             <li>Each Table of Honor guest will receive 3 raffle tickets</li><br />
                         </ul>
                         <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm hidden-lg " />
+                        <br class="hidden-xs hidden-sm" />
                         <br class="hidden-xs hidden-sm"/>
                         <br class="hidden-xs "/>
-                
+
                         <div class="sponserRadioBtnNTxt">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Silver Level.</label>
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Silver Level.</label>
                         </div>
                 </div>
-                
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col col-md-3 col-md-offset-1 sponserBox">
+
+                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1  btm2 sponserBox">
                       <h2 class="sponserBoxHeader">Bronze</h2>
                       <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
                         <ul class="sponserLiEl">
@@ -358,52 +367,52 @@ h3.sponserBoxHeader{
                         <br class="hidden-md hidden-xs" />
                         <div class="sponserRadioBtnNTxt">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>><label class="rdoTxt">&nbsp;Donte at a Bronze Level.</label>
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Bronze Level.</label>
                       </div>
                   </div>
-                
-                <div class="col-xs-10 col-xs-offset-1  col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 sponserFormTextBoxes" id="">
+
+                <div class="col-xs-10 col-xs-offset-1  col-sm-10 col-sm-offset-1 col-md-12 col-md-pull-1 sponserFormTextBoxes" id="">
                   <div class="row">
-                    <div class="inputFields col-xs-12  col-sm-4 col-md-4">
+                    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>First Name:</label><br />
                       <?php echo $fNameEmptyErr ?>
                       &nbsp;<input type="text" name="fName" value="<?php echo $fName; ?>">
                    </div>
-                
-                    <div class="inputFields col-xs-12  col-sm-4 col-md-4">
+
+                    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Last Name:</label><br />
                      <?php echo $lNameEmptyErr ?>
                       &nbsp;<input type="text" name="lName" value="<?php echo $lName; ?>">
                     </div>
-                
-                    <div class="inputFields col-xs-12  col-sm-4 col-md-4">
+
+                    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Middle Initial:</label><br />
                       &nbsp;<input type="text" name="mName" value="<?php echo $mName; ?>">
                     </div>
                   </div>
-                
+
                   <div class="row">
-                    <div class="inputFields col-xs-12 col-sm-4 col-md-4">
+                    <div class="inputFields col-xs-12 col-sm-12 col-md-4">
                       &nbsp;<label>Business/Organization:</label><br />
                       &nbsp;<input type="text" name="bus-org" value="<?php echo $busOrg; ?>">
                     </div>
-                
-                    <div class="inputFields col-xs-12 col-sm-4 col-md-4">
+
+                    <div class="inputFields col-xs-12 col-sm-12 col-md-4">
                       &nbsp;<label>Phone:</label><br />
                      <?php echo $phoneEmptyErr ?>
                       &nbsp;<input type="text" name="phone" value="<?php echo $phone; ?>">
                     </div>
-                
-                    <div class="inputFields col-xs-12  col-sm-4 col-md-4">
+
+                    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Email:</label><br />
                       <?php echo $emailEmptyErr ?>
                       &nbsp;<input type="text" name="email" value="<?php echo $email; ?>">
                     </div>
                   </div>
                 </div>
-                
+
                   <input type="submit" name="submit" class="col-xs-8 col-xs-offset-2 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4" id="sponserFormSubmitBtn">
-                
+
                 </form>
                </div>
         </div>

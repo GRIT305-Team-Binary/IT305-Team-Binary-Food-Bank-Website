@@ -34,7 +34,7 @@
             <!-- Main Content -->
             <div class="col-lg-7 ">
 				<h3>Main Location</h3>
-				<a href="location.php"><img class="img-responsive" src="images/building.JPG" id="buildingImg"></a>
+				<a href="location.php"><img class="img-responsive buildingImg" src="images/building.JPG" alt="Main Location"></a>
             <!-- List of main services available from Kent Food Bank -->
             <h3 id="services">Services We Provide</h3>
             <ul>
@@ -51,15 +51,15 @@
 				</span>
 				</div>
 			</div>
-			<!-- /top-link-block -->
-            <!-- Information about the Clothing Bank-->
+			 /top-link-block
+             Information about the Clothing Bank-->
             
             <h3 id="clothingbank">Clothing Bank</h3>
 			<ul>
             <li>10 item limit per person in family </li>
             <li>Diapers available once every 6 months if available</li>
 			</ul><br>
-			<p><img src="images/clothingbank.png" id="buildingImg" class="img-repsonsive"></p>
+			<p><img src="images/clothingbank.png" class="img-repsonsive buildingImg" alt="Clothing Bank"></p>
 			
 			<h3>Birch Creek Annex</h3>
 				<ul>
@@ -67,7 +67,7 @@
 					<li>Alternative to visiting Main Location</li>
 				</ul>
 				<p>For more information see <a href="location.php">Locations</a></p>
-				<a href="location.php"><img class="img-responsive" src="images/annex.png" id="buildingImg" ></a>
+				<a href="location.php"><img class="img-responsive buildingImg" src="images/annex.png" alt="Birch Creek Annex"></a>
             </div>
 			
 			
@@ -79,7 +79,7 @@
                 </div>
                 <div class="panel-body">
                 
-            <h3 id="foodbankcard">Obtain Eligibility</h3> 
+            <h3>Obtain Eligibility</h3> 
             <h4>Bring:</h4>
             <ul>
                 <li>Picture identification</li>
@@ -108,7 +108,7 @@
 				</a>
 				</span>
 				</div>
-			</div><!-- /top-link-block -->
+			</div> /top-link-block -->
             </div>
         </div>
     </div>

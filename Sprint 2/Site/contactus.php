@@ -80,8 +80,9 @@ if (isset($_POST['send'])) {
 				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 pull-right form-group">
 					
 					<div class="form-group">
-						<p>
+						
 							<div class="col-xs-12">
+							<p>
 								<label for="email" class="control-label">
 							<?php if ($missing && in_array('email', $missing)) : ?>
 							<span class="formError">Please enter your e-mail.</span>
@@ -101,8 +102,9 @@ if (isset($_POST['send'])) {
 									
 								}	
 							?> 
-						</div>
 						</p>
+					    </div>
+						
 					</div>
 				</div>
 			</div>
@@ -112,7 +114,7 @@ if (isset($_POST['send'])) {
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
 						<div class="form-group">
 						<p><label for="subject">Subject</label><br>
-						<input type="subject" name="subject" id="subject" class="form-control
+						<input type="text" name="subject" id="subject" class="form-control
 						<?php
 							if ($errors || $missing) {
 								echo 'has-error has-feedback" ';
@@ -120,7 +122,7 @@ if (isset($_POST['send'])) {
 							} else {
 									echo '"';
 								}
-						?>
+						?> >
 						</p>
 						</div>
 					</div>

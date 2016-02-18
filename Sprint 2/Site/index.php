@@ -49,9 +49,8 @@
                     </li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse 
+             
         </div>
-         /.container 
     </nav>
     -->
     <div class="main">
@@ -118,7 +117,7 @@
                          </div>
                         <div class="col-xs-12 col-sm-5 text-center">
                             <!-- Volunteer Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Donate <span class="glyphicon glyphicon-time" alt="time"></a>
+                             <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Donate <span class="glyphicon glyphicon-time"></span></a>
                          </div>
                      
                  </div>
@@ -159,7 +158,7 @@
                         <li>Work in conjunction with government agencies, churches and other organizations to serve the surrounding people.</li>
                         <li>Operate primarily as a volunteer agency, obtaining the majority of its support and donations from the community.</li>
                      </ul>
-                    Learn more about Kent Food Bank at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" target="_blank">Seattle Foundation</a>
+                    <p>Learn more about Kent Food Bank at <a href="http://www.seattlefoundation.org/npos/Pages/KentFoodBankandEmergencyServices.aspx" target="_blank">Seattle Foundation</a>
                     </p>
                     <h2>History</h2>
                     <p>The Kent Food Bank began operations in 1970 as a temporary agency to serve Kent families during an economic recession.</p>
@@ -225,19 +224,28 @@
                    <p class="text-center"> <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-3.jpg"></p>
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
-                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
+                    convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit,
+                    id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit
+                    urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-7.jpg">
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
-                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
+                    convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit,
+                    id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit
+                    urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-6.jpg">
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
-                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit, id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
+                    <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
+                    convallis ullamcorper ultricies. Curabitur ornare, ligula semper consectetur sagittis, nisi diam iaculis velit,
+                    id fringilla sem nunc vel mi. Nam dictum, odio nec pretium volutpat, arcu ante placerat erat, non tristique elit
+                    urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
                 </div>
             </div>
          

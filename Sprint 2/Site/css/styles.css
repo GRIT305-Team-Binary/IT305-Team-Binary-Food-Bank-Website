@@ -13,7 +13,9 @@ body {
     background-color: #DFEBED;
     margin: 2% auto;
     width: 100%;
-	color:black;
+    color:black;
+    box-shadow: 2px 2px 2.5px #888888;
+
 	
 }
 
@@ -23,6 +25,7 @@ body {
     margin-top: 2%;
     width: 100%;
 	color:white;
+	box-shadow: 2px 2px 2.5px #888888;
 }
 
 /* Changing the font color in header*/
@@ -38,7 +41,9 @@ body {
     background-color: #497285;
     padding: 2% 1%;
     margin-bottom: 2%;
-	color:white;
+    color:white;
+    box-shadow: 2px 2px 2.5px #888888;
+    
 	
 }
 .foot {
@@ -50,6 +55,7 @@ body {
  .foot .foot-btn {
      font-size: 4em;
     color: white;
+    
      
  }
  
@@ -130,6 +136,8 @@ body {
 
 .footerBtn {
     margin-bottom: 0;   /* remove margin space from bottom of footer button links */
+   
+    
 }
 
 
@@ -176,7 +184,7 @@ hr{
     padding: 2% 0;
 }
 
-#buildingImg
+.buildingImg
  {
     width: 100%;
  }

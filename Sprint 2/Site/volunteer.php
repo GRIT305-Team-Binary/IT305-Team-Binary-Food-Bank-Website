@@ -188,7 +188,7 @@ $missing = [];
 					<?php
 						//Validate Type of Application
 						//print_r ($missing);
-						$appTypes = array('individual', 'group', 'organizational', 'student');
+						$appTypes = array('individual', 'group', 'organizational', 'student', 'court');
 						if ($missing && in_array('appType', $missing))  {
 							echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 							$isValid = false;
@@ -253,7 +253,7 @@ $missing = [];
 				   <!-- First Name field -->
 					   <fieldset class="form-group">
 						   <label for="fname">First Name*</label><br>
-						   <input name="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
+						   <input name="fname" id="fname" class="input col-xs-12 form-control" type="text" placeholder="Enter your first name" value="<?php echo $fname; ?>">
 					   </fieldset>
 				   </div>
 				   
@@ -261,7 +261,7 @@ $missing = [];
 					<!-- Last Name field -->
 					   <fieldset class="form-group">
 						   <label for="lname">Last Name*</label><br>
-						   <input name="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
+						   <input name="lname" id="lname" class="input col-xs-12 form-control" type="text" placeholder="Enter your last name" value="<?php echo $lname; ?>">
 					   </fieldset>
 				   </div>
 				   
@@ -296,13 +296,14 @@ $missing = [];
 					   </fieldset>
 				   </div>
 				   <div class="col-lg-3 visible-lg">
-					   <h2 class="text-center">WA</h2>
+					<span class="bfh-states" data-country="US" data-state="WA"></span>
+					   <!--<h2 class="text-center">WA</h2>-->
 				   </div>
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 				   <!-- Zip -->
 					   <fieldset class="form-group">
 						   <label for="zip">Zip Code*</label><br>
-						   <input name="zip" pattern="[0-9]*" class="input col-xs-12 form-control" id="zip" type="text" placeholder="Enter your zip" value="<?php echo $zip; ?>">
+						   <input name="zip" pattern="[0-9]*.{5,}" class="input col-xs-12 form-control" id="zip" type="text" placeholder="#####" value="<?php echo $zip; ?>">
 					   </fieldset>
 				   </div>
 			   </div>
@@ -323,13 +324,13 @@ $missing = [];
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->
 						   <label>Phone*</label><br>
-						   <input name="phone" class="input col-xs-12 form-control" id="phone"  type="tel" placeholder="Enter phone number" value="<?php echo $phone; ?>"><br><br>
+						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
 					   </div>
 			   
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Email-->
 						   <label>E-mail address*</label><br>
-						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email" value="<?php echo $email; ?>">
+						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$ value="<?php echo $email; ?>">
 						   <br><br>
 					   </div>
 				   </fieldset>
@@ -525,4 +526,3 @@ $missing = [];
 	 </div>
 
 <?php  include ('includes/footer.php');  ?>
-
