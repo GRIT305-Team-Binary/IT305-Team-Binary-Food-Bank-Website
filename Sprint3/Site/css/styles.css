@@ -1,0 +1,408 @@
+/*
+* General page styles
+*/
+
+body {
+    background-color: #2B4450;
+    margin:0 5%;
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.main {
+    padding: 2% 2%;
+    background-color: #DFEBED;
+    margin: 2% auto;
+    width: 100%;
+    color:black;
+    box-shadow: 2px 2px 2.5px #888888;
+
+	
+}
+
+.head {
+    background-color: #497285;
+    padding: 2% 1%;
+    margin-top: 2%;
+    width: 100%;
+	color:white;
+	box-shadow: 2px 2px 2.5px #888888;
+}
+
+/* Changing the font color in header*/
+.icon-in-nav, .nav-fonts{
+	color:white;
+	text-shadow: 2px 2px black;
+}
+.head ul.nav a:hover{
+	background-color:#2B4450;
+}
+
+.footer {
+    background-color: #497285;
+    padding: 2% 1%;
+    margin-bottom: 2%;
+    color:white;
+    box-shadow: 2px 2px 2.5px #888888;
+    
+	
+}
+.foot {
+    vertical-align: bottom;
+    margin: 25px;
+
+}
+
+ .foot .foot-btn {
+     font-size: 4em;
+    color: white;
+    
+     
+ }
+ 
+ /* Our Team Styles*/
+ .team-img{
+    margin: 2% auto;
+    height: 200px;
+    width: 200px;
+ }
+  /* Form Styles */
+.formError{
+    color: #F78536;
+}
+ .checkbox label {
+    font-weight: 600;
+ }
+ 
+ .form-confirm {
+     color: #F78536;
+     font-weight: 600;
+ }
+/*Orange buttons and panel headers */
+.btn-warning, .panel-warning, .panel-warning>.panel-heading{
+	background-color:#F78536;
+	border-color:#F78536;
+	
+}
+.panel-body {
+	background-color: white;
+}
+.mobile-facebook {
+  vertical-align: middle;
+  line-height: 60px;
+}
+
+.contactButton {
+    margin: 5px;
+}
+
+.footerButton {
+    margin-bottom: 0px;
+}
+
+
+/* Specialized font */
+
+.contactInfo {
+    font-size: 80%;
+}
+
+.defaultLink {
+    color: inherit;
+}
+
+.title {
+    color: white;
+    text-align: center;
+    background-color: #FF9600;
+    border-radius: 3px;
+    padding: 2px;
+    margin-top: 0;
+}
+
+.dayOfWeek {
+    font-weight: bold;
+}
+
+.asterisk {
+    font-style: italic;
+    font-size: 80%;
+}
+
+.footerTitle {
+    margin: 0;
+    padding: 0;
+    color: #FF9600;
+}
+
+.footerBtn {
+    margin-bottom: 0;   /* remove margin space from bottom of footer button links */
+   
+    
+}
+
+
+/* Code for Image slider */
+.carousel{
+    background: #2f4357;
+    margin: 20px 0;
+}
+.carousel .item img{
+    margin: 0 auto; /* Align slide image horizontally center */
+}
+
+.warning{
+    background-color: #FF712C;
+    color:white;
+    font-weight: 300;
+}
+.center-block{
+  margin-bottom: 0;
+}
+
+.navbar{
+  margin-bottom:0;
+}
+
+hr{
+  margin: 0;
+  padding: 0;
+  height: 2px;
+  background-color: black;
+  border:none
+}
+
+#donateBtn{
+  margin-top: 10px; ;
+}
+
+.donateButton {
+    margin: 0 15px 0 15px;
+}
+
+.top-link-block {
+    margin: 2% 0;
+    padding: 2% 0;
+}
+
+.buildingImg
+ {
+    width: 100%;
+ }
+/* Extra Small Devices, Phones */
+
+  @media only screen and (max-width : 767px) and (min-width : 0px) {
+
+    .facebook-hours {
+        vertical-align: middle;
+        line-height: 45px;
+        margin: 10px 0;
+    }
+
+    .topItemsList {
+        padding-top: 10px;
+    }
+
+
+
+    hr{
+      display: none;
+    }
+
+    #donateBtn {
+      display: none;
+    }
+
+    #motto p {
+      display: none;
+    }
+
+    .icon-in-nav{
+      display: none;
+    }
+
+  .navbar-toggle {
+  position:static;
+  float: none;
+  padding:5px 0 5px 0;
+  margin: 0;
+  background-color: #F78536;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius:2px;
+  width: 100%;
+  font-size: 1.5em;
+  font-synthesis: weight;
+}
+
+.navbar-brand {
+   float:none;
+  height: 0;
+  padding: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+li.nav {
+font-size: 2em;
+text-align: center;
+border-bottom: 1px solid black;
+padding: 5px 0 5px 0;
+}
+
+li.nav a {
+color: white;
+}
+li.nav a:visited {
+color: white;
+}
+
+#logo img {
+  width: 100%;
+}
+
+iframe {
+    width:100%;
+}
+
+}
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px) and (max-width : 991px) {
+
+  #logo img{
+    position: relative;
+    max-width:12.5em;
+    right: 25%;
+    display: block;
+
+  }
+
+
+
+  .icon-in-nav{
+    display: block;
+    padding-bottom: 7px;
+    font-size: 3.5vw;
+  }
+  
+  li.nav {
+    padding: 0;
+  }
+
+  .nav-fonts{
+     font-size: 1.25vw;
+     font-weight: bold;
+
+  }
+
+  #motto p{
+    display: inline-block;
+    text-align: left;
+    position: relative;
+    right: 10%;
+
+    /*font-style: italic;*/
+  }
+
+  .fb-page {
+    margin: 20px 0;
+  }
+
+
+
+}
+
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) and (max-width : 1199px) {
+  .icon-in-nav{
+    display: block;
+    font-size: 3.5vw;
+    padding-bottom: 15px;
+    
+  }
+
+  #logo img{
+    position: relative;
+    max-width:300px;
+    display: block;
+    right:12%;
+
+  }
+
+
+  .nav-fonts{
+    font-size: 1.25vw;
+    font-weight: bold;
+
+  }
+
+  li.nav {
+    padding: 0;
+  }
+
+
+  #motto p{
+    position: relative;
+    right: 10%;
+    display: inline-block;
+    text-align: left;
+  }
+
+  nav{
+    padding-bottom: 0;
+  }
+
+
+.btn {
+    letter-spacing: 2px;
+}
+
+.fb-page {
+    margin: 20px 0 20px 20px;
+  }
+
+}
+
+/* Large Devices, Wide Screens */
+   @media only screen and (min-width : 1200px) {
+     .icon-in-nav{
+       display: block;
+       padding-bottom: 15px;
+       font-size: 3.5vw;
+     }
+
+     .nav-fonts{
+       font-size: 1.25vw;
+       font-weight: bold;
+     }
+
+     #logo img {
+       max-width:325px;
+       position: relative;
+       display: block;
+       right:12%;
+
+     }
+
+     #motto p{
+       position: relative;
+       right: 10%;
+       display: inline-block;
+       text-align: left;
+     }
+
+     nav{
+       padding-bottom: 0;
+   }
+   
+   li.nav {
+    padding: 0;
+  }
+
+
+   .fb-page {
+    margin: 20px 20px 20px 0;
+  }
+
+}
