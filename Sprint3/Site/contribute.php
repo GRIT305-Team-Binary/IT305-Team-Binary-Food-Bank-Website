@@ -25,7 +25,7 @@
         <div class="topItemsList col-xs-12 col-sm-3 col-md-3 col-lg-3 pull-right">
 			
 			 <?php  include ('includes/top-items-needed.php');  ?>
-           <p><a href="includes/top-items-needed.php">Print</a></p>
+           <p class="text-center"><a href="includes/top-items-needed.php"><span class="glyphicon glyphicon-print"></span>  Print</a></p>
 			<!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
 			<p><span class="top-link-block right">
