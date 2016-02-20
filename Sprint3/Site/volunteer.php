@@ -23,110 +23,38 @@ $missing = [];
    error_reporting(E_ALL);
 
 	
-	
+	//Form has been submitted 
 	if (isset($_POST['submit'])) {
 		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
 					 'commit', 'lift', 'limitation', 'questions'];
-		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 
-					 'commit', 'lift', 'limitation'];
+		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+					 'whyVolunteer','commit', 'lift', 'limitation'];
 		$recipient = 'Tina Ostrander <tostrander@greenriver.edu>';
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
-		
-
-	// Include the validation functions
-	include ('./includes/process_mail.php');
-       
-    //Form has been submitted 
-    if (isset($_POST['submit'])) {
-	$subject = 'Volunteer Application -'. $fname . " " . $lname;	
+		     
+    
+    	
 	//Create a boolean flag to track validation errors	
 	 $isValid = true;
 	 
 	  
-    
 		
-		
-		
-// 	 //Validate first name
-//        if (!empty($_POST['fname'])) {
-//            $fname = $_POST['fname'];
-//        } else {
-//            echo '<p>Please enter a first name.</p>';
-//            $isValid = false;
-//			
-//	    }
-//
-//	 //Validate last name
-//        
-//		if (!empty($_POST['lname'])) {
-//            $lname = $_POST['lname'];
-//        } else {
-//            echo '<p>Please enter a last name.</p>';
-//            $isValid = false;
-//        }
-		
-//	//Validate address
-//        
-//		if (!empty($_POST['address'])) {
-//            $address = $_POST['address'];
-//        } else {
-//            echo '<p> Please enter an address. </p>';
-//            $isValid = false;
-//        }
-//		
-//	//Validate city
-//        if (!empty($_POST['city'])) {
-//            $city = $_POST['city'];
-//        } else {
-//            echo '<p>Please enter a city.</p>';
-//            $isValid = false;
-//			
-//	    }
-//
-//	 //Validate zip
-//        
-//		if (!empty($_POST['zip'])) {
-//            $zip = $_POST['zip'];
-//        } else {
-//            echo '<p>Please enter a zip code.</p>';
-//            $isValid = false;
-//        }
-		
-	//Validate phone number
-        
-		if (!empty($_POST['phone'])) {
-            $phone = $_POST['phone'];
-        } 
-
-		//Validate email
-        if (!empty($_POST['email'])) {
-            $email = $_POST['email'];
+		 //Validate Checkboxes
+			if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+				array_push ( $required , 'clothing', 'office', 'food' );
+			}
 			
-        }
-//		
-		//Validate Why are you interested in Volunteering
-			//
-			//if (!empty($_POST['whyVolunteer'])) {
-			//	$whyVolunteer = $_POST['whyVolunteer'];
-			//}
-			//	
-			////Validate Any Questions
-			//
-			//if (!empty($_POST['questions'])) {
-			//	$questions = $_POST['questions'];
-			//}
-		
-		
 		
 		
 		
 		if ($isValid) {
-            //Send Form information in email
-			
+           
+			// Include the validation functions
+			include ('./includes/process_mail.php');
 			
 			
 			if ($mailSent) {
