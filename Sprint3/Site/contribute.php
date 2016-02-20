@@ -79,9 +79,9 @@
             <h3>Fred Meyer Community Rewards</h3>
 			<p><a href="http://www.fredmeyer.com/communityrewards"><img src="images/fred-meyer-logo.png" alt="Fred Meyer Rewards" class="img-responsive"></a></p>
             <P>Sign up for the Community Rewards program by linking your Fred Meyer Rewards Card to Kent Food Bank at:
-			<p class="text-center hidden-xs "><a href="http://www.fredmeyer.com/communityrewards" class="btn btn-warning">FredMeyer.com/communityrewards</a></p>.
+			<p class="text-center hidden-xs "><a href="http://www.fredmeyer.com/communityrewards" class="btn btn-warning">FredMeyer.com/communityrewards</a></p>
 			<!-- Button for Mobile display-->
-			<p class="text-center visible-xs"><a href="http://www.fredmeyer.com/communityrewards" class="btn btn-warning">Fred Meyer Rewards</a></p>.
+			<p class="text-center visible-xs"><a href="http://www.fredmeyer.com/communityrewards" class="btn btn-warning">Fred Meyer Rewards</a></p>
 			<p class="text-center bold"><strong>You can search for us by name, Kent Food Bank or by our NPO # 83698</strong></p>
 			<!-- Link to top of Page 
 			<div class="row"><div class="col-xs-6 col-xs-offset-6 col-sm-4 col-sm-offset-8">
