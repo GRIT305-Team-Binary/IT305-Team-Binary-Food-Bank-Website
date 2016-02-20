@@ -18,6 +18,7 @@ $missing = [];
 	$office="";
 	$food="";
 	$appType="";
+	$crime="";
 	// Turn on error reporting
    ini_set('display_errors', 1);
    error_reporting(E_ALL);
@@ -30,7 +31,7 @@ $missing = [];
 					 'commit', 'lift', 'limitation', 'questions'];
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = 'Tina Ostrander <tostrander@greenriver.edu>';
+		$recipient = '';
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
@@ -41,7 +42,13 @@ $missing = [];
 	//Create a boolean flag to track validation errors	
 	 $isValid = true;
 	 
-	  
+	   //Validate Court
+			if ($_POST && $_POST['appType'] == 'court') {
+				array_push ( $required , 'crime' );
+				array_push ( $expected , 'crime' );
+				echo "<script>court_ordered();</script>";
+			}
+			
 		
 		 //Validate Checkboxes
 			if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
@@ -376,14 +383,14 @@ include ('includes/header.inc.php');
 			   <div class="row">
 			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				   <fieldset class="form-group">
-				   <label>Are you able to lift 10 pounds?*</label >
+				   <label>Are you able to lift <span id="liftLB">10</span> pounds?*</label >
 				   <div class="radio">
 					   <label class="radio-inline">
 							   <input type="radio" name="lift" id="liftYes" value="Yes"
 							   <?php if (strcmp($lift, "Yes") == 0) : ?>
 							  checked
 							  <?php endif; ?>
-							  >
+							  />
 							   Yes
 					   </label>
 				 
@@ -392,7 +399,7 @@ include ('includes/header.inc.php');
 							   <?php if (strcmp($lift, "No") == 0) : ?>
 							  checked
 							  <?php endif; ?>
-							  >
+							  />
 							   No
 						   </label>
 				   <?php
@@ -419,7 +426,7 @@ include ('includes/header.inc.php');
 							   <?php if (strcmp($limitation, "Yes") == 0) : ?>
 							  checked
 							  <?php endif; ?>
-							  >
+							  />
 							   Yes
 					   </label>
 				   
@@ -428,7 +435,7 @@ include ('includes/header.inc.php');
 							  <?php if (strcmp($limitation, "No") == 0) : ?>
 							  checked
 							  <?php endif; ?>
-							   >
+							   />
 							   No
 						   </label>
 				    <?php
@@ -443,7 +450,8 @@ include ('includes/header.inc.php');
 				   </fieldset>
 			   
 			   </div>
-			   <div class="row" id="crime">
+			   </div>
+			   <div class="row hidden" id="crime">
 			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
 				   <fieldset class="form-group">
 				   <label>I have committed theft, fraud, assault, or a crime against children.*</label>
@@ -468,7 +476,7 @@ include ('includes/header.inc.php');
 						   </label>
 				    <?php
 				   //Validate Crime
-					   if ($missing && in_array('limitation', $missing)) {
+					   if ($missing && in_array('crime', $missing)) {
 						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 						   $isValid = false;
 						   
@@ -498,3 +506,30 @@ include ('includes/header.inc.php');
 	 </div>
 
 <?php  include ('includes/footer.php');  ?>
+<script>
+	$(document).ready(function(){
+		$('#court').on('click', court_ordered);
+		$('#indvidual').on('click', normal);
+		$('#group').on('click', normal);
+		$('#organizational').on('click', normal);
+		$('#student').on('click', normal);
+		
+		function court_ordered() {
+            //if they answer court ordered comunity service ask type of crime
+			$('#crime').removeClass('hidden');
+			$('#liftLB').html('40');
+	
+		}
+		function normal() {
+            //if they do not have court ordered community service
+			$('#crime').addClass('hidden');
+			$('#liftLB').html('10');	
+        }
+		
+		
+		<?php if ($_POST && $_POST['appType'] == 'court') {
+				echo "court_ordered();";
+			}
+			?>
+		});
+</script>
