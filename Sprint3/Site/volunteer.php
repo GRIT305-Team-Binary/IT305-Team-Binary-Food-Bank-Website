@@ -148,7 +148,10 @@ $missing = [];
 
 <html lang="en">
 
-<?php  include ('includes/header.inc.php');  ?>
+<?php
+include ('includes/header.inc.php');
+require ("../../db.php");
+?>
 
 
 	 <div class="main" id="#top">
