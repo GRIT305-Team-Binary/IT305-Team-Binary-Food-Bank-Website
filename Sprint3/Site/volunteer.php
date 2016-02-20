@@ -70,7 +70,7 @@ $missing = [];
 
 	
 	
-}
+
 ?>
 <!DOCTYPE html>
 
@@ -78,7 +78,7 @@ $missing = [];
 
 <?php
 include ('includes/header.inc.php');
-require ("../../db.php");
+//require ("../db.php");
 ?>
 
 
@@ -241,8 +241,8 @@ require ("../../db.php");
 			   <div class="row">
 				 <!-- Validate phone OR email is entered -->
 				<?php if ($_POST) {
-						if (empty($_POST['email']) && empty($_POST['phone'])) {
-							echo '<p class="formError text-center">Please enter a phone number or email address.</p>';
+						if (empty($_POST['email']) || empty($_POST['phone'])) {
+							echo '<p class="formError text-center">Please enter a phone number and email address.</p>';
 							$isValid = false;
 						}
 				}
@@ -320,8 +320,17 @@ require ("../../db.php");
 				   </div>
 			   
 			   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<?php
+				   //Validate Commitment
+					   if ($missing && in_array('whyVolunteer', $missing)) {
+						   echo '<p class="text-center formError" >Please tell us why you want to Volunteer.</p>';
+						   $isValid = false;
+						   
+					   }
+					   ?>
+				
 				   <fieldset class="form-group">
-						   <label for="whyVolunteer">Why are you interested in volunteering?</label><br />
+						   <label for="whyVolunteer">Why are you interested in volunteering?*</label><br />
 						   <textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
 				   </fieldset>
 			   </div>
@@ -389,7 +398,7 @@ require ("../../db.php");
 				   <?php
 				   //Validate Ability to Lift
 					    if ($missing && in_array('lift', $missing)) {
-						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+						   echo '<p class="radio-inline formError">Please select Yes or No.</p>';
 						   $isValid = false;
 						   
 					   }
@@ -424,6 +433,41 @@ require ("../../db.php");
 						   </label>
 				    <?php
 				   //Validate Physical Limiations
+					   if ($missing && in_array('limitation', $missing)) {
+						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+						   $isValid = false;
+						   
+					   }
+					   ?>
+				  </div>
+				   </fieldset>
+			   
+			   </div>
+			   <div class="row" id="crime">
+			   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
+				   <fieldset class="form-group">
+				   <label>I have committed theft, fraud, assault, or a crime against children.*</label>
+				   <div class="radio">
+					
+					   <label class="radio-inline">
+							   <input type="radio" name="crime" id="crimeYes" value="Yes"
+							   <?php if (strcmp($crime, "Yes") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							  >
+							   Yes
+					   </label>
+				   
+						   <label class="radio-inline">
+							   <input type="radio" name="crime" id="crimeNo" value="No"
+							  <?php if (strcmp($crime, "No") == 0) : ?>
+							  checked
+							  <?php endif; ?>
+							   >
+							   No
+						   </label>
+				    <?php
+				   //Validate Crime
 					   if ($missing && in_array('limitation', $missing)) {
 						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 						   $isValid = false;
