@@ -29,10 +29,11 @@ $missing = [];
 		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
 					 'commit', 'lift', 'limitation', 'questions'];
+		//'crime' is added below if they have court ordered community service
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = '';
-		$subject = 'Volunteer Application -'. $fname . " " . $lname;
+		$recipient = ''; //we should set to users email 
+		$subject = 'Volunteer Application -'. $fname . " " . $lname; 
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
@@ -85,7 +86,7 @@ $missing = [];
 
 <?php
 include ('includes/header.inc.php');
-//require ("../db.php");
+require ("../db.php");
 ?>
 
 
@@ -531,5 +532,11 @@ include ('includes/header.inc.php');
 				echo "court_ordered();";
 			}
 			?>
+		$('#crimeYes').click(function(){
+			$('form').attr('action', 'volunteer-c-thank-you.php');
+		});
+		$('#crimeNo').click(function(){
+			$('form').attr('action', '<?= $_SERVER['PHP_SELF']; ?>');
+		});
 		});
 </script>
