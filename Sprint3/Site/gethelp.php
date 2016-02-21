@@ -86,6 +86,7 @@
 				</ul>
 				<p>For more information see <a href="location.php">Locations</a></p>
 				<a href="location.php"><img class="img-responsive buildingImg" src="images/annex.png" alt="Birch Creek Annex"></a>
+				<p>&npsp;</p>
             </div>
 			
 			
