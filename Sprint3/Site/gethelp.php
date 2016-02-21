@@ -29,6 +29,17 @@
 				<a href="https://www.dshs.wa.gov/esa/community-services-offices/community-services-office" class="btn btn-default" target="_blank">D S H S</a><br>
             
             </div>
+			<p>&nbsp;</p>
+			<!--<div class="col-xs-12">
+			<h3>Hours of Service</h3>	-->
+			<!--<div class="panel panel-warning">
+                <div class="panel-heading">
+                  <h3 class="panel-title text-center" id="foodbankcard">Hours of Operation</h3>
+                </div>
+                <div class="panel-body">
+			
+			</div>
+			</div>-->
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9" >
             <!-- Main Content -->
@@ -42,8 +53,10 @@
                 <li>Each household may have two visits to the Food Bank per month</li>
                 <li>Remember to bring your own bags or boxes to carry your food</li>
             </ul>
-            <!-- Link to top of Page 
-			<div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
+			
+			
+            <!-- Link to top of Page -->
+			<!-- <div class="row"><div class="col-xs-6 col-xs-offset-6 visible-xs">
 			<p><span class="top-link-block right">
 				<a href="#top" class="well well-sm" >
 					<i class="glyphicon glyphicon-chevron-up"></i> Back to Top
@@ -51,8 +64,13 @@
 				</span>
 				</div>
 			</div>
-			 /top-link-block
-             Information about the Clothing Bank-->
+				 /top-link-block-->
+			
+			<!-- List of Hours -->
+			<?php  include ('includes/hours.php');  ?>
+			
+			
+             <!-- Information about the Clothing Bank-->
             
             <h3 id="clothingbank">Clothing Bank</h3>
 			<ul>

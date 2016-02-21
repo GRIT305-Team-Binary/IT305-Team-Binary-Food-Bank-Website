@@ -19,7 +19,9 @@
                     <!-- Option #2 for Header -->
                    <!-- <br><h4 class="title">Hours of Operation</h4>-->
                     
-                    <h3>Food Bank</h3>
+                    <!-- List of Hours -->
+                    <?php  include ('includes/hours.php');  ?>
+                   <!-- <h3>Food Bank</h3>
                     <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>
                     10am - 1pm</p>
                     <p><span class="dayOfWeek">Second Wednesday of each month</span><br>
@@ -30,7 +32,7 @@
                     <h3>Birch Creek Annex*</h3>
                     <p><span class="dayOfWeek">Monday</span><br>
                     10am - 1pm<br>
-                    <span class="asterisk">* Food Bank services only</span></p><br>
+                    <span class="asterisk">* Food Bank services only</span></p><br>-->
                  </div>
                 </div> 
                  </div>
