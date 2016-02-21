@@ -5,6 +5,7 @@
         ?>
         
         <div class="main">
+                <div class="container-fluid">
             <h1>Locations</h1>
             <div class="row">
                  <div class="col-xs-12 col-sm-3">
@@ -54,6 +55,7 @@
                 <p> Please park in legal designated parking spots to avoid tickets and towing!</p>
                 <p> HomeStreet Bank and Key Bank are private lots. Parking in their lots could result in your vehicle being towed at your own expense. </p>
                 </div>
+            </div>
             </div>
         </div>
         <!--<script>

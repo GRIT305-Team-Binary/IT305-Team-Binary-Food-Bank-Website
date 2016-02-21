@@ -188,6 +188,15 @@ hr{
  {
     width: 100%;
  }
+ 
+ /*jQuery classe*/
+ .visible {
+    display: block;
+ }
+ 
+  .hidden {
+    display: none;
+ }
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {

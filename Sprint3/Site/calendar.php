@@ -5,18 +5,19 @@
         <?php
             include('includes/header.inc.php');
         ?>
+         <div class="container-fluid">
         <div class="main">
             <h1>Calendar & Hours</h1>
             <div class="row">
-                 <div class="col-xs-12 col-sm-3">
-                 <!-- Orange Side Panel Style
+                  <div class="col-xs-12 col-sm-3">
+                 <!-- Orange Side Panel Style-->
                  <div class="panel panel-warning">
                 <div class="panel-heading">
                   <h3 class="panel-title text-center" id="foodbankcard">Hours of Operation</h3>
                 </div>
-                <div class="panel-body"> -->
+                <div class="panel-body"> 
                     <!-- Option #2 for Header -->
-                    <br><h4 class="title">Hours of Operation</h4>
+                   <!-- <br><h4 class="title">Hours of Operation</h4>-->
                     
                     <h3>Food Bank</h3>
                     <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>
@@ -30,8 +31,8 @@
                     <p><span class="dayOfWeek">Monday</span><br>
                     10am - 1pm<br>
                     <span class="asterisk">* Food Bank services only</span></p><br>
-                <!-- </div>
-                </div> -->
+                 </div>
+                </div> 
                  </div>
             
                 <!-- calendar on med/large screen sizes -->
@@ -54,6 +55,7 @@
                 
             </div>
         </div>
+         </div>
        <!-- Calendar and Hours Page  -->
    
         <?php
