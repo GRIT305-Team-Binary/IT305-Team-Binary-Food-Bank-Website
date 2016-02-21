@@ -32,14 +32,15 @@
 			<p>&nbsp;</p>
 			<!--<div class="col-xs-12">
 			<h3>Hours of Service</h3>	-->
-			<!--<div class="panel panel-warning">
+			<div class="panel panel-warning">
                 <div class="panel-heading">
-                  <h3 class="panel-title text-center" id="foodbankcard">Hours of Operation</h3>
+                  <h3 class="panel-title text-center" id="hours">Hours of Operation</h3>
                 </div>
                 <div class="panel-body">
-			
+			<!-- List of Hours -->
+			<?php  include ('includes/hours.php');  ?>
 			</div>
-			</div>-->
+			</div>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9" >
             <!-- Main Content -->
@@ -66,8 +67,7 @@
 			</div>
 				 /top-link-block-->
 			
-			<!-- List of Hours -->
-			<?php  include ('includes/hours.php');  ?>
+			
 			
 			
              <!-- Information about the Clothing Bank-->
@@ -86,7 +86,7 @@
 				</ul>
 				<p>For more information see <a href="location.php">Locations</a></p>
 				<a href="location.php"><img class="img-responsive buildingImg" src="images/annex.png" alt="Birch Creek Annex"></a>
-				<p>&npsp;</p>
+				<p>&nbsp;</p>
             </div>
 			
 			
