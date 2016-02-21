@@ -52,11 +52,11 @@
     </div>
 
 <!--
-    <div class="col-sm-2 col-md-1 hidden-xs">
+    <div class="col-sm-2 col-md-1 hidden-xs">-->
 
-        <!--<span class="glyphicon glyphicon-credit-card"></span> Donate 
-        <!--Paypal Donate Button
-        <div style="width: auto">
+        <!--<span class="glyphicon glyphicon-credit-card"></span> Donate -->
+        <!--Paypal Donate Button-->
+        <!-- <div style="width: auto">
             <form action="https://www.paypal.com/cgi-bin/webscr (Links to an external site.)" method="post" target="_top">
 
             <input type="hidden" name="cmd" value="_s-xclick">
