@@ -25,8 +25,8 @@
     while ($row = mysqli_fetch_assoc($result)) {
 
         $item = $row['item'];
-        
-		echo  "<li class='list-group-item'>$item</li>";        
+        echo  '<li class="list-group-item"><input id="box1" type="checkbox" class="hidden" />';
+		echo "$item</li>";        
 	}
 	
 	echo '</ul>';
@@ -51,5 +51,9 @@
 	<p>515 W Harrison St, Ste 107 <br />
 Kent, Washington 98032</p>
 	<p>Thank you for your donations and support.</p>
+	<p class="print"><form><input type="button" value=" Print this page "
+onclick="window.print();return false;" class="print" /></form></p>
+	<p class="print"><form><input type="button" value=" Return to Contribute "
+onClick="location.href='../contribute.php'" class="print" /></form></p>
  </div>
 	 	 
