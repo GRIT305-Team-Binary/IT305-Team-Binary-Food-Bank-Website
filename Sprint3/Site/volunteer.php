@@ -303,7 +303,7 @@ require ("../db.php");
 									<?php endif; ?>
 								   > Clothing
 								   </label>
-								   <p>Volunteers recieve, sort and organize donated clothing and assiting clients in their shopping</p>
+								   <p>Volunteers receive, sort and organize donated clothing and assiting clients in their shopping</p>
 						   
 								   <label for="office">
 								   <input type="checkbox" name="office" id="office"
