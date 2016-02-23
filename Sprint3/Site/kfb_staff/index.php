@@ -16,6 +16,7 @@
 
     <!-- Custom CSS -->
      <!-- <link href="/css/styles.css" rel="stylesheet"> -->
+	 <link href="navbar-fixed-top.css" rel="stylesheet"> 
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -29,13 +30,11 @@
 <body>
 	<div class="container-fluid">
 		
-		
-			<ul class="nav nav-tabs">
-			  <li role="presentation"><a href="index.php">Home</a></li>
-			  <li role="presentation"><a href="update_top_ten_items.php">Top Ten Items</a></li>
-			  <li role="presentation"><a href="#">Volunteers</a></li>
-			  <li role="presentation"><a href="#">Sponsors</a></li>
-			</ul>
+		<?php
+            include('nav.html');
+        ?>
+			
+			
 		
 		<div class="main">
 			<div class="row">

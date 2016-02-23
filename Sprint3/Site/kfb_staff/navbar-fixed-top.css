@@ -1,0 +1,5 @@
+/* Fixes Nav Bar to top of the screen */
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
