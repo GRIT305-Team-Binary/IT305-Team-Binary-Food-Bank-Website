@@ -274,7 +274,7 @@ require ("../db.php");
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<?php
-					//Validate Volunteer Opprotunities
+					//Validate Volunteer Opportunities
 					
 						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
 							echo '<p class="formError text-center">Please select a Volunteer Opportunity.</p>';
@@ -303,7 +303,7 @@ require ("../db.php");
 									<?php endif; ?>
 								   > Clothing
 								   </label>
-								   <p>Volunteers receive, sort and organize donated clothing and assiting clients in their shopping</p>
+								   <p>Volunteers receive, sort and organize donated clothing and assisting clients in their shopping</p>
 						   
 								   <label for="office">
 								   <input type="checkbox" name="office" id="office"
@@ -322,7 +322,7 @@ require ("../db.php");
 								 
 								   > Food
 								   </label>
-								   <p>Volunteers recieve, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
+								   <p>Volunteers receive, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
 						   </div>
 					   </fieldset>
 				   </div>
@@ -347,7 +347,7 @@ require ("../db.php");
 			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				   <fieldset class="form-group">
-				   <label>Are you able to make a commitment of at leaset three (3) months one day a week?*<br />
+				   <label>Are you able to make a commitment of at least three (3) months one day a week?*<br />
 				   (M, T, W, or F from 9am -2:30pm)</label>
 				   <div class="radio">
 					   <label class="radio-inline">
@@ -440,7 +440,7 @@ require ("../db.php");
 							   No
 						   </label>
 				    <?php
-				   //Validate Physical Limiations
+				   //Validate Physical Limitations
 					   if ($missing && in_array('limitation', $missing)) {
 						   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 						   $isValid = false;
