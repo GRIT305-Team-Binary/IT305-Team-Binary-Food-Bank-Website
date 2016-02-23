@@ -5,167 +5,7 @@
   <meta charset="utf-8">
 
 
-<style>
-.err{
-  color:red;
-  font-weight: bolder;
-}
-.sponserHeaderText{
-  text-align:justify;
-}
-
-.headerText{
-  font-size: 1.5em;
-}
-
-.sponserHeaderText{
-  margin-top: 20px;
-}
-
- #sponserFormSubmitBtn {
-  width: 30%;
-  height: 60px;
-  border-radius: 5px;
-  box-shadow: 2px 2px 2.5px #888888;
-  margin-top: 20px;
-}
-
-
-.sponserBoxHeader{
-  text-align: center;
-}
-
-h3.sponserBoxHeader{
-  text-decoration: underline;
-  margin-bottom: 20px;
-}
-
-.sponserBox{
-    border-radius: 2.5px;
-    margin-top: 15px;
-    border: 1px solid black;
-    box-shadow: 2px 2px 2.5px #888888;
-}
-
-.sponserFormTextBoxes{
-  border-radius: 2.5px;
-  padding: 15px .5% 15px .5%;
-  margin-top: 20px;
-  border: 1px solid black;
-  box-shadow: 2px 2px 2.5px #888888;
-}
-
-.sponserLiEl li{
-  list-style-type: none;
-}
-
-.sponser-radio-btn{
-  width: 30px;
-  height: 30px;
-}
-
-.rdoTxt{
-  position: relative;
-  bottom: 25px;
-  left: 18%;
-}
-
-.sponserRadioBtnNTxt{
-  width: 63%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Custom, iPhone Retina */
-    @media only screen and (min-width : 320px) and (max-width : 479px) {
-
-      .sponserFormTextBoxes{
-        position: relative;
-        top: 10px;
-        float: none;
-        display: table;
-        margin: 0 auto;
-
-      }
-
-    .inputFields{
-      text-align: center;
-    }
-
-    #sponserFormSubmitBtn {
-    position: relative;
-    left: 24%;
-   }
-
-   .sponserBox{
-       height:975px;
-   }
-
-    }
-
-    /* Extra Small Devices, Phones */
-    @media only screen and (min-width : 480px) and (max-width : 767px) {
-
-      .inputFields{
-        text-align: center;
-      }
-
-      #sponserFormSubmitBtn {
-      position: relative;
-      left: 18%;
-     }
-
-     .sponserBox{
-         height: 645px;
-     }
-
-    }
-
-    /* Small Devices, Tablets */
-    @media only screen and (min-width : 768px) and (max-width : 991px) {
-
-      .rdoTxt{
-        position: relative;
-        font-size: 1em;
-      }
-
-      .sponserBox{
-          height: 605px;
-      }
-
-      .inputFields{
-        text-align: center;
-      }
-    }
-
-    /* Medium Devices, Desktops */
-    @media only screen and (min-width : 992px) and (max-width : 1199px) {
-
-      .sponserRadioBtnNTxt{
-        width: 78%;
-      }
-
-      .sponserBox{
-        height 440px;
-
-      }
-
-      input[type="text"] {
-    width: 100%;
-}
-
-    }
-
-    @media only screen and (min-width : 1200px) {
-      .sponserBox{
-        margin-left: 2% !important;
-        width: 31% !important;
-        height: 850px;
-      }
-    }
-
-
-</style>
+<link rel="stylesheet" href="./css/sponsor-page.css" />
 <?php  include ('includes/header.inc.php');  ?>
 
 <?php
@@ -336,7 +176,7 @@ h3.sponserBoxHeader{
                             <li>Verbal recognition day of event</li>
                             <li>Each Table of Honor guest will receive 3 raffle tickets</li>
                         </ul>
-                        
+
                         <div class="sponserRadioBtnNTxt">
                           <?php echo $rdoNotSlectedErr; ?>
                           <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Silver Level.</label>
@@ -353,7 +193,7 @@ h3.sponserBoxHeader{
                             <li>Verbal recognition day of event</li>
                             <li>Table of Honor at event</li>
                         </ul>
-                      
+
                         <div class="sponserRadioBtnNTxt">
                           <?php echo $rdoNotSlectedErr; ?>
                           <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Bronze Level.</label>
@@ -367,19 +207,19 @@ h3.sponserBoxHeader{
                       <?php echo $fNameEmptyErr ?>
                       &nbsp;<input type="text" name="fName" value="<?php echo $fName; ?>">
                    </div>
-                    
+
                     <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Middle Initial:</label><br />
                       &nbsp;<input type="text" name="mName" value="<?php echo $mName; ?>">
                     </div>
-                    
+
                     <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Last Name:</label><br />
                      <?php echo $lNameEmptyErr ?>
                       &nbsp;<input type="text" name="lName" value="<?php echo $lName; ?>">
                     </div>
 
-                    
+
                   </div>
 
                   <div class="row">
