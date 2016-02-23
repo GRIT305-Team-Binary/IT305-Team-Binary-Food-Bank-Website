@@ -516,7 +516,7 @@ require ("../db.php");
 		$('#student').on('click', normal);
 		
 		function court_ordered() {
-            //if they answer court ordered comunity service ask type of crime
+            //if they answer court ordered community service ask type of crime
 			$('#crime').removeClass('hidden');
 			$('#liftLB').html('40');
 	
