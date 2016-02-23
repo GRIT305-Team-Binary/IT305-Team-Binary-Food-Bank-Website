@@ -220,7 +220,7 @@
                  <h2 class="text-center">Our Team</h2>
                  <hr>
                  <p></p>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
                    <p class="text-center"> <img alt="headshot" class="img-responsive team-img" src="images/people-q-g-200-200-3.jpg"></p>
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
