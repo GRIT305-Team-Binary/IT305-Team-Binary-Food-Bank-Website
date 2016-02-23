@@ -70,9 +70,9 @@
       var imageSize = windowWidth/4;
 
       if(windowWidth > 767){
-        $("#logo").css("width", imageSize + "px");
+        $('#logo').width(imageSize);
     }else{
-        $("#logo").css("width", "100%");
+        $('#logo').width('100%');
     }
 
     });
@@ -80,13 +80,14 @@
 
         $(window).resize(function(){
             var windowWidth = $(document).width();
-            var imageSize = windowWidth/4;
+            var imageSize = windowWidth/3.5;
 
-        if(windowWidth > 767){
-            $("#logo").css("width", imageSize + "px");
-        }else{
-            $("#logo").css("width", "100%");
-         }});
+            if(windowWidth > 767){
+              $('#logo').width(imageSize);
+          }else{
+              $('#logo').width('100%');
+          }
+     });
 
     </script>
 
