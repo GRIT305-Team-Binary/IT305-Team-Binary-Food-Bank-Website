@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
     <!-- Custom CSS -->
-     <!-- <link href="/css/styles.css" rel="stylesheet"> -->
+     <link href="/css/styles.css" rel="stylesheet"> 
 	 <link href="navbar-fixed-top.css" rel="stylesheet"> 
 
 
@@ -44,7 +44,7 @@
 
       
             <h1 class="text-center">This page is for the Kent Food Bank Staff</h1 >
-            <p>Update <a href="update_top_ten_items.php">Top Ten Items Needed</a></p>
+            <h3 class="text-center">Update <a href="update_top_ten_items.php">Top Ten Items Needed</a></p>
             </div>
             </div>
         </div>
