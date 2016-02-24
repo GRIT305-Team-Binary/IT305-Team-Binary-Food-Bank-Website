@@ -1,3 +1,7 @@
+<!-- Volunteer Application Form -->
+<!-- Kent Food Bank -->
+<!-- Jami Schwarzwalder, Team Binary -->
+<!-- http://teambinary.greenrivertech.net/volunteer.php -->
 <?php
 	//Set up arrays needed for process_mail.php
 	$errors = [];
@@ -292,7 +296,7 @@ require ("../db.php");
 						   <label >Volunteer Opportunities (check your interests)*</label>
 						   <div class="checkbox">
 							   <label for="clothing">
-							   <input type="checkbox" name="clothing" id="clothing
+							   <input type="checkbox" name="clothing" id="clothing"
 							   <!-- if Clothing was selected, add checked to the input field -->
 							   <?php if ($clothing) : ?>
 								checked
