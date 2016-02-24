@@ -24,13 +24,13 @@
 	$food="";
 	$appType="";
 	$crime="";
-	
+
 	// Turn on error reporting
    ini_set('display_errors', 1);
    error_reporting(E_ALL);
 
-	
-	//Form has been submitted 
+
+	//Form has been submitted
 	if (isset($_POST['submit'])) {
 		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
@@ -38,49 +38,54 @@
 		//'crime' is added below if they have court ordered community service
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = ''; //we should set to users email 
-		$subject = 'Volunteer Application -'. $fname . " " . $lname; 
+		$recipient = ''; //we should set to users email
+		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
-		     
-    
-    	
-	//Create a boolean flag to track validation errors	
+
+
+
+	//Create a boolean flag to track validation errors
 	 $isValid = true;
-	 
+
 	   //Adding Validation for Court Ordered Community Service
 			if ($_POST && $_POST['appType'] == 'court') {
 				array_push ( $required , 'crime' );
 				array_push ( $expected , 'crime' );
 				echo "<script>court_ordered();</script>";
 			}
-			
-		
+
+
 		 //Validate Checkboxes for Volunteer Opportunities
 			if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
 				array_push ( $required , 'clothing', 'office', 'food' );
 			}
-			
-		
-		
-		
+
+
+
+
 		if ($isValid) {
-           
+
 			// Include the validation functions
-			// This will make sure every field marked as required has a value entered. 
+			// This will make sure every field marked as required has a value entered.
 			include ('./includes/process_mail.php');
-			
+
+			//message sent to user filling out this form
+			$mailedMessage = 'Thank you for supportings the Kent Food Bank. One of our representatives will contact you for further steps to volenteer at the kent food bank.';
+
+		 //sends the user a reply after submitting the form.
+			include('./mail-sender.php');
 			
 			if ($mailSent) {
 				header('Location: volunteer-thank-you.php');
 				exit;
 			}
-			
-			
-           
+
+
+
         }
-		
+
 	}
 ?>
 <!DOCTYPE html>
@@ -105,23 +110,23 @@ require ("../db.php");
 				<?php  include ('includes/contribute-side.php');  ?>
 			</div>
 		    <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
-					
+
 				<!-- Space for error message -->
-				
+
 				<?php if ($_POST && ($suspect || isset($errors['mailfail']))) : ?>
 					<h1 class="formError text-center">Sorry, your mail couldn't be sent.</h1><br>
 				<?php elseif ($errors || $missing) : ?>
 					<h1 class="formError text-center">Please fix the item(s) indicated:</h1><br>
-				<?php endif; ?>		
-				
+				<?php endif; ?>
+
 			<!-- This is the Form -->
-							 
-						 
+
+
 			<form method="POST" action="<?= $_SERVER['PHP_SELF']; ?>"> <!-- Will reload volunteer.php after form submits -->
 				<div class="row ">
 				   <hr>
 				   <p></p>
-				   <p class="asterisk pull-right">* = Required field</p>	
+				   <p class="asterisk pull-right">* = Required field</p>
 				</div>
 				<div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
@@ -132,34 +137,34 @@ require ("../db.php");
 							if ($missing && in_array('appType', $missing))  {
 								echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 								$isValid = false;
-								
-								
+
+
 							} elseif ($_POST) {
 								//print_r($_POST);
 								//$appType = $_POST['appType'];
 								//echo 'appType: ';
 								//echo $appType;
-								
+
 								//echo '<br >appTypes: ';
 								//print_r($appTypes);
 								if (!in_array($appType, $appTypes )) {
 									echo '<p class="formError text-center">There was an error please reload your page</p>';
 								}
 							}
-							
+
 						?>
 					   <!-- Application type -->
 						<fieldset class="form-group text-center">
 							<label>Type of Application*:</label><br>
-								   
-						<!-- Create Radio Buttons -->		   
+
+						<!-- Create Radio Buttons -->
 						<?php
 							foreach ($appTypes as $appValue) {
 								echo '<label class="radio-inline"><input type="radio" name="appType" id="';
 								echo strtolower($appValue);
 								echo '" value="';
 								echo strtolower($appValue);
-								
+
 								if (strcmp($appValue, $appType) == 0){
 									echo '" checked>';
 								} else {
@@ -172,9 +177,9 @@ require ("../db.php");
 						</fieldset>
 					</div>
 			   </div>
-			   <div class="row">	
+			   <div class="row">
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
-						<!-- Error Message if first name not entered -->	
+						<!-- Error Message if first name not entered -->
 						<?php if ($missing && in_array('fname', $missing)) : ?>
 								<span class="formError text-center">Please enter your first name.</span>
 						<?php endif; ?>
@@ -187,7 +192,7 @@ require ("../db.php");
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">		
+					<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
 						<!-- First Name field -->
 					   <fieldset class="form-group">
 						   <label for="fname">First Name*</label><br>
@@ -218,8 +223,8 @@ require ("../db.php");
 						   <input name="address" class="input col-xs-12 form-control" type="text" id="address" placeholder="Enter your street address" value="<?php echo $address; ?>">
 					   </fieldset>
 				   </div>
-			   
-			   
+
+
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
 				   <!-- City and Zip will take up half the screen when on large monitor -->
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 form-group">
@@ -243,8 +248,8 @@ require ("../db.php");
 					   </div>
 				   </div>
 				</div> <!-- End of Address Row -->
-			   
-			   
+
+
 			   <div class="row">
 				 <!-- Validate phone and email is entered -->
 					<?php if ($_POST) {
@@ -254,14 +259,14 @@ require ("../db.php");
 						}
 					}
 					?>
-		
+
 				   <fieldset class="form-group">
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->
 						   <label>Phone*</label><br>
 						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
 					   </div>
-			   
+
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Email-->
 						   <label>E-mail address*</label><br>
@@ -274,14 +279,14 @@ require ("../db.php");
 				   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 						<?php
 						//Validate Volunteer Opportunities
-					
+
 						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
 							echo '<p class="formError text-center">Please select a Volunteer Opportunity.</p>';
 							$isValid = false;
 						} else {
 							if (!empty($_POST['clothing'])) {
 								$clothing = $_POST['clothing'];
-								
+
 							}
 							if (!empty($_POST['office'])) {
 								$office= $_POST['office'];
@@ -292,7 +297,7 @@ require ("../db.php");
 						}
 						?>
 					   <fieldset class="form-group">
-						   
+
 						   <label >Volunteer Opportunities (check your interests)*</label>
 						   <div class="checkbox">
 							   <label for="clothing">
@@ -304,7 +309,7 @@ require ("../db.php");
 							   > Clothing
 							   </label>
 							   <p>Volunteers receive, sort and organize donated clothing and assisting clients in their shopping</p>
-					   
+
 							   <label for="office">
 							   <input type="checkbox" name="office" id="office"
 							   <!-- if Office was selected, add checked to the input field -->
@@ -314,7 +319,7 @@ require ("../db.php");
 							   >Office
 							   </label>
 							   <p>Volunteers register clients by computer check in through a one on one client interview process and verify information. Assist with resource referral and other needs. </p>
-					   
+
 							   <label for="food">
 							   <input type="checkbox" name="food" id="food"
 							   <!-- if Food was selected, add checked to the input field -->
@@ -334,17 +339,17 @@ require ("../db.php");
 						   if ($missing && in_array('whyVolunteer', $missing)) {
 							   echo '<p class="text-center formError" >Please tell us why you want to Volunteer.</p>';
 							   $isValid = false;
-							   
+
 						   }
 						   ?>
-					
+
 					   <fieldset class="form-group">
 							   <label for="whyVolunteer">Why are you interested in volunteering?*</label><br />
 							   <textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
 					   </fieldset>
 				   </div>
 			   </div> <!-- End of Opportunities and Text Area Row -->
-			   
+
 			   <!-- Yes No Questions -->
 			   <div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -368,7 +373,7 @@ require ("../db.php");
 								  checked
 								  <?php endif; ?>
 								  >
-								  
+
 								   No
 							   </label>
 							   <?php
@@ -410,12 +415,12 @@ require ("../db.php");
 									if ($missing && in_array('lift', $missing)) {
 									   echo '<p class="radio-inline formError">Please select Yes or No.</p>';
 									   $isValid = false;
-									   
+
 								   }
 								?>
 							</div>
 					   </fieldset>
-			   
+
 					</div>
 			   </div>
 			   <div class="row">
@@ -446,12 +451,12 @@ require ("../db.php");
 								   if ($missing && in_array('limitation', $missing)) {
 									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 									   $isValid = false;
-									   
+
 								   }
 								?>
 							</div>
 						</fieldset>
-			   
+
 					</div>
 			   </div>
 			   <div class="row hidden" id="crime">
@@ -482,12 +487,12 @@ require ("../db.php");
 								   if ($missing && in_array('crime', $missing)) {
 									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 									   $isValid = false;
-									   
+
 								   }
 								?>
 							</div>
 						</fieldset>
-				   
+
 					</div>
 			   </div>
 			   <div class="row">
@@ -496,9 +501,9 @@ require ("../db.php");
 						<fieldset class="form-group">
 								<label for="questions">Any questions for or about the food bank, please use the provided space below and a staff member will respond using your preferred contact information.</label><br />
 								<textarea class="input col-xs-12 form-control" id="questions" name="questions" rows="7"><?php echo $questions; ?></textarea>
-						</fieldset>						
+						</fieldset>
 						<p><button type="submit" class="btn btn-warning" name="submit">Submit</button></p>
-							
+
 				   </div>
 			   </div>
 			</form> <!-- End of Form -->
@@ -519,20 +524,20 @@ require ("../db.php");
 		$('#group').on('click', normal);
 		$('#organizational').on('click', normal);
 		$('#student').on('click', normal);
-		
+
 		function court_ordered() {
             //if they answer court ordered community service ask type of crime
 			$('#crime').removeClass('hidden');
 			$('#liftLB').html('40');
-	
+
 		}
 		function normal() {
             //if they do not have court ordered community service
 			$('#crime').addClass('hidden');
-			$('#liftLB').html('10');	
+			$('#liftLB').html('10');
         }
-		
-		
+
+
 		<?php if ($_POST && $_POST['appType'] == 'court') {
 				echo "court_ordered();";
 			}

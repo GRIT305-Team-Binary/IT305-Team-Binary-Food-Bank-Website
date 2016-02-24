@@ -117,7 +117,7 @@
         $mailedMessage = 'Thank you for sponsoring the Kent Food Bank. One of our representatives will contact you for further steps regarding sponsorship.';
 
         //sends the user a reply after submitting the form.
-        include('./includes/send-email/mail-sender.php');
+        include('./mail-sender.php');
 
 
       }
