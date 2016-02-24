@@ -11,28 +11,26 @@
             <div class="row">
                   <div class="col-xs-12 col-sm-3">
                  <!-- Orange Side Panel Style-->
+				 <ul class="nav nav-tabs">
+				  <li id="hours" class="active"><a href="">Hours</a></li>
+				  <li id="events"><a href="">Events</a></li>
+				</ul>
                  <div class="panel panel-warning">
                 <div class="panel-heading">
-                  <h3 class="panel-title text-center" id="foodbankcard">Hours of Operation</h3>
+					<div id="hours-title"><h3 class="panel-title text-center" >Hours of Operation</h3></div>
+					<div id="events-title"><h3 class="panel-title text-center" >Annual Events</h3></div>
                 </div>
                 <div class="panel-body"> 
-                    <!-- Option #2 for Header -->
-                   <!-- <br><h4 class="title">Hours of Operation</h4>-->
-                    
+                   
+                    <div id="hours-body">
                     <!-- List of Hours -->
                     <?php  include ('includes/hours.php');  ?>
-                   <!-- <h3>Food Bank</h3>
-                    <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>
-                    10am - 1pm</p>
-                    <p><span class="dayOfWeek">Second Wednesday of each month</span><br>
-                    5pm - 6pm<br><br></p>
-                    <h3>Clothing Bank</h3>
-                    <p><span class="dayOfWeek">Tuesday, Wednesday, Friday</span><br>
-                    10am - 12:30pm<br><br></p>
-                    <h3>Birch Creek Annex*</h3>
-                    <p><span class="dayOfWeek">Monday</span><br>
-                    10am - 1pm<br>
-                    <span class="asterisk">* Food Bank services only</span></p><br>-->
+					</div>
+					<div id="event-body">
+                    <!-- List of Annual Events -->
+                    
+					</div>
+                   
                  </div>
                 </div> 
                  </div>
@@ -63,3 +61,35 @@
         <?php
             include('includes/footer.php');
         ?>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script>
+	  
+			$("div#events-title").hide();
+			$("div#events-body").hide();
+			$("div#hours-title").show();
+			$("div#hours-body").show();
+			
+			//When click on hours should hide, and events should display
+            $("li#events").click(function(){
+				
+            	$("div#hours-title").hide();
+				$("div#hours-body").hide();
+				$("div#events-title").show();
+				$("div#event-body").show();
+                $("li#hours").removeClass("active");
+				$("li#events").addClass("active");
+				
+			});
+			
+			//When click on events should hide, and hours should display
+			$("li#hours").click(function(){
+				
+			    $("div#events-title").hide();
+				$("div#event-body").hide();
+				$("div#hours-title").show();
+				$("div#hours-body").show();
+                $("li#events").removeClass("active");
+				$("li#hours").addClass("active");				
+			});
+        </script>
