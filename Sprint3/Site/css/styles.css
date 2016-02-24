@@ -27,6 +27,14 @@ body {
 	color:white;
 	box-shadow: 2px 2px 2.5px black;
 }
+.navbar-brand {
+  padding: 0px; /* firefox bug fix */
+}
+.navbar-brand>img {
+  height: 100%;
+  padding: 15px; /* firefox bug fix */
+  width: auto;
+}
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
@@ -134,7 +142,7 @@ body {
     color: #FF9600;
 }
 
-.footerBtn {
+.footerBtn  .mBtn{
     margin-bottom: 0;   /* remove margin space from bottom of footer button links */
    
     

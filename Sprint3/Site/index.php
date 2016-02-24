@@ -113,9 +113,10 @@
                     
                         <div class="col-xs-12 col-sm-offset-1 col-sm-5 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=120598&s=3">Donate</a>
+                             <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=120598&s=3">Donate</a>
                          </div>
-                        <div class="col-xs-12 col-sm-5 text-center">
+						  <p class="visible-xs">&nbsp;</p>
+                        <div class="col-xs-12 col-sm-5 text-center mBtn">
                             <!-- Volunteer Button under Carousel -->
                              <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Volunteer</a>
                          </div>
