@@ -129,14 +129,43 @@ body {
 }
 
 .footerTitle {
+    font-size: 175%;
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
-    color: #FF9600;
+    color: #DFEBED;
+    color: #c8d3d5;
+}
+
+.footerP {
+    font-size: 115%;
+    margin-bottom: 0;
+}
+
+.footerIcon {
+    color: #F78536;
+}
+
+.footerLink {
+    text-decoration: none;
+    color: white;
+}
+
+.footerLink:hover {
+    text-decoration: none;
+    color: #F78536;
 }
 
 .footerBtn {
     margin-bottom: 0;   /* remove margin space from bottom of footer button links */
-   
+    
+}
+
+footer .underline {
+    margin-top: 0px;
+    margin-bottom: 3px;
+    border: 1px solid #c8d3d5;
+    width: 100%;
     
 }
 
