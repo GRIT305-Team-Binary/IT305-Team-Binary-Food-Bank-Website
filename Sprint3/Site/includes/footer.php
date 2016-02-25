@@ -62,7 +62,37 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script async src="js/bootstrap.min.js"></script>
+<<<<<<< HEAD
 	
+=======
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+      var windowWidth = $(document).width();
+      var imageSize = windowWidth/4;
+
+      if(windowWidth > 767){
+        $('#logo').width(imageSize);
+    }else{
+        $('#logo').width('100%');
+    }
+
+    });
+
+
+        $(window).resize(function(){
+            var windowWidth = $(document).width();
+            var imageSize = windowWidth/3.5;
+
+            if(windowWidth > 767){
+              $('#logo').width(imageSize);
+          }else{
+              $('#logo').width('100%');
+          }
+     });
+
+    </script>
+>>>>>>> origin/master
 
 
 
