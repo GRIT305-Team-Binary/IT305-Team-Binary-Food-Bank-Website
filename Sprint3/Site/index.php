@@ -115,10 +115,10 @@
                             <!-- Donate Button under Carousel -->
                              <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=120598&s=3">Donate</a>
                          </div>
-						  <p class="visible-xs">&nbsp;</p>
-                        <div class="col-xs-12 col-sm-5 text-center mBtn">
+                        <p class="visible-xs">&nbsp;</p>
+                        <div class="col-xs-12 col-sm-5 text-center">
                             <!-- Volunteer Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Volunteer</a>
+                             <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="volunteer.php">Volunteer</a>
                          </div>
                      
                  </div>
