@@ -5,11 +5,11 @@
         <?php
             include('includes/header.inc.php');
         ?>
-         <div class="container-fluid">
+     <div class="container-fluid">
         <div class="main">
             <h1>Calendar & Hours</h1>
             <div class="row">
-                  <div class="col-xs-12 col-sm-3">
+                  <div class="col-xs-12 col-md-3">
                  <!-- Orange Side Panel Style-->
 				 <ul class="nav nav-tabs">
 				  <li id="hours" class="active"><a href="">Hours</a></li>
@@ -36,26 +36,20 @@
                  </div>
             
                 <!-- calendar on med/large screen sizes -->
-                <div class="col-med-9 hidden-xs hidden-sm">
-                    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
-                            style="border-width:0" width="73%" height="600px" frameborder="0" scrolling="no"></iframe>
-                </div>
+                <div class="col-xs-12 col-md-9 ">
+					<div class="embed-responsive embed-responsive-16by9">
+
+
+                    <iframe class="embed-responsive-item"  src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
+                           scrolling="no"></iframe>
+					</div>
+				</div>
                 
-                <!-- calendar on small screen size -->
-                <div class="col-sm-9 visible-sm">
-                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
-                            style="border-width:0" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
-                </div>
                 
-                <!-- calendar on mobile/xs screen size -->
-                <div class="col-xs-12 visible-xs">
-                    <iframe src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
-                             width="600"  scrolling="yes"></iframe>
-                </div>
                 
             </div>
         </div>
-         </div>
+     </div>
        <!-- Calendar and Hours Page  -->
    
         <?php
@@ -70,7 +64,7 @@
 			$("div#hours-title").show();
 			$("div#hours-body").show();
 			
-			//When click on hours should hide, and events should display
+			
             $("li#events").click(function(){
 				
             	$("div#hours-title").hide();
@@ -78,11 +72,10 @@
 				$("div#events-title").show();
 				$("div#event-body").show();
                 $("li#hours").removeClass("active");
-				$("li#events").addClass("active");
+				 $("li#events").addClass("active");
 				
 			});
 			
-			//When click on events should hide, and hours should display
 			$("li#hours").click(function(){
 				
 			    $("div#events-title").hide();
