@@ -107,6 +107,12 @@
          "<p>We will contact you via email or phone regarding the steps to make you a sponsor. We are ever so grateful, Thank You!</p>";
          $formHd = "hidden";
 
+         //message sent to user filling out this form
+     $mailedMessage = 'Thank you for sponsoring the Kent Food Bank. One of our representatives will contact you for further steps regarding sponsorship.';
+
+     //sends the user a reply after submitting the form.
+     include('./mail-sender.php');
+
       }
     }
   }
