@@ -114,6 +114,15 @@ if(mysqli_connect_errno()){
       //check if all fields are valid and ready for submission
       if($isValid){
 
+        //escape the input strings
+        $sponserLvlRdo = mysqli_real_escape_string($connection, $sponserLvlRdo);
+        $fName = mysqli_real_escape_string($connection, $fName);
+        $mName = mysqli_real_escape_string($connection, $mName);
+        $lName = mysqli_real_escape_string($connection, $lName);
+        $busOrg = mysqli_real_escape_string($connection, $busOrg);
+        $phone = mysqli_real_escape_string($connection, $phone);
+        $email = mysqli_real_escape_string($connection, $email);
+
         $query = "INSERT INTO sponsors (sponsor_lvl, fname, mname, lname, Bus_Org, phone, email) ";
         $query .= "VALUES ('{$sponserLvlRdo}', '{$fName}', '{$mName}', '{$lName}', '{$busOrg}', '{$phone}', '{$email}')";
 
