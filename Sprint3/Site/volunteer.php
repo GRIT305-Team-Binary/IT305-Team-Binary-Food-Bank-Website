@@ -1,29 +1,26 @@
-<!-- Volunteer Application Form -->
-<!-- Kent Food Bank -->
-<!-- Team Binary -->
-<!-- http://teambinary.greenrivertech.net/volunteer.php -->
 <?php
+	/* Volunteer Application Form 
+	 * Kent Food Bank 
+	 * Jami, Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/volunteer.php
+	 */
 	//Set up arrays needed for process_mail.php
 	$errors = [];
 	$missing = [];
+	//All of the fields expected to have values from form
+	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+					 'clothing', 'office', 'food','whyVolunteer',
+					 'commit', 'lift', 'limitation', 'questions', 'crime'];
+	//'crime' is added below if they have court ordered community service
+	
 	//Create placeholder text for entry forms
-	$fname="";
-	$lname="";
-	$address="";
-	$city="";
-	$zip="";
-	$phone="";
-	$email="";
-	$whyVolunteer="";
-	$commit ="";
-	$lift = "";
-	$limitation ="";
-	$questions="";
-	$clothing="";
-	$office="";
-	$food="";
-	$appType="";
-	$crime="";
+	foreach ($form_fields as $field) {
+		$$field = "";
+	}
+	
+								
+	
+	
 
 	// Turn on error reporting
    ini_set('display_errors', 1);
@@ -32,60 +29,57 @@
 
 	//Form has been submitted
 	if (isset($_POST['submit'])) {
-		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+		//All of the fields expected to have values from form
+		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
 					 'commit', 'lift', 'limitation', 'questions'];
-		//'crime' is added below if they have court ordered community service
+				
+		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = ''; //we should set to users email
+		$recipient = $_POST['email']; //email user submitted
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
-
-
-
-	//Create a boolean flag to track validation errors
-	 $isValid = true;
-
-	   //Adding Validation for Court Ordered Community Service
-			if ($_POST && $_POST['appType'] == 'court') {
-				array_push ( $required , 'crime' );
-				array_push ( $expected , 'crime' );
-				echo "<script>court_ordered();</script>";
-			}
-
+		
+		//Adding Validation for Court Ordered Community Service
+		if ($_POST && $_POST['appType'] == 'court') {
+			array_push ( $required , 'crime' );
+			array_push ( $expected , 'crime' );
+			$crime = '';
+			
+		}
+		
+		// Include the validation functions
+		// This will make sure every field marked as required has a value entered.
+ 		include ('includes/process_mail.php');
+       
+     	//Create a boolean flag to track validation errors
+		$isValid = true;
+		 
+				
+	   
 
 		 //Validate Checkboxes for Volunteer Opportunities
-			if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-				array_push ( $required , 'clothing', 'office', 'food' );
-			}
-
-
-
-
+		if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+			array_push ( $required , 'clothing', 'office', 'food' );
+		}
+		
 		if ($isValid) {
-
-			// Include the validation functions
-			// This will make sure every field marked as required has a value entered.
-			include ('./includes/process_mail.php');
-
 			//message sent to user filling out this form
 			// $mailedMessage = 'Thank you for supportings the Kent Food Bank. One of our representatives will contact you for further steps to volenteer at the kent food bank.';
 
-		 //sends the user a reply after submitting the form.
+			//sends the user a reply after submitting the form.
 			// include('./mail-sender.php');
 			
 			if ($mailSent) {
 				header('Location: volunteer-thank-you.php');
 				exit;
 			}
-
-
-
+		
+		
         }
-
 	}
 ?>
 <!DOCTYPE html>
@@ -132,21 +126,14 @@ require ("../db.php");
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
 						<?php
 							//Validate Type of Application
-							//print_r ($missing);
 							$appTypes = array('individual', 'group', 'organizational', 'student', 'court');
-							if ($missing && in_array('appType', $missing))  {
+							if (($missing && in_array('appType', $missing)) || ($_POST && $_POST['appType'] == "none"))  {
 								echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 								$isValid = false;
 
 
 							} elseif ($_POST) {
-								//print_r($_POST);
-								//$appType = $_POST['appType'];
-								//echo 'appType: ';
-								//echo $appType;
-
-								//echo '<br >appTypes: ';
-								//print_r($appTypes);
+								
 								if (!in_array($appType, $appTypes )) {
 									echo '<p class="formError text-center">There was an error please reload your page</p>';
 								}
@@ -159,6 +146,10 @@ require ("../db.php");
 
 						<!-- Create Radio Buttons -->
 						<?php
+							if (empty($appType)){
+								//Creates value of none for appType until user selects an Application Type 
+								echo '<label class="radio-inline"><input type="radio" name="appType" id="none" class="hidden" checked></label>';
+							}
 							foreach ($appTypes as $appValue) {
 								echo '<label class="radio-inline"><input type="radio" name="appType" id="';
 								echo strtolower($appValue);
@@ -167,13 +158,17 @@ require ("../db.php");
 
 								if (strcmp($appValue, $appType) == 0){
 									echo '" checked>';
+									
 								} else {
 									echo'">';
 								}
 								echo ucfirst($appValue);
 								echo '</label>';
 							}
+							
+							
 						?>
+							
 						</fieldset>
 					</div>
 			   </div>
@@ -231,13 +226,14 @@ require ("../db.php");
 						<!-- City -->
 						   <fieldset class="form-group">
 							   <label for="city">City*</label><br>
-							   <input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" value="<?php echo $city; ?>">
+							   <input name="city" class="input col-xs-12 form-control" type="text" id="city"
+									  placeholder="Enter your city" value="<?php echo $city; ?>">
 							</fieldset>
 					   </div>
 					   <!-- State visible only on large screens -->
 					   <div class="col-lg-3 visible-lg">
-							<span class="bfh-states" data-country="US" data-state="WA">WA</span>
-						   <!--<h2 class="text-center">WA</h2>-->
+							<span class="bfh-states" data-country="US" data-state="WA"></span>
+							<h2 class="text-center">WA</h2>
 					   </div>
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 					   <!-- Zip -->
@@ -264,7 +260,7 @@ require ("../db.php");
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->
 						   <label>Phone*</label><br>
-						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
+						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
 					   </div>
 
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
@@ -345,7 +341,7 @@ require ("../db.php");
 
 					   <fieldset class="form-group">
 							   <label for="whyVolunteer">Why are you interested in volunteering?*</label><br />
-							   <textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
+							   <textarea class="input col-xs-12 form-control" id="whyVolunteer" placeholder="Please tell us why you want to Volunteer." name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
 					   </fieldset>
 				   </div>
 			   </div> <!-- End of Opportunities and Text Area Row -->
@@ -539,9 +535,9 @@ require ("../db.php");
 
 
 		<?php if ($_POST && $_POST['appType'] == 'court') {
-				echo "court_ordered();";
+			echo "court_ordered();";
 			}
-			?>
+		?>
 		$('#crimeYes').click(function(){
 			$('form').attr('action', 'volunteer-c-thank-you.php');
 		});
