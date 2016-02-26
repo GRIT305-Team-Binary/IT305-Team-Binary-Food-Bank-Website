@@ -82,7 +82,7 @@
       if(empty($_POST['phone'])){
         $phoneEmptyErr = "<span class='err'>Please enter a phone number. <br /></span>";
         $isValid = false;
-      }elseif (!ctype_digit(str_replace(" ", "", str_replace("-", "", $_POST['phone'])))) {
+      }elseif (!ctype_digit(str_replace("(", "", str_replace(")", "", str_replace(" ", "", str_replace("-", "", $_POST['phone'])))))) {
         $phoneEmptyErr = "<span class='err'>Please enter a valid phone number. <br /></span>";
         $isValid = false;
       }else {
