@@ -113,11 +113,12 @@
                     
                         <div class="col-xs-12 col-sm-offset-1 col-sm-5 text-center">
                             <!-- Donate Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=120598&s=3">Donate</a>
+                             <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="https://www.paypal.com/us/webapps/mpp/search-cause?charityId=120598&s=3">Donate</a>
                          </div>
+                        <p class="visible-xs">&nbsp;</p>
                         <div class="col-xs-12 col-sm-5 text-center">
                             <!-- Volunteer Button under Carousel -->
-                             <a class="btn btn-warning btn-lg col-xs-12" href="volunteer.php">Volunteer</a>
+                             <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="volunteer.php">Volunteer</a>
                          </div>
                      
                  </div>
@@ -220,8 +221,8 @@
                  <h2 class="text-center">Our Team</h2>
                  <hr>
                  <p></p>
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 text-center">
-                   <p class="text-center"> <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-3.jpg"></p>
+                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 ">
+                   <p class="text-center"> <img alt="headshot" class="img-responsive team-img" src="images/people-q-g-200-200-3.jpg"></p>
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
                     <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
@@ -230,7 +231,7 @@
                     urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-7.jpg">
+                    <img alt="headshot" class="img-responsive team-img" src="images/people-q-g-200-200-7.jpg">
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
                     <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
@@ -239,7 +240,7 @@
                     urna et turpis. Quisque mi metus, ornare sit amet fermentum et, tincidunt et orci. </p>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    <img alt="headshot" class="img-responsive team-img" src="http://lorempixel.com/image_output/people-q-g-200-200-6.jpg">
+                    <img alt="headshot" class="img-responsive team-img" src="images/people-q-g-200-200-6.jpg">
                      <h4 class="text-center">Name</h4>
                     <h5 class="text-center">Job Title</h5>
                     <p>Vivamus fermentum semper porta. Nunc diam velit, adipiscing ut tristique vitae, sagittis vel odio. Maecenas
