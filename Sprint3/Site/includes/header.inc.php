@@ -30,11 +30,11 @@
       <!---Top of the page-->
 
     <div class="row">
-        <div  class="col-sm-3 col-md-3 col-xs-12">
-            <a href="index.php" class="navbar-brand" ><img id="logo" alt="This is the logo" src="images/logo-transparent-bw-orange.png" ></a>
+        <div  class="col-sm-3 col-md-4 col-xs-12">
+            <a href="index.php" class="navbar-brand"><img id="logo" class="img-responsive" alt="This is the logo" src="images/logo-transparent-bw-orange.png" ></a>
         </div>
 
-      <div class="col-xs-12 col-sm-9 col-md-9 navbar center-block">
+      <div class="col-xs-12 col-sm-9 col-md-8 navbar center-block">
           <div class="container-fluid"><!--Centers Nav On Headers-->
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeaderCollapse">Menu<span class="caret"></span></button>
@@ -52,11 +52,11 @@
     </div>
 
 <!--
-    <div class="col-sm-2 col-md-1 hidden-xs">
+    <div class="col-sm-2 col-md-1 hidden-xs">-->
 
-        <!--<span class="glyphicon glyphicon-credit-card"></span> Donate 
-        <!--Paypal Donate Button
-        <div style="width: auto">
+        <!--<span class="glyphicon glyphicon-credit-card"></span> Donate -->
+        <!--Paypal Donate Button-->
+        <!-- <div style="width: auto">
             <form action="https://www.paypal.com/cgi-bin/webscr (Links to an external site.)" method="post" target="_top">
 
             <input type="hidden" name="cmd" value="_s-xclick">
@@ -83,44 +83,3 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script async src="js/bootstrap.min.js"></script>
-
-
-      <script>
-      //This javascript manipulates the logo size.
-        $(document).ready(function(){
-          var windowWidth = $(document).width();
-          var imageSize = windowWidth/4;
-
-          if(windowWidth > 767){
-            $("#logo").css("width", imageSize + "px");
-        }else{
-            $("#logo").css("width", "100%");
-        }
-
-        });
-
-          $(window).resize(function(){
-            var windowWidth = $(document).width();
-            var imageSize = windowWidth/4;
-
-            if(windowWidth > 767){
-              $("#logo").css("width", imageSize + "px");
-          }else{
-              $("#logo").css("width", "100%");
-          }
-
-          $(document).load(function(){
-              var windowWidth = $(document).width();
-              var imageSize = windowWidth/4;
-              
-              if(windowWidth > 767){
-                $("#logo").css("width", imageSize + "px");
-            }else{
-                $("#logo").css("width", "100%");
-            }
-          });
-
-        });
-
-
-      </script>

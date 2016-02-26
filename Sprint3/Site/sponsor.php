@@ -154,67 +154,68 @@
                 <form  method="POST" action="<?php echo $_SERVER['PHP_SELF'] ?>" class="form-horizontal <?php echo $formHd ?>">
 
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
-                      <h2 class="sponserBoxHeader">Gold</h2>
-                      <h3 class="sponserBoxHeader">$3,000 or $250 per month for a year</h3>
-                        <ul class="sponserLiEl">
-                            <li>Logo and name recognition on printed materials</li><br />
-                            <li>Logo and name recognition in annual report</li><br />
-                            <li>Logo and name recognition on our Facebook page</li><br />
-                            <li>Verbal recognition day of event</li><br />
-                            <li>Each Table of Honor guest will receive 7 raffle tickets</li><br />
-                            <li>Certificate of Appreciation</li><br />
-                        </ul>
+                      <h2 class="text-center">Gold</h2>
+                      <h4 class="text-center">$3,000 or $250 per month for a year</h4>
+                       
+                            <p><b>Logo and name recognition on printed materials</b></p>
+                            <p><b>Logo and name recognition in annual report</b></p>
+                            <p><b>Logo and name recognition on our Facebook page</b></p>
+                            <p>Verbal recognition day of event</p>
+                            <p>Each Table of Honor guest will receive <b>7 raffle tickets</b></p>
+                            <p><b>Certificate of Appreciation</b></p>
+                            <p><hr></p>
 
-                        <div class="sponserRadioBtnNTxt">
+                        <div class="radio">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold" <?php echo $goldChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Gold Level.</label>
+                           <label class="radio-inline">
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="gold" <?php echo $goldChecked; ?>>
+                          &nbsp;Donate at a Gold Level.</label>
                         </div>
+                          <p>&nbsp;</p>
                 </div>
 
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
-                      <h2 class="sponserBoxHeader">Silver</h2>
-                      <h3 class="sponserBoxHeader">$1,500 or $125 per month for a year</h3>
-                        <ul class="sponserLiEl">
-                            <li>Logo and name recognition on printed materials</li><br />
-                            <li>Name recognition in annual report</li><br />
-                            <li>Logo and name recognition on our Facebook page</li><br />
-                            <li>Verbal recognition day of event</li><br>
-                            <li>Each Table of Honor guest will receive 3 raffle tickets</li><br />
-                        </ul>
-                        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm" />
-                        <br class="hidden-xs hidden-sm"/>
-                        <br class="hidden-xs "/>
-
-                        <div class="sponserRadioBtnNTxt">
+                       <h2 class="text-center">Silver</h2>
+                      <h4 class="text-center">$1,500 or $125 per month for a year</h4>
+                        
+                            <p><b>Logo and name recognition on printed materials</b></p>
+                            <p>Name recognition in annual report</p>
+                            <p><b>Logo and name recognition on our Facebook page</b></p>
+                            <p>Verbal recognition day of event</p>
+                            <p>Each Table of Honor guest will receive <b>3 raffle tickets</b></p>
+                            <p>&nbsp;</p>
+                            <p><hr></p>
+                        
+                        <div class="radio">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Silver Level.</label>
+                          <label class="radio-inline">
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="silver" <?php echo $silverChecked; ?>>
+                          &nbsp;Donate at a Silver Level.</label>
                         </div>
+                          <p>&nbsp;</p>
                 </div>
 
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1  btm2 sponserBox">
-                      <h2 class="sponserBoxHeader">Bronze</h2>
-                      <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
-                        <ul class="sponserLiEl">
-                            <li>Name recognition on printed materials</li><br />
-                            <li>Name recognition in annual report</li><br />
-                            <li>Name recognition on our Facebook page</li><br />
-                            <li>Verbal recognition day of event</li><br />
-                            <li>Table of Honor at event</li><br />
-                        </ul>
-                        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm hidden-md hidden-lg"/>
-                        <br class="hidden-xs hidden-sm" />
-                        <br class="hidden-xs hidden-sm" />
-                        <br class="hidden-xs hidden-sm" />
-                        <br  class="hidden-xs hidden-sm" />
-                        <br class="hidden-md hidden-xs" />
-                        <div class="sponserRadioBtnNTxt">
+                       <h2 class="text-center">Bronze</h2>
+                      <h4 class="text-center">$1,000 or $85 per month for a year</h4>
+                            <p>&nbsp;</p>
+                            <p>Name recognition on printed materials</p>
+                            <p>Name recognition in annual report</p>
+                            <p>Name recognition on our Facebook page</p>
+                            <p>Verbal recognition day of event</p>
+                            <p>Table of Honor at event</p>
+                            <p>&nbsp;</p>
+                            <p>&nbsp;</p>
+                            <p><hr></p>
+                      
+                        <div class="radio">
                           <?php echo $rdoNotSlectedErr; ?>
-                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>><label class="rdoTxt">&nbsp;Donate at a Bronze Level.</label>
+                          <label class="radio-inline">
+                          <input class="sponser-radio-btn" type="radio" name="sponserLvl" value="bronze" <?php echo $bronzeChecked; ?>>
+                          &nbsp;Donate at a Bronze Level.</label>
                       </div>
+                        <p>&nbsp;</p>
+                        
                   </div>
 
                 <div class="col-xs-10 col-xs-offset-1  col-sm-10 col-sm-offset-1 col-md-12 col-md-pull-1 sponserFormTextBoxes" id="">
@@ -224,6 +225,11 @@
                       <?php echo $fNameEmptyErr ?>
                       &nbsp;<input type="text" name="fName" value="<?php echo $fName; ?>">
                    </div>
+				   
+				    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
+                      &nbsp;<label>Middle Initial:</label><br />
+                      &nbsp;<input type="text" name="mName" value="<?php echo $mName; ?>">
+                    </div>
 
                     <div class="inputFields col-xs-12  col-sm-12 col-md-4">
                       &nbsp;<label>Last Name:</label><br />
@@ -231,10 +237,7 @@
                       &nbsp;<input type="text" name="lName" value="<?php echo $lName; ?>">
                     </div>
 
-                    <div class="inputFields col-xs-12  col-sm-12 col-md-4">
-                      &nbsp;<label>Middle Initial:</label><br />
-                      &nbsp;<input type="text" name="mName" value="<?php echo $mName; ?>">
-                    </div>
+                   
                   </div>
 
                   <div class="row">
