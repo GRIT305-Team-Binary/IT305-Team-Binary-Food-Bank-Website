@@ -37,11 +37,16 @@
 		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = $_POST['email']; //email user submitted
+		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>'; //Kent Food Bank
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
+		
+		 //Validate Checkboxes for Volunteer Opportunities
+		if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+			array_push ( $required , 'clothing', 'office', 'food' );
+		}
 		
 		//Adding Validation for Court Ordered Community Service
 		if ($_POST && $_POST['appType'] == 'court') {
@@ -58,13 +63,22 @@
      	//Create a boolean flag to track validation errors
 		$isValid = true;
 		 
-				
-	   
+		
+		
+//		$recipient = $_POST['email']; //email user submitted
+//		$subject = 'Volunteer Application -'. $fname . " " . $lname;
+//		$message = '<h2 class="text-center">Thank you!</h2>';
+//	    $message .= '<p>Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.</p>';
+//	    $message .= '<p>Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!</p>';
+//	    $message .= '<p>Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.</p>';
+//	    $message .= '<p><strong>Jeniece Choate, Executive Director</strong><br>';
+//	    $message .= 'Kent Food Bank and Emergency Services</p>';
+//	    $message .= '<p>If you have any questions for or about the food bank please <a href="http://teambinary.greenrivertech.net/contactus.php">contact us</a>. </p>';
+//		$message = wordwrap($message, 70);
+//	   // This will send an email to the applicant 
+// 		$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 
-		 //Validate Checkboxes for Volunteer Opportunities
-		if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-			array_push ( $required , 'clothing', 'office', 'food' );
-		}
+		
 		
 		if ($isValid) {
 			//message sent to user filling out this form
@@ -73,7 +87,7 @@
 			//sends the user a reply after submitting the form.
 			// include('./mail-sender.php');
 			
-			if ($mailSent) {
+			if ($mailSent && $mailApplicant) {
 				header('Location: volunteer-thank-you.php');
 				exit;
 			}
