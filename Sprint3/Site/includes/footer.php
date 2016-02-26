@@ -25,8 +25,8 @@
 								 <div class="underline"></div>
 
 								   <span class="fa fa-phone footerIcon" aria-hidden="true"></span><a href="tel:1-253-520-3550" class="footerLink"> (253) 520-3550 </a><br>
-								   <span class="fa fa-map-marker footerIcon" aria-hidden="true"></span><a href="location.php" class="footerLink"> 515 W Harrison St, Ste 107 Kent,
-										  Washington 98032</a><br>
+								   <span class="fa fa-map-marker footerIcon" aria-hidden="true"></span><a href="location.php" class="footerLink"> 515 W Harrison St, Ste 107
+								   <br>Kent, Washington 98032</a><br>
 								   <span class="fa fa-envelope footerIcon" aria-hidden="true"></span><a href="contact.php" class="footerLink"> Contact Us</a><br>
 								   <span class="fa fa-clock-o footerIcon" aria-hidden="true"></span><a href="calendar.php" class="footerLink"> Hours</a><br>
 
@@ -62,37 +62,7 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script async src="js/bootstrap.min.js"></script>
-<<<<<<< HEAD
 	
-=======
-    <script type="text/javascript">
-
-    $(document).ready(function(){
-      var windowWidth = $(document).width();
-      var imageSize = windowWidth/4;
-
-      if(windowWidth > 767){
-        $('#logo').width(imageSize);
-    }else{
-        $('#logo').width('100%');
-    }
-
-    });
-
-
-        $(window).resize(function(){
-            var windowWidth = $(document).width();
-            var imageSize = windowWidth/3.5;
-
-            if(windowWidth > 767){
-              $('#logo').width(imageSize);
-          }else{
-              $('#logo').width('100%');
-          }
-     });
-
-    </script>
->>>>>>> origin/master
 
 
 
