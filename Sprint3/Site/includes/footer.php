@@ -27,7 +27,7 @@
 								   <span class="fa fa-phone footerIcon" aria-hidden="true"></span><a href="tel:1-253-520-3550" class="footerLink"> (253) 520-3550 </a><br>
 								   <span class="fa fa-map-marker footerIcon" aria-hidden="true"></span><a href="location.php" class="footerLink"> 515 W Harrison St, Ste 107
 								   <br>Kent, Washington 98032</a><br>
-								   <span class="fa fa-envelope footerIcon" aria-hidden="true"></span><a href="contact.php" class="footerLink"> Contact Us</a><br>
+								   <span class="fa fa-envelope footerIcon" aria-hidden="true"></span><a href="contactus.php" class="footerLink"> Contact Us</a><br>
 								   <span class="fa fa-clock-o footerIcon" aria-hidden="true"></span><a href="calendar.php" class="footerLink"> Hours</a><br>
 
 							<br>

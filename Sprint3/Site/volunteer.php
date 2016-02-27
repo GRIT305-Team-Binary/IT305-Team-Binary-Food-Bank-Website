@@ -10,7 +10,7 @@
 	//All of the fields expected to have values from form
 	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
-					 'commit', 'lift', 'limitation', 'questions', 'crime'];
+					 'canCommit', 'lift', 'limitation', 'questions', 'crime'];
 	//'crime' is added below if they have court ordered community service
 	
 	//Create placeholder text for entry forms
@@ -32,11 +32,11 @@
 		//All of the fields expected to have values from form
 		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
-					 'commit', 'lift', 'limitation', 'questions'];
+					 'canCommit', 'lift', 'limitation', 'questions'];
 				
 		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-					 'whyVolunteer','commit', 'lift', 'limitation'];
+					 'whyVolunteer','canCommit', 'lift', 'limitation'];
 		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>'; //Kent Food Bank
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
@@ -76,7 +76,7 @@
 //	    $message .= '<p>If you have any questions for or about the food bank please <a href="http://teambinary.greenrivertech.net/contactus.php">contact us</a>. </p>';
 //		$message = wordwrap($message, 70);
 //	   // This will send an email to the applicant 
-// 		$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
+ 		//$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 
 		
 		
@@ -87,7 +87,13 @@
 			//sends the user a reply after submitting the form.
 			// include('./mail-sender.php');
 			
-			if ($mailSent && $mailApplicant) {
+			/* test - printing the values from the user's input
+			foreach ($required as $item) {
+				echo $_GET[$item];
+			}
+			*/
+			
+			if ($mailSent) {
 				header('Location: volunteer-thank-you.php');
 				exit;
 			}
@@ -369,8 +375,8 @@ require ("../db.php");
 						   <div class="radio">
 								<!-- Yes Radio Button -->
 							   <label class="radio-inline">
-									   <input type="radio" name="commit" id="commitYes" value="Yes"
-									   <?php if (strcmp($commit, "Yes") == 0 ) : ?>
+									   <input type="radio" name="canCommit" id="commitYes" value="Yes"
+									   <?php if (strcmp($canCommit, "Yes") == 0 ) : ?>
 									  checked
 									  <?php endif; ?>
 									  >
@@ -378,8 +384,8 @@ require ("../db.php");
 							   </label>
 								<!-- No Radio Button -->
 							   <label class="radio-inline">
-								   <input type="radio" name="commit" id="commitNo" value="No"
-								   <?php if (strcmp($commit, "No") == 0) : ?>
+								   <input type="radio" name="canCommit" id="commitNo" value="No"
+								   <?php if (strcmp($canCommit, "No") == 0) : ?>
 								  checked
 								  <?php endif; ?>
 								  >
@@ -388,7 +394,7 @@ require ("../db.php");
 							   </label>
 							   <?php
 							   //Validate Commitment of at least 3 months
-								   if ($missing && in_array('commit', $missing)) {
+								   if ($missing && in_array('canCommit', $missing)) {
 									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 									   $isValid = false;
 									}

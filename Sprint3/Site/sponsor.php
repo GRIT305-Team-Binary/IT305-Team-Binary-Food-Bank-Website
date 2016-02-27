@@ -198,7 +198,7 @@
                 <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1  btm2 sponserBox">
                        <h2 class="text-center">Bronze</h2>
                       <h4 class="text-center">$1,000 or $85 per month for a year</h4>
-                            <p>&nbsp;</p>
+                            
                             <p>Name recognition on printed materials</p>
                             <p>Name recognition in annual report</p>
                             <p>Name recognition on our Facebook page</p>

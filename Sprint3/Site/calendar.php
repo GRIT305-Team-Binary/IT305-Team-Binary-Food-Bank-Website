@@ -12,8 +12,8 @@
                   <div class="col-xs-12 col-md-3">
                  <!-- Orange Side Panel Style-->
 				 <ul class="nav nav-tabs">
-				  <li id="hours" class="active"><a href="">Hours</a></li>
-				  <li id="events"><a href="">Events</a></li>
+				  <li id="hours" class="active"><button class="btn-sm btn-warning toggleBtn">Hours</button>&nbsp;&nbsp;&nbsp;</li>
+				  <li id="events"><button class="btn-sm btn-warning toggleBtn">Events</button></li>
 				</ul>
                  <div class="panel panel-warning">
                 <div class="panel-heading">
