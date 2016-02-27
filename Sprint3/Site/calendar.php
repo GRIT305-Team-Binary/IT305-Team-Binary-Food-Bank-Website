@@ -11,7 +11,7 @@
             <div class="row">
                   <div class="col-xs-12 col-md-3">
                  <!-- Orange Side Panel Style-->
-				 <ul class="nav nav-tabs">
+				 <ul class="nav nav-pills">
 				  <li id="hours" class="active"><button class="btn-sm btn-warning toggleBtn">Hours</button>&nbsp;&nbsp;&nbsp;</li>
 				  <li id="events"><button class="btn-sm btn-warning toggleBtn">Events</button></li>
 				</ul>
@@ -29,6 +29,19 @@
 					<div id="event-body">
                     <!-- List of Annual Events -->
                     
+					<p><span class="dayOfWeek">February</span> - Annual Meeting</p>
+
+					<p><span class="dayOfWeek">March</span> - Scouting For Food Drive</p>
+
+					<p><span class="dayOfWeek">May</span> - USPS - Stamp Out Hunger Food Drive</p>
+
+					<p><span class="dayOfWeek">October</span> - Fundraising Breakfast (link to sponsorship form)</p>
+
+					<p><span class="dayOfWeek">Oct./Nov./December</span> - Kent School District High School Food Drive</p>
+
+					<p><span class="dayOfWeek">November</span> - Torklift Food Drive</p>
+
+					<p><span class="dayOfWeek">December</span> - Christmas Food and Toys for Joy distributions</p>
 					</div>
                    
                  </div>
