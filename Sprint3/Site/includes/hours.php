@@ -7,11 +7,11 @@
 
 <p ><span class="dayOfWeek">2nd Wednesday of each month</span>
 <br> 5-6pm
-<br>at <a href="locatoin.php">main Alliance location</a></p>
+<br>at <a href="location.php">main Alliance location</a></p>
 
 <p ><span class="dayOfWeek">Thursday Seniors (55+) </span>
 <br> 10-11am
-<br>at <a href="locatoin.php">main Alliance location</a></p>
+<br>at <a href="location.php">main Alliance location</a></p>
 
 <p><span class="dayOfWeek">Monday</span>
 <br>at <a href="location.php">Birch Creek</a>  (link to map)
@@ -21,17 +21,17 @@
 
 <p><span class="dayOfWeek">Tuesday, Wednesday, and Friday</span>
 <br>10am – 12:30pm
-<br>at <a href="locatoin.php">main Alliance location</a></p>
+<br>at <a href="location.php">main Alliance location</a></p>
 
 <p ><span class="dayOfWeek">Thursday Seniors (55+)</span>
 <br>10-11 am
-<br>at <a href="locatoin.php">main Alliance location</a></p>
+<br>at <a href="location.php">main Alliance location</a></p>
 
 <h4>Donation and Business Hours</h3>
 
 <p ><span class="dayOfWeek">Tuesday - Friday</span>
 <br>9am-2pm
-<br>at <a href="locatoin.php">main Alliance location</a></p>
+<br>at <a href="location.php">main Alliance location</a></p>
 
 
     <!-- <h3>Food Bank</h3>
