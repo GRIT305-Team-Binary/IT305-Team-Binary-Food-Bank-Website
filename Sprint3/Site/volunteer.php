@@ -253,7 +253,7 @@ require ("../db.php");
 					   <!-- State visible only on large screens -->
 					   <div class="col-lg-3 visible-lg">
 							<span class="bfh-states" data-country="US" data-state="WA"></span>
-							<h2 class="text-center">WA</h2>
+							<h4 class="text-center">WA</h4>
 					   </div>
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 					   <!-- Zip -->
@@ -286,7 +286,7 @@ require ("../db.php");
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Email-->
 						   <label>E-mail address*</label><br>
-						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="<?php echo $email; ?>">
+						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email"  pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="<?php echo $email; ?>">
 						   <br><br>
 					   </div>
 				   </fieldset>
@@ -530,8 +530,10 @@ require ("../db.php");
 	</div><!-- End of Container -->
  </div> <!-- End of Main -->
 
- <!-- Insert Footer -->
-<?php  include ('includes/footer.php');  ?>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- jQuery to modify questions for Court Ordered Service -->
 <script>
 	$(document).ready(function(){
@@ -566,3 +568,6 @@ require ("../db.php");
 		});
 		});
 </script>
+
+ <!-- Insert Footer -->
+<?php  include ('includes/footer.php');  ?>
