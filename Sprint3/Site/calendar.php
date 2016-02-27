@@ -20,7 +20,7 @@
 				<!-- Orange Side Panel Style-->
 				<ul class="nav nav-pills">
 				  <li id="hours" class="active"><button class="btn-sm btn-warning toggleBtn">Hours</button>&nbsp;&nbsp;&nbsp;</li>
-				  <li id="events"><button class="btn-sm btn-warning toggleBtn">Events</button></li>
+				  <li id="events"><button class="btn-sm btn-warning toggleBtn pull-right">Events</button></li>
 				</ul>
 				<div class="panel panel-warning">
 					<div class="panel-heading">
@@ -37,6 +37,7 @@
 						<!-- List of Annual Events -->
 						<p class="text-center">(click for more details)</p>
 							<div  id="accordion">
+								<!-- February – Annual Meeting -->
 								<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title text-center">
@@ -50,6 +51,7 @@
 											</div>
 										</div>
 
+								<!-- March – Scouting For Food Drive -->
 								<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title text-center">
@@ -63,6 +65,7 @@
 											</div>
 										</div>
 
+								<!-- May – NALC Stamp Out Hunger National Food Drive -->
 								<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title text-center">
@@ -76,6 +79,7 @@
 											</div>
 										</div>
 
+								<!-- Summer – Volunteer Picnic -->
 								<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title text-center">
@@ -89,6 +93,7 @@
 											</div>
 										</div>
 
+								<!-- October – Fundraising Breakfast -->
 								<div class="panel panel-default">
 											<div class="panel-heading">
 												<h4 class="panel-title text-center">
@@ -97,11 +102,12 @@
 											</div>
 											<div id="October" class="panel-collapse collapse">
 												<div class="panel-body">
-													<p>The fundraising breakfast is Kent Food Bank’s largest fundraiser of the year.  40 tables of 8 enjoy a program, breakfast, entertainment, and a raffle. If interested in donating a raffle item, sponsoring the event or attending, please contact kentfoodbank@gmail.com anytime throughout the year.</p>
+													<p>The <a href="sponsor.php" target="_blank">fundraising breakfast</a> is Kent Food Bank’s largest fundraiser of the year.  40 tables of 8 enjoy a program, breakfast, entertainment, and a raffle. If interested in donating a raffle item, sponsoring the event or attending, please <a href="contactus.php" target="_blank">contact</a> <a href="mailto:kentfoodbank@gmail.com">kentfoodbank@gmail.com</a> anytime throughout the year.</p>
 												</div>
 											</div>
 										</div>
 
+								<!-- November – Torklift Central Turkey Drive -->
 								<div class="panel panel-default">
 											<div class="panel-heading text-center">
 												<h4 class="panel-title">
@@ -115,6 +121,7 @@
 											</div>
 										</div>
 
+								<!-- December – Holiday Food and Toy distribution -->
 								<div class="panel panel-default">
 									<div class="panel-heading">
 										<h4 class="panel-title text-center">
