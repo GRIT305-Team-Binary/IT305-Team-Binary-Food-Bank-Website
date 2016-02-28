@@ -1,29 +1,26 @@
-<!-- Volunteer Application Form -->
-<!-- Kent Food Bank -->
-<!-- Team Binary -->
-<!-- http://teambinary.greenrivertech.net/volunteer.php -->
 <?php
+	/* Volunteer Application Form 
+	 * Kent Food Bank 
+	 * Jami, Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/volunteer.php
+	 */
 	//Set up arrays needed for process_mail.php
 	$errors = [];
 	$missing = [];
+	//All of the fields expected to have values from form
+	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+					 'clothing', 'office', 'food','whyVolunteer',
+					 'canCommit', 'lift', 'limitation', 'questions', 'crime'];
+	//'crime' is added below if they have court ordered community service
+	
 	//Create placeholder text for entry forms
-	$fname="";
-	$lname="";
-	$address="";
-	$city="";
-	$zip="";
-	$phone="";
-	$email="";
-	$whyVolunteer="";
-	$commit ="";
-	$lift = "";
-	$limitation ="";
-	$questions="";
-	$clothing="";
-	$office="";
-	$food="";
-	$appType="";
-	$crime="";
+	foreach ($form_fields as $field) {
+		$$field = "";
+	}
+	
+								
+	
+	
 
 	// Turn on error reporting
    ini_set('display_errors', 1);
@@ -32,60 +29,121 @@
 
 	//Form has been submitted
 	if (isset($_POST['submit'])) {
-		$expected = [ 'appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
+		//All of the fields expected to have values from form
+		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
-					 'commit', 'lift', 'limitation', 'questions'];
-		//'crime' is added below if they have court ordered community service
+					 'canCommit', 'lift', 'limitation', 'questions'];
+				
+		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-					 'whyVolunteer','commit', 'lift', 'limitation'];
-		$recipient = ''; //we should set to users email
+					 'whyVolunteer','canCommit', 'lift', 'limitation'];
+		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>'; //Kent Food Bank
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
-
-
-
-	//Create a boolean flag to track validation errors
-	 $isValid = true;
-
-	   //Adding Validation for Court Ordered Community Service
-			if ($_POST && $_POST['appType'] == 'court') {
-				array_push ( $required , 'crime' );
-				array_push ( $expected , 'crime' );
-				echo "<script>court_ordered();</script>";
-			}
-
-
+		
 		 //Validate Checkboxes for Volunteer Opportunities
-			if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
-				array_push ( $required , 'clothing', 'office', 'food' );
-			}
+		if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+			array_push ( $required , 'clothing', 'office', 'food' );
+		}
+		
+		//Adding Validation for Court Ordered Community Service
+		if ($_POST && $_POST['appType'] == 'court') {
+			array_push ( $required , 'crime' );
+			array_push ( $expected , 'crime' );
+			$crime = '';
+			
+		}
+		
+		// Include the validation functions
+		// This will make sure every field marked as required has a value entered.
+ 		include ('includes/process_mail.php');
+       
+     	//Create a boolean flag to track validation errors
+		$isValid = true;
+		 
+		
+		
+//		$recipient = $_POST['email']; //email user submitted
+//		$subject = 'Volunteer Application -'. $fname . " " . $lname;
+//		$message = '<h2 class="text-center">Thank you!</h2>';
+//	    $message .= '<p>Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.</p>';
+//	    $message .= '<p>Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!</p>';
+//	    $message .= '<p>Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.</p>';
+//	    $message .= '<p><strong>Jeniece Choate, Executive Director</strong><br>';
+//	    $message .= 'Kent Food Bank and Emergency Services</p>';
+//	    $message .= '<p>If you have any questions for or about the food bank please <a href="http://teambinary.greenrivertech.net/contactus.php">contact us</a>. </p>';
+//		$message = wordwrap($message, 70);
+//	   // This will send an email to the applicant 
+ 		//$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 
-
-
-
+		
+		
 		if ($isValid) {
-
-			// Include the validation functions
-			// This will make sure every field marked as required has a value entered.
-			include ('./includes/process_mail.php');
-
 			//message sent to user filling out this form
 			// $mailedMessage = 'Thank you for supportings the Kent Food Bank. One of our representatives will contact you for further steps to volenteer at the kent food bank.';
 
-		 //sends the user a reply after submitting the form.
+			//sends the user a reply after submitting the form.
 			// include('./mail-sender.php');
 			
+			/* test - printing the values from the user's input
+			foreach ($required as $item) {
+				echo $_GET[$item];
+			}
+			*/
+
+			require ("../db.php");
+			
+			$allItems = "";
+			$allValues = "";
+			
+			// 
+			foreach ($form_fields as $item) {
+				
+				if (isset($_POST[$item])) {
+					$value = trim($_POST[$item]);
+					if ($value == "on" || $value == "Yes") {
+						$value = "Y";
+					} else if ($value == "No") {
+						$value = "N";
+					}
+					
+					$value = mysqli_real_escape_string($cnxn, $value);
+					$allValues .= "\"$value\", ";
+				} else {
+					$value = "null";
+					$allValues .= "$value, ";
+				}
+				
+				$allItems .= $item . ", ";
+										
+			}
+			// trim values to remove final comma
+			$allValues = substr($allValues, 0, strlen($allValues) - 2);
+			
+			// trim field names to remove final comma
+			$allItems = substr($allItems, 0, strlen($allItems) - 2);
+			
+			/* test printing fields and values
+			echo "<br>$allItems<br><br>";
+			echo $allValues;
+			*/
+			
+			// insert all values
+			$sql = "INSERT INTO volunteers ($allItems) VALUES ($allValues)";
+			@mysqli_query($cnxn, $sql) or
+					  die ("Error executing query: $sql");
+			
 			if ($mailSent) {
+
 				header('Location: volunteer-thank-you.php');
+				
 				exit;
 			}
-
-
-
+		
+		
         }
-
 	}
 ?>
 <!DOCTYPE html>
@@ -97,7 +155,7 @@
 include ('includes/header.inc.php');
 
 //link to database file
-require ("../db.php");
+
 ?>
 
 
@@ -132,21 +190,14 @@ require ("../db.php");
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 pagination-centered " >
 						<?php
 							//Validate Type of Application
-							//print_r ($missing);
 							$appTypes = array('individual', 'group', 'organizational', 'student', 'court');
-							if ($missing && in_array('appType', $missing))  {
+							if (($missing && in_array('appType', $missing)) || ($_POST && $_POST['appType'] == "none"))  {
 								echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 								$isValid = false;
 
 
 							} elseif ($_POST) {
-								//print_r($_POST);
-								//$appType = $_POST['appType'];
-								//echo 'appType: ';
-								//echo $appType;
-
-								//echo '<br >appTypes: ';
-								//print_r($appTypes);
+								
 								if (!in_array($appType, $appTypes )) {
 									echo '<p class="formError text-center">There was an error please reload your page</p>';
 								}
@@ -159,6 +210,10 @@ require ("../db.php");
 
 						<!-- Create Radio Buttons -->
 						<?php
+							if (empty($appType)){
+								//Creates value of none for appType until user selects an Application Type 
+								echo '<label class="radio-inline"><input type="radio" name="appType" id="none" class="hidden" checked></label>';
+							}
 							foreach ($appTypes as $appValue) {
 								echo '<label class="radio-inline"><input type="radio" name="appType" id="';
 								echo strtolower($appValue);
@@ -167,13 +222,17 @@ require ("../db.php");
 
 								if (strcmp($appValue, $appType) == 0){
 									echo '" checked>';
+									
 								} else {
 									echo'">';
 								}
 								echo ucfirst($appValue);
 								echo '</label>';
 							}
+							
+							
 						?>
+							
 						</fieldset>
 					</div>
 			   </div>
@@ -231,13 +290,14 @@ require ("../db.php");
 						<!-- City -->
 						   <fieldset class="form-group">
 							   <label for="city">City*</label><br>
-							   <input name="city" class="input col-xs-12 form-control" type="text" id="city" placeholder="Enter your city" value="<?php echo $city; ?>">
+							   <input name="city" class="input col-xs-12 form-control" type="text" id="city"
+									  placeholder="Enter your city" value="<?php echo $city; ?>">
 							</fieldset>
 					   </div>
 					   <!-- State visible only on large screens -->
 					   <div class="col-lg-3 visible-lg">
-							<span class="bfh-states" data-country="US" data-state="WA">WA</span>
-						   <!--<h2 class="text-center">WA</h2>-->
+							<span class="bfh-states" data-country="US" data-state="WA"></span>
+							<h4 class="text-center">WA</h4>
 					   </div>
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
 					   <!-- Zip -->
@@ -264,13 +324,13 @@ require ("../db.php");
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Phone -->
 						   <label>Phone*</label><br>
-						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
+						   <input name="phone" class="input col-xs-12 form-control bfh-phone" data-format="+1 (ddd) ddd-dddd" id="phone"  type="tel" placeholder="Enter phone number xxx-xxx-xxxx" value="<?php echo $phone; ?>"><br><br>
 					   </div>
 
 					   <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					   <!-- Contact Email-->
 						   <label>E-mail address*</label><br>
-						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="<?php echo $email; ?>">
+						   <input name="email" class="input col-xs-12 form-control" id="email" type="email" placeholder="Enter email"  pattern="[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" value="<?php echo $email; ?>">
 						   <br><br>
 					   </div>
 				   </fieldset>
@@ -345,7 +405,7 @@ require ("../db.php");
 
 					   <fieldset class="form-group">
 							   <label for="whyVolunteer">Why are you interested in volunteering?*</label><br />
-							   <textarea class="input col-xs-12 form-control" id="whyVolunteer" name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
+							   <textarea class="input col-xs-12 form-control" id="whyVolunteer" placeholder="Please tell us why you want to Volunteer." name="whyVolunteer" rows=10><?php echo $whyVolunteer; ?></textarea>
 					   </fieldset>
 				   </div>
 			   </div> <!-- End of Opportunities and Text Area Row -->
@@ -359,8 +419,8 @@ require ("../db.php");
 						   <div class="radio">
 								<!-- Yes Radio Button -->
 							   <label class="radio-inline">
-									   <input type="radio" name="commit" id="commitYes" value="Yes"
-									   <?php if (strcmp($commit, "Yes") == 0 ) : ?>
+									   <input type="radio" name="canCommit" id="commitYes" value="Yes"
+									   <?php if (strcmp($canCommit, "Yes") == 0 ) : ?>
 									  checked
 									  <?php endif; ?>
 									  >
@@ -368,8 +428,8 @@ require ("../db.php");
 							   </label>
 								<!-- No Radio Button -->
 							   <label class="radio-inline">
-								   <input type="radio" name="commit" id="commitNo" value="No"
-								   <?php if (strcmp($commit, "No") == 0) : ?>
+								   <input type="radio" name="canCommit" id="commitNo" value="No"
+								   <?php if (strcmp($canCommit, "No") == 0) : ?>
 								  checked
 								  <?php endif; ?>
 								  >
@@ -378,7 +438,7 @@ require ("../db.php");
 							   </label>
 							   <?php
 							   //Validate Commitment of at least 3 months
-								   if ($missing && in_array('commit', $missing)) {
+								   if ($missing && in_array('canCommit', $missing)) {
 									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
 									   $isValid = false;
 									}
@@ -514,8 +574,10 @@ require ("../db.php");
 	</div><!-- End of Container -->
  </div> <!-- End of Main -->
 
- <!-- Insert Footer -->
-<?php  include ('includes/footer.php');  ?>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
 <!-- jQuery to modify questions for Court Ordered Service -->
 <script>
 	$(document).ready(function(){
@@ -539,9 +601,9 @@ require ("../db.php");
 
 
 		<?php if ($_POST && $_POST['appType'] == 'court') {
-				echo "court_ordered();";
+			echo "court_ordered();";
 			}
-			?>
+		?>
 		$('#crimeYes').click(function(){
 			$('form').attr('action', 'volunteer-c-thank-you.php');
 		});
@@ -550,3 +612,6 @@ require ("../db.php");
 		});
 		});
 </script>
+
+ <!-- Insert Footer -->
+<?php  include ('includes/footer.php');  ?>
