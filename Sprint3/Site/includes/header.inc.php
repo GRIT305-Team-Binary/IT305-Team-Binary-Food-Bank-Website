@@ -1,4 +1,11 @@
-    <head>
+<?php
+	/* Header
+	 * Kent Food Bank 
+	 * Peter Team Binary
+	 * http://teambinary.greenrivertech.net/includes/header.inc.php
+	 */
+?>
+<head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">

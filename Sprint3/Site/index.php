@@ -1,3 +1,10 @@
+<?php
+	/* Calendar with Hours and Events
+	 * Kent Food Bank 
+	 * Jami, Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/caldendar.php
+	 */
+?>
 <!DOCTYPE html>
 <html lang="en">
 

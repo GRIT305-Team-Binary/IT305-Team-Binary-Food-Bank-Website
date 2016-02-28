@@ -1,4 +1,11 @@
- <!-- Footer -->
+ <?php
+	/* Page Footer
+	 * Kent Food Bank 
+	 * Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/includes/footer.php
+	 */
+?>
+<!-- Footer -->
  <div class="footer">
            
         <footer>

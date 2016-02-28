@@ -30,7 +30,7 @@
 		</span>
 	</div>
 	<div class="btn btn-default">
-		!-- Email -->
+		<!-- Email -->
 		<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 		<a class="defaultLink" href="mailto:kentfoodbank@gmail.com">
 			<span class="hidden-xs hidden-sm contactInfo">kentfoodbank@gmail.com</span><span class="visible-xs visible-sm">Email</span>

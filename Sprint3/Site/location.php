@@ -1,3 +1,10 @@
+<?php
+	/* Location
+	 * Kent Food Bank 
+	 * Nicole, Jami Team Binary
+	 * http://teambinary.greenrivertech.net/location.php
+	 */
+?>
 <!DOCTYPE html>
 <html>
         <?php
@@ -68,7 +75,7 @@
         </div>
 		<script src="http://code.jquery.com/jquery.js"></script>
 		<script src="js/jquery.min.js"></script>
-       <script>
+		<script>
 	  
 			$("div#annexMap").hide();
 			$("div#foodBankMap").show();

@@ -1,4 +1,11 @@
-
+<?php
+	/* Hours
+     * Display all of the open hours with link to location page
+	 * Kent Food Bank 
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/includes/hours.php
+	 */
+?>
 <h4>Food Distribution</h4>
 <h5>(Clients may visit twice a month for food service)</h5>
 
