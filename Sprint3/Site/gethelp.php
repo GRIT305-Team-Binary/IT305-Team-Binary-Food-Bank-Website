@@ -74,6 +74,7 @@
             
             <h3 id="clothingbank">Clothing Bank</h3>
 			<ul>
+			<li>One visit per month </li>
             <li>10 item limit per person in family </li>
             <li>Diapers available once every 6 months if available</li>
 			</ul><br>
