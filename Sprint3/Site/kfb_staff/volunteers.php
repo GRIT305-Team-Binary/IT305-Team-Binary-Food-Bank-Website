@@ -5,7 +5,7 @@
 	 * http://teambinary.greenrivertech.net/kfb_staff/volunteers.php
 	 */
 
-    include('nav.html');
+    include('nav.php');
 ?>
     
 <div class="container-fluid">	

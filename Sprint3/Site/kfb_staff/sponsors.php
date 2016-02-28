@@ -20,18 +20,18 @@ include('nav.php');
 			<h3>Breakfast Sponsers</h3>
 			<?php
 				//Connect to database
-				require '../../db.php';
+				require '/home/teambinary/db.php';
 			
 				
 			   //Define the SELECT query
-				$sql = "SELECT * FROM sponsors ORDER BY date DESC;";
+				$sql = "SELECT * FROM `sponsors`";
 				// SELECT `sponsor_id`, `sponsor_lvl`, `fname`, `mname`, `lname`, `Bus_Org`, `phone`, `email` FROM `sponsors` -->
 			
 			
 				//Send the query to the database
 				$result = @mysqli_query($cnxn, $sql);
 			
-				
+
 				echo '<table width="100%" class="text-center">';
 				echo '<tr><th>Name</th><th>Bus_Org</th>';
 				echo '<th>Phone</th><th>Email</th>';
