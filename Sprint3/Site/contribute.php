@@ -1,3 +1,10 @@
+<?php
+	/* Contribute - Dontate
+	 * Kent Food Bank 
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/contribute.php
+	 */
+?>
 <!DOCTYPE html>
 
 <html lang="en">
