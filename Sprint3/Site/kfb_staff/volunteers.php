@@ -1,4 +1,10 @@
 <?php
+	/* Volunteer Applications
+	 * Kent Food Bank Staff
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/kfb_staff/volunteers.php
+	 */
+
     include('nav.html');
 ?>
     
@@ -42,16 +48,16 @@
                 echo  "<tr><td> $fname $lname </td><td>$appType</td>";
                
                  echo '<td>';
-                 if ($clothing){
+                 if ($clothing == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  } 
                  echo '</td><td>';
-                 if ($office){
+                 if ($office == 'Y'){
                     echo '<span class="glyphicon glyphicon-ok"></span>';
                  }
                  echo '</td><td>';
                 
-                 if ($food){
+                 if ($food == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  }     
                 echo '</td>';

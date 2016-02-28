@@ -1,5 +1,10 @@
 <?php
-	
+	/* Top Ten Items 
+	 * Kent Food Bank Staff
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/kfb_staff/update_top_ten_items.php
+	 */
+
      //Turn on error reporting
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
@@ -9,14 +14,13 @@
 ?>  
 
 	
-		
-		<?php
-            include('nav.html');
-        ?>
-	<div class="container-fluid">		
-		
-		<div class="main">
-			<div class="row">
+
+<?php
+	include('nav.html');
+?>
+<div class="container-fluid">		
+	<div class="main">
+		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ">
 				<h2 class="text-center">Update Ten Most Needed Items List</h2>
 				<?php
@@ -70,11 +74,10 @@
 		   }
 				
 			?>
-			<!--Form inputs start here -->
-			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
-			
+				<!--Form inputs start here -->
+				<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 					<form method="post" action="<?= $_SERVER['PHP_SELF']; ?>" class="form-horizontal" role="form">
-				   <div class="form-group">
+				    <div class="form-group">
 						<!--Created inputs for each row in database -->
 						<?php
 							//Connect to database
@@ -105,14 +108,13 @@
 						?>
 						
 						<input class="pull-right" type="submit" value="Update" name="submit">
-				   </div>
-				  
-    
-				   </div>
+				    </div>
+				    </form>
+				</div>
 			</div>
-		  </div>
-		</div>
+	  </div>
 	</div>
+</div>
 </body>
 
 </html>

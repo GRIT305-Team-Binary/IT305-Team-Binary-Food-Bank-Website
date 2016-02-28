@@ -1,8 +1,8 @@
 <?php
-	/* Breakfast Sponsors 
+	/* Staff Navigation 
 	 * Kent Food Bank Staff
 	 * Jami Team Binary
-	 * http://teambinary.greenrivertech.net/kfb_staff/sponsers.php
+	 * http://teambinary.greenrivertech.net/kfb_staff/nav.php
 	 */
 ?>
 <!DOCTYPE html>
@@ -46,14 +46,14 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.php">Kent Food Bank - Staff</a>
-        </div>
+        </div><!--/.nav-header -->
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li> <a href="index.php">Staff Main</a></li>
             <li><a href="update_top_ten_items.php">Top Ten Items</a></li>
 			<li><a href="volunteers.php">Volunteers</a></li>
 			<li><a href="sponsors.php">Sponsors</a></li>
-			<li <a href="/">Public</a></li>
+			<li><a href="/">Public</a></li>
           </ul>
          </div><!--/.nav-collapse -->
       </div> <!-- end of container -->
