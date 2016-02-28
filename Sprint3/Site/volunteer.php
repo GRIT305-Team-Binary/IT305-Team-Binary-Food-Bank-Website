@@ -92,9 +92,53 @@
 				echo $_GET[$item];
 			}
 			*/
+
+			require ("../db.php");
+			
+			$allItems = "";
+			$allValues = "";
+			
+			// 
+			foreach ($form_fields as $item) {
+				
+				if (isset($_POST[$item])) {
+					$value = trim($_POST[$item]);
+					if ($value == "on" || $value == "Yes") {
+						$value = "Y";
+					} else if ($value == "No") {
+						$value = "N";
+					}
+					
+					$value = mysqli_real_escape_string($cnxn, $value);
+					$allValues .= "\"$value\", ";
+				} else {
+					$value = "null";
+					$allValues .= "$value, ";
+				}
+				
+				$allItems .= $item . ", ";
+										
+			}
+			// trim values to remove final comma
+			$allValues = substr($allValues, 0, strlen($allValues) - 2);
+			
+			// trim field names to remove final comma
+			$allItems = substr($allItems, 0, strlen($allItems) - 2);
+			
+			/* test printing fields and values
+			echo "<br>$allItems<br><br>";
+			echo $allValues;
+			*/
+			
+			// insert all values
+			$sql = "INSERT INTO volunteers ($allItems) VALUES ($allValues)";
+			@mysqli_query($cnxn, $sql) or
+					  die ("Error executing query: $sql");
 			
 			if ($mailSent) {
+
 				header('Location: volunteer-thank-you.php');
+				
 				exit;
 			}
 		
@@ -111,7 +155,7 @@
 include ('includes/header.inc.php');
 
 //link to database file
-require ("../db.php");
+
 ?>
 
 
