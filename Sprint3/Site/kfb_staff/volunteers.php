@@ -14,6 +14,7 @@
         <div class="row">
             <!-- Kent Food Bank Staff - View Volunteer Applications -->
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ">
+				<h3>Volunteer Applicants</h3>
             <?php
             //Connect to database
             require '../../db.php';
@@ -25,11 +26,11 @@
             //Send the query to the database
             $result = @mysqli_query($cnxn, $sql);
         
-            
-            echo '<table width="100%" class="text-center">';
-            echo '<tr><th>Name</th><th>Application</th>';
-            echo '<th>Clothing Bank</th><th>Office</th><th>Food Bank</th>';
-            echo '<th>Phone</th><th>Email</th>';
+        
+            echo '<table width="100%" class="table table-bordered table-striped">';
+            echo '<tr><th class="text-center">Name</th><th class="text-center">Application</th>';
+            echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th>';
+            echo '<th class="text-center">Phone</th><th class="text-center">Email</th>';
             echo '</tr>';
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
@@ -68,7 +69,8 @@
                 
             echo '</table>';
         ?>
-
+		
+		<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>
 			
         </div>
     </div>

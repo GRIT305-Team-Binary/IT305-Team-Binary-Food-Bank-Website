@@ -32,9 +32,9 @@ include('nav.php');
 				$result = @mysqli_query($cnxn, $sql);
 			
 
-				echo '<table width="100%" class="text-center">';
-				echo '<tr><th>Name</th><th>Bus_Org</th>';
-				echo '<th>Phone</th><th>Email</th>';
+				echo '<table width="100%" class="table table-bordered table-striped">';
+				echo '<tr><th class="text-center">Name</th><th class="text-center">Organization</th>';
+				echo '<th class="text-center">Phone</th><th class="text-center">Email</th>';
 				echo '</tr>';
 				//Process the rows
 				while ($row = mysqli_fetch_assoc($result)) {
