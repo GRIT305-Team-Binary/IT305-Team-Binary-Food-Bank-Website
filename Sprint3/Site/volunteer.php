@@ -90,7 +90,7 @@
 	    $message .= "Jeniece Choate, Executive Director\r\n";
 	    $message .= "Kent Food Bank and Emergency Services\r\n\r\n";
 	    $message .= "If you have any questions for or about the food bank please contact us. \r\n\r\n";
-		$message = wordwrap($message, 70);
+		$message = wordwrap($message, 70, "\r\n");
 	   // This will send an email to the applicant 
  		$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 
