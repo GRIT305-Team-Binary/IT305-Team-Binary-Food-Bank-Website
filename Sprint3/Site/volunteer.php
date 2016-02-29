@@ -81,18 +81,18 @@
 		 
 		
 		
-//		$recipient = $_POST['email']; //email user submitted
-//		$subject = 'Volunteer Application -'. $fname . " " . $lname;
-//		$message = '<h2 class="text-center">Thank you!</h2>';
-//	    $message .= '<p>Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.</p>';
-//	    $message .= '<p>Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!</p>';
-//	    $message .= '<p>Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.</p>';
-//	    $message .= '<p><strong>Jeniece Choate, Executive Director</strong><br>';
-//	    $message .= 'Kent Food Bank and Emergency Services</p>';
-//	    $message .= '<p>If you have any questions for or about the food bank please <a href="http://teambinary.greenrivertech.net/contactus.php">contact us</a>. </p>';
-//		$message = wordwrap($message, 70);
-//	   // This will send an email to the applicant 
- 		//$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
+		$recipient = $_POST['email']; //email user submitted
+		$subject = 'Kent Food Bank Volunteer Application ';
+		$message = "Thank you!\r\n\r\n";
+	    $message .= "Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.\r\n\r\n";
+	    $message .= "Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!\r\n\r\n";
+	    $message .= "Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.\r\n\r\n";
+	    $message .= "Jeniece Choate, Executive Director\r\n";
+	    $message .= "Kent Food Bank and Emergency Services\r\n\r\n";
+	    $message .= "If you have any questions for or about the food bank please contact us. \r\n\r\n";
+		$message = wordwrap($message, 70);
+	   // This will send an email to the applicant 
+ 		$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 
 		
 		
@@ -151,7 +151,7 @@
 			@mysqli_query($cnxn, $sql) or
 					  die ("Error executing query: $sql");
 			
-			if ($mailSent) {
+			if ($mailSent && $mailApplicant) {
 
 				header('Location: volunteer-thank-you.php');
 				
