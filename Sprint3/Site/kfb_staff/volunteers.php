@@ -35,7 +35,7 @@
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
         
-               
+                $id = $row['Volunteer_index'];
                 $fname = $row['fname'];
                 $lname = $row['lname'];
                 $appType= $row['appType'];
@@ -45,8 +45,8 @@
                 $office= $row['office']; //assuming this is a true false value
                 $food= $row['food']; //assuming this is a true false value
                 
-                
-                echo  "<tr><td> $fname $lname </td><td>$appType</td>";
+                $url = "volunteer_detail.php?" . http_build_query(array('id'=>$id));
+                echo  "<tr><td> <a href='$url'>$fname $lname</a> </td><td>$appType</td>";
                
                  echo '<td>';
                  if ($clothing == 'Y'){
