@@ -10,8 +10,8 @@
 	//All of the fields expected to have values from form
 	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
-					 'canCommit', 'lift', 'limitation', 'questions', 'crime'];
-	//'crime' is added below if they have court ordered community service
+					  'lift', 'questions', 'crime'];
+	//'crime' & 'lift' is added below if they have court ordered community service
 	
 	//Create placeholder text for entry forms
 	foreach ($form_fields as $field) {
@@ -32,27 +32,44 @@
 		//All of the fields expected to have values from form
 		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food','whyVolunteer',
-					 'canCommit', 'lift', 'limitation', 'questions'];
+					  'questions'];
 				
 		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-					 'whyVolunteer','canCommit', 'lift', 'limitation'];
+					 'whyVolunteer'];
 		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>'; //Kent Food Bank
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
 		$authorized = '-fkentfoodbank@gmail.com';
 		
+		//Create a boolean flag to track validation errors
+		$isValid = true;
+		
 		 //Validate Checkboxes for Volunteer Opportunities
 		if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
 			array_push ( $required , 'clothing', 'office', 'food' );
+			$isValid = false;
+		} else {
+			$isValid = true;
 		}
 		
 		//Adding Validation for Court Ordered Community Service
-		if ($_POST && $_POST['appType'] == 'court') {
-			array_push ( $required , 'crime' );
-			array_push ( $expected , 'crime' );
-			$crime = '';
+		if ($_POST) {
+			if (!empty($_POST['appType'])) {
+				if ($_POST['appType'] == 'court') {
+					array_push ( $required , 'crime' );
+					array_push ( $expected , 'crime' );
+					array_push ( $required , 'lift' );
+					array_push ( $expected , 'lift' );
+					$crime = '';
+					if (!empty($_POST['crime']) && !empty($_POST['lift'])) {
+						$isValid = false;
+					}
+				}
+			} else {
+				$isValid = false;
+			}
 			
 		}
 		
@@ -60,8 +77,7 @@
 		// This will make sure every field marked as required has a value entered.
  		include ('includes/process_mail.php');
        
-     	//Create a boolean flag to track validation errors
-		$isValid = true;
+     	
 		 
 		
 		
@@ -99,7 +115,7 @@
 			$allValues = "";
 			
 			// 
-			foreach ($form_fields as $item) {
+			foreach ($expected as $item) {
 				
 				if (isset($_POST[$item])) {
 					$value = trim($_POST[$item]);
@@ -131,7 +147,7 @@
 			*/
 			
 			// insert all values
-			$sql = "INSERT INTO volunteers ($allItems) VALUES ($allValues)";
+			$sql = "INSERT INTO `volunteers` ($allItems) VALUES ($allValues)";
 			@mysqli_query($cnxn, $sql) or
 					  die ("Error executing query: $sql");
 			
@@ -411,23 +427,23 @@ include ('includes/header.inc.php');
 			   </div> <!-- End of Opportunities and Text Area Row -->
 
 			   <!-- Yes No Questions -->
-			   <div class="row">
+			   <!--<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					   <fieldset class="form-group">
 						   <label>Are you able to make a commitment of at least three (3) months one day a week?*<br />
 						   (M, T, W, or F from 9am -2:30pm)</label>
-						   <div class="radio">
+						   <div class="radio">-->
 								<!-- Yes Radio Button -->
-							   <label class="radio-inline">
+							    <!-- <label class="radio-inline">
 									   <input type="radio" name="canCommit" id="commitYes" value="Yes"
 									   <?php if (strcmp($canCommit, "Yes") == 0 ) : ?>
 									  checked
 									  <?php endif; ?>
 									  >
 									   Yes
-							   </label>
+							   </label>-->
 								<!-- No Radio Button -->
-							   <label class="radio-inline">
+							    <!-- <label class="radio-inline">
 								   <input type="radio" name="canCommit" id="commitNo" value="No"
 								   <?php if (strcmp($canCommit, "No") == 0) : ?>
 								  checked
@@ -435,22 +451,22 @@ include ('includes/header.inc.php');
 								  >
 
 								   No
-							   </label>
+							   </label>-->
 							   <?php
-							   //Validate Commitment of at least 3 months
-								   if ($missing && in_array('canCommit', $missing)) {
-									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
-									   $isValid = false;
-									}
+							//   //Validate Commitment of at least 3 months
+							//	   if ($missing && in_array('canCommit', $missing)) {
+							//		   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+							//		   $isValid = false;
+							//		}
 								?>
-						   </div>
+						   <!--  </div>
 						</fieldset>
 					</div>
-				</div>
-			   <div class="row">
+				</div>-->
+			   <div class="row hidden" id="liftLB">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					   <fieldset class="form-group">
-						   <label>Are you able to lift <span id="liftLB">10</span> pounds?*</label >
+						   <label>Are you able to lift 40 pounds?*</label >
 						   <div class="radio">
 								<!-- Yes Radio Button -->
 							   <label class="radio-inline">
@@ -483,22 +499,22 @@ include ('includes/header.inc.php');
 
 					</div>
 			   </div>
-			   <div class="row">
+			   <!--<div class="row">
 					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 					   <fieldset class="form-group">
 						   <label>Do you have any physical limitations that would impair your ability to perform as a volunteer without supplemental assistance?*</label>
-						   <div class="radio">
+						   <div class="radio">-->
 								<!-- Yes Radio Button -->
-								<label class="radio-inline">
+								 <!--<label class="radio-inline">
 									   <input type="radio" name="limitation" id="limitationYes" value="Yes"
 									   <?php if (strcmp($limitation, "Yes") == 0) : ?>
 									  checked
 									  <?php endif; ?>
 									  />
 									   Yes
-								</label>
+								</label>-->
 								<!-- No Radio Button -->
-								<label class="radio-inline">
+								 <!--<label class="radio-inline">
 								   <input type="radio" name="limitation" id="limitationNo" value="No"
 								  <?php if (strcmp($limitation, "No") == 0) : ?>
 								  checked
@@ -507,18 +523,18 @@ include ('includes/header.inc.php');
 								   No
 								</label>
 								<?php
-							   //Validate Physical Limitations
-								   if ($missing && in_array('limitation', $missing)) {
-									   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
-									   $isValid = false;
-
-								   }
+							//   //Validate Physical Limitations
+							//	   if ($missing && in_array('limitation', $missing)) {
+							//		   echo '<p class="radio-inline formError" >Please select Yes or No.</p>';
+							//		   $isValid = false;
+							//
+							//	   }
 								?>
 							</div>
 						</fieldset>
 
 					</div>
-			   </div>
+			   </div>-->
 			   <div class="row hidden" id="crime">
 				   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" >
 					   <fieldset class="form-group">
@@ -590,13 +606,13 @@ include ('includes/header.inc.php');
 		function court_ordered() {
             //if they answer court ordered community service ask type of crime
 			$('#crime').removeClass('hidden');
-			$('#liftLB').html('40');
+			$('#liftLB').removeClass('hidden');
 
 		}
 		function normal() {
             //if they do not have court ordered community service
 			$('#crime').addClass('hidden');
-			$('#liftLB').html('10');
+			$('#liftLB').addClass('hidden');
         }
 
 
