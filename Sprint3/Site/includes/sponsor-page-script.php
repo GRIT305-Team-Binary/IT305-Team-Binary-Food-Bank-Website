@@ -16,14 +16,15 @@ if(mysqli_connect_errno()){
 
 //Form Validation for the sponser form.
 
-  $rdoNotSlectedErr = ""; //initializing the variable
-  $fNameEmptyErr = ""; //initializing the variable
-  $lNameEmptyErr = ""; //initializing the variable
-  $phoneEmptyErr = ""; //initializing the variable
-  $emailEmptyErr = ""; //initializing the variable
-  $goldChecked = ""; //initializing the variable
-  $silverChecked = ""; //initializing the variable
-  $bronzeChecked = ""; //initializing the variable
+//Initializing Variables
+  $rdoNotSlectedErr = "";
+  $fNameEmptyErr = "";
+  $lNameEmptyErr = "";
+  $phoneEmptyErr = "";
+  $emailEmptyErr = "";
+  $goldChecked = "";
+  $silverChecked = "";
+  $bronzeChecked = "";
   $errors = "";
   $missing = "";
   $suspect = "";
@@ -143,7 +144,21 @@ if(mysqli_connect_errno()){
      $mailedMessage = 'Thank you for sponsoring the Kent Food Bank. One of our representatives will contact you for further steps regarding sponsorship.';
 
      //sends the user a reply after submitting the form.
-     include('./mail-sender.php');
+
+
+     //Email Sending Info
+     $to_name = $fName . ' ' . $mName . ' ' . $lName;
+     $to = $email;
+     $subject = 'Thank You for sponsoring the Kent Food Bank';
+     $mailedMessage = wordwrap($mailedMessage, 70);
+     $from_name = "The Kent Food Bank";
+     $from = "noreply@teambinary.greenrivertech.net";
+
+     if(mail($to, $subject, $mailedMessage, $from)){
+       echo "<h1>Mail Sent</h1>";
+     } else {
+       echo "<h1>FAIL</h1>";
+     }
 
       }
     }
