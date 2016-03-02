@@ -4,9 +4,6 @@
 	 * Jami, Nicole Team Binary
 	 * http://teambinary.greenrivertech.net/volunteer.php
 	 */
-	echo "<p>";
-	print_r ($_POST);
-	echo "</p>";
 	//Set up arrays needed for process_mail.php
 	$errors = [];
 	$missing = [];
@@ -40,7 +37,7 @@
 		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'whyVolunteer'];
-		$recipient = 'teambinarykfb@gmail.com'; //Kent Food Bank
+		$recipient = 'Nicole Bassen <nicolerbassen@gmail.com>'; //Kent Food Bank
 		$subject = 'Volunteer Application -'. $fname . " " . $lname;
 		$headers[] = 'From: kentfoodbank@gmail.com';
 		$headers[] = 'Content-type: text/plain; charset=utf-8';
@@ -56,6 +53,7 @@
 		} else {
 			$isValid = true;
 		}
+		
 		//Adding Validation for Court Ordered Community Service
 		if ($_POST) {
 			if (!empty($_POST['appType'])) {
@@ -65,7 +63,7 @@
 					array_push ( $required , 'lift' );
 					array_push ( $expected , 'lift' );
 					$crime = '';
-					if (empty($_POST['crime']) || empty($_POST['lift'])) {
+					if (!empty($_POST['crime']) && !empty($_POST['lift'])) {
 						$isValid = false;
 					}
 				}
@@ -77,25 +75,28 @@
 		
 		// Include the validation functions
 		// This will make sure every field marked as required has a value entered.
-		echo "<p>Required: ";
-		print_r ($required);
-		echo "</p>";
  		include ('includes/process_mail.php');
-		echo "<p> Missing: ";
-		print_r ($missing);
-		echo "</p>";
-		echo "<p> Missing: ";
-		print_r ($errors);
-		echo "</p>";
-		
-		
        
      	
 		 
 		
-		echo $isValid . "princess" ;
+		
+		$recipient = $_POST['email']; //email user submitted
+		$subject = 'Kent Food Bank Volunteer Application ';
+		$message = "Thank you!\r\n\r\n";
+	    $message .= "Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.\r\n\r\n";
+	    $message .= "Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!\r\n\r\n";
+	    $message .= "Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.\r\n\r\n";
+	    $message .= "Jeniece Choate, Executive Director\r\n";
+	    $message .= "Kent Food Bank and Emergency Services\r\n\r\n";
+	    $message .= "If you have any questions for or about the food bank please contact us. \r\n\r\n";
+		$message = wordwrap($message, 70, "\r\n");
+	   // This will send an email to the applicant 
+ 		$mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
+
+		
+		
 		if ($isValid) {
-			echo "I am in the is Valid if statement";
 			//message sent to user filling out this form
 			// $mailedMessage = 'Thank you for supportings the Kent Food Bank. One of our representatives will contact you for further steps to volenteer at the kent food bank.';
 
@@ -147,26 +148,11 @@
 			
 			// insert all values
 			$sql = "INSERT INTO `volunteers` ($allItems) VALUES ($allValues)";
-			echo "<p> sql: $sql </p>";
 			@mysqli_query($cnxn, $sql) or
 					  die ("Error executing query: $sql");
 			
-			
-			
-			if ($mailSent) {
+			if ($mailSent && $mailApplicant) {
 
-				$recipient = $_POST['email']; //email user submitted
-				$subject = 'Kent Food Bank Volunteer Application ';
-				$message = "Thank you!\r\n\r\n";
-				$message .= "Thank you for your interest in volunteering with the Kent Food Bank. Volunteers are a vital part of our ability to serve the needs of our community. Kent Food Bank would not be able to provide basic needs to our clients without our caring and dedicated volunteers. Kent Food Bank has volunteer positions to accommodate many different schedules, physical abilities and interests.\r\n\r\n";
-				$message .= "Thanks to people like you, we are able to spend 99 cents of every dollar donated on direct client services. Last year, community members donated more than 20,000 volunteer hours to support Kent Food Bank’s mission to end hunger. We cannot achieve our mission without you!\r\n\r\n";
-				$message .= "Once again, thank you for your interest.  A staff member will be in contact with you to set up orientation.\r\n\r\n";
-				$message .= "Jeniece Choate, Executive Director\r\n";
-				$message .= "Kent Food Bank and Emergency Services\r\n\r\n";
-				$message .= "If you have any questions for or about the food bank please contact us. \r\n\r\n";
-				$message = wordwrap($message, 70, "\r\n");
-			   // This will send an email to the applicant
-			    $mailApplicant = mail($recipient, $subject, $message, $headers, $authorized);
 				header('Location: volunteer-thank-you.php');
 				
 				exit;
@@ -221,7 +207,7 @@ include ('includes/header.inc.php');
 						<?php
 							//Validate Type of Application
 							$appTypes = array('individual', 'group', 'organizational', 'student', 'court');
-							if (($missing && in_array('appType', $missing)) )  {
+							if (($missing && in_array('appType', $missing)) || ($_POST && $_POST['appType'] == "none"))  {
 								echo '<p class="formError text-center">Please select the type of application you are submitting.</p>';
 								$isValid = false;
 
@@ -240,6 +226,10 @@ include ('includes/header.inc.php');
 
 						<!-- Create Radio Buttons -->
 						<?php
+							if (empty($appType)){
+								//Creates value of none for appType until user selects an Application Type 
+								echo '<label class="radio-inline"><input type="radio" name="appType" id="none" class="hidden" checked></label>';
+							}
 							foreach ($appTypes as $appValue) {
 								echo '<label class="radio-inline"><input type="radio" name="appType" id="';
 								echo strtolower($appValue);
@@ -636,7 +626,7 @@ include ('includes/header.inc.php');
 		$('#crimeNo').click(function(){
 			$('form').attr('action', '<?= $_SERVER['PHP_SELF']; ?>');
 		});
-	});
+		});
 </script>
 
  <!-- Insert Footer -->
