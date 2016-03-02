@@ -21,7 +21,7 @@
 <br>at <a href="location.php">main Alliance location</a></p>
 
 <p><span class="dayOfWeek">Monday</span>
-<br>at <a href="location.php">Birch Creek</a>  (link to map)
+<br>at <a href="location.php?<?php echo http_build_query(array('annex'=>true)) ?>">Birch Creek</a>  (link to map)
 <br>10am - 1pm</p>
 
 <h4>Clothing Distribution</h3>

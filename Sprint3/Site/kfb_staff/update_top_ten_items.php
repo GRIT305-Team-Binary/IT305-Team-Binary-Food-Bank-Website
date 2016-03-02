@@ -64,7 +64,7 @@
 				   
 					}
 					echo '</div></div><div class="row">';
-			   echo '<div class="col-xs-12"><div class="row"><h3 class="text-center">Thank you. All your items have been updated</h3></div>'	;
+			   echo '<div class="col-xs-12"><div class="row"><h3 class="text-center">Thank you. Your items have been updated.</h3></div>'	;
 			   echo '<div class="col-xs-12 col-sm-6 text-center"><p>Back to <a href="/">Kent Food Bank Home</a></p></div>';
 			   echo '<div class="col-xs-12 col-sm-6 text-center"><p>Back to <a href="index.php">Kent Food Bank Staff</a></p></div>';
 			   echo '<p class="text-center"><a href="' .$_SERVER['PHP_SELF']. '">Updade list</a></p>';

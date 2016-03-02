@@ -17,7 +17,7 @@ include('nav.php');
 		<div class="row">
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ">
 			<!-- Kent Food Bank Staff - View Breakfast Sponsors -->
-			<h3>Breakfast Sponsers</h3>
+			<h3>Breakfast Sponsors</h3>
 			<?php
 				//Connect to database
 				require '/home/teambinary/db.php';
@@ -57,7 +57,7 @@ include('nav.php');
 					
 				echo '</table>';
 			?>
-			<p>Breakfast Sponsers can <a href="/sponsor.php">sign up online</a></p>
+			<p>Breakfast sponsors can <a href="/sponsor.php">sign up online</a>.</p>
 			
 			</div>
 		</div>

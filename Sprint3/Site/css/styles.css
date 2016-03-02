@@ -37,6 +37,7 @@ body {
 	background-color:#2B4450;
 }
 
+/* Footer styles */
 .footer {
     background-color: #497285;
     padding: 2% 1%;
@@ -58,6 +59,7 @@ body {
     
      
  }
+
  
  /* Our Team Styles*/
  .team-img{
@@ -216,10 +218,22 @@ hr{
     margin: 2% 0;
     padding: 2% 0;
 }
-
+ /* Styles for Get Help Page */
 .buildingImg
  {
     width: 100%;
+ }
+ /* Styles for Volunteer Page */
+ .pagination-centered  fieldset {
+    background-color:white;
+    padding:15px 0px;
+    margin:5px 5px
+ }
+ .required {
+    color: #F78536;
+    font-weight: 600;
+    font-size: 1.75em;
+    
  }
 /* Extra Small Devices, Phones */
 

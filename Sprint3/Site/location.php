@@ -90,6 +90,12 @@
 				$("#foodBankMap").show();
 				
 			});
+			<?php
+				if ($_GET['annex']){
+						echo '$("#foodBankMap").hide();';
+						echo '$("#annexMap").show();';
+				}
+				?>
                 // function mapDisplay(show, hide) {
                     // document.getElementById(hide).style.visibility = "hidden";
                     // document.getElementById(show).style.visibility = "show";

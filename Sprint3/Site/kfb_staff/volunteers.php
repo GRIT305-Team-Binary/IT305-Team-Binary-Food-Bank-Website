@@ -13,7 +13,7 @@
     <div class="main">
         <div class="row">
             <!-- Kent Food Bank Staff - View Volunteer Applications -->
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
 				<h3>Volunteer Applicants</h3>
             <?php
             //Connect to database
@@ -26,12 +26,14 @@
             //Send the query to the database
             $result = @mysqli_query($cnxn, $sql);
         
-        
+			//Create table
+			
             echo '<table width="100%" class="table table-bordered table-striped">';
             echo '<tr><th class="text-center">Name</th><th class="text-center">Application</th>';
             echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th>';
             echo '<th class="text-center">Phone</th><th class="text-center">Email</th>';
             echo '</tr>';
+			
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
         
