@@ -208,7 +208,7 @@
 
 
 
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
+                <div id="gold" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
                       <h2 class="sponserBoxHeader">Gold</h2>
                       <h3 class="sponserBoxHeader">$3,000 or $250 per month for a year</h3>
                         <ul class="sponserLiEl">
@@ -232,7 +232,7 @@
                         </div>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
+                <div id="silver" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1 sponserBox">
                       <h2 class="sponserBoxHeader">Silver</h2>
                       <h3 class="sponserBoxHeader">$1,500 or $125 per month for a year</h3>
                         <ul class="sponserLiEl">
@@ -256,7 +256,7 @@
                         </div>
                 </div>
 
-                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1  btm2 sponserBox">
+                <div id="bronze" class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-3 col-lg-offset-1  btm2 sponserBox">
                       <h2 class="sponserBoxHeader">Bronze</h2>
                       <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
                         <ul class="sponserLiEl">
