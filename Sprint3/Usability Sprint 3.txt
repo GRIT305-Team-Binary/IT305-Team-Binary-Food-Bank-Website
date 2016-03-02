@@ -1,0 +1,69 @@
+Usability Test
+Sprint 3
+M Keany
+Uses computers at home and work over 40 hours a week
+Knows HTML and minimal CSS
+Middle aged
+
+Asked to Sign up to be a breakfast sponsor.
+Home page - Clicked on Donate(which takes to Paypal)
+Confidently says - I think I found it. I can give money here right.
+Asks - Did you make this page? It looks so nice, and it even says the Kent Food Bank.
+
+I point out that, the page is Paypal. 
+
+She returns to home page
+Clicks on Contribute
+Scans page then scrolls down and goes back to the top
+
+Clicks on Get Help
+Looks at page for a second
+Clicks back on Contribute
+Clicks on Volunteer
+
+Goes to home page
+
+Clicks on Facebook Feed
+
+Returns to homepage
+scrolls down to footer
+Clicks on Contact Us 
+It was a broken link and went to a 404 page.
+
+gets frustrated and asks me where it is.
+
+I take her to the contact US page.
+
+She fills out an email to send to the Kent Food Bank, and then notices after she submits her email stayed in the field. This confused her.
+
+She then asks if there was a way to sign up for the breakfast. 
+
+I ask her where she thinks it should be.
+I don't know, I want a search feature so I can search for the word breakfast. I was scanning for the word and could not find anywhere.
+
+I ask her if she wouldn't mind filling out the volunteer form
+
+She goes to Contribute, then Volunteer
+
+Enters First Name
+Address
+Phone
+Last Name
+City
+Zip
+Email
+Selects Office
+Answers Why Volunteering
+Clicks Submit
+Sees error at top
+Selects Individual
+Submits and gets confirmation email. 
+
+Commented that we should do something so Type of Application is more noticeable.
+
+Asked overall impressions of site. She talked while clicking around and exploring site:
+I like it. Its very professional. Clean and nice. It looks like a real site. Likes the pictures on the pages and that we embedded a map on location. 
+
+
+
+
