@@ -3,7 +3,11 @@
 */
 
 body {
+<<<<<<< HEAD
     background-color: #2B4450;
+=======
+    background-color: #695D46;
+>>>>>>> Sprint-2-styles
     margin:0 5%;
     font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -12,6 +16,7 @@ body {
     padding: 2% 2%;
     background-color: #DFEBED;
     margin: 2% auto;
+<<<<<<< HEAD
     width: 100%;
     color:black;
     box-shadow: 2px 2px 2.5px #888888;
@@ -26,24 +31,52 @@ body {
     width: 100%;
 	color:white;
 	box-shadow: 2px 2px 2.5px #888888;
+=======
+	background-color:#FFF6C5;
+    width: 100%;
+	color:black;
+	box-shadow: 2px 2px #404040; /* dark gray*/
+}
+
+.head {
+    background-color: #CFC291;
+    padding: 2% 1%;
+    margin-top: 2%;
+    width: 100%;
+	color:black;
+	box-shadow: 2px 2px #404040; /* dark gray*/
+>>>>>>> Sprint-2-styles
 }
 
 /* Changing the font color in header*/
 .icon-in-nav, .nav-fonts{
+<<<<<<< HEAD
 	color:white;
 	text-shadow: 2px 2px black;
+=======
+	color: black;
+	text-shadow: 2px 2px #695D46 ;
+>>>>>>> Sprint-2-styles
 }
 .head ul.nav a:hover{
 	background-color:#2B4450;
 }
 
 .footer {
+<<<<<<< HEAD
     background-color: #497285;
     padding: 2% 1%;
     margin-bottom: 2%;
     color:white;
     box-shadow: 2px 2px 2.5px #888888;
     
+=======
+    background-color: #CFC291;
+    padding: 2% 1%;
+    margin-bottom: 2%;
+	color:black;
+	box-shadow: 2px 2px #404040; /* dark gray*/
+>>>>>>> Sprint-2-styles
 	
 }
 .foot {
@@ -79,9 +112,15 @@ body {
  }
 /*Orange buttons and panel headers */
 .btn-warning, .panel-warning, .panel-warning>.panel-heading{
+<<<<<<< HEAD
 	background-color:#F78536;
 	border-color:#F78536;
 	
+=======
+	background-color:#FF712C;
+	border-color:#FF712C;
+		
+>>>>>>> Sprint-2-styles
 }
 .panel-body {
 	background-color: white;
@@ -188,6 +227,7 @@ hr{
  {
     width: 100%;
  }
+<<<<<<< HEAD
 /* Extra Small Devices, Phones */
 
   @media only screen and (max-width : 767px) and (min-width : 0px) {
@@ -406,3 +446,6 @@ iframe {
   }
 
 }
+=======
+
+>>>>>>> Sprint-2-styles
