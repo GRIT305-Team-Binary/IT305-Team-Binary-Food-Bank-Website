@@ -33,7 +33,7 @@ include('nav.php');
 			
 
 				echo '<table width="100%" class="table table-bordered table-striped">';
-				echo '<tr><th class="text-center">Name</th><th class="text-center">Organization</th>';
+				echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Organization</th>';
 				echo '<th class="text-center">Phone</th><th class="text-center">Email</th>';
 				echo '</tr>';
 				//Process the rows
@@ -49,7 +49,7 @@ include('nav.php');
 							
 					//Print rows
 					echo  "<tr><td> $fname $mname  $lname </td>";
-					echo "<td>$org</td>";
+					echo "<td class='hidden-xs'>$org</td>";
 					echo "<td> $phone</td>";
 					echo "<td> $email</td>";
 					echo '</tr>';

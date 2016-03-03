@@ -169,6 +169,7 @@
 ?>
 
 <link rel="stylesheet" href="./css/sponsor-page.css" />
+<link href='https://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
 
 <div class="main" id="#top">
     <div class="container-fluid">
@@ -328,7 +329,7 @@
                       ?>>
                     </div>
 
-                    
+
                   </div>
 
                   <div class="row">

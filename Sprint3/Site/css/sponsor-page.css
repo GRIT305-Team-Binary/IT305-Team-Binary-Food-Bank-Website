@@ -52,6 +52,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fceabb', end
 
 .sponserBoxHeader{
   text-align: center;
+  font-family: 'Racing Sans One', cursive;
 }
 
 h3.sponserBoxHeader{
@@ -82,6 +83,7 @@ h3.sponserBoxHeader{
 }
 
 .sponser-radio-btn{
+  border-radius: 1px;
   width: 30px;
   height: 30px;
 }
