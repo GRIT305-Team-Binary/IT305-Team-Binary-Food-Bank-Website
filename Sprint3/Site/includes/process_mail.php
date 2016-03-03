@@ -1,4 +1,10 @@
 <?php
+	/* Scripts to Validate and send mail to Kent Food Bank for Contact Us and Volunteer Application
+	 * Kent Food Bank 
+	 * Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/includes/process_mail.php
+	 */
+
 $mailSent = false;
 // Assume the input contains nothing suspect
 $suspect = false;
@@ -85,3 +91,6 @@ if (!$suspect) :
         }
     endif;
 endif;
+
+            
+            

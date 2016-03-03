@@ -1,4 +1,10 @@
 <?php
+	/* Thank you - Volunteer Form (if yes to Committed crime question)
+	 * Kent Food Bank 
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/volunteer-c-thank-you.php
+	 */
+
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {

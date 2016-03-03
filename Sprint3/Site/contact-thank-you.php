@@ -1,4 +1,10 @@
 <?php
+	/* Calendar with Hours and Events
+	 * Kent Food Bank 
+	 * Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/caldendar.php
+	 */
+	
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {

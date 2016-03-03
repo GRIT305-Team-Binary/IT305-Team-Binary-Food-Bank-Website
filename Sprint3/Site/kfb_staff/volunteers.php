@@ -1,5 +1,11 @@
 <?php
-    include('nav.html');
+	/* Volunteer Applications
+	 * Kent Food Bank Staff
+	 * Jami Team Binary
+	 * http://teambinary.greenrivertech.net/kfb_staff/volunteers.php
+	 */
+
+    include('nav.php');
 ?>
     
 <div class="container-fluid">	
@@ -7,7 +13,8 @@
     <div class="main">
         <div class="row">
             <!-- Kent Food Bank Staff - View Volunteer Applications -->
-			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 ">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
+				<h3>Volunteer Applicants</h3>
             <?php
             //Connect to database
             require '../../db.php';
@@ -19,16 +26,18 @@
             //Send the query to the database
             $result = @mysqli_query($cnxn, $sql);
         
-            
-            echo '<table width="100%" class="text-center">';
-            echo '<tr><th>Name</th><th>Application</th>';
-            echo '<th>Clothing Bank</th><th>Office</th><th>Food Bank</th>';
-            echo '<th>Phone</th><th>Email</th>';
+			//Create table
+			
+            echo '<table width="100%"zz class="table table-bordered table-striped">';
+            echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
+            echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th>';
+            echo '<th class="text-center hidden-sm hidden-xs">Phone</th><th class="text-center hidden-sm hidden-xs">Email</th>';
             echo '</tr>';
+			
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
         
-               
+                $id = $row['Volunteer_index'];
                 $fname = $row['fname'];
                 $lname = $row['lname'];
                 $appType= $row['appType'];
@@ -38,31 +47,32 @@
                 $office= $row['office']; //assuming this is a true false value
                 $food= $row['food']; //assuming this is a true false value
                 
-                
-                echo  "<tr><td> $fname $lname </td><td>$appType</td>";
+                $url = "volunteer_detail.php?" . http_build_query(array('id'=>$id));
+                echo  "<tr><td> <a href='$url'>$fname $lname</a> </td><td class='hidden-xs'>$appType</td>";
                
-                 echo '<td>';
-                 if ($clothing){
+                 echo '<td class="text-center">';
+                 if ($clothing == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  } 
-                 echo '</td><td>';
-                 if ($office){
+                 echo '</td><td class="text-center">';
+                 if ($office == 'Y'){
                     echo '<span class="glyphicon glyphicon-ok"></span>';
                  }
-                 echo '</td><td>';
+                 echo '</td><td class="text-center">';
                 
-                 if ($food){
+                 if ($food == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  }     
                 echo '</td>';
-				echo "<td> $phone</td>";
-                echo "<td> $email</td>";
+				echo "<td class='hidden-sm hidden-xs'> $phone</td>";
+                echo "<td class='hidden-sm hidden-xs'> $email</td>";
 				 echo '</tr>';
             }     
                 
             echo '</table>';
         ?>
-
+		
+		<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>
 			
         </div>
     </div>

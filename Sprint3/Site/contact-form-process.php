@@ -1,3 +1,10 @@
+<?php
+	/* Contact Form Process
+	 * Kent Food Bank 
+	 * Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/contact-form-process.php
+	 */
+?>
 <!DOCTYPE html>
 <html>
     <head>
