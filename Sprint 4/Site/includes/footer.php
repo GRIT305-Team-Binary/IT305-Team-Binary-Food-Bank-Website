@@ -21,10 +21,15 @@
 								 <p class="footerP text-left">Contribute<br>
 								 <div class="underline text-left"></div>
 
-								   <a href="#" class="footerLink">Donate</a><br>
+								   <a href="contribute.php" class="footerLink">Donate</a><br>
 								   <a href="volunteer.php" class="footerLink">Volunteer</a><br>
 								   <a href="sponsor.php" class="footerLink">Sponsorship</a>
 								 
+								 </p>
+								 
+								 <p class="footerP text-left"><br>
+								 <div class="underline text-left"></div>
+								  <a href="kfb_staff/" class="footerLink">Staff Login</a><br>
 								 </p>
 							</div>
 							<div class="col-xs-12 col-sm-7 text-left">
