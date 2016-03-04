@@ -10,7 +10,7 @@
 	$missing = [];
 	//All of the fields expected to have values from form
 	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-					 'clothing', 'office', 'food','whyVolunteer',
+					 'clothing', 'office', 'food', 'drive', 'whyVolunteer',
 					  'lift', 'questions', 'crime'];
 	//'crime' & 'lift' is added below if they have court ordered community service
 	
@@ -32,7 +32,7 @@
 	if (isset($_POST['submit'])) {
 		//All of the fields expected to have values from form
 		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
-					 'clothing', 'office', 'food','whyVolunteer',
+					 'clothing', 'office', 'food', 'drive', 'whyVolunteer',
 					  'questions'];
 				
 		//All of the fields required to have user entered content in the form
@@ -347,7 +347,7 @@ include ('includes/header.inc.php');
 						<?php
 						//Validate Volunteer Opportunities
 
-						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food'])) {
+						if ($_POST && empty($_POST['clothing']) && empty($_POST['office']) && empty($_POST['food']) && empty($_POST['drive'])) {
 							echo '<p class="formError text-center">Please select a Volunteer Opportunity.</p>';
 							$isValid = false;
 						} else {
@@ -360,6 +360,9 @@ include ('includes/header.inc.php');
 							}
 							if (!empty($_POST['food'])) {
 								$food= $_POST['food'];
+							}
+							if (!empty($_POST['drive'])) {
+								$drive= $_POST['drive'];
 							}
 						}
 						?>
@@ -396,6 +399,17 @@ include ('includes/header.inc.php');
 							  > Food
 							   </label>
 							   <p>Volunteers receive, unload and organize donated items from the community. Assist clients one on one with their food line selections.</p>
+							   
+							   <label for="drive">
+							   <!-- if Driver was selected, add checked to the input field -->
+							   <input type="checkbox" name="drive" id="drive"
+							   <?php if ($drive) : ?>
+								checked
+								<?php endif; ?>
+							   >Driver
+							   </label>
+							   <p>Selected Volunteers will be responsible for driving.</p>
+							   
 						   </div>
 					   </fieldset>
 				   </div>
