@@ -1,4 +1,9 @@
 <?php
+	/* Thank you - Volunteer Form (default)
+	 * Kent Food Bank 
+	 * Nicole Team Binary
+	 * http://teambinary.greenrivertech.net/Volunteer-thank-you.php
+	 */
 $errors = [];
 $missing = [];
 if (isset($_POST['send'])) {
