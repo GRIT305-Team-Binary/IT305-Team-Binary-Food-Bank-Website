@@ -30,22 +30,23 @@
 			
             echo '<table width="100%"zz class="table table-bordered table-striped">';
             echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
-            echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th>';
+            echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th> <th class="text-center">Driver</th>';
             echo '<th class="text-center hidden-sm hidden-xs">Phone</th><th class="text-center hidden-sm hidden-xs">Email</th>';
             echo '</tr>';
 			
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
         
-                $id = $row['Volunteer_index'];
-                $fname = $row['fname'];
-                $lname = $row['lname'];
-                $appType= $row['appType'];
-                $phone = $row['phone'];
-                $email = $row['email'];
-                $clothing=$row['clothing']; //assuming this is a true false value
-                $office= $row['office']; //assuming this is a true false value
-                $food= $row['food']; //assuming this is a true false value
+                $id = htmlentities($row['Volunteer_index']);
+                $fname = htmlentities($row['fname']);
+                $lname = htmlentities($row['lname']);
+                $appType= htmlentities($row['appType']);
+                $phone = htmlentities($row['phone']);
+                $email = htmlentities($row['email']);
+                $clothing=htmlentities($row['clothing']); 
+                $office= htmlentities($row['office']); 
+                $food= htmlentities($row['food']); 
+				$drive= htmlentities($row['drive']); 
                 
                 $url = "volunteer_detail.php?" . http_build_query(array('id'=>$id));
                 echo  "<tr><td> <a href='$url'>$fname $lname</a> </td><td class='hidden-xs'>$appType</td>";
@@ -62,7 +63,12 @@
                 
                  if ($food == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
-                 }     
+                 }
+				 echo '</td><td class="text-center">';
+                				
+                 if ($drive == 'Y'){
+                     echo '<span class="glyphicon glyphicon-ok"></span>';
+                 }  
                 echo '</td>';
 				echo "<td class='hidden-sm hidden-xs'> $phone</td>";
                 echo "<td class='hidden-sm hidden-xs'> $email</td>";

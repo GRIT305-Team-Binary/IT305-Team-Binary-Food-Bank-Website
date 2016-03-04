@@ -40,12 +40,12 @@ include('nav.php');
 				while ($row = mysqli_fetch_assoc($result)) {
 			
 				   
-					$fname = $row['fname'];
-					$mname = $row['mname'];
-					$lname = $row['lname'];
-					$org= $row['Bus_Org'];
-					$phone = $row['phone'];
-					$email = $row['email'];
+					$fname = htmlentities($row['fname']);
+					$mname = htmlentities($row['mname']);
+					$lname = htmlentities($row['lname']);
+					$org = htmlentities($row['Bus_Org']);
+					$phone = htmlentities($row['phone']);
+					$email = htmlentities($row['email']);
 							
 					//Print rows
 					echo  "<tr><td> $fname $mname  $lname </td>";

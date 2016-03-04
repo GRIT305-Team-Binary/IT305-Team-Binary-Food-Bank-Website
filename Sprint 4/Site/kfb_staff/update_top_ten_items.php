@@ -92,14 +92,14 @@
 							//Process the rows
 							while ($row = mysqli_fetch_assoc($result)) {
 						
-								$item = $row['item'];
-								$id = $row['item_id'];
+								$item = htmlentities($row['item']);
+								$id = htmlentities($row['item_id']);
 								echo '<div class="form-group"> <label class="col-xs-2 col-sm-2 control-label text-right">';
 								echo $id;
 								echo '</label><div class="col-xs-10 col-sm-10"><input class="form-control" name="' . $id ;
 								echo  '" type="text" value="';
 								if ($_POST) {
-									echo $_POST["$id"];
+									echo htmlentities($_POST["$id"]);
 								} else {
 									echo $item;
 								}

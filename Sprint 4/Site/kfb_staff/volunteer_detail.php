@@ -44,9 +44,10 @@
 				$zip = htmlentities($row['zip']);
                 $phone = htmlentities($row['phone']);
                 $email = htmlentities($row['email']);
-                $clothing=htmlentities($row['clothing']); //assuming this is a true false value
-                $office= htmlentities($row['office']); //assuming this is a true false value
-                $food= htmlentities($row['food']); //assuming this is a true false value
+                $clothing=htmlentities($row['clothing']); 
+                $office= htmlentities($row['office']); 
+                $food= htmlentities($row['food']); 
+				$drive= htmlentities($row['drive']); 
 				$whyVolunteer = htmlentities($row['whyVolunteer']);
 				$lift = htmlentities($row['lift']);
 				$crime = htmlentities($row['crime']);
@@ -72,25 +73,33 @@
 				echo '</tr>';
 			
 				//Volunteer Opprotunities
-				echo '<tr><th class="text-center"  colspan="2">Clothing Bank</th><th class="text-center" colspan="2">Office</th><th class="text-center" colspan="2">Food Bank</th></tr>';
+				echo '<tr><th class="text-center"  colspan="2">Clothing Bank</th>';
+				echo '<th class="text-center" colspan="1">Office</th>';
+				echo '<th class="text-center" colspan="2">Food Bank</th>';
+				echo '<th class="text-center" colspan="1">Driver</th></tr>';
                 echo '<tr>';
 				echo '<td class="text-center" colspan="2">';
 				if ($clothing == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  } 
-                 echo '</td><td class="text-center" colspan="2">';
+                 echo '</td><td class="text-center" colspan="1">';
                  if ($office == 'Y'){
                     echo '<span class="glyphicon glyphicon-ok"></span>';
                  }
                  echo '</td><td class="text-center" colspan="2">';
-                
-                 if ($food == 'Y'){
+				 
+                if ($food == 'Y'){
+                    echo '<span class="glyphicon glyphicon-ok"></span>';
+                 }
+                 echo '</td><td class="text-center" colspan="1">';
+                				
+                 if ($drive == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  }     
                 echo '</td></tr>';
 				
 				//Supplemental Questions
-				echo '<th class="text-center" colspan="3">Can lift 40 pounds?</th><th class="text-center" colspan="2">Committed a crime </th></tr>';
+				echo '<tr><th class="text-center" colspan="3">Can lift 40 pounds?</th><th class="text-center" colspan="3">Committed a crime </th></tr>';
 				echo '<tr>';
                 echo "<td class='text-center' colspan='3'>" ;
 				if ($lift == 'Y'){

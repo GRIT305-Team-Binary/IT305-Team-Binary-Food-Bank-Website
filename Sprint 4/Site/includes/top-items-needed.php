@@ -33,7 +33,7 @@
 			//Process the rows
 			while ($row = mysqli_fetch_assoc($result)) {
 		
-				$item = $row['item'];
+				$item = htmlentities($row['item']);
 				echo  '<li class="list-group-item"><input id="box1" type="checkbox" class="hidden" />';
 				echo "$item</li>";        
 			}
