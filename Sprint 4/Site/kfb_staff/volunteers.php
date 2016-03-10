@@ -92,14 +92,17 @@
 				echo "<td class='hidden-sm hidden-xs'> $phone</td>";
                 echo "<td class='hidden-sm hidden-xs'> $email</td>";
 				echo '</tr>';
-				echo '</tbody></table>';
+				
+			}
+			echo '</tbody></table>';
         ?>
 			
 
         </div>
-		<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>	
-    </div>
-
+			<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>	
+		</div>
+	</div>
+</div>
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->

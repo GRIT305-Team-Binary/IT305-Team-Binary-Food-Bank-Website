@@ -62,10 +62,10 @@ include('nav.php');
 					echo "<td> $phone</td>";
 					echo "<td> $email</td>";
 					echo '</tr>';
+					
+				}     
 					echo '</tbody></table>';
 
-				}     
-					
 
 			?>
 			<p>Breakfast sponsors can <a href="/sponsor.php">sign up online</a>.</p>
