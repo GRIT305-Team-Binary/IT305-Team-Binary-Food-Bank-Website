@@ -22,6 +22,10 @@ require('auth.php');
 		<link href="../readable_css/bootstrap.css" rel="stylesheet">
 		<link href="../readable_css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		
+		<!-- Bootstrap for dataTables -->
+			<link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
+          rel="stylesheet">
 
 		<!-- Custom CSS -->
 			  <link href="navbar-fixed-top.css" rel="stylesheet">
@@ -75,3 +79,5 @@ require('auth.php');
     <script src="../js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
+
+	

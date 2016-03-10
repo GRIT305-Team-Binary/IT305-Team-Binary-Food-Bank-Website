@@ -5,16 +5,11 @@
 	 * http://teambinary.greenrivertech.net/kfb_staff/volunteers.php
 	 */
 
-?>
-<!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
-          rel="stylesheet">
+	include('nav.php');
 
-	
-<?php
-        include('nav.php');
 ?>
+
+
 <div class="container-fluid">	
     
 

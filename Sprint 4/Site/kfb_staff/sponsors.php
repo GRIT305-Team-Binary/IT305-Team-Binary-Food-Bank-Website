@@ -4,17 +4,13 @@
 	 * Jami Team Binary
 	 * http://teambinary.greenrivertech.net/kfb_staff/sponsers.php
 	 */
+
+	include('nav.php');
 	 
 ?>
 
-	<!-- Bootstrap -->
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
-          rel="stylesheet">
 
-<?php
-include('nav.php');
-?>
+
 
 <div class="container-fluid">	
 
