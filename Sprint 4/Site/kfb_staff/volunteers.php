@@ -6,15 +6,18 @@
 	 */
 
 ?>
-	<!-- Bootstrap -->
+<!-- Bootstrap -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
           rel="stylesheet">
+
+	
 <?php
         include('nav.php');
 ?>
 <div class="container-fluid">	
     
+
     <div class="main">
         <div class="row">
             <!-- Kent Food Bank Staff - View Volunteer Applications -->
@@ -24,16 +27,16 @@
             <?php
             //Connect to database
             require '../../db.php';
-        
-            
+
+
            //Define the SELECT query
             $sql = "SELECT * FROM volunteers ORDER BY date DESC;";
-        
+
             //Send the query to the database
             $result = @mysqli_query($cnxn, $sql);
-        
+
 			//Create table
-			
+
             echo '<table width="100%" class="table table-bordered table-striped" id="volunteers">';
 			echo '<thead>';
             echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
@@ -49,53 +52,57 @@
 			echo '</tfoot>';
 			echo '<tbody>';
 			
+
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
-        
+
                 $id = htmlentities($row['Volunteer_index']);
                 $fname = htmlentities($row['fname']);
                 $lname = htmlentities($row['lname']);
                 $appType= htmlentities($row['appType']);
                 $phone = htmlentities($row['phone']);
                 $email = htmlentities($row['email']);
-                $clothing=htmlentities($row['clothing']); 
-                $office= htmlentities($row['office']); 
-                $food= htmlentities($row['food']); 
-				$drive= htmlentities($row['drive']); 
-                
+                $clothing=htmlentities($row['clothing']);
+                $office= htmlentities($row['office']);
+                $food= htmlentities($row['food']);
+				$drive= htmlentities($row['drive']);
+
                 $url = "volunteer_detail.php?" . http_build_query(array('id'=>$id));
                 echo  "<tr><td> <a href='$url'>$fname $lname</a> </td><td class='hidden-xs'>$appType</td>";
-               
+
                  echo '<td class="text-center">';
                  if ($clothing == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
-                 } 
+                 }
                  echo '</td><td class="text-center">';
                  if ($office == 'Y'){
                     echo '<span class="glyphicon glyphicon-ok"></span>';
                  }
                  echo '</td><td class="text-center">';
-                
+
                  if ($food == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
                  }
 				 echo '</td><td class="text-center">';
-                				
+
                  if ($drive == 'Y'){
                      echo '<span class="glyphicon glyphicon-ok"></span>';
-                 }  
+                 }
                 echo '</td>';
 				echo "<td class='hidden-sm hidden-xs'> $phone</td>";
                 echo "<td class='hidden-sm hidden-xs'> $email</td>";
-				 echo '</tr>';
-            }     
-                
-            echo '</tbod></table>';
+				echo '</tr>';
+				
+			}
+			echo '</tbody></table>';
         ?>
 			
+
         </div>
-			
-    </div>
+			<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>	
+		</div>
+	</div>
+</div>
 	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
       <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <!-- Include all compiled plugins (below), or include individual files as needed -->
@@ -106,5 +113,6 @@
 	<script>
 		$('#volunteers').DataTable();    
 	</script>     
+
 </body>
 </html>

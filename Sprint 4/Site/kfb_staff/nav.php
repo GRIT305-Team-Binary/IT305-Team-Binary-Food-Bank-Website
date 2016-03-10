@@ -1,9 +1,11 @@
 <?php
-	/* Staff Navigation 
+require('auth.php');
+	/* Staff Navigation
 	 * Kent Food Bank Staff
 	 * Jami Team Binary
 	 * http://teambinary.greenrivertech.net/kfb_staff/nav.php
 	 */
+
 ?>
 <!DOCTYPE html>
 
@@ -15,16 +17,16 @@
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<title>Kent Food Bank Staff</title>
-	
+
 		<!-- Bootstrap Core CSS -->
 		<link href="../readable_css/bootstrap.css" rel="stylesheet">
 		<link href="../readable_css/bootstrap.min.css" rel="stylesheet">
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-	
+
 		<!-- Custom CSS -->
-			  <link href="navbar-fixed-top.css" rel="stylesheet"> 
-	
-	
+			  <link href="navbar-fixed-top.css" rel="stylesheet">
+
+
 		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 		<!--[if lt IE 9]>
@@ -34,7 +36,7 @@
 	 </head>
 
 <body>
-  
+
  <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -54,6 +56,13 @@
 			<li><a href="volunteers.php">Volunteers</a></li>
 			<li><a href="sponsors.php">Sponsors</a></li>
 			<li><a href="/">Public</a></li>
+
+                <?php
+                    if(isset($_SESSION['username'])) {
+                        echo "<li><a href='logout.php'><b>Logout</b></a></li>";
+                    }
+                 ?>
+
           </ul>
          </div><!--/.nav-collapse -->
       </div> <!-- end of container -->
