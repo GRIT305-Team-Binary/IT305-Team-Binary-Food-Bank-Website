@@ -6,6 +6,10 @@
 	 */
 ?>
 	
+	<!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
+          rel="stylesheet">
 
 <?php
 include('nav.php');
@@ -32,10 +36,13 @@ include('nav.php');
 				$result = @mysqli_query($cnxn, $sql);
 			
 
-				echo '<table width="100%" class="table table-bordered table-striped">';
-				echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Organization</th>';
-				echo '<th class="text-center">Phone</th><th class="text-center">Email</th>';
+				echo '<table width="100%" class="table table-bordered table-striped" id="sponsors">';
+				echo '<thead>';
+				echo '<tr><th class="">Name</th><th class=" hidden-xs">Organization</th>';
+				echo '<th class="">Phone</th><th class="">Email</th>';
 				echo '</tr>';
+				echo '</thead>';
+				echo '<tbody>';
 				//Process the rows
 				while ($row = mysqli_fetch_assoc($result)) {
 			
@@ -55,14 +62,24 @@ include('nav.php');
 					echo '</tr>';
 				}     
 					
-				echo '</table>';
+				 echo '</tbod></table>';
 			?>
 			<p>Breakfast sponsors can <a href="/sponsor.php">sign up online</a>.</p>
 			
 			</div>
 		</div>
 	</div>
-</div>            
+</div>
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="//maxcdn.bootstrapcdn.com/3.3.6/js/bootstrap.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+      
+
+	<script>
+		$('#sponsors').DataTable();    
+	</script>
 </body>
 </html>
         

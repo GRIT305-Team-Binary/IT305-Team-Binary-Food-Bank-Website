@@ -5,9 +5,14 @@
 	 * http://teambinary.greenrivertech.net/kfb_staff/volunteers.php
 	 */
 
-    include('nav.php');
 ?>
-    
+	<!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//cdn.datatables.net/1.10.4/css/jquery.dataTables.css"
+          rel="stylesheet">
+<?php
+        include('nav.php');
+?>
 <div class="container-fluid">	
     
     <div class="main">
@@ -15,6 +20,7 @@
             <!-- Kent Food Bank Staff - View Volunteer Applications -->
 			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-12 col-md-offset-0">
 				<h3>Volunteer Applicants</h3>
+				<p class="pull-right">Volunteers can <a href="/volunteer.php">sign up online</a></p>
             <?php
             //Connect to database
             require '../../db.php';
@@ -28,11 +34,20 @@
         
 			//Create table
 			
-            echo '<table width="100%"zz class="table table-bordered table-striped">';
+            echo '<table width="100%" class="table table-bordered table-striped" id="volunteers">';
+			echo '<thead>';
             echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
             echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th> <th class="text-center">Driver</th>';
             echo '<th class="text-center hidden-sm hidden-xs">Phone</th><th class="text-center hidden-sm hidden-xs">Email</th>';
             echo '</tr>';
+			echo '</thead>';
+			echo '<tfoot>';
+            echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
+            echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th> <th class="text-center">Driver</th>';
+            echo '<th class="text-center hidden-sm hidden-xs">Phone</th><th class="text-center hidden-sm hidden-xs">Email</th>';
+            echo '</tr>';
+			echo '</tfoot>';
+			echo '<tbody>';
 			
             //Process the rows
             while ($row = mysqli_fetch_assoc($result)) {
@@ -75,13 +90,21 @@
 				 echo '</tr>';
             }     
                 
-            echo '</table>';
+            echo '</tbod></table>';
         ?>
-		
-		<p>Volunteers can <a href="/volunteer.php">sign up online</a></p>
 			
         </div>
+			
     </div>
-            
+	  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="//maxcdn.bootstrapcdn.com/3.3.6/js/bootstrap.min.js"></script>
+      <script src="//cdn.datatables.net/1.10.4/js/jquery.dataTables.min.js"></script>
+      
+
+	<script>
+		$('#volunteers').DataTable();    
+	</script>     
 </body>
 </html>
