@@ -11,7 +11,8 @@
 	//All of the fields expected to have values from form
 	$form_fields = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food', 'drive', 'whyVolunteer',
-					  'lift', 'questions', 'crime'];
+					  'lift', 'questions', 'crime', 'monday', 'tuesday', 'wednesday', 'thursday',
+					  'friday', 'weekends'];
 	//'crime' & 'lift' is added below if they have court ordered community service
 	
 	//Create placeholder text for entry forms
@@ -33,7 +34,7 @@
 		//All of the fields expected to have values from form
 		$expected = ['appType', 'fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
 					 'clothing', 'office', 'food', 'drive', 'whyVolunteer',
-					  'questions'];
+					  'questions', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'weekends'];
 				
 		//All of the fields required to have user entered content in the form
 		$required = ['appType','fname', 'lname', 'address', 'city', 'zip', 'phone', 'email',
@@ -575,6 +576,70 @@ include ('includes/header.inc.php');
 						</fieldset>
 
 					</div>
+			   </div>
+			   
+			   <div class="row">
+				<fieldset class="form-group">
+
+						   <label>Availability (check all that apply)</label>
+						   <div class="checkbox">
+							   <label for="monday">
+							   <input type="checkbox" name="monday" id="monday"
+							   <?php if ($monday) : ?>
+								checked
+								<?php endif; ?>
+							   > Monday
+							   <!-- if Monday was selected, add checked to the input field -->
+							   </label>
+
+							   <label for="tuesday">
+							   <!-- if Tuesday was selected, add checked to the input field -->
+							   <input type="checkbox" name="tuesday" id="tuesday"
+							   <?php if ($tuesday) : ?>
+								checked
+								<?php endif; ?>
+							   > Tuesday
+							   </label>
+
+							   <label for="wednesday">
+							   <!-- if Wednesday was selected, add checked to the input field -->
+								<input type="checkbox" name="wednesday" id="wednesday"
+							   <?php if ($wednesday) : ?>
+								checked
+								<?php endif; ?>
+							  > Wednesday
+							   </label>
+							   
+							   <label for="thursday">
+							   <!-- if Thursday was selected, add checked to the input field -->
+							   <input type="checkbox" name="thursday" id="thursday"
+							   <?php if ($thursday) : ?>
+								checked
+								<?php endif; ?>
+							   > Thursday
+							   </label>
+							   
+							   <label for="friday">
+							   <!-- if Friday was selected, add checked to the input field -->
+							   <input type="checkbox" name="friday" id="friday"
+							   <?php if ($friday) : ?>
+								checked
+								<?php endif; ?>
+							   > Friday
+							   </label>
+							   
+							   <label for="weekends">
+							   <!-- if Weekends was selected, add checked to the input field -->
+							   <input type="checkbox" name="weekends" id="weekends"
+							   <?php if ($weekends) : ?>
+								checked
+								<?php endif; ?>
+							   > Weekends
+							   </label>
+							   
+							   
+						   </div>
+					   </fieldset>
 			   </div>
 			   <div class="row">
 					<!-- Text Area for Additional Comments/Questions -->
