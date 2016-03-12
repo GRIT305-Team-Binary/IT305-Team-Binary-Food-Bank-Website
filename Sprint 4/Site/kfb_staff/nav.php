@@ -62,7 +62,7 @@ require('auth.php');
 			<li><a href="/">Public</a></li>
 
                 <?php
-                    if(isset($_SESSION['username'])) {
+                    if(isset($_SESSION['teambinary_KFB_username'])) {
                         echo "<li><a href='logout.php'><b>Logout</b></a></li>";
                     }
                  ?>

@@ -29,7 +29,7 @@ $loginMessage	= "";
 
 								if($_POST['pword'] == $hash) {
 
-									$_SESSION['username'] = $row['username'];
+									$_SESSION['teambinary_KFB_username'] = $row['username'];
 
 									header('Location: index.php');
 
