@@ -579,16 +579,17 @@ include ('includes/header.inc.php');
 			   </div>
 			   
 			   <div class="row">
+				<div class="col-xs-12" >
 				<fieldset class="form-group">
 
-						   <label>Availability (check all that apply)</label>
+						   <label>Which days are you available? (check all that apply):</label>
 						   <div class="checkbox">
 							   <label for="monday">
 							   <input type="checkbox" name="monday" id="monday"
 							   <?php if ($monday) : ?>
 								checked
 								<?php endif; ?>
-							   > Monday
+							   > M&nbsp;&nbsp;&nbsp;
 							   <!-- if Monday was selected, add checked to the input field -->
 							   </label>
 
@@ -598,7 +599,7 @@ include ('includes/header.inc.php');
 							   <?php if ($tuesday) : ?>
 								checked
 								<?php endif; ?>
-							   > Tuesday
+							   > T&nbsp;&nbsp;&nbsp;
 							   </label>
 
 							   <label for="wednesday">
@@ -607,7 +608,7 @@ include ('includes/header.inc.php');
 							   <?php if ($wednesday) : ?>
 								checked
 								<?php endif; ?>
-							  > Wednesday
+							  > W&nbsp;&nbsp;&nbsp;
 							   </label>
 							   
 							   <label for="thursday">
@@ -616,7 +617,7 @@ include ('includes/header.inc.php');
 							   <?php if ($thursday) : ?>
 								checked
 								<?php endif; ?>
-							   > Thursday
+							   > Th&nbsp;&nbsp;&nbsp;
 							   </label>
 							   
 							   <label for="friday">
@@ -625,7 +626,7 @@ include ('includes/header.inc.php');
 							   <?php if ($friday) : ?>
 								checked
 								<?php endif; ?>
-							   > Friday
+							   > F&nbsp;&nbsp;&nbsp;
 							   </label>
 							   
 							   <label for="weekends">
@@ -635,11 +636,10 @@ include ('includes/header.inc.php');
 								checked
 								<?php endif; ?>
 							   > Weekends
-							   </label>
-							   
-							   
+							   </label>	   
 						   </div>
 					   </fieldset>
+				</div>
 			   </div>
 			   <div class="row">
 					<!-- Text Area for Additional Comments/Questions -->
