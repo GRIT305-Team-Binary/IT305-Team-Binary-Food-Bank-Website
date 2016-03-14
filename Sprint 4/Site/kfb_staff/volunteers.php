@@ -34,7 +34,8 @@
 
             echo '<table width="100%" class="table table-bordered table-striped" id="volunteers">';
 			echo '<thead>';
-            echo '<tr><th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
+            echo '<tr><th class="text-center">Date</th>';
+			echo '<th class="text-center">Name</th><th class="text-center hidden-xs">Application</th>';
             echo '<th class="text-center" >Clothing Bank</th><th class="text-center">Office</th><th class="text-center">Food Bank</th> <th class="text-center">Driver</th>';
             echo '<th class="text-center hidden-sm hidden-xs">Phone</th><th class="text-center hidden-sm hidden-xs">Email</th>';
             echo '</tr>';
@@ -52,6 +53,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
 
                 $id = htmlentities($row['Volunteer_index']);
+				$date = date('n/j/Y', strtotime(htmlentities($row['date'])));
                 $fname = htmlentities($row['fname']);
                 $lname = htmlentities($row['lname']);
                 $appType= htmlentities($row['appType']);
@@ -61,9 +63,10 @@
                 $office= htmlentities($row['office']);
                 $food= htmlentities($row['food']);
 				$drive= htmlentities($row['drive']);
-
+			
                 $url = "volunteer_detail.php?" . http_build_query(array('id'=>$id));
-                echo  "<tr><td> <a href='$url'>$fname $lname</a> </td><td class='hidden-xs'>$appType</td>";
+                echo  "<tr><td>$date</td>";
+				echo "<td><a href='$url'>$fname $lname</a> </td><td class='hidden-xs'>$appType</td>";
 
                  echo '<td class="text-center">';
                  if ($clothing == 'Y'){
