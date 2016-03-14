@@ -303,7 +303,7 @@ li.nav a:visited {
 color: white;
 }
 
-#logo img {
+img#logo {
   width: 100%;
 }
 
@@ -315,12 +315,10 @@ iframe {
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) and (max-width : 991px) {
 
-  #logo img{
+  img#logo {
     position: relative;
-    max-width:12.5em;
-    right: 25%;
     display: block;
-
+    max-width: 160%;
   }
 
 
@@ -369,11 +367,10 @@ iframe {
     
   }
 
-  #logo img{
+  img#logo {
     position: relative;
-    max-width:300px;
+    max-width: 325px;
     display: block;
-    right:12%;
 
   }
 
@@ -424,12 +421,10 @@ iframe {
        font-weight: bold;
      }
 
-     #logo img {
-       max-width:325px;
+     img#logo {
+       max-width:350px;
        position: relative;
        display: block;
-       right:12%;
-
      }
 
      #motto p{
