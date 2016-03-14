@@ -58,9 +58,10 @@
 				$thursday = htmlentities($row['thursday']);
 				$friday = htmlentities($row['friday']);
 				$weekends = htmlentities($row['weekends']);
-				
+
 				echo '<tr><th class="text-center" colspan="6">Date</th>';
                 echo  "<tr><td class='text-center' colspan='6'>$date</td>";
+
 
 				// Name and Application Type
                 echo '<tr><th class="text-center" colspan="3">Name</th><th class="text-center" colspan="3">Application Type </th></tr>';
