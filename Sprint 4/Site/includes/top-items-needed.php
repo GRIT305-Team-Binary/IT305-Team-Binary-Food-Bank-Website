@@ -59,7 +59,9 @@
 <div class="hidden">
 <h3>Bring all items to Kent Food Bank</h3>
 <p>515 W Harrison St, Ste 107 <br />
-Kent, Washington 98032</p>
+Kent, Washington 98032 <br>
+Accepted every T, W, Th and F from 9 am – 2 pm  </p>
+<p>When you come, please park in legal designated parking spots to avoid tickets and towing!</p>
 <p>Thank you for your donations and support.</p>
 <p class="print"><form><input type="button" value=" Print this page "
 onclick="window.print();return false;" class="print" /></form></p>
