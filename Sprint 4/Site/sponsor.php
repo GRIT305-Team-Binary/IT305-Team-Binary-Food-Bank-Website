@@ -179,6 +179,7 @@
                   <?php  include ('includes/contribute-side.php');  ?>
               </div>
               <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 pull-right">
+                <h2 class="text-center">Annual Fundraising Breakfast</h2>
 
           <?php if(empty($errors) && empty($missing) && $isValid && isset($_POST['submit'])) : ?>
 
@@ -242,6 +243,7 @@
                             <li>Logo and name recognition on our Facebook page</li><br />
                             <li>Verbal recognition day of event</li><br>
                             <li>Each Table of Honor guest will receive 3 raffle tickets</li><br />
+                            <li class="visible-lg">&nbsp;</li><br />
                         </ul>
 
 
@@ -261,11 +263,13 @@
                       <h2 class="sponserBoxHeader">Bronze</h2>
                       <h3 class="sponserBoxHeader">$1,000 or $85 per month for a year</h3>
                         <ul class="sponserLiEl">
+                            <li class="visible-lg">&nbsp;</li><br />
                             <li>Name recognition on printed materials</li><br />
                             <li>Name recognition in annual report</li><br />
                             <li>Name recognition on our Facebook page</li><br />
                             <li>Verbal recognition day of event</li><br />
                             <li>Table of Honor at event</li><br />
+                            <li class="visible-lg">&nbsp;</li><br />
                         </ul>
 
                         <div class="sponserRadioBtnNTxt">
