@@ -28,17 +28,19 @@
                     <h3>Main Food Bank</h3>
                     <p>515 W Harrison St, Ste 107 <br>
                     Kent, Washington 98032</p>
-                    
+                    <p class="text-center"><a href="calendar.php">Hours</a></p>
                     <h3>Clothing Bank</h3>
                     <p>515 W Harrison St, Ste 107 <br>
                     Kent, Washington 98032</p>
-					<br />
+					<p class="text-center"><a href="calendar.php" >Hours</a></p>
+					
 					<!--<button >Show</button>-->
                     </div>
                     <div id='annex' class="col-sm-6 col-md-12">
                     <h3>Birch Creek Annex*</h3>
                     <p>12961 SE 275th Street<br>
-                    <span class="asterisk">* Food Bank services only</span></p><br>
+                    <span class="asterisk">* Food Bank services only</span></p>
+					<p class="text-center"><a href="calendar.php" >Hours</a></p><br>
 					<!--<button >Show</button>-->
                     </div>
                 </div>
