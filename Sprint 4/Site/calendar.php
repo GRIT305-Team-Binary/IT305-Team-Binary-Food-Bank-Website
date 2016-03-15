@@ -140,14 +140,14 @@
 				 </div><!-- end of panel -->
 			</div><!-- end of Side panel -->
 				
-			<div class="col-xs-12  hidden-sm hidden-md col-lg-9">
+			<div class="hidden-xs  hidden-sm col-md-9 col-lg-9">
 				<div class="embed-responsive embed-responsive-4by3">
 					<!-- calendar on med/large screen sizes -->
 					<iframe class="embed-responsive-item"  src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showTz=0&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
 					   scrolling="no"></iframe>
 				</div><!-- end of map for med/large screens -->
 			</div>
-			<div class="col-sm-12 visible-sm col-md-9 visible-md">
+			<div class="col-xs-12 visible-xs col-sm-12 visible-sm ">
 				<div class="embed-responsive embed-responsive-4by3">
 				 <!-- calendar on small screen size -->
                     <iframe class="embed-responsive-item" src="https://calendar.google.com/calendar/embed?mode=AGENDA&amp;height=600&amp;wkst=1&amp;bgcolor=%23FF9600&amp;src=teambinarykfb%40gmail.com&amp;color=%23000000&amp;ctz=America%2FLos_Angeles"
