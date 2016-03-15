@@ -33,13 +33,13 @@
 	
 				<!-- How you can help the Food Bank -->
 				<h2> Non-Perishable Food</h2>
-				<p>Kent Food Bank accepts nonperishable food donations on M, T, W and F from 9 am – 2 pm at</p>
+				<p>Kent Food Bank accepts nonperishable food donations on T, W, Th and F from 9 am – 2 pm at</p>
 				<p class="text-center   "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p>
 				<p> Items must not be expired, damaged, or opened. During the summer call if you would like to donate vegetables or other items from your garden. </p>
 				
 				<!-- How you can help the Clothing Bank-->
 				<h2 id="clothing">Clothing Bank</h2>
-				<p>Clothing Bank accepts donations on M, T, W and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at</p>
+				<p>Clothing Bank accepts donations on T, W, Th and F from 9 am – 2 pm of gently used men’s, women’s, children’s clothing along with small household items at</p>
 				<p class="text-center  hidden-xs hidden-sm "><a href="location.php" class="btn btn-warning text-center">515 W. Harrison Street, Suite 107</a></p>
 				<!-- Button for Mobile display-->
 				<p class="text-center  visible-xs visible-sm"><a href="location.php" class="btn btn-warning text-center">Kent Food Bank</a></p><p></p>
