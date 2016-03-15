@@ -127,7 +127,7 @@
                             <!-- Volunteer Button under Carousel -->
                              <a class="btn btn-warning btn-lg col-xs-12 mBtn" href="volunteer.php">Volunteer</a>
                          </div>
-                     
+						<p class="visible-xs">&nbsp;</p>
                  </div>
                  <div class="row visible-xs">
                     
@@ -136,6 +136,7 @@
                             <div class="col-xs-2 text-center"><a class="btn btn-lg" href="https://www.facebook.com/kentfoodbank/">
                                 <img src="images/FB-f-Logo__blue_50.png" alt="facebook"></a>
                             </div>
+							<p class="visible-xs">&nbsp;</p>
                              <div class="col-xs-9 col-xs-offset-1 text-center">
                                 <a class="btn btn-primary col-xs-12 facebook-hours" href="calendar.php">Hours</a>
                              </div>
@@ -183,13 +184,14 @@
          
             <div class="col-sm-12 col-md-6 col-lg-4 hidden-xs facebookFeed">
                     <!-- Facebook Feed for Kent Food Bank Page -->
+					
                     <div class="fb-page col-md-12"
                          data-href="https://www.facebook.com/kentfoodbank/"
                          data-tabs="timeline"
                          data-small-header="true"
                          data-adapt-container-width="true"
                          data-hide-cover="false"
-                         data-height="100%"
+                         data-height="1250"
                          data-show-facepile="true">
                     <div class="fb-xfbml-parse-ignore">
                         <blockquote cite="https://www.facebook.com/kentfoodbank/">
