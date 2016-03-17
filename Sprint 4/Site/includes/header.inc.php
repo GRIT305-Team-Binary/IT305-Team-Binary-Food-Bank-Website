@@ -37,11 +37,11 @@
       <!---Top of the page-->
 
     <div class="row">
-        <div  class="col-sm-3 col-md-4 col-xs-12">
-            <a href="index.php" class="navbar-brand"><img id="logo" class="img-responsive" alt="This is the logo" src="images/logo-transparent-bw-orange.png" ></a>
+        <div class="col-xs-12 col-sm-3 col-md-4">
+			<a href="index.php" class="navbar-brand"><img id="logo" alt="Kent Food Bank" src="images/logo-transparent-bw-orange.png" ></a>
         </div>
 
-      <div class="col-xs-12 col-sm-9 col-md-8 navbar center-block">
+		<div class="col-xs-12 col-sm-9 col-md-8 navbar center-block">
           <div class="container-fluid"><!--Centers Nav On Headers-->
 
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navHeaderCollapse">Menu<span class="caret"></span></button>
